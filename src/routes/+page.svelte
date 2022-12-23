@@ -10,46 +10,55 @@
 	/>
 </svelte:head>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<img src={logo_horizontal} alt="Logo da OPTIMUS Jr." />
-		</span>
+<h1>
+	<img src={logo_horizontal} alt="Logo da OPTIMUS Jr." />
+</h1>
 
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-</section>
+<ul>
+	<li><a href="http://wa.me/5571999112217">Whatsapp</a></li>
+	<li>&dot;</li>
+	<li><a href="https://www.instagram.com/optimusjrautomacao/">Instagram</a></li>
+	<li>&dot;</li>
+	<li><a href="https://br.linkedin.com/company/optimus-jr-automacao">Facebook</a></li>
+</ul>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
 	h1 {
 		width: 100%;
 	}
 
-	.welcome {
+	h1 img {
 		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
+		margin: auto;
+
+		width: 80vw;
+		max-width: 700px;
 	}
 
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+	ul {
+		display: flex;
+		justify-content: center;
+		padding: 0;
+	}
+
+	li {
+		list-style: none;
+		text-transform: uppercase;
+		font-size: 2em;
+		padding: 10px;
+
+		color: var(--color-gray);
+	}
+
+	li a {
+		color: var(--color-gray);
+
+		transition: border-bottom-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+		border-bottom: 2px solid transparent;
+	}
+
+	li a:hover {
+		color: var(--color-primary);
+		border-bottom: 2px solid currentcolor;
 	}
 </style>
