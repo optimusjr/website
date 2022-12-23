@@ -1,21 +1,19 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import logo_horizontal from '$lib/images/logo_horizontal.svg';
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>OPTIMUS Jr. Controle e Automação | Empresa de Automação em Salvador</title>
+	<meta
+		name="description"
+		content="Realizando sonhos, automatizando vidas. futuro está em todos os lugares, permita que ele entre na sua casa com a melhor experiência, conforto, praticidade e economia!"
+	/>
 </svelte:head>
 
 <section>
 	<h1>
 		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
+			<img src={logo_horizontal} alt="Logo da OPTIMUS Jr." />
 		</span>
 
 		to your new<br />SvelteKit app
@@ -24,8 +22,6 @@
 	<h2>
 		try editing <strong>src/routes/+page.svelte</strong>
 	</h2>
-
-	<Counter />
 </section>
 
 <style>
