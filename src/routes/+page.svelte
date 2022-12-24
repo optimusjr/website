@@ -1,4 +1,5 @@
 <script>
+	import logo from '$lib/images/logo.svg';
 	import logo_horizontal from '$lib/images/logo_horizontal.svg';
 </script>
 
@@ -11,14 +12,15 @@
 </svelte:head>
 
 <h1>
-	<img src={logo_horizontal} alt="Logo da OPTIMUS Jr." />
+	<img src={logo} alt="Logo da OPTIMUS Jr." class="hide-desktop" />
+	<img src={logo_horizontal} alt="Logo da OPTIMUS Jr." class="hide-mobile" />
 </h1>
 
 <ul>
 	<li><a href="http://wa.me/5571999112217">Whatsapp</a></li>
-	<li>&dot;</li>
+	<li>&bullet;</li>
 	<li><a href="https://www.instagram.com/optimusjrautomacao/">Instagram</a></li>
-	<li>&dot;</li>
+	<li>&bullet;</li>
 	<li><a href="https://br.linkedin.com/company/optimus-jr-automacao">Facebook</a></li>
 </ul>
 
@@ -39,14 +41,14 @@
 		display: flex;
 		justify-content: center;
 		padding: 0;
+		margin-top: 32px;
 	}
 
 	li {
 		list-style: none;
 		text-transform: uppercase;
 		font-size: 2em;
-		padding: 10px;
-
+		padding: 8px;
 		color: var(--color-gray);
 	}
 
@@ -60,5 +62,18 @@
 	li a:hover {
 		color: var(--color-primary);
 		border-bottom: 2px solid currentcolor;
+	}
+
+	@media (max-width: 600px) {
+		ul {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-top: 32px;
+		}
+
+		h1 img {
+			max-width: 400px;
+		}
 	}
 </style>
