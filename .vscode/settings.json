@@ -1,5 +1,5 @@
 {
-	"cSpell.words": ["fontsource", "neoconfetti", "optimus", "peaceiris", "sveltekit"],
+	"cSpell.words": ["fontsource", "neoconfetti", "optimus", "peaceiris", "sveltekit", "wordmark"],
 	"svelte.enable-ts-plugin": true,
 	"svelte.plugin.svelte.note-new-transformation": false
 }

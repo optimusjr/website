@@ -6,6 +6,7 @@
 
 body {
 	font-family: 'League Spartan', sans-serif;
+	scroll-behavior: smooth;
 
 	min-height: 100vh;
 	margin: 0;
