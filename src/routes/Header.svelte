@@ -1,15 +1,13 @@
 <script>
 	import icon from '$lib/images/icon_white.svg';
 	import wordmark from '$lib/images/wordmark.svg';
-	import whatsapp from '$lib/images/icons/whatsapp.svg';
-	import instagram from '$lib/images/icons/instagram.svg';
-	import facebook from '$lib/images/icons/facebook.svg';
+	import arrow from '$lib/images/icons/arrow-right.svg';
 </script>
 
 <header>
 	<div class="left">
 		<a href="/">
-			<img src={icon} alt="Ícone da OPTIMUS Jr." height="32" />
+			<img src={icon} alt="Ícone da OPTIMUS Jr." height="32" width="32" />
 			<img src={wordmark} alt="OPTIMUS Jr. escrito em letras brancas" height="16" />
 		</a>
 	</div>
@@ -20,49 +18,27 @@
 		<li><a href="#contact">Contato</a></li>
 	</ul>
 
-	<ul class="right">
-		<li>
-			<a href="http://wa.me/5571999112217"
-				><img src={whatsapp} alt="Ícone do Whatsapp" height="24" /></a
-			>
-		</li>
-		<li>
-			<a href="https://www.instagram.com/optimusjrautomacao/"
-				><img src={instagram} alt="Ícone do Instagram" height="24" /></a
-			>
-		</li>
-		<li>
-			<a href="https://br.linkedin.com/company/optimus-jr-automacao"
-				><img src={facebook} alt="Ícone do Facebook" height="24" /></a
-			>
-		</li>
-	</ul>
+	<div class="right">
+		<a href="/budget">
+			<div>Faça um Orçamento</div>
+			<img src={arrow} alt="Seta apontando para direita" height="24" width="24" />
+		</a>
+	</div>
 </header>
 
 <style lang="scss">
 	header {
 		position: fixed;
-		top: 8px;
-		left: 8px;
-		right: 8px;
+		top: 16px;
+		left: 64px;
+		right: 64px;
 
 		border-radius: 64px;
-		background-color: var(--color-gray);
-
-		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-		animation: 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0s 1 slideInFromTop;
+		background-color: #0f0f0f;
+		//background-color: var(--color-gray);
 
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-	}
-
-	@keyframes slideInFromTop {
-		0% {
-			transform: translateY(-200%);
-		}
-		100% {
-			transform: translateY(0);
-		}
 	}
 
 	.left {
@@ -70,8 +46,10 @@
 		align-items: center;
 		justify-content: left;
 
-		margin-left: 5px;
+		margin-left: 16px;
 		gap: 8px;
+
+		// @extend %opacityTransition;
 
 		a {
 			display: contents;
@@ -84,15 +62,16 @@
 		justify-content: center;
 
 		margin: 0;
-		height: 40px;
 		gap: 16px;
 
 		li {
 			display: contents;
 
 			a {
-				text-transform: uppercase;
-				color: white;
+				@extend %opacityTransition;
+
+				font-size: 1.1rem;
+				color: #ffffff;
 			}
 		}
 	}
@@ -102,16 +81,52 @@
 		align-items: center;
 		justify-content: right;
 
-		margin: 0;
-		margin-right: 8px;
-		gap: 8px;
+		a {
+			display: flex;
+			align-items: center;
+			gap: 8px;
 
-		li {
-			display: contents;
+			border-radius: 64px;
+			padding: 8px 16px;
+			margin: 8px;
+			margin-right: 8px;
 
-			a {
-				display: contents;
+			background-color: var(--color-primary);
+			color: white;
+		}
+
+		a:hover {
+			img {
+				animation-name: bounceLoop;
+				animation-timing-function: ease-in-out;
+				animation-duration: 0.3s;
+				animation-direction: alternate;
+				animation-iteration-count: infinite;
 			}
+		}
+
+		a:focus,
+		a:active {
+			background-color: var(--color-primary-dark);
+		}
+	}
+
+	%opacityTransition {
+		transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+		opacity: 0.8;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	@keyframes bounceLoop {
+		0% {
+			transform: translateX(0);
+		}
+
+		100% {
+			transform: translateX(5px);
 		}
 	}
 </style>
