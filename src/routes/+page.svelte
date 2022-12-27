@@ -24,17 +24,21 @@
 	<li><a href="https://br.linkedin.com/company/optimus-jr-automacao">Facebook</a></li>
 </ul>
 
-<style>
+<style lang="scss">
 	h1 {
 		width: 100%;
-	}
 
-	h1 img {
-		display: block;
-		margin: auto;
+		img {
+			display: block;
+			margin: auto;
 
-		width: 80vw;
-		max-width: 700px;
+			width: 80vw;
+			max-width: 700px;
+
+			@media (max-width: 600px) {
+				max-width: 400px;
+			}
+		}
 	}
 
 	ul {
@@ -42,6 +46,13 @@
 		justify-content: center;
 		padding: 0;
 		margin-top: 32px;
+
+		@media (max-width: 600px) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-top: 32px;
+		}
 	}
 
 	li {
@@ -50,30 +61,17 @@
 		font-size: 2em;
 		padding: 8px;
 		color: var(--color-gray);
-	}
 
-	li a {
-		color: var(--color-gray);
+		a {
+			color: var(--color-gray);
 
-		transition: border-bottom-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-		border-bottom: 2px solid transparent;
-	}
+			transition: border-bottom-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+			border-bottom: 2px solid transparent;
 
-	li a:hover {
-		color: var(--color-primary);
-		border-bottom: 2px solid currentcolor;
-	}
-
-	@media (max-width: 600px) {
-		ul {
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			margin-top: 32px;
-		}
-
-		h1 img {
-			max-width: 400px;
+			&:hover {
+				color: var(--color-primary);
+				border-bottom: 2px solid currentcolor;
+			}
 		}
 	}
 </style>

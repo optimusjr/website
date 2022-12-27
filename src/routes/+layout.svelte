@@ -1,6 +1,6 @@
 <script>
 	import Header from './Header.svelte';
-	import './styles.css';
+	import './styles.scss';
 </script>
 
 <div class="app">
@@ -10,7 +10,7 @@
 	</main>
 </div>
 
-<style>
+<style lang="scss">
 	.app {
 		display: flex;
 		flex-direction: column;
