@@ -2,6 +2,7 @@
 	import icon from '$lib/images/icon_white.svg';
 	import wordmark from '$lib/images/wordmark.svg';
 	import arrow from '$lib/images/icons/arrow-right.svg';
+	import menu from '$lib/images/icons/menu.svg';
 </script>
 
 <header>
@@ -19,10 +20,16 @@
 	</ul>
 
 	<div class="right">
-		<a href="/budget">
+		<a href="/budget" class="Button">
 			<div>Faça um Orçamento</div>
 			<img src={arrow} alt="Seta apontando para direita" height="24" width="24" />
 		</a>
+	</div>
+
+	<div class="mobile">
+		<button class="Button">
+			<img src={menu} alt="Seta apontando para direita" height="24" width="24" />
+		</button>
 	</div>
 </header>
 
@@ -35,10 +42,13 @@
 
 		border-radius: 64px;
 		background-color: #0f0f0f;
-		//background-color: var(--color-gray);
 
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
+
+		@media (max-width: 920px) {
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 
 	.left {
@@ -48,8 +58,6 @@
 
 		margin-left: 16px;
 		gap: 8px;
-
-		// @extend %opacityTransition;
 
 		a {
 			display: contents;
@@ -74,6 +82,10 @@
 				color: #ffffff;
 			}
 		}
+
+		@media (max-width: 920px) {
+			display: none;
+		}
 	}
 
 	.right {
@@ -82,32 +94,40 @@
 		justify-content: right;
 
 		a {
-			display: flex;
-			align-items: center;
-			gap: 8px;
-
-			border-radius: 64px;
-			padding: 8px 16px;
 			margin: 8px;
-			margin-right: 8px;
 
-			background-color: var(--color-primary);
-			color: white;
-		}
+			&:hover {
+				img {
+					animation-name: bounceLoop;
+					animation-timing-function: ease-in-out;
+					animation-duration: 0.3s;
+					animation-direction: alternate;
+					animation-iteration-count: infinite;
+				}
+			}
 
-		a:hover {
-			img {
-				animation-name: bounceLoop;
-				animation-timing-function: ease-in-out;
-				animation-duration: 0.3s;
-				animation-direction: alternate;
-				animation-iteration-count: infinite;
+			&:focus,
+			&:active {
+				background-color: var(--color-primary-dark);
 			}
 		}
 
-		a:focus,
-		a:active {
-			background-color: var(--color-primary-dark);
+		@media (max-width: 920px) {
+			display: none;
+		}
+	}
+
+	.mobile {
+		display: flex;
+		align-items: center;
+		justify-content: right;
+
+		button {
+			margin: 8px;
+		}
+
+		@media (min-width: 921px) {
+			display: none;
 		}
 	}
 
