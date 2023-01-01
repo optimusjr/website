@@ -1,5 +1,5 @@
 <script>
-	import icon from '$lib/images/icon_white.svg';
+	import icon from '$lib/images/icon.svg';
 	import wordmark from '$lib/images/wordmark.svg';
 	import arrow from '$lib/images/icons/arrow-right.svg';
 	import menu from '$lib/images/icons/menu.svg';
@@ -8,7 +8,9 @@
 <header>
 	<div class="left">
 		<a href="/">
-			<img src={icon} alt="Ícone da OPTIMUS Jr." height="32" width="32" />
+			<div class="iconWrapper">
+				<img src={icon} alt="Ícone da OPTIMUS Jr." height="36" width="36" />
+			</div>
 			<img src={wordmark} alt="OPTIMUS Jr. escrito em letras brancas" height="16" />
 		</a>
 	</div>
@@ -35,13 +37,13 @@
 
 <style lang="scss">
 	header {
-		position: fixed;
+		position: absolute;
 		top: 16px;
 		left: 64px;
 		right: 64px;
 
 		border-radius: 64px;
-		background-color: #0f0f0f;
+		background-color: var(--color-gray);
 
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
@@ -66,11 +68,19 @@
 		align-items: center;
 		justify-content: left;
 
-		margin-left: 16px;
-		gap: 8px;
-
 		a {
 			display: contents;
+		}
+
+		.iconWrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			aspect-ratio: 1;
+			width: auto;
+			height: 100%;
+			line-height: 0;
 		}
 	}
 
