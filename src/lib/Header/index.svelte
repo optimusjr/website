@@ -1,8 +1,16 @@
-<script>
+<script lang="ts">
+	import Mobile from './Mobile.svelte';
+
 	import icon from '$lib/images/icon.svg';
 	import wordmark from '$lib/images/wordmark.svg';
 	import arrow from '$lib/images/icons/arrow-right.svg';
 	import menu from '$lib/images/icons/menu.svg';
+
+	let showMobile = false;
+
+	function toggleMobile() {
+		showMobile = !showMobile;
+	}
 </script>
 
 <header>
@@ -29,20 +37,26 @@
 	</div>
 
 	<div class="mobile">
-		<button class="Button">
+		<button on:click={toggleMobile} class="Button">
 			<img src={menu} alt="Seta apontando para direita" height="24" width="24" />
 		</button>
 	</div>
+
+	{#if showMobile}
+		<Mobile />
+	{/if}
 </header>
 
 <style lang="scss">
+	@use '../styles/transitions.scss';
+
 	header {
 		position: absolute;
 		top: 16px;
 		left: 64px;
 		right: 64px;
 
-		border-radius: 64px;
+		border-radius: 28px;
 		background-color: var(--color-gray);
 
 		display: grid;
@@ -148,15 +162,6 @@
 
 		@media (min-width: 857px) {
 			display: none;
-		}
-	}
-
-	%opacityTransition {
-		transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-		opacity: 0.8;
-
-		&:hover {
-			opacity: 1;
 		}
 	}
 
