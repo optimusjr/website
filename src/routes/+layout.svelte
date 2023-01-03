@@ -5,7 +5,7 @@
 
 <div class="app">
 	<Header />
-	<main>
+	<main style="display:contents">
 		<slot />
 	</main>
 </div>
@@ -15,9 +15,5 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-	}
-
-	main {
-		margin: auto;
 	}
 </style>

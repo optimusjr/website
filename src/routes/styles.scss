@@ -13,6 +13,8 @@ body {
 
 	background-color: #efefef;
 
+	width: 100vw;
+	overflow-x: hidden;
 	min-height: 100vh;
 	margin: 0;
 }
@@ -39,17 +41,5 @@ button {
 
 	&:active {
 		background-color: var(--color-primary-dark);
-	}
-}
-
-@media (min-width: 768px) {
-	.hide-desktop {
-		display: none !important;
-	}
-}
-
-@media (max-width: 767px) {
-	.hide-mobile {
-		display: none !important;
 	}
 }
