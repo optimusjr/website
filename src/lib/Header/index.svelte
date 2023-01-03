@@ -13,7 +13,7 @@
 	}
 </script>
 
-<header>
+<header class:show-mobile={showMobile}>
 	<div class="left">
 		<a href="/">
 			<div class="iconWrapper">
@@ -42,9 +42,7 @@
 		</button>
 	</div>
 
-	{#if showMobile}
-		<Mobile />
-	{/if}
+	<Mobile />
 </header>
 
 <style lang="scss">
@@ -62,6 +60,10 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 
+		transition: max-height 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+		max-height: 56px;
+		overflow: hidden;
+
 		@media (max-width: 920px) {
 			left: 32px;
 			right: 32px;
@@ -75,6 +77,10 @@
 		@media (max-width: 856px) {
 			grid-template-columns: 1fr 1fr;
 		}
+	}
+
+	.show-mobile {
+		max-height: 281px;
 	}
 
 	.left {
@@ -138,11 +144,6 @@
 					animation-direction: alternate;
 					animation-iteration-count: infinite;
 				}
-			}
-
-			&:focus,
-			&:active {
-				background-color: var(--color-primary-dark);
 			}
 		}
 
