@@ -1,6 +1,15 @@
 <script lang="ts">
-	export let show = false;
+	import MenuIcon from './MenuIcon.svelte';
+
+	export let show: boolean;
+	export let toggleShow: () => void;
 </script>
+
+<div class="menu-button">
+	<button on:click={toggleShow} class="Button">
+		<MenuIcon open={show} />
+	</button>
+</div>
 
 <ul aria-hidden={!show}>
 	<li class="link"><a href="#about">Sobre Nós</a></li>
@@ -14,6 +23,20 @@
 
 <style lang="scss">
 	@use '../styles/transitions.scss';
+
+	.menu-button {
+		display: flex;
+		align-items: center;
+		justify-content: right;
+
+		button {
+			margin: 8px;
+		}
+
+		@media (min-width: 857px) {
+			display: none;
+		}
+	}
 
 	ul {
 		grid-column: 1/-1;

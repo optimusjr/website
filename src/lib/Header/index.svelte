@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Mobile from './Mobile.svelte';
-	import MenuIcon from './MenuIcon.svelte';
 
 	import icon from '$lib/images/icon.svg';
 	import wordmark from '$lib/images/wordmark.svg';
@@ -8,7 +7,7 @@
 
 	let showMobile = false;
 
-	function toggleMobile() {
+	function toggleShowMobile() {
 		showMobile = !showMobile;
 	}
 </script>
@@ -36,13 +35,7 @@
 		</a>
 	</div>
 
-	<div class="mobile">
-		<button on:click={toggleMobile} class="Button">
-			<MenuIcon open={showMobile} />
-		</button>
-	</div>
-
-	<Mobile show={showMobile} />
+	<Mobile show={showMobile} toggleShow={toggleShowMobile} />
 </header>
 
 <style lang="scss">
@@ -138,7 +131,7 @@
 
 			&:hover {
 				img {
-					animation-name: bounceLoop;
+					animation-name: wiggle-loop;
 					animation-timing-function: ease-in-out;
 					animation-duration: 0.3s;
 					animation-direction: alternate;
@@ -152,21 +145,7 @@
 		}
 	}
 
-	.mobile {
-		display: flex;
-		align-items: center;
-		justify-content: right;
-
-		button {
-			margin: 8px;
-		}
-
-		@media (min-width: 857px) {
-			display: none;
-		}
-	}
-
-	@keyframes bounceLoop {
+	@keyframes wiggle-loop {
 		0% {
 			transform: translateX(0);
 		}
