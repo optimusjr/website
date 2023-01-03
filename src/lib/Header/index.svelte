@@ -1,10 +1,10 @@
 <script lang="ts">
 	import Mobile from './Mobile.svelte';
+	import MenuIcon from './MenuIcon.svelte';
 
 	import icon from '$lib/images/icon.svg';
 	import wordmark from '$lib/images/wordmark.svg';
 	import arrow from '$lib/images/icons/arrow-right.svg';
-	import menu from '$lib/images/icons/menu.svg';
 
 	let showMobile = false;
 
@@ -38,11 +38,11 @@
 
 	<div class="mobile">
 		<button on:click={toggleMobile} class="Button">
-			<img src={menu} alt="Seta apontando para direita" height="24" width="24" />
+			<MenuIcon open={showMobile} />
 		</button>
 	</div>
 
-	<Mobile />
+	<Mobile show={showMobile} />
 </header>
 
 <style lang="scss">
@@ -80,7 +80,7 @@
 	}
 
 	.show-mobile {
-		max-height: 281px;
+		max-height: 233px;
 	}
 
 	.left {
