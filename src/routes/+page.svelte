@@ -1,6 +1,6 @@
 <script lang="ts">
-	import logo from '$lib/images/logo.svg';
-	import logo_horizontal from '$lib/images/logo_horizontal.svg';
+	import bedroomOff from '$lib/images/bedroom-off.png';
+	import bedroomOn from '$lib/images/bedroom-on.png';
 </script>
 
 <svelte:head>
@@ -12,25 +12,105 @@
 </svelte:head>
 
 <article>
-	<div>
+	<div class="text">
 		<h1>Leve o futuro para o seu lar com as nossas soluções de automação residencial.</h1>
 		<p>
 			Controle tudo em sua casa, desde a iluminação até a temperatura, de forma fácil e intuitiva
 			com o nosso aplicativo.
 		</p>
 	</div>
-	<img src={logo} alt="Logo da OPTIMUS Jr." height="300" />
+
+	<div class="animation">
+		<svg
+			width="794"
+			height="722"
+			version="1.1"
+			viewBox="0 0 794 722"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<image width="794" height="722" xlink:href={bedroomOff} />
+			<image class="top-image" width="794" height="722" xlink:href={bedroomOn} />
+		</svg>
+	</div>
 </article>
 
 <style lang="scss">
 	article {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
+		min-height: 100vh;
+	}
 
+	.text {
+		margin: auto;
+	}
+
+	.animation {
+		margin-top: auto;
 		width: 100%;
-		height: 100vh;
+		line-height: 0;
 
-		align-items: center;
-		justify-items: center;
+		image {
+			width: 100%;
+			max-width: 700px;
+		}
+
+		.top-image {
+			animation: fade-loop 10s ease-in-out infinite alternate;
+		}
+	}
+
+	@keyframes fade-loop {
+		0% {
+			opacity: 0;
+		}
+
+		10% {
+			opacity: 0;
+		}
+
+		20% {
+			opacity: 0;
+		}
+
+		30% {
+			opacity: 0;
+		}
+
+		33% {
+			opacity: 1;
+		}
+
+		40% {
+			opacity: 1;
+		}
+
+		50% {
+			opacity: 1;
+		}
+
+		60% {
+			opacity: 1;
+		}
+
+		70% {
+			opacity: 1;
+		}
+
+		73% {
+			opacity: 0;
+		}
+
+		80% {
+			opacity: 0;
+		}
+
+		90% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 0;
+		}
 	}
 </style>

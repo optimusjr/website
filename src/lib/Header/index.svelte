@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Mobile from './Mobile.svelte';
 
-	import icon from '$lib/images/icon.svg';
-	import wordmark from '$lib/images/wordmark.svg';
-	import arrow from '$lib/images/icons/arrow-right.svg';
+	import icon from '$lib/icons/OPTIMUS/icon.svg';
+	import wordmark from '$lib/icons/OPTIMUS/wordmark.svg';
+	import arrow from '$lib/icons/arrow-right.svg';
 
 	let showMobile = false;
 
