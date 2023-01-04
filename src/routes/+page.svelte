@@ -12,24 +12,25 @@
 </svelte:head>
 
 <article>
-	<div class="text">
-		<h1>Leve o futuro para o seu lar com as nossas soluções de automação residencial.</h1>
+	<div>
+		<h1>Leve o futuro para o seu lar.</h1>
 		<p>
-			Controle tudo em sua casa, desde a iluminação até a temperatura, de forma fácil e intuitiva
-			com o nosso aplicativo.
+			Controle tudo em sua casa, desde a iluminação até a temperatura, com as nossas soluções de
+			automação residencial
 		</p>
 	</div>
 
 	<div class="animation">
 		<svg
-			width="794"
-			height="722"
+			width="612"
+			height="508"
 			version="1.1"
-			viewBox="0 0 794 722"
+			viewBox="0 0 612 508"
 			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
 		>
-			<image width="794" height="722" xlink:href={bedroomOff} />
-			<image class="top-image" width="794" height="722" xlink:href={bedroomOn} />
+			<image class="bottom-image" xlink:href={bedroomOff} />
+			<image class="top-image" xlink:href={bedroomOn} />
 		</svg>
 	</div>
 </article>
@@ -37,26 +38,43 @@
 <style lang="scss">
 	article {
 		display: grid;
-		grid-template-columns: 1fr 2fr;
+		grid-template-columns: auto minmax(auto, 700px);
+		align-content: center;
+		align-items: center;
+		justify-items: center;
+
 		min-height: 100vh;
+
+		padding: 88px 64px;
+		box-sizing: border-box;
 	}
 
-	.text {
-		margin: auto;
+	h1 {
+		color: var(--color-primary);
+		font-size: 6em;
+		margin: 0;
+
+		text-transform: uppercase;
+	}
+
+	p {
+		color: var(--color-gray);
+		font-size: 2em;
+		margin: 0;
 	}
 
 	.animation {
-		margin-top: auto;
-		width: 100%;
-		line-height: 0;
-
-		image {
-			width: 100%;
+		svg {
 			max-width: 700px;
+			overflow: visible;
+		}
+
+		.bottom-image {
+			filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.25));
 		}
 
 		.top-image {
-			animation: fade-loop 10s ease-in-out infinite alternate;
+			animation: fade-loop 5s ease-in-out infinite alternate;
 		}
 	}
 
@@ -65,52 +83,16 @@
 			opacity: 0;
 		}
 
-		10% {
-			opacity: 0;
-		}
-
-		20% {
-			opacity: 0;
-		}
-
-		30% {
-			opacity: 0;
-		}
-
-		33% {
-			opacity: 1;
-		}
-
-		40% {
-			opacity: 1;
-		}
-
 		50% {
-			opacity: 1;
-		}
-
-		60% {
-			opacity: 1;
-		}
-
-		70% {
-			opacity: 1;
-		}
-
-		73% {
 			opacity: 0;
 		}
 
-		80% {
-			opacity: 0;
-		}
-
-		90% {
-			opacity: 0;
+		56% {
+			opacity: 1;
 		}
 
 		100% {
-			opacity: 0;
+			opacity: 1;
 		}
 	}
 </style>
