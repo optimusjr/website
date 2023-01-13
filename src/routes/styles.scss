@@ -5,13 +5,14 @@
 
 	--color-secondary: #c9e4ca;
 	--color-gray: #2f2f2f;
+	--color-white: #efefef;
 }
 
 body {
 	font-family: 'League Spartan', sans-serif;
 	scroll-behavior: smooth;
 
-	background-color: #efefef;
+	background-color: var(--color-white);
 
 	width: 100vw;
 	overflow-x: hidden;
