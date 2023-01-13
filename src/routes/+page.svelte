@@ -7,17 +7,14 @@
 	<title>OPTIMUS Jr. Controle e Automação | Empresa de Automação em Salvador</title>
 	<meta
 		name="description"
-		content="Realizando sonhos, automatizando vidas. futuro está em todos os lugares, permita que ele entre na sua casa com a melhor experiência, conforto, praticidade e economia!"
+		content="Empresa júnior de automação residencial, oferecemos soluções inovadoras e personalizadas para tornar sua casa mais inteligente."
 	/>
 </svelte:head>
 
 <article>
-	<div>
+	<div class="text">
 		<h1>Leve o futuro para o seu lar.</h1>
-		<p>
-			Controle tudo em sua casa, desde a iluminação até a temperatura, com as nossas soluções de
-			automação residencial
-		</p>
+		<p>Controle tudo em sua casa com as nossas soluções de automação residencial.</p>
 	</div>
 
 	<div class="animation">
@@ -37,21 +34,24 @@
 
 <style lang="scss">
 	article {
-		display: grid;
-		grid-template-columns: auto minmax(auto, 700px);
-		align-content: center;
+		display: flex;
+		flex-direction: column;
 		align-items: center;
-		justify-items: center;
 
 		min-height: 100vh;
 
 		padding: 88px 64px;
-		box-sizing: border-box;
+	}
+
+	.text {
+		padding: 50px;
+		width: 60%;
+		text-align: center;
 	}
 
 	h1 {
 		color: var(--color-primary);
-		font-size: 6em;
+		font-size: 5em;
 		margin: 0;
 
 		text-transform: uppercase;
@@ -65,7 +65,8 @@
 
 	.animation {
 		svg {
-			max-width: 700px;
+			width: auto;
+			height: auto;
 			overflow: visible;
 		}
 
