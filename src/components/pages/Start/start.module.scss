@@ -1,0 +1,48 @@
+@use "variables" as v;
+@use "helpers/animations" as a;
+
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+
+  padding: 88px 64px;
+}
+
+.text {
+  padding: 50px;
+  width: 60%;
+  text-align: center;
+
+  h1 {
+    color: v.$primary;
+    font-size: 5em;
+    margin: 0;
+
+    text-transform: uppercase;
+  }
+
+  p {
+    color: v.$gray;
+    font-size: 2em;
+    margin: 0;
+  }
+}
+
+.animation {
+  svg {
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  .bottom-image {
+    filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.25));
+  }
+
+  .top-image {
+    animation: fade-loop 5s ease-in-out infinite alternate;
+  }
+}

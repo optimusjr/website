@@ -1,0 +1,47 @@
+@use "helpers/transitions" as t;
+
+.menuButton {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+  button {
+    margin: 8px;
+  }
+
+  @media (min-width: 857px) {
+    display: none;
+  }
+}
+
+.menu {
+  grid-column: 1/-1;
+
+  padding: 0 64px;
+  padding-top: 16px;
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  border-top: rgba(255, 255, 255, 0.6) 1px solid;
+  font-size: 1.1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  li {
+    text-align: center;
+    list-style: none;
+  }
+
+  a {
+    @extend %opacityTransition;
+
+    color: #ffffff;
+  }
+
+  a {
+    min-height: 24px;
+    justify-content: center;
+  }
+}

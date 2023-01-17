@@ -18,7 +18,10 @@ jobs:
         with:
           version: latest
           run_install: true
-      - name: Build and Export
+      - name: Build
+        run: pnpm build
+      - name: Export
+        run: pnpm export
         run: pnpm build
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
