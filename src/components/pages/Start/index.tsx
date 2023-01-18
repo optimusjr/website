@@ -1,3 +1,6 @@
+import Image from "next/image";
+
+import bedroomOn from "../../../../public/images/bedroom-zoom-on.png";
 import styles from "./start.module.scss";
 
 const Start = () => {
@@ -8,18 +11,8 @@ const Start = () => {
         <p>Controle tudo em sua casa com as nossas soluções de automação residencial.</p>
       </div>
 
-      <div className={styles.animation}>
-        <svg
-          width="612"
-          height="508"
-          version="1.1"
-          viewBox="0 0 612 508"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-        >
-          <image className={styles.bottomImage} xlinkHref="/images/bedroom-off.png" />
-          <image className={styles.topImage} xlinkHref="/images/bedroom-on.png" />
-        </svg>
+      <div className={styles.image}>
+        <Image src={bedroomOn} alt="Quarto com as luzes acessas" />
       </div>
     </article>
   );

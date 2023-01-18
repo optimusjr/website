@@ -23,7 +23,7 @@ export default function Mobile({ show, toggleShow }: Props) {
       <ul className={styles.menu} aria-hidden={!show}>
         <Links />
 
-        <li>
+        <li className={styles.button}>
           <Button as={Link} href="/budget">
             Faça um Orçamento
           </Button>

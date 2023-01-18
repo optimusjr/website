@@ -17,10 +17,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <Layout>
-        <main className={league.className}>
-          <Component {...pageProps} />
-        </main>
+      <Layout font={league}>
+        <Component {...pageProps} />
       </Layout>
     </>
   );

@@ -1,0 +1,11 @@
+@use "variables" as v;
+@use "helpers/transitions" as t;
+
+.link {
+  display: contents;
+  a {
+    @extend %opacityTransition;
+
+    text-align: center;
+  }
+}
