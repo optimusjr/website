@@ -1,10 +1,15 @@
 @use "variables" as v;
-@use "helpers/transitions" as t;
 
 .link {
   display: contents;
   a {
-    @extend %opacityTransition;
+    transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    color: #5a5a5a;
+
+    &:hover {
+      color: v.$gray;
+    }
+
     text-align: center;
   }
 }

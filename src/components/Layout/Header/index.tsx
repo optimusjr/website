@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -16,7 +17,13 @@ export default function Header() {
 
   return (
     <div className={styles.container}>
-      <header className={showMobile ? `${styles.header} ${styles.showMobile}` : styles.header}>
+      <motion.header
+        initial={{ y: -64 }}
+        animate={{ y: 0 }}
+        transition={{ type: "tween" }}
+        onClick={toggleShowMobile}
+        className={styles.header}
+      >
         <div className={styles.left}>
           <Link href="/">
             <div className={styles.iconWrapper}>
@@ -34,20 +41,22 @@ export default function Header() {
           <Links />
         </ul>
 
-        <div className={styles.right}>
+        <motion.div className={styles.right} whileHover="hover" animate="rest">
           <Button as={Link} href="/budget">
             <div>Faça um Orçamento</div>
-            <img
+
+            <motion.img
+              variants={{ hover: { x: [0, 5, 0], transition: { repeat: Infinity } } }}
               src="/images/icons/arrow-right.svg"
               alt="Seta apontando para direita"
               height="24"
               width="24"
             />
           </Button>
-        </div>
+        </motion.div>
 
         <Mobile show={showMobile} toggleShow={toggleShowMobile} />
-      </header>
+      </motion.header>
     </div>
   );
 }

@@ -1,5 +1,4 @@
 @use "variables" as v;
-@use "helpers/transitions" as t;
 
 .menuButton {
   display: flex;
@@ -15,22 +14,19 @@
   }
 }
 
-.menu {
+.menuContainer {
   grid-column: 1/-1;
+}
 
-  padding: 16px 64px;
-  margin-top: 0;
-
+.menu {
   display: flex;
   flex-direction: column;
   gap: 16px;
 
+  padding: 0;
+
   a {
     min-height: 24px;
-  }
-
-  @media (max-width: 374px) {
-    padding: 16px 32px;
   }
 }
 

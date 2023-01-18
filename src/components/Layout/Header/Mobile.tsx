@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 
 import Button from "@/components/common/Button";
@@ -20,15 +21,30 @@ export default function Mobile({ show, toggleShow }: Props) {
         </Button>
       </div>
 
-      <ul className={styles.menu} aria-hidden={!show}>
-        <Links />
+      <AnimatePresence initial={false}>
+        {show && (
+          <motion.div
+            initial="collapsed"
+            animate="open"
+            exit="collapsed"
+            variants={{
+              open: { opacity: 1, height: "auto" },
+              collapsed: { opacity: 0, height: 0 },
+            }}
+            className={styles.menuContainer}
+          >
+            <ul className={styles.menu}>
+              <Links />
 
-        <li className={styles.button}>
-          <Button as={Link} href="/budget">
-            Faça um Orçamento
-          </Button>
-        </li>
-      </ul>
+              <li className={styles.button}>
+                <Button as={Link} href="/budget">
+                  Faça um Orçamento
+                </Button>
+              </li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
