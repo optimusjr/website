@@ -3,18 +3,56 @@
 .start {
   display: flex;
   align-items: center;
-  gap: 64px;
-  padding: 64px;
 
   background-color: v.$secondary;
   box-sizing: border-box;
-  height: 100vh;
+  min-height: 100vh;
+
+  gap: 64px;
+  padding: 64px;
+  padding-top: 64px+64px; // Normal padding + tamanho do header
+
+  // Media queries para manter o padding da página alinhado com os do header
+  @media (max-width: 920px) {
+    gap: 32px;
+    padding: 32px;
+    padding-top: 32px + 64px; // Normal padding + tamanho do  header
+  }
+
+  @media (max-width: 425px) {
+    gap: 16px;
+    padding: 16px;
+    padding-top: 16px + 64px; // Normal padding + tamanho do  header
+  }
+
+  // Media queries para ajustar o layout
+  @media (max-width: 767px) {
+    flex-direction: column;
+    justify-content: center;
+
+    .text {
+      width: auto;
+      text-align: center;
+
+      h1 {
+        font-size: calc(1em + 5vh);
+      }
+
+      p {
+        color: v.$gray;
+        font-size: calc(1em + 2vh);
+        margin: 0;
+      }
+    }
+  }
 }
 
 .text {
+  width: min-content;
+
   h1 {
     color: v.$primary;
-    font-size: 5em;
+    font-size: calc(1em + 4vw);
     margin: 0;
 
     text-transform: uppercase;
@@ -22,15 +60,29 @@
 
   p {
     color: v.$gray;
-    font-size: 2em;
+    font-size: calc(1em + 1vw);
     margin: 0;
   }
 }
 
 .image {
+  align-self: stretch;
+  position: relative;
+  overflow: hidden;
+
+  div {
+    line-height: 0;
+    height: 100%;
+  }
+
   img {
-    width: 100%;
-    height: auto;
     border-radius: v.$radius;
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    top: 0;
+    left: 0;
   }
 }
