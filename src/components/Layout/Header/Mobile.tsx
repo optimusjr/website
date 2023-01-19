@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import Link from "next/link";
 
 import Button from "@/components/common/Button";
@@ -23,7 +23,7 @@ export default function Mobile({ show, toggleShow }: Props) {
 
       <AnimatePresence initial={false}>
         {show && (
-          <motion.div
+          <m.div
             initial="collapsed"
             animate="open"
             exit="collapsed"
@@ -42,7 +42,7 @@ export default function Mobile({ show, toggleShow }: Props) {
                 </Button>
               </li>
             </ul>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </>

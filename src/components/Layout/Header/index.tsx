@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -17,7 +17,7 @@ export default function Header() {
 
   return (
     <div className={styles.container}>
-      <motion.header
+      <m.header
         initial={{ y: -64 }}
         animate={{ y: 0 }}
         transition={{ type: "tween" }}
@@ -41,11 +41,11 @@ export default function Header() {
           <Links />
         </ul>
 
-        <motion.div className={styles.right} whileHover="hover" animate="rest">
+        <m.div className={styles.right} whileHover="hover" animate="rest">
           <Button as={Link} href="/budget">
             <div>Faça um Orçamento</div>
 
-            <motion.img
+            <m.img
               variants={{ hover: { x: [0, 5, 0], transition: { repeat: Infinity } } }}
               src="/images/icons/arrow-right.svg"
               alt="Seta apontando para direita"
@@ -53,10 +53,10 @@ export default function Header() {
               width="24"
             />
           </Button>
-        </motion.div>
+        </m.div>
 
         <Mobile show={showMobile} toggleShow={toggleShowMobile} />
-      </motion.header>
+      </m.header>
     </div>
   );
 }
