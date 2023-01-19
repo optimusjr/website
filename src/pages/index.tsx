@@ -1,5 +1,6 @@
 import Head from "next/head";
 
+import Benefits from "@/components/pages/Benefits";
 import Start from "@/components/pages/Start";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
       </Head>
 
       <Start />
+      <Benefits />
     </>
   );
 };

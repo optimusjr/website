@@ -1,0 +1,85 @@
+@use "variables" as v;
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: v.$white;
+  box-sizing: border-box;
+  min-height: 100vh;
+
+  padding: 64px;
+
+  // Media queries para manter o padding da página alinhado com os do header
+  @media (max-width: 920px) {
+    padding: 32px;
+  }
+
+  @media (max-width: 425px) {
+    padding: 16px;
+  }
+
+  %align-left {
+    text-align: left;
+    width: 100%;
+  }
+
+  span {
+    @extend %align-left;
+
+    color: v.$primary;
+    font-weight: 500;
+    font-size: calc(1em + 1vw);
+  }
+
+  h2 {
+    @extend %align-left;
+
+    color: v.$gray;
+    font-size: calc(2em + 2vw);
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+
+  gap: 64px;
+  padding: 64px;
+
+  li {
+    background-color: white;
+    padding: 32px;
+
+    border-radius: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  svg {
+    width: 128px;
+    margin: 0 auto;
+
+    fill: v.$gray;
+  }
+
+  h3 {
+    color: v.$primary;
+    font-size: 1.5em;
+  }
+
+  p {
+    margin: 0;
+
+    color: v.$gray;
+    font-size: 1.2em;
+  }
+}
