@@ -1,8 +1,9 @@
 import { m } from "framer-motion";
 import Image from "next/image";
 
-import bedroomOff from "../../../../public/images/bedroom-off.png";
-import bedroomOn from "../../../../public/images/bedroom-on.png";
+import bedroomOff from "@/images/bedroom-off.png";
+import bedroomOn from "@/images/bedroom-on.png";
+
 import styles from "./start.module.scss";
 
 const Start = () => {
