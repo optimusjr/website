@@ -7,7 +7,7 @@
 /cypress/videos
 
 # Typescript
-.tsbuildinfo
+*.tsbuildinfo
 
 # dependencies
 /node_modules
