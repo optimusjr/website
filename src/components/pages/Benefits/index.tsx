@@ -1,4 +1,5 @@
 import styles from "./benefits.module.scss";
+import Card from "./Card";
 import DeviceIcon from "./icons/Devices";
 import HomeAssistantIcon from "./icons/HomeAssistant";
 import LeafIcon from "./icons/Leaf";
@@ -13,7 +14,7 @@ const Benefits = () => {
       <h2>Porque automatizar sua casa?</h2>
 
       <ul className={styles.list}>
-        <li>
+        <Card>
           <DeviceIcon />
 
           <h3>Praticidade</h3>
@@ -21,9 +22,9 @@ const Benefits = () => {
             Nunca foi tão prático realizar suas atividades diárias, você poderá programar seus
             dispositivos para realizarem essas atividades por você e te auxiliar no dia a dia.
           </p>
-        </li>
+        </Card>
 
-        <li>
+        <Card>
           <LeafIcon />
 
           <h3>Economia</h3>
@@ -31,9 +32,9 @@ const Benefits = () => {
             Monitore seu gasto de energia, tenha controle dos seus dispositivos à distância e
             economize na conta de energia.
           </p>
-        </li>
+        </Card>
 
-        <li>
+        <Card>
           <ShieldHomeIcon />
 
           <h3>Segurança</h3>
@@ -41,18 +42,18 @@ const Benefits = () => {
             Seu ambiente poderá ser controlado e monitorado de qualquer lugar do mundo com apenas um
             toque.
           </p>
-        </li>
+        </Card>
 
-        <li>
+        <Card>
           <SofaIcon />
 
           <h3>Conforto</h3>
           <p>
             Tenha o controle da sua casa na palma da sua mão, sem precisar se levantar do seu lugar.
           </p>
-        </li>
+        </Card>
 
-        <li>
+        <Card>
           <RocketIcon />
 
           <h3>Tecnologia de Ponta</h3>
@@ -60,9 +61,9 @@ const Benefits = () => {
             Integração com as tecnologias emergentes do mercado. Controle sua casa por comando de
             voz, seja esse por Alexa ou até mesmo do seu celular.
           </p>
-        </li>
+        </Card>
 
-        <li>
+        <Card>
           <HomeAssistantIcon />
 
           <h3>Design</h3>
@@ -70,7 +71,7 @@ const Benefits = () => {
             Dê ao seu ambiente um toque futurístico! Além de todas as demais vantagens, seu espaço
             ficará moderno e bonito, valorizando o imóvel.
           </p>
-        </li>
+        </Card>
       </ul>
     </article>
   );
