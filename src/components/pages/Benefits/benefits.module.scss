@@ -1,4 +1,5 @@
 @use "variables" as v;
+@use "utils";
 
 .benefits {
   display: flex;
@@ -7,26 +8,22 @@
 
   background-color: v.$white;
   box-sizing: border-box;
-  min-height: 100vh;
 
-  padding: 64px;
-
-  // Media queries para manter o padding da página alinhado com os do header
-  @media (max-width: 920px) {
-    padding: 32px;
-  }
-
-  @media (max-width: 425px) {
-    padding: 16px;
-  }
+  @extend %defaultPaddings;
 
   %align-left {
     text-align: left;
     width: 100%;
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   span {
     @extend %align-left;
+
+    padding-bottom: 16px;
 
     color: v.$primary;
     font-weight: 500;
@@ -43,13 +40,24 @@
 
 .list {
   list-style: none;
-  padding: 0;
   margin: 0;
+
+  @extend %defaultPaddings;
+  @extend %defaultGaps;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: 1fr;
 
-  gap: 64px;
-  padding: 64px;
+  @media (min-width: 2560px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 1225px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
 }

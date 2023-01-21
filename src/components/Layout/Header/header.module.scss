@@ -1,18 +1,13 @@
 @use "variables" as v;
+@use "utils";
 
 .container {
-  position: absolute;
-  padding: 0 64px;
-  right: 0;
-  left: 0;
+  background-color: v.$secondary;
 
-  @media (max-width: 920px) {
-    padding: 0 32px;
-  }
+  @extend %defaultPaddings;
 
-  @media (max-width: 425px) {
-    padding: 0 16px;
-  }
+  padding-top: unset;
+  padding-bottom: unset;
 }
 
 .header {

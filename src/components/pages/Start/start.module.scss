@@ -1,4 +1,5 @@
 @use "variables" as v;
+@use "utils";
 
 .start {
   display: flex;
@@ -6,24 +7,10 @@
 
   background-color: v.$secondary;
   box-sizing: border-box;
-  min-height: 100vh;
+  min-height: calc(100vh - 64px); // Subtrair o valor do header
 
-  gap: 64px;
-  padding: 64px;
-  padding-top: 64px+64px; // Normal padding + tamanho do header
-
-  // Media queries para manter o padding da página alinhado com os do header
-  @media (max-width: 920px) {
-    gap: 32px;
-    padding: 32px;
-    padding-top: 32px + 64px; // Normal padding + tamanho do  header
-  }
-
-  @media (max-width: 425px) {
-    gap: 16px;
-    padding: 16px;
-    padding-top: 16px + 64px; // Normal padding + tamanho do  header
-  }
+  @extend %defaultPaddings;
+  @extend %defaultGaps;
 
   // Media queries para ajustar o layout
   @media (max-width: 768px) {

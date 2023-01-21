@@ -1,0 +1,23 @@
+%defaultPaddings {
+  padding: 64px;
+
+  @media (max-width: 920px) {
+    padding: 32px;
+  }
+
+  @media (max-width: 425px) {
+    padding: 16px;
+  }
+}
+
+%defaultGaps {
+  gap: 64px;
+
+  @media (max-width: 920px) {
+    gap: 32px;
+  }
+
+  @media (max-width: 425px) {
+    gap: 16px;
+  }
+}

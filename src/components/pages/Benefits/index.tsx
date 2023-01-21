@@ -11,7 +11,7 @@ const Benefits = () => {
   return (
     <article className={styles.benefits}>
       <span>Vantagens</span>
-      <h2>Porque automatizar sua casa?</h2>
+      <h2>Por que automatizar sua casa?</h2>
 
       <ul className={styles.list}>
         <Card>
