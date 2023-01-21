@@ -1,0 +1,12 @@
+// Arquivo para exportar as variáveis SCSS e poder utilizar-las no TypeScript
+
+@use "variables" as v;
+
+:export {
+  primaryColor: v.$primary;
+  secondaryColor: v.$secondary;
+
+  shadow2: v.$shadow-dp2;
+  shadow3: v.$shadow-dp3;
+  shadow4: v.$shadow-dp4;
+}

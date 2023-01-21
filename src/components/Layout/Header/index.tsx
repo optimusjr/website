@@ -20,8 +20,7 @@ export default function Header() {
       <m.header
         initial={{ y: -64 }}
         animate={{ y: 0 }}
-        transition={{ type: "tween" }}
-        onClick={toggleShowMobile}
+        transition={{ type: "tween", duration: 0.4, delay: 0.4 }}
         className={styles.header}
       >
         <div className={styles.left}>
