@@ -3,24 +3,24 @@ import Image from "next/image";
 
 import bedroomOff from "@/images/bedroom-off.png";
 import bedroomOn from "@/images/bedroom-on.png";
-import variables from "@/styles/variables.module.scss";
 
 import styles from "./start.module.scss";
 
+const fadeInTop = {
+  initial: { y: 20, opacity: 0 },
+  whileInView: { y: 0, opacity: 1 },
+  viewport: { once: true },
+};
+
 const Start = () => {
   return (
-    <m.article className={styles.start}>
-      <div className={styles.text}>
+    <article className={styles.start}>
+      <m.div {...fadeInTop} transition={{ duration: 0.4 }} className={styles.text}>
         <h1>Leve o futuro para o seu lar.</h1>
         <p>Controle tudo em sua casa com as nossas soluções de automação residencial.</p>
-      </div>
+      </m.div>
 
-      <m.div
-        initial={{ scale: 1.1, boxShadow: variables.shadow4 }}
-        animate={{ scale: 1, boxShadow: variables.shadow3 }}
-        transition={{ duration: 0.4 }}
-        className={styles.image}
-      >
+      <m.div {...fadeInTop} transition={{ duration: 0.4 }} className={styles.image}>
         <div>
           <Image src={bedroomOff} alt="Quarto com as luzes apagadas" />
         </div>
@@ -37,7 +37,7 @@ const Start = () => {
           />
         </m.div>
       </m.div>
-    </m.article>
+    </article>
   );
 };
 
