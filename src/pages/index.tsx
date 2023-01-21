@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Benefits from "@/components/pages/Benefits";
+import Differentials from "@/components/pages/Differentials";
 import Start from "@/components/pages/Start";
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
       </Head>
 
       <Start />
+      <Differentials />
       <Benefits />
     </>
   );

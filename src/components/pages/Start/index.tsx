@@ -17,7 +17,7 @@ const Start = () => {
     <article className={styles.start}>
       <m.div {...fadeInTop} transition={{ duration: 0.4 }} className={styles.text}>
         <h1>Leve o futuro para o seu lar.</h1>
-        <p>Controle tudo em sua casa com as nossas soluções de automação residencial.</p>
+        <p>Transforme sua casa com as nossas soluções de automação residencial.</p>
       </m.div>
 
       <m.div {...fadeInTop} transition={{ duration: 0.4 }} className={styles.image}>

@@ -1,0 +1,64 @@
+@use "variables" as v;
+@use "utils";
+
+.differentials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+  background-color: v.$primary;
+  box-sizing: border-box;
+
+  @extend %defaultPaddings;
+
+  %align-left {
+    text-align: left;
+    width: 100%;
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  span {
+    @extend %align-left;
+
+    padding-bottom: 16px;
+
+    color: v.$white;
+    font-weight: 500;
+    font-size: calc(1em + 1vw);
+  }
+
+  h2 {
+    @extend %align-left;
+
+    color: v.$secondary;
+    font-size: calc(2em + 2vw);
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+
+  @extend %defaultPaddings;
+  @extend %defaultGaps;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+
+  @media (min-width: 2560px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 1225px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
