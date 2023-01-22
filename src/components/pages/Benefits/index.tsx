@@ -1,5 +1,6 @@
+import Card from "@/components/common/Card";
+
 import styles from "./benefits.module.scss";
-import Card from "./Card";
 import DeviceIcon from "./icons/Devices";
 import HomeAssistantIcon from "./icons/HomeAssistant";
 import LeafIcon from "./icons/Leaf";
