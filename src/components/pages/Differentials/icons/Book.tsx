@@ -1,8 +1,30 @@
+import { m } from "framer-motion";
+
+const icon = {
+  hidden: {
+    scale: 0,
+    rotate: 180,
+  },
+  visible: {
+    scale: 1,
+    rotate: 0,
+  },
+};
+
 const BookIcon = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path d="M6 20h7v2H6c-1.11 0-2-.89-2-2V4a2 2 0 012-2h12a2 2 0 012 2v8.54l-1.5-.82-.5.28V4h-5v8l-2.5-2.25L8 12V4H6v16m18-3l-5.5-3-5.5 3 5.5 3 5.5-3m-9 2.09v2L18.5 23l3.5-1.91v-2L18.5 21 15 19.09z"></path>
-    </svg>
+    <m.svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      <m.path
+        variants={icon}
+        d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"
+      />
+    </m.svg>
   );
 };
 
