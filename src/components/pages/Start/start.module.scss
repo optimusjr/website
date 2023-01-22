@@ -6,7 +6,6 @@
   align-items: center;
 
   background-color: v.$secondary;
-  box-sizing: border-box;
   min-height: calc(100vh - 64px); // Subtrair o valor do header
 
   @extend %defaultPaddings;
