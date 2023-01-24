@@ -34,6 +34,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 1fr;
+
+  @media (max-width: 1180px) {
+    padding-left: 0;
+    padding-right: 0;
+    gap: 32px;
+  }
+
+  @media (max-width: 919px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .item {
@@ -65,5 +75,19 @@
     margin: 0 auto;
 
     fill: v.$gray;
+  }
+
+  @media (max-width: 424px) {
+    h3 {
+      font-size: 1.2em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+
+    svg {
+      width: 100%;
+    }
   }
 }
