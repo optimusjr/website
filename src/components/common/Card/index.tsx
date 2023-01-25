@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import styles from "./card.module.scss";
 
 interface Props {
-  layout: "column" | "row";
+  layout?: "column" | "row";
   children: ReactNode;
 }
 
