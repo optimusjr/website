@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import Benefits from "@/components/pages/Benefits";
 import Differentials from "@/components/pages/Differentials";
+import Services from "@/components/pages/Services";
 import Start from "@/components/pages/Start";
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
 
       <Start />
       <Differentials />
+      <Services />
       <Benefits />
     </>
   );
