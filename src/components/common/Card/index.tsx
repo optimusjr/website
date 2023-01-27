@@ -1,11 +1,10 @@
 import { m } from "framer-motion";
-import type { ReactNode } from "react";
 
 import styles from "./card.module.scss";
 
 interface Props {
   layout?: "column" | "row";
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 const Card = ({ layout = "column", children }: Props) => {

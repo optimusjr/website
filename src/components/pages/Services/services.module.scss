@@ -1,34 +1,11 @@
 @use "variables" as v;
 @use "utils";
 
-.services {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  text-align: center;
-  background-color: v.$secondary;
-
-  @extend %defaultPaddings;
-
-  span {
-    padding-bottom: 16px;
-    color: v.$primary;
-    font-weight: 500;
-    font-size: calc(1rem + 1vw);
-  }
-
-  h2 {
-    color: v.$gray;
-    font-size: calc(2rem + 2vw);
-  }
-}
-
 .list {
   list-style: none;
   margin: 0;
+  padding: 0;
 
-  @extend %defaultPaddings;
   @extend %defaultGaps;
 
   display: grid;

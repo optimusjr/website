@@ -1,4 +1,6 @@
 import Card from "@/components/common/Card";
+import Page from "@/components/common/Page";
+import Title from "@/components/common/Title";
 
 import styles from "./differentials.module.scss";
 import CapIcon from "./icons/Book";
@@ -8,9 +10,11 @@ import TenIcon from "./icons/Ten";
 
 const Differentials = () => {
   return (
-    <article className={styles.differentials}>
-      <span>Diferenciais</span>
-      <h2>Por que somos a escolha certa?</h2>
+    <Page backgroundColor="white">
+      <Title>
+        <span>Diferenciais</span>
+        <h2>Por que somos a escolha certa?</h2>
+      </Title>
 
       <ul className={styles.list}>
         <Card layout="row">
@@ -45,7 +49,7 @@ const Differentials = () => {
           </div>
         </Card>
       </ul>
-    </article>
+    </Page>
   );
 };
 

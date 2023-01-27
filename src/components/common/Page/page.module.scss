@@ -1,0 +1,23 @@
+@use "variables" as v;
+@use "utils";
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @extend %defaultPaddings;
+  @extend %defaultGaps;
+}
+
+.white {
+  background-color: v.$white;
+}
+
+.secondary {
+  background-color: v.$secondary;
+}
+
+.full {
+  min-height: 100vh;
+}

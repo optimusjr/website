@@ -1,12 +1,16 @@
 import Card from "@/components/common/Card";
+import Page from "@/components/common/Page";
+import Title from "@/components/common/Title";
 
 import styles from "./services.module.scss";
 
 const Services = () => {
   return (
-    <article className={styles.services}>
-      <span>Serviços</span>
-      <h2>Conheça nossas soluções</h2>
+    <Page backgroundColor="secondary">
+      <Title>
+        <span>Serviços</span>
+        <h2>Conheça nossas soluções</h2>
+      </Title>
 
       <ul className={styles.list}>
         <Card>
@@ -83,7 +87,7 @@ const Services = () => {
           </p>
         </Card>
       </ul>
-    </article>
+    </Page>
   );
 };
 

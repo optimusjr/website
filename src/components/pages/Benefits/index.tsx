@@ -1,4 +1,6 @@
 import Card from "@/components/common/Card";
+import Page from "@/components/common/Page";
+import Title from "@/components/common/Title";
 
 import styles from "./benefits.module.scss";
 import DeviceIcon from "./icons/Devices";
@@ -10,9 +12,11 @@ import SofaIcon from "./icons/Sofa";
 
 const Benefits = () => {
   return (
-    <article className={styles.benefits}>
-      <span>Vantagens</span>
-      <h2>Por que automatizar sua casa?</h2>
+    <Page backgroundColor="white">
+      <Title>
+        <span>Vantagens</span>
+        <h2>Por que automatizar sua casa?</h2>
+      </Title>
 
       <ul className={styles.list}>
         <Card>
@@ -74,7 +78,7 @@ const Benefits = () => {
           </p>
         </Card>
       </ul>
-    </article>
+    </Page>
   );
 };
 

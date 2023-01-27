@@ -1,6 +1,7 @@
 import { m } from "framer-motion";
 import Image from "next/image";
 
+import Page from "@/components/common/Page";
 import bedroomOff from "@/images/bedroom-off.png";
 import bedroomOn from "@/images/bedroom-on.png";
 
@@ -14,7 +15,7 @@ const fadeInTop = {
 
 const Start = () => {
   return (
-    <article className={styles.start}>
+    <Page backgroundColor="secondary" className={styles.start}>
       <m.div {...fadeInTop} transition={{ duration: 0.4 }} className={styles.text}>
         <h1>Leve o futuro para o seu lar.</h1>
         <p>Transforme sua casa com as nossas soluções de automação residencial.</p>
@@ -37,7 +38,7 @@ const Start = () => {
           />
         </m.div>
       </m.div>
-    </article>
+    </Page>
   );
 };
 

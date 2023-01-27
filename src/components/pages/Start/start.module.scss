@@ -2,14 +2,9 @@
 @use "utils";
 
 .start {
-  display: flex;
-  align-items: center;
+  flex-direction: row;
 
-  background-color: v.$secondary;
   min-height: calc(100vh - 64px); // Subtrair o valor do header
-
-  @extend %defaultPaddings;
-  @extend %defaultGaps;
 
   @media (max-width: 768px) {
     flex-direction: column;
