@@ -6,7 +6,11 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 
 import Layout from "@/components/Layout";
-const league = League_Spartan({ subsets: ["latin"] });
+const league = League_Spartan({
+  subsets: ["latin"],
+  fallback: ["Roboto", "sans-serif"],
+  display: "swap",
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
