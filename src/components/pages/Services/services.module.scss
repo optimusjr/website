@@ -2,7 +2,7 @@
 @use "utils";
 
 .pageContainer {
-  height: 300vh;
+  height: 500vh;
 }
 
 .sticky {
@@ -10,6 +10,10 @@
   top: 0;
 
   overflow: hidden;
+}
+
+.scroll {
+  width: min-content;
 }
 
 .services {
