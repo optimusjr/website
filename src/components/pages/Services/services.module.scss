@@ -1,17 +1,58 @@
 @use "variables" as v;
 @use "utils";
 
+.pageContainer {
+  height: 300vh;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+
+  overflow: hidden;
+}
+
+.services {
+  flex-direction: row;
+  width: min-content;
+
+  span {
+    text-align: left;
+    font-size: calc(1rem + 3vw);
+  }
+
+  h2 {
+    text-align: left;
+    font-size: calc(2rem + 6vw);
+  }
+}
+
 .list {
+  display: flex;
   @extend %defaultGaps;
 
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-
-  width: 95%;
-  overflow-x: scroll;
-
   li {
-    min-width: 300px;
+    padding: 0;
+    width: 300px;
+
+    img {
+      transform: translateY(-0.5px); // Para esconder a estranha borda branca que fica
+      border-radius: v.$radius;
+
+      width: 100%;
+      height: auto;
+    }
+
+    .content {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    a {
+      margin: auto;
+      min-height: 40px;
+    }
   }
 }
