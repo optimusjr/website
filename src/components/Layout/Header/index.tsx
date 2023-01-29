@@ -17,12 +17,7 @@ export default function Header() {
 
   return (
     <div className={styles.container}>
-      <m.header
-        initial={{ y: -64 }}
-        animate={{ y: 0 }}
-        transition={{ type: "tween", duration: 0.4, delay: 0.4 }}
-        className={styles.header}
-      >
+      <header className={styles.header}>
         <div className={styles.left}>
           <Link href="/">
             <div className={styles.iconWrapper}>
@@ -55,7 +50,7 @@ export default function Header() {
         </m.div>
 
         <Mobile show={showMobile} toggleShow={toggleShowMobile} />
-      </m.header>
+      </header>
     </div>
   );
 }

@@ -21,8 +21,22 @@
   font-size: 1.2rem;
   overflow: hidden;
 
+  transform: translateY(-100%);
+  animation: slide-from-top 0.4s 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+
   @media (max-width: 856px) {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@keyframes slide-from-top {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
 
