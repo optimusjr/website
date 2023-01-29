@@ -50,7 +50,7 @@ const Services = () => {
     <div className={styles.pageContainer} ref={containerRef}>
       <div className={styles.sticky}>
         <m.div className={styles.scroll} ref={scrollRef} style={{ x }}>
-          <Page backgroundColor="secondary" fullHeight className={styles.services}>
+          <Page id="services" backgroundColor="secondary" fullHeight className={styles.services}>
             <Title>
               <span>Serviços</span>
               <h2>Conheça as&nbsp;nossas soluções</h2>
