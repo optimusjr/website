@@ -3,7 +3,9 @@
 
 .serviceCard {
   padding: 0;
-  width: 300px;
+  width: 30vw;
+  max-width: 500px;
+  min-width: 300px;
 
   img {
     transform: translateY(-0.5px); // Para esconder a estranha borda branca que fica
