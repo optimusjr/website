@@ -7,9 +7,16 @@
   max-width: 500px;
   min-width: 300px;
 
+  .imageContainer {
+    display: table;
+    line-height: 0;
+    border-radius: v.$radius;
+
+    overflow: hidden;
+  }
+
   img {
     transform: translateY(-0.5px); // Para esconder a estranha borda branca que fica
-    border-radius: v.$radius;
 
     width: 100%;
     height: auto;

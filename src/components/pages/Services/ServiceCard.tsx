@@ -1,3 +1,4 @@
+import { m } from "framer-motion";
 import Link from "next/link";
 
 import Button from "@/components/common/Button";
@@ -12,8 +13,19 @@ export interface Props {
 
 const ServiceCard = ({ image, children }: Props) => {
   return (
-    <Card noAnime className={styles.serviceCard}>
-      {image}
+    <Card
+      customAnime={{
+        initial: { scale: 0.9 },
+        whileInView: { scale: 1 },
+        transition: { type: "spring", duration: 1 },
+      }}
+      className={styles.serviceCard}
+    >
+      <div className={styles.imageContainer}>
+        <m.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", duration: 1 }}>
+          {image}
+        </m.div>
+      </div>
       <div className={styles.content}>
         {children}
         <Button as={Link} href="/budget">
