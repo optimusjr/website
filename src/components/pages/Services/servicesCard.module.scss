@@ -1,0 +1,29 @@
+@use "variables" as v;
+@use "utils";
+
+.serviceCard {
+  padding: 0;
+  width: 300px;
+
+  img {
+    transform: translateY(-0.5px); // Para esconder a estranha borda branca que fica
+    border-radius: v.$radius;
+
+    width: 100%;
+    height: auto;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  a {
+    margin: auto auto 0 auto;
+    min-height: 40px;
+  }
+}

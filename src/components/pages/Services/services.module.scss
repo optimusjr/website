@@ -34,29 +34,4 @@
 .list {
   display: flex;
   @extend %defaultGaps;
-
-  li {
-    padding: 0;
-    width: 300px;
-
-    img {
-      transform: translateY(-0.5px); // Para esconder a estranha borda branca que fica
-      border-radius: v.$radius;
-
-      width: 100%;
-      height: auto;
-    }
-
-    .content {
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    a {
-      margin: auto;
-      min-height: 40px;
-    }
-  }
 }

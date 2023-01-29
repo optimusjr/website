@@ -1,14 +1,12 @@
 import { m, useScroll, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-import Button from "@/components/common/Button";
-import Card from "@/components/common/Card";
 import Page from "@/components/common/Page";
 import Title from "@/components/common/Title";
 import Socket from "@/images/socket.png";
 
+import ServiceCard from "./ServiceCard";
 import styles from "./services.module.scss";
 
 const Services = () => {
@@ -130,25 +128,6 @@ const Services = () => {
         </m.div>
       </div>
     </div>
-  );
-};
-
-interface Props {
-  image: React.ReactNode;
-  children: React.ReactNode;
-}
-
-const ServiceCard = ({ image, children }: Props) => {
-  return (
-    <Card noAnime>
-      {image}
-      <div className={styles.content}>
-        {children}
-        <Button as={Link} href="/budget">
-          Faça um Orçamento
-        </Button>
-      </div>
-    </Card>
   );
 };
 
