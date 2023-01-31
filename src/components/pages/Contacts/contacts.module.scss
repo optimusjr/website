@@ -2,18 +2,21 @@
 @use "utils";
 
 .content {
-  @extend %defaultGaps;
-
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-auto-rows: 1fr;
 
+  background-color: v.$primary;
+  border-radius: v.$radius;
+
   section {
-    background-color: white;
-    color: v.$gray;
+    display: flex;
+    flex-direction: column;
     padding: 32px;
+    gap: 32px;
+
+    color: white;
     border-radius: v.$radius;
-    gap: 16px;
 
     div {
       display: flex;
@@ -21,18 +24,16 @@
       align-items: flex-start;
 
       gap: 4px;
-      margin: 16px 0;
     }
 
     svg {
       width: 24px;
       height: auto;
 
-      fill: v.$gray;
+      fill: white;
     }
 
     h3 {
-      color: v.$primary;
       font-size: 1.5rem;
     }
 
@@ -43,7 +44,6 @@
     a {
       margin: 0;
 
-      color: v.$primary;
       font-size: 1.1rem;
 
       border-bottom: 1px solid;
@@ -56,7 +56,50 @@
   }
 
   form {
+    display: flex;
+    flex-direction: column;
+
+    color: v.$gray;
+    background-color: white;
+    border-radius: v.$radius;
+
     padding: 32px;
-    gap: 16px;
+    gap: 32px;
+
+    h3 {
+      color: v.$primary;
+      font-size: 1.5rem;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+
+      gap: 4px;
+      font-size: 1.2rem;
+    }
+
+    input,
+    textarea {
+      all: unset;
+
+      height: 100%;
+      padding: 8px 0;
+      font-size: 1.5rem;
+
+      border-bottom: 2px solid v.$gray;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    label.textarea {
+      height: 100%;
+    }
+
+    button {
+      margin-left: auto;
+    }
   }
 }

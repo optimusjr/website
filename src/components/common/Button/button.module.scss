@@ -12,6 +12,10 @@
   background-color: v.$primary;
   color: white;
 
+  svg {
+    fill: white;
+  }
+
   &:hover {
     background-color: v.$primary-light;
     box-shadow: v.$shadow-dp2;

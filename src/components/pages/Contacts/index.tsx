@@ -1,7 +1,9 @@
 import Link from "next/link";
 
+import Button from "@/components/common/Button";
 import Page from "@/components/common/Page";
 import Title from "@/components/common/Title";
+import SendIcon from "@/components/pages/Contacts/icons/Send";
 
 import styles from "./contacts.module.scss";
 import EmailIcon from "./icons/Email";
@@ -27,55 +29,41 @@ const Contacts = () => {
           </div>
 
           <div>
-            <EmailIcon />
-            <h4>Manda um email</h4>
+            <span>
+              <EmailIcon />
+              <h4>Manda um e-mail</h4>
+            </span>
             <Link href="mailto:contato@optimusjr.com.br">contato@optimusjr.com.br</Link>
           </div>
 
           <div>
             <WhatsappIcon />
-            <h4>Chama no zap</h4>
+            <h4>Nos chame pelo WhatsApp</h4>
             <Link href="http://wa.me/5571999112217">+55 71 99911-2217</Link>
           </div>
         </section>
 
         <form action="https://formsubmit.co/silash35@gmail.com" method="POST">
           <h3>Como a OPTIMUS Jr. pode te ajudar?</h3>
-          <div>
-            <label>
-              <span>Nome*</span>
-              <input
-                placeholder="Seu nome Completo"
-                name="nome"
-                aria-label="Digite o seu nome completo"
-                required
-              />
-            </label>
-            <label>
-              <span>Email*</span>
-              <input
-                placeholder="Seu Email"
-                type="email"
-                name="email"
-                aria-label="Digite o seu email"
-                required
-              />
-            </label>
-          </div>
 
           <label>
-            <textarea
-              placeholder="Sua mensagem"
-              name="mensagem"
-              aria-label="Digite a sua mensagem"
-            ></textarea>
-            <span>Mensagem</span>
+            <span>Nome:</span>
+            <input name="nome" aria-label="Digite o seu nome completo" required />
+          </label>
+          <label>
+            <span>E-mail:</span>
+            <input type="email" name="email" aria-label="Digite o seu e-mail" required />
           </label>
 
-          <button type="submit">
-            <img src="/images/icons/send.svg" alt="paper plane icon" width="0" height="0" />
-            Send
-          </button>
+          <label className={styles.textarea}>
+            <span>Sua mensagem:</span>
+            <textarea name="mensagem" aria-label="Digite a sua mensagem"></textarea>
+          </label>
+
+          <Button type="submit">
+            <SendIcon />
+            Enviar
+          </Button>
         </form>
       </div>
     </Page>
