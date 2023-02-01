@@ -29,10 +29,8 @@ const Contacts = () => {
           </div>
 
           <div>
-            <span>
-              <EmailIcon />
-              <h4>Manda um e-mail</h4>
-            </span>
+            <EmailIcon />
+            <h4>Manda um e-mail</h4>
             <Link href="mailto:contato@optimusjr.com.br">contato@optimusjr.com.br</Link>
           </div>
 

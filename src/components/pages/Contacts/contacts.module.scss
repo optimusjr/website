@@ -1,6 +1,16 @@
 @use "variables" as v;
 @use "utils";
 
+%paddingsAndGaps {
+  padding: 32px;
+  gap: 32px;
+
+  @media (max-width: 425px) {
+    padding: 16px;
+    gap: 16px;
+  }
+}
+
 .content {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -9,14 +19,27 @@
   background-color: v.$primary;
   border-radius: v.$radius;
 
+  margin: 16px;
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    h3 {
+      text-align: center;
+    }
+  }
+
   section {
     display: flex;
     flex-direction: column;
-    padding: 32px;
-    gap: 32px;
 
     color: white;
     border-radius: v.$radius;
+
+    @extend %paddingsAndGaps;
 
     div {
       display: flex;
@@ -27,7 +50,7 @@
     }
 
     svg {
-      width: 24px;
+      width: 32px;
       height: auto;
 
       fill: white;
@@ -63,8 +86,7 @@
     background-color: white;
     border-radius: v.$radius;
 
-    padding: 32px;
-    gap: 32px;
+    @extend %paddingsAndGaps;
 
     h3 {
       color: v.$primary;
