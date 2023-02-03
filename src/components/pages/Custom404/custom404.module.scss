@@ -1,0 +1,39 @@
+@use "variables" as v;
+@use "utils";
+
+.custom404 {
+  min-height: calc(100vh - 64px); // Subtrair o valor do header
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  text-align: left;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 16px;
+  }
+
+  h1 {
+    color: v.$primary;
+    font-size: calc(0.5rem + 4.5vw);
+  }
+
+  p {
+    color: v.$gray;
+    font-size: calc(0.5rem + 1.5vw);
+    margin: 0;
+  }
+
+  svg {
+    width: 50vw;
+    height: auto;
+
+    border-radius: v.$radius;
+    box-shadow: v.$shadow-md;
+    background-color: v.$white;
+    padding: 32px;
+  }
+}
