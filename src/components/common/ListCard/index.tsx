@@ -15,8 +15,8 @@ const ListCard = ({ layout, customAnime, className, children }: Props) => {
   const animation = customAnime
     ? customAnime
     : {
-        initial: { y: 20, opacity: 0, boxShadow: "none" },
-        whileInView: { y: 0, opacity: 1, boxShadow: "none" },
+        initial: { y: 20, opacity: 0 },
+        whileInView: { y: 0, opacity: 1 },
         viewport: { once: true },
       };
 
