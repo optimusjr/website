@@ -90,8 +90,8 @@ const ContactCard = ({ href, children }: Props) => {
         as={m.div}
         cardLayout="none"
         className={styles.contactCard}
-        initial={{ scale: 1, boxShadow: variables.shadow2 }}
-        whileHover={{ scale: 1.01, boxShadow: variables.shadow4 }}
+        initial={{ scale: 1, boxShadow: variables.shadowMd }}
+        whileHover={{ scale: 1.01, boxShadow: variables.shadowLg }}
         transition={{ type: "spring", duration: 0.3 }}
       >
         {children}
