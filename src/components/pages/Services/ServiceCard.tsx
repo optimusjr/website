@@ -2,7 +2,7 @@ import { m } from "framer-motion";
 import Link from "next/link";
 
 import Button from "@/components/common/Button";
-import Card from "@/components/common/Card";
+import ListCard from "@/components/common/ListCard";
 
 import styles from "./servicesCard.module.scss";
 
@@ -13,7 +13,7 @@ export interface Props {
 
 const ServiceCard = ({ image, children }: Props) => {
   return (
-    <Card
+    <ListCard
       customAnime={{
         initial: { scale: 0.9 },
         whileInView: { scale: 1 },
@@ -32,7 +32,7 @@ const ServiceCard = ({ image, children }: Props) => {
           Faça um Orçamento
         </Button>
       </div>
-    </Card>
+    </ListCard>
   );
 };
 

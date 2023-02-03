@@ -1,4 +1,4 @@
-import Card from "@/components/common/Card";
+import ListCard from "@/components/common/ListCard";
 import Page from "@/components/common/Page";
 import Title from "@/components/common/Title";
 
@@ -17,37 +17,37 @@ const Differentials = () => {
       </Title>
 
       <ul className={styles.list}>
-        <Card layout="row">
+        <ListCard layout="row">
           <TenIcon />
           <div>
             <h3>Mais de 10 anos de experiencia</h3>
             <p>Impactando vidas e negócios</p>
           </div>
-        </Card>
+        </ListCard>
 
-        <Card layout="row">
+        <ListCard layout="row">
           <HandIcon />
           <div>
             <h3>Melhor preço do mercado</h3>
             <p>Preços baixos com alta qualidade de serviço</p>
           </div>
-        </Card>
+        </ListCard>
 
-        <Card layout="row">
+        <ListCard layout="row">
           <CapIcon />
           <div>
             <h3>Vasto conhecimento técnico</h3>
             <p>Apoio dos melhores professores da UFBA</p>
           </div>
-        </Card>
+        </ListCard>
 
-        <Card layout="row">
+        <ListCard layout="row">
           <CheckIcon />
           <div>
             <h3>Selo de qualidade</h3>
             <p>Quem contrata, recomenda. A nossa média de NPS é 9,5.</p>
           </div>
-        </Card>
+        </ListCard>
       </ul>
     </Page>
   );

@@ -1,31 +1,23 @@
-import { HTMLMotionProps, m } from "framer-motion";
-
 import styles from "./card.module.scss";
 
-interface Props {
-  layout?: "column" | "row";
-  customAnime?: HTMLMotionProps<"li">;
+interface Props<T extends React.ElementType> {
+  as?: T;
   className?: string;
-
-  children: React.ReactNode;
+  cardLayout?: "column" | "row" | "none";
+  children?: React.ReactNode;
 }
 
-const Card = ({ layout = "column", customAnime, className, children }: Props) => {
-  const classes = `${styles.card} ${styles[layout]} ${className}`;
+function Card<T extends React.ElementType = "div">({
+  as,
+  className,
+  cardLayout = "column",
+  ...props
+}: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>) {
+  const Component = as || "div";
 
-  const animation = customAnime
-    ? customAnime
-    : {
-        initial: { y: 20, opacity: 0, boxShadow: "none" },
-        whileInView: { y: 0, opacity: 1, boxShadow: "none" },
-        viewport: { once: true },
-      };
+  const classes = `${styles.card} ${styles[cardLayout]} ${className}`;
 
-  return (
-    <m.li {...animation} className={classes}>
-      {children}
-    </m.li>
-  );
-};
+  return <Component className={classes} {...props} />;
+}
 
 export default Card;

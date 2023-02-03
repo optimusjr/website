@@ -1,13 +1,14 @@
 import Link from "next/link";
 
 import Button from "@/components/common/Button";
+import Card from "@/components/common/Card";
 import Page from "@/components/common/Page";
 import Title from "@/components/common/Title";
-import SendIcon from "@/components/pages/Contacts/icons/Send";
 
 import styles from "./contacts.module.scss";
 import EmailIcon from "./icons/Email";
 import PhoneIcon from "./icons/Phone";
+import SendIcon from "./icons/Send";
 import WhatsappIcon from "./icons/Whatsapp";
 
 const Contacts = () => {
@@ -19,30 +20,43 @@ const Contacts = () => {
       </Title>
 
       <div className={styles.content}>
-        <section>
-          <h3>Informações de Contato</h3>
-
-          <div>
-            <PhoneIcon />
-            <h4>Liga pra gente</h4>
-            <Link href="tel:+5571999112217">(71) 99911-2217</Link>
-          </div>
-
-          <div>
-            <EmailIcon />
-            <h4>Manda um e-mail</h4>
-            <Link href="mailto:contato@optimusjr.com.br">contato@optimusjr.com.br</Link>
-          </div>
-
-          <div>
+        <Link href="http://wa.me/5571999112217">
+          <Card cardLayout="none" className={styles.contactCard}>
             <WhatsappIcon />
-            <h4>Nos chame pelo WhatsApp</h4>
-            <Link href="http://wa.me/5571999112217">+55 71 99911-2217</Link>
-          </div>
-        </section>
+            <div>
+              <h3>Chame no WhatsApp</h3>
+              <p>+55 71 99911-2217</p>
+            </div>
+          </Card>
+        </Link>
 
-        <form action="https://formsubmit.co/silash35@gmail.com" method="POST">
-          <h3>Como a OPTIMUS Jr. pode te ajudar?</h3>
+        <Link href="mailto:contato@optimusjr.com.br">
+          <Card cardLayout="none" className={styles.contactCard}>
+            <EmailIcon />
+            <div>
+              <h3>Mande um e-mail</h3>
+              <p>contato@optimusjr.com.br</p>
+            </div>
+          </Card>
+        </Link>
+
+        <Link href="tel:+5571999112217">
+          <Card cardLayout="none" className={styles.contactCard}>
+            <PhoneIcon />
+            <div>
+              <h3>Ligue pra gente</h3>
+              <p>(71) 99911-2217</p>
+            </div>
+          </Card>
+        </Link>
+
+        <Card
+          as="form"
+          className={styles.contactForm}
+          action="https://formsubmit.co/silash35@gmail.com"
+          method="POST"
+        >
+          <h3>Mande uma mensagem</h3>
 
           <label>
             <span>Nome:</span>
@@ -62,7 +76,7 @@ const Contacts = () => {
             <SendIcon />
             Enviar
           </Button>
-        </form>
+        </Card>
       </div>
     </Page>
   );
