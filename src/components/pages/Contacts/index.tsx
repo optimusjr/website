@@ -1,12 +1,10 @@
-import { m } from "framer-motion";
-import Link from "next/link";
-
 import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
 import Page from "@/components/common/Page";
+import TextField from "@/components/common/TextField";
 import Title from "@/components/common/Title";
-import variables from "@/styles/variables.module.scss";
 
+import ContactCard from "./ContactCard";
 import styles from "./contacts.module.scss";
 import EmailIcon from "./icons/Email";
 import PhoneIcon from "./icons/Phone";
@@ -49,24 +47,16 @@ const Contacts = () => {
         <Card
           as="form"
           className={styles.contactForm}
-          action="https://formsubmit.co/silash35@gmail.com"
+          action="https://formsubmit.co/contato@optimusjr.com.br"
           method="POST"
         >
           <h3>Mande uma mensagem</h3>
 
-          <label>
-            <span>Nome:</span>
-            <input name="nome" aria-label="Digite o seu nome completo" required />
-          </label>
-          <label>
-            <span>E-mail:</span>
-            <input type="email" name="email" aria-label="Digite o seu e-mail" required />
-          </label>
+          <TextField label="Nome:" name={"nome"} required />
+          <TextField label="E-mail:" name={"email"} type="email" required />
+          <TextField label="Sua mensagem:" name={"mensagem"} required multiline />
 
-          <label className={styles.textarea}>
-            <span>Sua mensagem:</span>
-            <textarea name="mensagem" aria-label="Digite a sua mensagem"></textarea>
-          </label>
+          <input type="hidden" name="_next" value="https://optimusjr.com.br/thanks" />
 
           <Button type="submit">
             <SendIcon />
@@ -75,28 +65,6 @@ const Contacts = () => {
         </Card>
       </div>
     </Page>
-  );
-};
-
-interface Props {
-  href: string;
-  children: React.ReactNode;
-}
-
-const ContactCard = ({ href, children }: Props) => {
-  return (
-    <Link href={href}>
-      <Card
-        as={m.div}
-        cardLayout="none"
-        className={styles.contactCard}
-        initial={{ scale: 1, boxShadow: variables.shadowMd }}
-        whileHover={{ scale: 1.01, boxShadow: variables.shadowLg }}
-        transition={{ type: "spring", duration: 0.3 }}
-      >
-        {children}
-      </Card>
-    </Link>
   );
 };
 
