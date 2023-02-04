@@ -6,7 +6,7 @@ export default function Links() {
   return (
     <>
       <li className={styles.link}>
-        <Link href="/#about">Sobre Nós</Link>
+        <Link href="/about">Sobre Nós</Link>
       </li>
       <li className={styles.link}>
         <Link href="/#services">Serviços</Link>

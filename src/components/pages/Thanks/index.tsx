@@ -10,7 +10,7 @@ import styles from "./thanks.module.scss";
 
 declare global {
   interface Window {
-    jsConfetti: JSConfetti;
+    jsConfetti?: JSConfetti;
   }
 }
 

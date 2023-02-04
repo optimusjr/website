@@ -18,7 +18,7 @@ const Start = () => {
     <Page backgroundColor="secondary" className={styles.start}>
       <m.div {...fadeInTop} transition={{ duration: 0.4 }} className={styles.text}>
         <h1>Leve o futuro para o seu lar.</h1>
-        <p>Transforme sua casa com as nossas soluções de automação residencial.</p>
+        <p>Transformamos sua casa com as nossas soluções de automação residencial.</p>
       </m.div>
 
       <m.div {...fadeInTop} transition={{ duration: 0.4 }} className={styles.image}>

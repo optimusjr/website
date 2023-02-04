@@ -14,18 +14,17 @@
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
-    "@types/react": "^18.0.26",
+    "@types/react": "^18.0.27",
     "eslint-config-silash35": "^1.2.1",
-    "next-sitemap": "^3.1.45",
-    "sass": "^1.57.1",
-    "typescript": "^4.9.4"
+    "next-sitemap": "^3.1.49",
+    "sass": "^1.58.0",
+    "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@next/font": "^13.1.2",
-    "add": "^2.0.6",
-    "framer-motion": "^8.4.7",
+    "@next/font": "^13.1.6",
+    "framer-motion": "^9.0.1",
     "js-confetti": "^0.11.0",
-    "next": "^13.1.2",
+    "next": "^13.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.31.3"
