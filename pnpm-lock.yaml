@@ -7,6 +7,7 @@ specifiers:
   add: ^2.0.6
   eslint-config-silash35: ^1.2.1
   framer-motion: ^8.4.7
+  js-confetti: ^0.11.0
   next: ^13.1.2
   next-sitemap: ^3.1.45
   react: ^18.2.0
@@ -19,6 +20,7 @@ dependencies:
   '@next/font': 13.1.2
   add: 2.0.6
   framer-motion: 8.4.7_biqbaboplfbrettd7655fr4n2y
+  js-confetti: 0.11.0
   next: 13.1.2_3duxcpitbtplz62feflag7fwby
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -1420,6 +1422,10 @@ packages:
   /isexe/2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
+
+  /js-confetti/0.11.0:
+    resolution: {integrity: sha512-Hc7I3VI4r4H0nq5q/oQK+JJwGoYRYVHK72fGk8E9Ay1dbh+aiZ9yl0yFp1K4oYeq7YFDQAndYChwqLPA3QWQuA==}
+    dev: false
 
   /js-sdsl/4.2.0:
     resolution: {integrity: sha512-dyBIzQBDkCqCu+0upx25Y2jGdbTGxE9fshMsCdK0ViOongpV+n5tXRcZY9v7CaVQ79AGS9KA1KHtojxiM7aXSQ==}
