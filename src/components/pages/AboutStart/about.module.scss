@@ -2,8 +2,6 @@
 @use "utils";
 
 .custom404 {
-  min-height: calc(100vh - 64px); // Subtrair o valor do header
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;

@@ -9,7 +9,7 @@ import Illustration from "./Illustration";
 
 const Custom404 = () => {
   return (
-    <Page backgroundColor="secondary" className={styles.custom404}>
+    <Page backgroundColor="secondary" firstFullHeight className={styles.custom404}>
       <div>
         <h1>Oops! Algo deu errado.</h1>
         <p>A Página que você está procurando não pôde ser encontrada.</p>

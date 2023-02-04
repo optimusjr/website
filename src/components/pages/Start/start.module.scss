@@ -4,8 +4,6 @@
 .start {
   flex-direction: row;
 
-  min-height: calc(100vh - 64px); // Subtrair o valor do header
-
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: center;

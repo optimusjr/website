@@ -21,3 +21,7 @@
 .full {
   min-height: 100vh;
 }
+
+.firstFull {
+  min-height: calc(100vh - 64px); // Subtrair a altura do header
+}
