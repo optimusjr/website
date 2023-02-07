@@ -13,6 +13,11 @@ const nextConfig = {
   env: {
     SITE_URL: process.env.SITE_URL,
   },
+
+  images: {
+    loader: "custom",
+  },
+  transpilePackages: ["next-image-export-optimizer"],
 };
 
 module.exports = nextConfig;

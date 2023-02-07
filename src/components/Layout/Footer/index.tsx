@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import ExportedImage from "next-image-export-optimizer";
 
 import Button from "@/components/common/Button";
 import logo_horizontal from "@/images/icons/OPTIMUS/logo_white_horizontal.svg";
@@ -9,7 +9,7 @@ import styles from "./footer.module.scss";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <Image src={logo_horizontal} alt="Logo da OPTIMUS Jr." height={64} />
+      <ExportedImage src={logo_horizontal} alt="Logo da OPTIMUS Jr." height={64} />
 
       <div className={styles.links}>
         <Button as={Link} href="https://www.instagram.com/optimusjrautomacao/">

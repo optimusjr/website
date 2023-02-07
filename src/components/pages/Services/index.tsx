@@ -1,5 +1,5 @@
 import { m, useScroll, useSpring, useTransform } from "framer-motion";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { useEffect, useRef, useState } from "react";
 
 import Page from "@/components/common/Page";
@@ -57,7 +57,7 @@ const Services = () => {
             </Title>
 
             <ul className={styles.list}>
-              <ServiceCard image={<Image src={lights} alt="Luzes penduradas no teto" />}>
+              <ServiceCard image={<ExportedImage src={lights} alt="Luzes penduradas no teto" />}>
                 <h3>Controle de Iluminação</h3>
                 <p>
                   A OPTIMUS Jr. automatiza as luzes da sua casa, tornando possível o controle da
@@ -65,7 +65,7 @@ const Services = () => {
                 </p>
               </ServiceCard>
 
-              <ServiceCard image={<Image src={socket} alt="Foto de uma tomada" />}>
+              <ServiceCard image={<ExportedImage src={socket} alt="Foto de uma tomada" />}>
                 <h3>Automação de Tomadas</h3>
                 <p>
                   Com a automatização de tomadas elétricas, você pode controlar os eletrodomésticos
@@ -75,7 +75,10 @@ const Services = () => {
 
               <ServiceCard
                 image={
-                  <Image src={bedroom} alt="Foto de um quarto com televisão e ar condicionado" />
+                  <ExportedImage
+                    src={bedroom}
+                    alt="Foto de um quarto com televisão e ar condicionado"
+                  />
                 }
               >
                 <h3>Controle de dispositivos</h3>
@@ -88,7 +91,7 @@ const Services = () => {
 
               <ServiceCard
                 image={
-                  <Image
+                  <ExportedImage
                     src={curtains}
                     alt="Foto uma mulher controlando as cortinas por controle remoto"
                   />
@@ -102,7 +105,7 @@ const Services = () => {
               </ServiceCard>
 
               <ServiceCard
-                image={<Image src={lock} alt="Foto de uma fechadura digital inteligente" />}
+                image={<ExportedImage src={lock} alt="Foto de uma fechadura digital inteligente" />}
               >
                 <h3>Instalação de Fechadura digital</h3>
                 <p>
@@ -111,7 +114,7 @@ const Services = () => {
                 </p>
               </ServiceCard>
 
-              <ServiceCard image={<Image src={gate} alt="Foto de portão de garagem" />}>
+              <ServiceCard image={<ExportedImage src={gate} alt="Foto de portão de garagem" />}>
                 <h3>Automação de Portão Eletrônico</h3>
                 <p>
                   Controle a garagem da sua casa de qualquer lugar pelo seu celular automatizando
@@ -119,7 +122,7 @@ const Services = () => {
                 </p>
               </ServiceCard>
 
-              <ServiceCard image={<Image src={pool} alt="Foto de uma piscina" />}>
+              <ServiceCard image={<ExportedImage src={pool} alt="Foto de uma piscina" />}>
                 <h3>Controle de Piscinas</h3>
                 <p>
                   Nunca mais tenha que se preocupar com a bomba da sua piscina. Nós automatizamos
@@ -128,7 +131,9 @@ const Services = () => {
                 </p>
               </ServiceCard>
 
-              <ServiceCard image={<Image src={sensor} alt="Foto de um sensor de presença" />}>
+              <ServiceCard
+                image={<ExportedImage src={sensor} alt="Foto de um sensor de presença" />}
+              >
                 <h3>Instalação de Sensores</h3>
                 <p>
                   Acione dispositivos automaticamente com sensores de presença, umidade, temperatura
@@ -138,7 +143,7 @@ const Services = () => {
 
               <ServiceCard
                 image={
-                  <Image
+                  <ExportedImage
                     src={smart}
                     alt="Foto de um celular com uma interface para controlar a casa inteligente que está ao fundo"
                   />
