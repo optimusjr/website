@@ -22,7 +22,6 @@ jobs:
         run: pnpm build
       - name: Export
         run: pnpm export
-        run: pnpm build
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
