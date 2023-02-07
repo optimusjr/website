@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://optimusjr.com.br
+Host: https://beta.optimusjr.com.br
 
 # Sitemaps
-Sitemap: https://optimusjr.com.br/sitemap.xml
+Sitemap: https://beta.optimusjr.com.br/sitemap.xml
