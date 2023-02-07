@@ -15,7 +15,7 @@ module.exports = {
       priority = 1.0;
     }
 
-    // Use default transformation for all other cases
+    // Usar o padrão para todos os outros casos
     return {
       loc: path, // Exportar o arquivo sitemap em http(s)://<config.siteUrl>/<path>
       changefreq: config.changefreq,

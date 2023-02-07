@@ -1,5 +1,5 @@
 import { m } from "framer-motion";
-import ExportedImage from "next-image-export-optimizer";
+import Image from "next-image-export-optimizer";
 
 import Page from "@/components/common/Page";
 import bedroomOff from "@/images/bedroom-off.png";
@@ -24,7 +24,13 @@ const Start = () => {
       <m.div {...fadeInTop} transition={{ duration: 0.4 }} className={styles.image}>
         <m.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", bounce: 0, duration: 1 }}>
           <div>
-            <ExportedImage priority src={bedroomOff} alt="Quarto com as luzes apagadas" />
+            <Image
+              placeholder="empty"
+              priority
+              src={bedroomOff}
+              width={1924}
+              alt="Quarto com as luzes apagadas"
+            />
           </div>
 
           <m.div
@@ -32,9 +38,10 @@ const Start = () => {
             animate={{ opacity: 1 }}
             transition={{ repeat: Infinity, repeatType: "reverse", delay: 5, repeatDelay: 5 }}
           >
-            <ExportedImage
+            <Image
               priority
               src={bedroomOn}
+              width={1924}
               alt="Quarto com as luzes acessas"
               style={{ position: "absolute" }}
             />

@@ -16,7 +16,7 @@ export default function Mobile({ show, toggleShow }: Props) {
   return (
     <>
       <div className={styles.menuButton}>
-        <Button onClick={toggleShow}>
+        <Button onClick={toggleShow} aria-label="Abrir menu">
           <MenuIcon open={show} />
         </Button>
       </div>
