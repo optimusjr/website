@@ -7,6 +7,14 @@
   justify-items: center;
   align-content: center;
 
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+
+    .image {
+      display: none;
+    }
+  }
+
   .image {
     img {
       width: 100%;
