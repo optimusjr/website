@@ -1,6 +1,6 @@
 import { m } from "framer-motion";
 import Link from "next/link";
-import ExportedImage from "next-image-export-optimizer";
+import Image from "next-image-export-optimizer";
 import { useState } from "react";
 
 import Button from "@/components/common/Button";
@@ -25,11 +25,7 @@ export default function Header() {
             <div className={styles.iconWrapper}>
               <img src="/icon.svg" alt="Ícone da OPTIMUS Jr." height="40" width="40" />
             </div>
-            <ExportedImage
-              src={wordmark}
-              alt="'OPTIMUS Jr.' escrito em letras estilizadas"
-              height="18"
-            />
+            <Image src={wordmark} alt="'OPTIMUS Jr.' escrito em letras estilizadas" height="18" />
           </Link>
         </div>
 
