@@ -23,9 +23,20 @@ export default function Header() {
         <div className={styles.left}>
           <Link href="/">
             <div className={styles.iconWrapper}>
-              <img src="/icon.svg" alt="Ícone da OPTIMUS Jr." height="40" width="40" />
+              <Image
+                placeholder="empty"
+                src="/icon.svg"
+                alt="Ícone da OPTIMUS Jr."
+                height="40"
+                width="40"
+              />
             </div>
-            <Image src={wordmark} alt="'OPTIMUS Jr.' escrito em letras estilizadas" height="18" />
+            <Image
+              placeholder="empty"
+              src={wordmark}
+              alt="'OPTIMUS Jr.' escrito em letras estilizadas"
+              height="18"
+            />
           </Link>
         </div>
 

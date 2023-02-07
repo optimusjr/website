@@ -66,7 +66,7 @@ export default class MyDocument extends Document {
             sizes="16x16"
             href={`${process.env.SITE_URL}/icons/favicon-16x16.png`}
           />
-          <link rel="manifest" href={`${process.env.SITE_URL}/site.webmanifest`} />
+          <link rel="manifest" href={`${process.env.SITE_URL}/icons/site.webmanifest`} />
           <link
             rel="mask-icon"
             href={`${process.env.SITE_URL}/icons/safari-pinned-tab.svg`}

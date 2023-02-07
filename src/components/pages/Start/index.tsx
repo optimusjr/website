@@ -24,7 +24,13 @@ const Start = () => {
       <m.div {...fadeInTop} transition={{ duration: 0.4 }} className={styles.image}>
         <m.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", bounce: 0, duration: 1 }}>
           <div>
-            <Image priority src={bedroomOff} width={1924} alt="Quarto com as luzes apagadas" />
+            <Image
+              placeholder="empty"
+              priority
+              src={bedroomOff}
+              width={1924}
+              alt="Quarto com as luzes apagadas"
+            />
           </div>
 
           <m.div

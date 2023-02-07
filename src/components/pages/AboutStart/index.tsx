@@ -18,7 +18,7 @@ const AboutStart = () => {
       </div>
 
       <div className={styles.image}>
-        <Image src={logo} alt="Logotipo da OPTIMUS Jr." priority />
+        <Image placeholder="empty" src={logo} alt="Logotipo da OPTIMUS Jr." priority />
       </div>
     </Page>
   );
