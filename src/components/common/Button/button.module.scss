@@ -5,9 +5,7 @@
   align-items: center;
   gap: 8px;
 
-  font-size: 1.2rem;
   border-radius: v.$radius;
-  padding: 8px 16px;
 
   background-color: v.$primary;
   color: white;
@@ -25,4 +23,14 @@
     background-color: v.$primary-dark;
     box-shadow: none;
   }
+}
+
+.normal {
+  font-size: 1.2rem;
+  padding: 8px 16px;
+}
+
+.large {
+  font-size: 1.5rem;
+  padding: 16px 32px;
 }

@@ -1,18 +1,13 @@
 @use "variables" as v;
 @use "utils";
 
-.custom404 {
+.aboutStart {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   align-content: center;
 
   .image {
-    border-radius: v.$radius;
-    box-shadow: v.$shadow-md;
-    background-color: v.$white;
-    padding: 64px 96px;
-
     img {
       width: 100%;
       height: auto;
@@ -22,13 +17,19 @@
   div {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 
     gap: 16px;
   }
 
-  h1 {
+  span {
     color: v.$primary;
+    font-weight: bold;
+    font-size: calc(1rem + 1vw);
+  }
+
+  h1 {
+    color: v.$gray;
     font-size: calc(2rem + 2vw);
   }
 

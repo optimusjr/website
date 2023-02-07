@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import Button from "@/components/common/Button";
 import Page from "@/components/common/Page";
 import logo from "@/images/icons/OPTIMUS/logo.svg";
 
@@ -7,16 +8,13 @@ import styles from "./about.module.scss";
 
 const AboutStart = () => {
   return (
-    <Page backgroundColor="secondary" className={styles.custom404}>
+    <Page backgroundColor="secondary" firstFullHeight className={styles.aboutStart}>
       <div>
-        <h1>Nós somos OPTIMUS Jr.</h1>
-        <p>A Empresa Junior de Automação Residencial da Universidade Federal da Bahia (UFBA).</p>
-        <p>
-          Nossa equipe é formada por alunos do curso de Engenharia de Controle e Automação da UFBA,
-          que possuem conhecimento especializado em diferentes áreas da automação e que trabalham em
-          conjunto para encontrar soluções criativas para os problemas enfrentados pelos nossos
-          clientes.
-        </p>
+        <span>OPTIMUS Jr.</span>
+        <h1>A Empresa Junior de Controle e Automação.</h1>
+        <p>Trazemos conforto, segurança e economia para os seus ambientes.</p>
+
+        <Button size="large">Faça um Orçamento</Button>
       </div>
 
       <div className={styles.image}>
