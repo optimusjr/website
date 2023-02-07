@@ -1,0 +1,37 @@
+@use "variables" as v;
+@use "utils";
+
+.pageContainer {
+  height: 600vh;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+
+  overflow: hidden;
+}
+
+.scroll {
+  width: min-content;
+}
+
+.services {
+  flex-direction: row;
+  width: min-content;
+
+  span {
+    text-align: left;
+    font-size: calc(1rem + 3vw);
+  }
+
+  h2 {
+    text-align: left;
+    font-size: calc(2rem + 6vw);
+  }
+}
+
+.list {
+  display: flex;
+  @extend %defaultGaps;
+}

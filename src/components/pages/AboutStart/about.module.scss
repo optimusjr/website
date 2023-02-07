@@ -1,0 +1,49 @@
+@use "variables" as v;
+@use "utils";
+
+.aboutStart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-content: center;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+
+    .image {
+      display: none;
+    }
+  }
+
+  .image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 16px;
+  }
+
+  span {
+    color: v.$primary;
+    font-weight: bold;
+    font-size: calc(1rem + 1vw);
+  }
+
+  h1 {
+    color: v.$gray;
+    font-size: calc(2rem + 2vw);
+  }
+
+  p {
+    color: v.$gray;
+    font-size: calc(1rem + 1vw);
+    margin: 0;
+  }
+}

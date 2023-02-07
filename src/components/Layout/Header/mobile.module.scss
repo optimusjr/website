@@ -1,0 +1,38 @@
+@use "variables" as v;
+
+.menuButton {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+  button {
+    margin: 8px;
+  }
+
+  @media (min-width: 857px) {
+    display: none;
+  }
+}
+
+.menuContainer {
+  grid-column: 1/-1;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px 0;
+
+  a {
+    min-height: 24px;
+  }
+}
+
+.button {
+  display: contents;
+  a {
+    margin: auto;
+    min-height: 40px;
+  }
+}

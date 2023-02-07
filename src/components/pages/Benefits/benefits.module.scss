@@ -1,0 +1,22 @@
+@use "variables" as v;
+@use "utils";
+
+.list {
+  @extend %defaultGaps;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+
+  @media (min-width: 2560px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 1225px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}

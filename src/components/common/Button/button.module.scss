@@ -1,0 +1,36 @@
+@use "variables" as v;
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: v.$radius;
+
+  background-color: v.$primary;
+  color: white;
+
+  svg {
+    fill: white;
+  }
+
+  &:hover {
+    background-color: v.$primary-light;
+    box-shadow: v.$shadow-md;
+  }
+
+  &:active {
+    background-color: v.$primary-dark;
+    box-shadow: none;
+  }
+}
+
+.normal {
+  font-size: 1.2rem;
+  padding: 8px 16px;
+}
+
+.large {
+  font-size: 1.5rem;
+  padding: 16px 32px;
+}

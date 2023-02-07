@@ -1,0 +1,88 @@
+@use "variables" as v;
+@use "utils";
+
+.container {
+  background-color: v.$secondary;
+
+  @extend %defaultPaddings;
+
+  padding-top: unset;
+  padding-bottom: unset;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 64px auto;
+
+  border-radius: 0 0 v.$radius v.$radius;
+  background-color: v.$white;
+
+  font-size: 1.2rem;
+  overflow: hidden;
+
+  transform: translateY(-100%);
+  animation: slide-from-top 0.4s 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+
+  @media (max-width: 856px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@keyframes slide-from-top {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  a {
+    display: contents;
+  }
+
+  .iconWrapper {
+    padding: 12px;
+    line-height: 0;
+  }
+
+  @media (max-width: 292px) {
+    .wordmark {
+      height: 12px;
+    }
+  }
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  @media (max-width: 856px) {
+    display: none;
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+  a {
+    margin: 12px;
+  }
+
+  @media (max-width: 856px) {
+    display: none;
+  }
+}
