@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 import Button from "@/components/common/Button";
 import Page from "@/components/common/Page";
@@ -18,7 +18,7 @@ const AboutStart = () => {
       </div>
 
       <div className={styles.image}>
-        <Image src={logo} alt="Logotipo da OPTIMUS Jr." />
+        <ExportedImage src={logo} alt="Logotipo da OPTIMUS Jr." />
       </div>
     </Page>
   );
