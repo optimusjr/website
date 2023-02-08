@@ -3,7 +3,7 @@ import Page from "@/components/common/Page";
 import Title from "@/components/common/Title";
 
 import styles from "./differentials.module.scss";
-import CapIcon from "./icons/Book";
+import CapIcon from "./icons/Cap";
 import CheckIcon from "./icons/Check";
 import HandIcon from "./icons/Hand";
 import TenIcon from "./icons/Ten";
