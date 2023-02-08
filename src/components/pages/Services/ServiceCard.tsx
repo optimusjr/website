@@ -13,14 +13,7 @@ export interface Props {
 
 const ServiceCard = ({ image, children }: Props) => {
   return (
-    <ListCard
-      customAnime={{
-        initial: { scale: 0.9 },
-        whileInView: { scale: 1 },
-        transition: { type: "spring", duration: 1 },
-      }}
-      className={styles.serviceCard}
-    >
+    <ListCard className={styles.serviceCard}>
       <div className={styles.imageContainer}>
         <m.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", duration: 1 }}>
           {image}

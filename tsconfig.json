@@ -16,12 +16,7 @@
     "baseUrl": "./src",
     "paths": {
       "@/images/*": ["../public/images/*"],
-      "@/components/*": ["components/*"],
-      "@/contexts/*": ["contexts/*"],
-      "@/pages/*": ["pages/*"],
-      "@/styles/*": ["styles/*"],
-      "@/types/*": ["types/*"],
-      "@/utils/*": ["utils/*"]
+      "@/*": ["./*"]
     },
     "incremental": true,
     "isolatedModules": true
