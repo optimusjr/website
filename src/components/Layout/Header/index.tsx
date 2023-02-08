@@ -17,11 +17,17 @@ export default function Header() {
     setShowMobile(!showMobile);
   };
 
+  const hideMobile = () => {
+    if (showMobile) {
+      setShowMobile(false);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <div className={styles.left}>
-          <Link href="/">
+          <Link href="/" onClick={hideMobile}>
             <div className={styles.iconWrapper}>
               <Image
                 placeholder="empty"
@@ -41,7 +47,7 @@ export default function Header() {
         </div>
 
         <ul className={styles.center}>
-          <Links />
+          <Links hideMobile={hideMobile} />
         </ul>
 
         <m.div className={styles.right} whileHover="hover" animate="rest">
@@ -58,7 +64,7 @@ export default function Header() {
           </Button>
         </m.div>
 
-        <Mobile show={showMobile} toggleShow={toggleShowMobile} />
+        <Mobile show={showMobile} toggleShow={toggleShowMobile} hideShow={hideMobile} />
       </header>
     </div>
   );

@@ -10,9 +10,10 @@ import styles from "./mobile.module.scss";
 interface Props {
   show: boolean;
   toggleShow: () => void;
+  hideShow: () => void;
 }
 
-export default function Mobile({ show, toggleShow }: Props) {
+export default function Mobile({ show, toggleShow, hideShow }: Props) {
   return (
     <>
       <div className={styles.menuButton}>
@@ -34,7 +35,7 @@ export default function Mobile({ show, toggleShow }: Props) {
             className={styles.menuContainer}
           >
             <ul className={styles.menu}>
-              <Links />
+              <Links hideMobile={hideShow} />
 
               <li className={styles.button}>
                 <Button as={Link} href="/budget">

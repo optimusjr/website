@@ -17,6 +17,10 @@
   }
 
   li {
+    p {
+      padding-top: 4px;
+    }
+
     @media (max-width: 424px) {
       h3 {
         font-size: 1.2rem;
