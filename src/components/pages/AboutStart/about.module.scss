@@ -18,7 +18,7 @@
   }
 
   .image {
-    background-color: #efefef;
+    background-color: v.$white;
     padding: 64px;
     margin-left: auto;
 
@@ -77,6 +77,6 @@
   .values {
     text-align: start;
     font-size: 1.2rem;
-    color: #2f2f2f;
+    color: v.$gray;
   }
 }
