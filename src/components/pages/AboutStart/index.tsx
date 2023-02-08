@@ -1,8 +1,10 @@
 import { m } from "framer-motion";
+import Link from "next/link";
 import Image from "next-image-export-optimizer";
 
 import fadeInTop from "@/animations/fadeInTop";
 import Button from "@/components/common/Button";
+import Card from "@/components/common/Card";
 import ListCard from "@/components/common/ListCard";
 import Page from "@/components/common/Page";
 import DiamondIcon from "@/components/pages/AboutStart/icons/Diamond";
@@ -22,12 +24,30 @@ const AboutStart = () => {
             <h1>A Empresa Junior de Controle e Automação.</h1>
             <p>Trazemos conforto, segurança e economia para os seus ambientes.</p>
 
-            <Button size="large">Faça um Orçamento</Button>
+            <m.div className={styles.right} whileHover="hover" animate="rest">
+              <Button as={Link} href="/budget">
+                <div>Faça um Orçamento</div>
+
+                <m.img
+                  variants={{ hover: { x: [0, 5, 0], transition: { repeat: Infinity } } }}
+                  src="/images/icons/arrow-right.svg"
+                  alt="Seta apontando para direita"
+                  height="24"
+                  width="24"
+                />
+              </Button>
+            </m.div>
           </div>
 
-          <div className={styles.image}>
-            <Image placeholder="empty" src={logo} alt="Logotipo da OPTIMUS Jr." priority />
-          </div>
+          <Card className={styles.image}>
+            <Image
+              placeholder="empty"
+              src={logo}
+              alt="Logotipo da OPTIMUS Jr."
+              width={350}
+              priority
+            />
+          </Card>
         </m.section>
 
         <ul className={styles.list}>
@@ -56,11 +76,11 @@ const AboutStart = () => {
 
             <h3>Valores</h3>
             <ul className={styles.values}>
-              <li>&#8226; Autonomia</li>
-              <li>&#8226; Resiliência</li>
-              <li>&#8226; Comprometimento com os resultados</li>
-              <li>&#8226; Ser Dono</li>
-              <li>&#8226; Orgulho de ser OPTIMUS</li>
+              <li>&#8226;&nbsp;Autonomia</li>
+              <li>&#8226;&nbsp;Resiliência</li>
+              <li>&#8226;&nbsp;Comprometimento com os resultados</li>
+              <li>&#8226;&nbsp;Ser Dono</li>
+              <li>&#8226;&nbsp;Orgulho de ser OPTIMUS</li>
             </ul>
           </ListCard>
         </ul>
