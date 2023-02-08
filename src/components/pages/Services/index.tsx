@@ -36,24 +36,33 @@ const Services = () => {
     addEventListener("resize", loadMaxScroll);
   }, []);
 
-  const translateX = useTransform(scrollYProgress, [0, 1], [0, maxScroll]);
-  const x = useSpring(translateX, { damping: 15, mass: 0.27, stiffness: 55 });
+  const x = useTransform(scrollYProgress, [0, 1], [0, maxScroll]);
+  const springedX = useSpring(x, { damping: 15, mass: 0.27, stiffness: 55 });
 
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -maxScroll / 2]);
   const springedRotate = useSpring(rotate, { damping: 15, mass: 0.27, stiffness: 55 });
 
+  const [isTouch, setIsTouch] = useState(false);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.matchMedia("(pointer: coarse)").matches) {
+        setIsTouch(true);
+      }
+    }
+  }, []);
+
   return (
     <div className={styles.pageContainer} ref={containerRef}>
       <div className={styles.sticky}>
-        <m.div style={{ rotate: springedRotate }} className={styles.gearTop}>
+        <m.div style={{ rotate: isTouch ? rotate : springedRotate }} className={styles.gearTop}>
           <Image src={gearIcon} alt="Ícone de uma engrenagem" width={256} />
         </m.div>
 
-        <m.div style={{ rotate: springedRotate }} className={styles.gearBottom}>
+        <m.div style={{ rotate: isTouch ? rotate : springedRotate }} className={styles.gearBottom}>
           <Image src={gearIcon} alt="Ícone de uma engrenagem" width={256} />
         </m.div>
 
-        <m.div className={styles.scroll} ref={scrollRef} style={{ x }}>
+        <m.div className={styles.scroll} ref={scrollRef} style={{ x: isTouch ? x : springedX }}>
           <Page id="services" backgroundColor="none" fullHeight className={styles.services}>
             <Title>
               <span>Serviços</span>
