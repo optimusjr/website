@@ -4,16 +4,9 @@ import { useEffect, useRef, useState } from "react";
 
 import Page from "@/components/common/Page";
 import Title from "@/components/common/Title";
-import bedroom from "@/images/bedroom.jpg";
-import curtains from "@/images/curtains.jpg";
-import gate from "@/images/gate.jpg";
-import lights from "@/images/lights.jpg";
-import lock from "@/images/lock.png";
-import pool from "@/images/pool.jpg";
-import sensor from "@/images/sensor.jpg";
-import smart from "@/images/smart.png";
-import socket from "@/images/socket.png";
+import gearIcon from "@/images/icons/gear.svg";
 
+import images from "./images";
 import ServiceCard from "./ServiceCard";
 import styles from "./services.module.scss";
 
@@ -46,11 +39,22 @@ const Services = () => {
   const translateX = useTransform(scrollYProgress, [0, 1], [0, maxScroll]);
   const x = useSpring(translateX, { damping: 15, mass: 0.27, stiffness: 55 });
 
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, -maxScroll / 2]);
+  const springedRotate = useSpring(rotate, { damping: 15, mass: 0.27, stiffness: 55 });
+
   return (
     <div className={styles.pageContainer} ref={containerRef}>
       <div className={styles.sticky}>
+        <m.div style={{ rotate: springedRotate }} className={styles.gearTop}>
+          <Image src={gearIcon} alt="Ícone de uma engrenagem" width={256} />
+        </m.div>
+
+        <m.div style={{ rotate: springedRotate }} className={styles.gearBottom}>
+          <Image src={gearIcon} alt="Ícone de uma engrenagem" width={256} />
+        </m.div>
+
         <m.div className={styles.scroll} ref={scrollRef} style={{ x }}>
-          <Page id="services" backgroundColor="secondary" fullHeight className={styles.services}>
+          <Page id="services" backgroundColor="none" fullHeight className={styles.services}>
             <Title>
               <span>Serviços</span>
               <h2>Conheça as&nbsp;nossas soluções</h2>
@@ -58,7 +62,9 @@ const Services = () => {
 
             <ul className={styles.list}>
               <ServiceCard
-                image={<Image placeholder="empty" src={lights} alt="Luzes penduradas no teto" />}
+                image={
+                  <Image placeholder="empty" src={images.lights} alt="Luzes penduradas no teto" />
+                }
               >
                 <h3>Controle de Iluminação</h3>
                 <p>
@@ -68,7 +74,7 @@ const Services = () => {
               </ServiceCard>
 
               <ServiceCard
-                image={<Image placeholder="empty" src={socket} alt="Foto de uma tomada" />}
+                image={<Image placeholder="empty" src={images.socket} alt="Foto de uma tomada" />}
               >
                 <h3>Automação de Tomadas</h3>
                 <p>
@@ -81,7 +87,7 @@ const Services = () => {
                 image={
                   <Image
                     placeholder="empty"
-                    src={bedroom}
+                    src={images.bedroom}
                     alt="Foto de um quarto com televisão e ar condicionado"
                   />
                 }
@@ -97,7 +103,7 @@ const Services = () => {
               <ServiceCard
                 image={
                   <Image
-                    src={curtains}
+                    src={images.curtains}
                     alt="Foto uma mulher controlando as cortinas por controle remoto"
                   />
                 }
@@ -113,7 +119,7 @@ const Services = () => {
                 image={
                   <Image
                     placeholder="empty"
-                    src={lock}
+                    src={images.lock}
                     alt="Foto de uma fechadura digital inteligente"
                   />
                 }
@@ -126,7 +132,9 @@ const Services = () => {
               </ServiceCard>
 
               <ServiceCard
-                image={<Image placeholder="empty" src={gate} alt="Foto de portão de garagem" />}
+                image={
+                  <Image placeholder="empty" src={images.gate} alt="Foto de portão de garagem" />
+                }
               >
                 <h3>Automação de Portão Eletrônico</h3>
                 <p>
@@ -136,7 +144,7 @@ const Services = () => {
               </ServiceCard>
 
               <ServiceCard
-                image={<Image placeholder="empty" src={pool} alt="Foto de uma piscina" />}
+                image={<Image placeholder="empty" src={images.pool} alt="Foto de uma piscina" />}
               >
                 <h3>Controle de Piscinas</h3>
                 <p>
@@ -148,7 +156,11 @@ const Services = () => {
 
               <ServiceCard
                 image={
-                  <Image placeholder="empty" src={sensor} alt="Foto de um sensor de presença" />
+                  <Image
+                    placeholder="empty"
+                    src={images.sensor}
+                    alt="Foto de um sensor de presença"
+                  />
                 }
               >
                 <h3>Instalação de Sensores</h3>
@@ -161,7 +173,7 @@ const Services = () => {
               <ServiceCard
                 image={
                   <Image
-                    src={smart}
+                    src={images.smart}
                     alt="Foto de um celular com uma interface para controlar a casa inteligente que está ao fundo"
                   />
                 }

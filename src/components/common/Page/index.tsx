@@ -6,7 +6,7 @@ interface Props {
   className?: string;
   fullHeight?: boolean;
   firstFullHeight?: boolean;
-  backgroundColor: "white" | "secondary";
+  backgroundColor: "white" | "secondary" | "none";
 }
 
 const Page = ({ children, id, className, fullHeight, firstFullHeight, backgroundColor }: Props) => {
