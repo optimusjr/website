@@ -7,6 +7,14 @@
 
   border-radius: v.$radius;
 
+  min-height: 40px;
+
+  white-space: nowrap;
+}
+
+// Variants
+
+.filled {
   background-color: v.$primary;
   color: white;
 
@@ -24,6 +32,24 @@
     box-shadow: none;
   }
 }
+
+.text {
+  color: v.$primary;
+  background-color: transparent;
+
+  &:hover {
+    background-color: v.$white;
+
+    box-shadow: v.$shadow-md;
+  }
+
+  &:active {
+    background-color: v.$secondary;
+    box-shadow: none;
+  }
+}
+
+// Sizes
 
 .normal {
   font-size: 1.2rem;
