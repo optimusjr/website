@@ -2,7 +2,6 @@ import { m } from "framer-motion";
 import Link from "next/link";
 import Image from "next-image-export-optimizer";
 
-import fadeInTop from "@/animations/fadeInTop";
 import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
 import ListCard from "@/components/common/ListCard";
@@ -18,7 +17,7 @@ const AboutStart = () => {
   return (
     <>
       <Page backgroundColor="secondary">
-        <m.section {...fadeInTop} className={styles.intro}>
+        <section className={styles.intro}>
           <div>
             <span>OPTIMUS Jr.</span>
             <h1>A Empresa Junior de Controle e Automação.</h1>
@@ -48,7 +47,7 @@ const AboutStart = () => {
               priority
             />
           </Card>
-        </m.section>
+        </section>
 
         <ul className={styles.list}>
           <ListCard>

@@ -9,6 +9,9 @@
 
   padding: 64px 0;
 
+  animation: fadeInTop 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+
   @media (max-width: 767px) {
     grid-template-columns: 1fr;
 

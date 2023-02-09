@@ -1,7 +1,5 @@
 import { HTMLMotionProps, m } from "framer-motion";
 
-import fadeInTop from "@/animations/fadeInTop";
-
 import Card from "../Card";
 import styles from "./listCard.module.scss";
 
@@ -14,7 +12,14 @@ interface Props {
 }
 
 const ListCard = ({ layout, customAnime, className, children }: Props) => {
-  const animation = customAnime ? customAnime : fadeInTop;
+  const animation = customAnime
+    ? customAnime
+    : {
+        initial: { y: 20, opacity: 0 },
+        whileInView: { y: 0, opacity: 1 },
+        viewport: { once: true },
+        transition: { duration: 0.4 },
+      };
 
   return (
     <Card

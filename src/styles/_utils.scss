@@ -22,7 +22,8 @@
   }
 }
 
-// Evite utilizar o Framer Motion para maior desempenho.
+// Animações CSS
+// Se possível, previra usar elas do que utilizar o Framer Motion para ter maior desempenho.
 
 @keyframes slideFromTop {
   0% {
