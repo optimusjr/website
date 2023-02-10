@@ -72,7 +72,12 @@ const Services = () => {
             <ul className={styles.list}>
               <ServiceCard
                 image={
-                  <Image placeholder="empty" src={images.lights} alt="Luzes penduradas no teto" />
+                  <Image
+                    placeholder="empty"
+                    src={images.lights}
+                    alt="Luzes penduradas no teto"
+                    width={640}
+                  />
                 }
               >
                 <h3>Controle de Iluminação</h3>
@@ -83,7 +88,14 @@ const Services = () => {
               </ServiceCard>
 
               <ServiceCard
-                image={<Image placeholder="empty" src={images.socket} alt="Foto de uma tomada" />}
+                image={
+                  <Image
+                    placeholder="empty"
+                    src={images.socket}
+                    alt="Foto de uma tomada"
+                    width={640}
+                  />
+                }
               >
                 <h3>Automação de Tomadas</h3>
                 <p>
@@ -98,6 +110,7 @@ const Services = () => {
                     placeholder="empty"
                     src={images.bedroom}
                     alt="Foto de um quarto com televisão e ar condicionado"
+                    width={640}
                   />
                 }
               >
@@ -114,6 +127,7 @@ const Services = () => {
                   <Image
                     src={images.curtains}
                     alt="Foto uma mulher controlando as cortinas por controle remoto"
+                    width={640}
                   />
                 }
               >
@@ -130,6 +144,7 @@ const Services = () => {
                     placeholder="empty"
                     src={images.lock}
                     alt="Foto de uma fechadura digital inteligente"
+                    width={640}
                   />
                 }
               >
@@ -142,7 +157,12 @@ const Services = () => {
 
               <ServiceCard
                 image={
-                  <Image placeholder="empty" src={images.gate} alt="Foto de portão de garagem" />
+                  <Image
+                    placeholder="empty"
+                    src={images.gate}
+                    alt="Foto de portão de garagem"
+                    width={640}
+                  />
                 }
               >
                 <h3>Automação de Portão Eletrônico</h3>
@@ -153,7 +173,14 @@ const Services = () => {
               </ServiceCard>
 
               <ServiceCard
-                image={<Image placeholder="empty" src={images.pool} alt="Foto de uma piscina" />}
+                image={
+                  <Image
+                    placeholder="empty"
+                    src={images.pool}
+                    alt="Foto de uma piscina"
+                    width={640}
+                  />
+                }
               >
                 <h3>Controle de Piscinas</h3>
                 <p>
@@ -169,6 +196,7 @@ const Services = () => {
                     placeholder="empty"
                     src={images.sensor}
                     alt="Foto de um sensor de presença"
+                    width={640}
                   />
                 }
               >
@@ -184,6 +212,7 @@ const Services = () => {
                   <Image
                     src={images.smart}
                     alt="Foto de um celular com uma interface para controlar a casa inteligente que está ao fundo"
+                    width={640}
                   />
                 }
               >

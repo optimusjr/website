@@ -8,6 +8,7 @@
   align-content: center;
 
   padding: 64px 0;
+  gap: 16px;
 
   animation: fadeInTop 0.4s ease-in-out;
   animation-fill-mode: forwards;
@@ -21,15 +22,19 @@
   }
 
   .image {
-    background-color: v.$gray-300;
+    background-color: v.$gray-050;
     padding: 64px;
     margin-left: auto;
 
+    img {
+      margin: auto;
+    }
+
     @media (max-width: 1023px) {
-      padding: 32px;
+      padding: 64px;
       margin: auto;
       img {
-        width: 280px;
+        width: 256px;
         height: auto;
       }
     }
