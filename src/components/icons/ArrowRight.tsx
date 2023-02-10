@@ -2,7 +2,7 @@ interface Props<T extends React.ElementType> {
   as?: T;
 }
 
-const ArrowRightIcon = <T extends React.ElementType = "div">({
+const ArrowRightIcon = <T extends React.ElementType = "svg">({
   as,
   ...props
 }: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>) => {

@@ -14,6 +14,8 @@ const PROSEL = () => {
 
   const [isOpen, setIsOpen] = useState(true);
 
+  const subscribeLink = "/prosel";
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -30,7 +32,7 @@ const PROSEL = () => {
               gente!
             </p>
 
-            <Button as={Link} href="/prosel" onClick={() => setIsOpen(false)}>
+            <Button as={Link} href={subscribeLink} onClick={() => setIsOpen(false)}>
               Quero me Inscrever!
             </Button>
             <Button className={styles.close} onClick={() => setIsOpen(false)} variant="text">
