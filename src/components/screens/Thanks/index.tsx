@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 
 import Button from "@/components/common/Button";
-import Page from "@/components/common/Page";
+import Screen from "@/components/common/Screen";
 import ArrowLeftIcon from "@/components/icons/ArrowLeft";
 
 import styles from "./thanks.module.scss";
@@ -26,7 +26,7 @@ const Thanks = () => {
   }, []);
 
   return (
-    <Page backgroundColor="secondary" className={styles.custom404} firstFullHeight>
+    <Screen backgroundColor="secondary" className={styles.custom404} firstFullHeight>
       <div>
         <h1>Muito Obrigado!</h1>
         <p>Recebemos sua mensagem. Entraremos em contato com você o mais rápido possível.</p>
@@ -42,7 +42,7 @@ const Thanks = () => {
           </Button>
         </m.div>
       </div>
-    </Page>
+    </Screen>
   );
 };
 

@@ -5,7 +5,7 @@ import Image from "next-image-export-optimizer";
 import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
 import ListCard from "@/components/common/ListCard";
-import Page from "@/components/common/Page";
+import Screen from "@/components/common/Screen";
 import ArrowRightIcon from "@/components/icons/ArrowRight";
 import DiamondIcon from "@/components/icons/Diamond";
 import EyeIcon from "@/components/icons/Eye";
@@ -17,7 +17,7 @@ import styles from "./about.module.scss";
 const AboutStart = () => {
   return (
     <>
-      <Page backgroundColor="secondary">
+      <Screen backgroundColor="secondary">
         <section className={styles.intro}>
           <div>
             <span>OPTIMUS Jr.</span>
@@ -75,7 +75,7 @@ const AboutStart = () => {
             </ul>
           </ListCard>
         </ul>
-      </Page>
+      </Screen>
     </>
   );
 };

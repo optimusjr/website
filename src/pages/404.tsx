@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Custom404 from "@/components/pages/Custom404";
+import Custom404 from "@/components/screens/Custom404";
 
 const Custom404Page = () => {
   return (

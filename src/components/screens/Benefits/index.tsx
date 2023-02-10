@@ -1,8 +1,6 @@
 import ListCard from "@/components/common/ListCard";
-import Page from "@/components/common/Page";
+import Screen from "@/components/common/Screen";
 import Title from "@/components/common/Title";
-
-import styles from "./benefits.module.scss";
 import DeviceIcon from "@/components/icons/Devices";
 import HomeAssistantIcon from "@/components/icons/HomeAssistant";
 import LeafIcon from "@/components/icons/Leaf";
@@ -10,9 +8,11 @@ import RocketIcon from "@/components/icons/Rocket";
 import ShieldHomeIcon from "@/components/icons/ShieldHome";
 import SofaIcon from "@/components/icons/Sofa";
 
+import styles from "./benefits.module.scss";
+
 const Benefits = () => {
   return (
-    <Page backgroundColor="white">
+    <Screen backgroundColor="white">
       <Title>
         <span>Vantagens</span>
         <h2>Por que automatizar sua casa?</h2>
@@ -78,7 +78,7 @@ const Benefits = () => {
           </p>
         </ListCard>
       </ul>
-    </Page>
+    </Screen>
   );
 };
 

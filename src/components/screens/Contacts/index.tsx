@@ -1,6 +1,6 @@
 import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
-import Page from "@/components/common/Page";
+import Screen from "@/components/common/Screen";
 import TextField from "@/components/common/TextField";
 import Title from "@/components/common/Title";
 import EmailIcon from "@/components/icons/Email";
@@ -13,7 +13,7 @@ import styles from "./contacts.module.scss";
 
 const Contacts = () => {
   return (
-    <Page backgroundColor="secondary" id="contact">
+    <Screen backgroundColor="secondary" id="contact">
       <Title>
         <span>Contato</span>
         <h2>Fale conosco</h2>
@@ -64,7 +64,7 @@ const Contacts = () => {
           </Button>
         </Card>
       </div>
-    </Page>
+    </Screen>
   );
 };
 

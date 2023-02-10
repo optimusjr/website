@@ -2,7 +2,7 @@ import { m } from "framer-motion";
 import Link from "next/link";
 
 import Button from "@/components/common/Button";
-import Page from "@/components/common/Page";
+import Screen from "@/components/common/Screen";
 import ArrowLeftIcon from "@/components/icons/ArrowLeft";
 
 import styles from "./custom404.module.scss";
@@ -10,7 +10,7 @@ import Illustration from "./Illustration";
 
 const Custom404 = () => {
   return (
-    <Page backgroundColor="secondary" className={styles.custom404} firstFullHeight>
+    <Screen backgroundColor="secondary" className={styles.custom404} firstFullHeight>
       <div className={styles.text}>
         <h1>Oops! Algo deu errado.</h1>
         <p>A Página que você está procurando não pôde ser encontrada.</p>
@@ -28,7 +28,7 @@ const Custom404 = () => {
       </div>
 
       <Illustration />
-    </Page>
+    </Screen>
   );
 };
 

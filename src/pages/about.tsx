@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import AboutStart from "@/components/pages/AboutStart";
+import AboutStart from "@/components/screens/AboutStart";
 
 const About = () => {
   return (

@@ -2,7 +2,7 @@ import { m, useScroll, useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 import Image from "@/components/common/Image";
-import Page from "@/components/common/Page";
+import Screen from "@/components/common/Screen";
 import Title from "@/components/common/Title";
 import GearIcon from "@/components/icons/Gear";
 
@@ -52,7 +52,7 @@ const Services = () => {
   }, []);
 
   return (
-    <div className={styles.pageContainer} ref={containerRef}>
+    <div className={styles.screenContainer} ref={containerRef}>
       <div className={styles.sticky}>
         <m.div className={styles.gearTop} style={{ rotate: isTouch ? rotate : springedRotate }}>
           <GearIcon />
@@ -63,7 +63,7 @@ const Services = () => {
         </m.div>
 
         <m.div className={styles.scroll} ref={scrollRef} style={{ x: isTouch ? x : springedX }}>
-          <Page backgroundColor="none" className={styles.services} id="services" fullHeight>
+          <Screen backgroundColor="none" className={styles.services} id="services" fullHeight>
             <Title>
               <span>Serviços</span>
               <h2>Conheça as&nbsp;nossas soluções</h2>
@@ -189,7 +189,7 @@ const Services = () => {
                 </p>
               </ServiceCard>
             </ul>
-          </Page>
+          </Screen>
         </m.div>
       </div>
     </div>

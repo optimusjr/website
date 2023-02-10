@@ -1,16 +1,16 @@
 import ListCard from "@/components/common/ListCard";
-import Page from "@/components/common/Page";
+import Screen from "@/components/common/Screen";
 import Title from "@/components/common/Title";
-
-import styles from "./differentials.module.scss";
 import CapIcon from "@/components/icons/Cap";
 import CheckIcon from "@/components/icons/Check";
 import HandIcon from "@/components/icons/Hand";
 import TenIcon from "@/components/icons/Ten";
 
+import styles from "./differentials.module.scss";
+
 const Differentials = () => {
   return (
-    <Page backgroundColor="white">
+    <Screen backgroundColor="white">
       <Title>
         <span>Diferenciais</span>
         <h2>Por que somos a escolha certa?</h2>
@@ -51,7 +51,7 @@ const Differentials = () => {
           </div>
         </ListCard>
       </ul>
-    </Page>
+    </Screen>
   );
 };
 

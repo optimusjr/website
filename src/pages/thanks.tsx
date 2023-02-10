@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Thanks from "@/components/pages/Thanks";
+import Thanks from "@/components/screens/Thanks";
 
 const ThanksPage = () => {
   return (

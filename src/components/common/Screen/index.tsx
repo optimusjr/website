@@ -1,4 +1,4 @@
-import styles from "./page.module.scss";
+import styles from "./screen.module.scss";
 
 interface Props {
   children: React.ReactNode;
@@ -9,10 +9,17 @@ interface Props {
   backgroundColor: "white" | "secondary" | "none";
 }
 
-const Page = ({ children, id, className, fullHeight, firstFullHeight, backgroundColor }: Props) => {
+const Screen = ({
+  children,
+  id,
+  className,
+  fullHeight,
+  firstFullHeight,
+  backgroundColor,
+}: Props) => {
   return (
     <article
-      className={`${styles.page} ${styles[backgroundColor]} ${fullHeight ? styles.full : ""} ${
+      className={`${styles.screen} ${styles[backgroundColor]} ${fullHeight ? styles.full : ""} ${
         firstFullHeight ? styles.firstFull : ""
       } ${className}`}
       id={id}
@@ -22,4 +29,4 @@ const Page = ({ children, id, className, fullHeight, firstFullHeight, background
   );
 };
 
-export default Page;
+export default Screen;

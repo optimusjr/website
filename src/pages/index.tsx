@@ -1,10 +1,10 @@
 import Head from "next/head";
 
-import Benefits from "@/components/pages/Benefits";
-import Contacts from "@/components/pages/Contacts";
-import Differentials from "@/components/pages/Differentials";
-import Services from "@/components/pages/Services";
-import Start from "@/components/pages/Start";
+import Benefits from "@/components/screens/Benefits";
+import Contacts from "@/components/screens/Contacts";
+import Differentials from "@/components/screens/Differentials";
+import Services from "@/components/screens/Services";
+import Start from "@/components/screens/Start";
 
 const Home = () => {
   return (
