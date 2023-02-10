@@ -1,7 +1,7 @@
 import { m, useScroll, useSpring, useTransform } from "framer-motion";
-import Image from "next-image-export-optimizer";
 import { useEffect, useRef, useState } from "react";
 
+import Image from "@/components/common/Image";
 import Page from "@/components/common/Page";
 import Title from "@/components/common/Title";
 import gearIcon from "@/images/icons/gear.svg";
@@ -71,14 +71,7 @@ const Services = () => {
 
             <ul className={styles.list}>
               <ServiceCard
-                image={
-                  <Image
-                    alt="Luzes penduradas no teto"
-                    placeholder="empty"
-                    src={images.lights}
-                    width={640}
-                  />
-                }
+                image={<Image alt="Luzes penduradas no teto" src={images.lights} width={640} />}
               >
                 <h3>Controle de Iluminação</h3>
                 <p>
@@ -88,14 +81,7 @@ const Services = () => {
               </ServiceCard>
 
               <ServiceCard
-                image={
-                  <Image
-                    alt="Foto de uma tomada"
-                    placeholder="empty"
-                    src={images.socket}
-                    width={640}
-                  />
-                }
+                image={<Image alt="Foto de uma tomada" src={images.socket} width={640} />}
               >
                 <h3>Automação de Tomadas</h3>
                 <p>
@@ -108,7 +94,6 @@ const Services = () => {
                 image={
                   <Image
                     alt="Foto de um quarto com televisão e ar condicionado"
-                    placeholder="empty"
                     src={images.bedroom}
                     width={640}
                   />
@@ -142,7 +127,6 @@ const Services = () => {
                 image={
                   <Image
                     alt="Foto de uma fechadura digital inteligente"
-                    placeholder="empty"
                     src={images.lock}
                     width={640}
                   />
@@ -156,14 +140,7 @@ const Services = () => {
               </ServiceCard>
 
               <ServiceCard
-                image={
-                  <Image
-                    alt="Foto de portão de garagem"
-                    placeholder="empty"
-                    src={images.gate}
-                    width={640}
-                  />
-                }
+                image={<Image alt="Foto de portão de garagem" src={images.gate} width={640} />}
               >
                 <h3>Automação de Portão Eletrônico</h3>
                 <p>
@@ -173,14 +150,7 @@ const Services = () => {
               </ServiceCard>
 
               <ServiceCard
-                image={
-                  <Image
-                    alt="Foto de uma piscina"
-                    placeholder="empty"
-                    src={images.pool}
-                    width={640}
-                  />
-                }
+                image={<Image alt="Foto de uma piscina" src={images.pool} width={640} />}
               >
                 <h3>Controle de Piscinas</h3>
                 <p>
@@ -192,12 +162,7 @@ const Services = () => {
 
               <ServiceCard
                 image={
-                  <Image
-                    alt="Foto de um sensor de presença"
-                    placeholder="empty"
-                    src={images.sensor}
-                    width={640}
-                  />
+                  <Image alt="Foto de um sensor de presença" src={images.sensor} width={640} />
                 }
               >
                 <h3>Instalação de Sensores</h3>

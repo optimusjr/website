@@ -39,13 +39,7 @@ const AboutStart = () => {
           </div>
 
           <Card className={styles.image}>
-            <Image
-              alt="Logotipo da OPTIMUS Jr."
-              placeholder="empty"
-              src={logo}
-              width={350}
-              priority
-            />
+            <Image alt="Logotipo da OPTIMUS Jr." src={logo} width={350} priority />
           </Card>
         </section>
 

@@ -1,6 +1,6 @@
 import { m } from "framer-motion";
-import Image from "next-image-export-optimizer";
 
+import Image from "@/components/common/Image";
 import Page from "@/components/common/Page";
 import bedroomOff from "@/images/bedroom-off.png";
 import bedroomOn from "@/images/bedroom-on.png";
@@ -18,13 +18,7 @@ const Start = () => {
       <div className={styles.image}>
         <m.div transition={{ type: "spring", bounce: 0, duration: 1 }} whileHover={{ scale: 1.1 }}>
           <div>
-            <Image
-              alt="Quarto com as luzes apagadas"
-              placeholder="empty"
-              src={bedroomOff}
-              width={1924}
-              priority
-            />
+            <Image alt="Quarto com as luzes apagadas" src={bedroomOff} width={1924} priority />
           </div>
 
           <m.div

@@ -1,9 +1,9 @@
 import { m } from "framer-motion";
 import Link from "next/link";
-import Image from "next-image-export-optimizer";
 import { useState } from "react";
 
 import Button from "@/components/common/Button";
+import Image from "@/components/common/Image";
 import wordmark from "@/images/icons/OPTIMUS/wordmark.svg";
 
 import styles from "./header.module.scss";
@@ -29,20 +29,9 @@ const Header = () => {
         <div className={styles.left}>
           <Link href="/" onClick={hideMobile}>
             <div className={styles.iconWrapper}>
-              <Image
-                alt="Ícone da OPTIMUS Jr."
-                height="40"
-                placeholder="empty"
-                src="/icon.svg"
-                width="40"
-              />
+              <Image alt="Ícone da OPTIMUS Jr." height="40" src="/icon.svg" width="40" />
             </div>
-            <Image
-              alt="'OPTIMUS Jr.' escrito em letras estilizadas"
-              height="18"
-              placeholder="empty"
-              src={wordmark}
-            />
+            <Image alt="'OPTIMUS Jr.' escrito em letras estilizadas" height="18" src={wordmark} />
           </Link>
         </div>
 
