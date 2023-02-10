@@ -17,12 +17,12 @@
   animation-fill-mode: forwards;
 
   h1 {
-    color: v.$primary;
+    color: v.$primary-800;
     font-size: calc(0.5rem + 4.5vw);
   }
 
   p {
-    color: v.$gray;
+    color: v.$gray-900;
     font-size: calc(0.5rem + 1.5vw);
     margin: 0;
   }
@@ -36,7 +36,7 @@
     }
 
     p {
-      color: v.$gray;
+      color: v.$gray-900;
       font-size: calc(1rem + 2vw);
       margin: 0;
     }

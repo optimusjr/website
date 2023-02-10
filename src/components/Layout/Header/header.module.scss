@@ -2,7 +2,7 @@
 @use "utils";
 
 .container {
-  background-color: v.$secondary;
+  background-color: v.$secondary-100;
 
   @extend %defaultPaddings;
 
@@ -16,7 +16,7 @@
   grid-template-rows: 64px auto;
 
   border-radius: 0 0 v.$radius v.$radius;
-  background-color: v.$white;
+  background-color: v.$gray-300;
 
   font-size: 1.2rem;
   overflow: hidden;

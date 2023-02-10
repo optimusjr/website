@@ -17,12 +17,12 @@
   }
 
   h1 {
-    color: v.$primary;
+    color: v.$primary-800;
     font-size: calc(2rem + 2vw);
   }
 
   p {
-    color: v.$gray;
+    color: v.$gray-900;
     font-size: calc(1rem + 1vw);
     margin: 0;
   }

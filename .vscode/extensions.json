@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "mrmlnc.vscode-scss",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
     "shardulm94.trailing-spaces",

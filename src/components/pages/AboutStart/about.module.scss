@@ -21,7 +21,7 @@
   }
 
   .image {
-    background-color: v.$white;
+    background-color: v.$gray-300;
     padding: 64px;
     margin-left: auto;
 
@@ -44,18 +44,18 @@
   }
 
   span {
-    color: v.$primary;
+    color: v.$primary-800;
     font-weight: bold;
     font-size: calc(1rem + 1vw);
   }
 
   h1 {
-    color: v.$gray;
+    color: v.$gray-900;
     font-size: calc(2rem + 2vw);
   }
 
   p {
-    color: v.$gray;
+    color: v.$gray-900;
     font-size: calc(1rem + 1vw);
     margin: 0;
   }
@@ -80,6 +80,6 @@
   .values {
     text-align: start;
     font-size: 1.2rem;
-    color: v.$gray;
+    color: v.$gray-900;
   }
 }

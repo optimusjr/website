@@ -6,10 +6,10 @@
     white-space: nowrap;
 
     transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-    color: #5a5a5a;
+    color: v.$gray-800;
 
     &:hover {
-      color: v.$gray;
+      color: v.$gray-900;
     }
 
     text-align: center;

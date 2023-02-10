@@ -7,13 +7,13 @@
 
   span {
     padding-bottom: 16px;
-    color: v.$primary;
+    color: v.$primary-800;
     font-weight: 500;
     font-size: calc(1rem + 1vw);
   }
 
   h2 {
-    color: v.$gray;
+    color: v.$gray-900;
     font-size: calc(2rem + 2vw);
   }
 }

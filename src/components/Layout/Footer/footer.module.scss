@@ -3,7 +3,7 @@
 
 .footer {
   @extend %defaultPaddings;
-  background-color: v.$gray;
+  background-color: v.$gray-900;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -14,7 +14,7 @@
   gap: 16px;
 
   p {
-    color: white;
+    color: v.$gray-050;
     text-align: center;
   }
 

@@ -15,36 +15,36 @@
 // Variants
 
 .filled {
-  background-color: v.$primary;
-  color: white;
+  background-color: v.$primary-800;
+  color: v.$gray-050;
 
   svg {
-    fill: white;
+    fill: v.$gray-050;
   }
 
   &:hover {
-    background-color: v.$primary-light;
+    background-color: v.$primary-700;
     box-shadow: v.$shadow-md;
   }
 
   &:active {
-    background-color: v.$primary-dark;
+    background-color: v.$primary-900;
     box-shadow: none;
   }
 }
 
 .text {
-  color: v.$primary;
+  color: v.$primary-800;
   background-color: transparent;
 
   &:hover {
-    background-color: v.$white;
+    background-color: v.$gray-300;
 
     box-shadow: v.$shadow-md;
   }
 
   &:active {
-    background-color: v.$secondary;
+    background-color: v.$secondary-100;
     box-shadow: none;
   }
 }
