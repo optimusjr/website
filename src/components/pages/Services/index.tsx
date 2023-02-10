@@ -39,7 +39,7 @@ const Services = () => {
   const x = useTransform(scrollYProgress, [0, 1], [0, maxScroll]);
   const springedX = useSpring(x, { damping: 15, mass: 0.27, stiffness: 55 });
 
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, -maxScroll / 2]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, -maxScroll / 8]);
   const springedRotate = useSpring(rotate, { damping: 15, mass: 0.27, stiffness: 55 });
 
   const [isTouch, setIsTouch] = useState(false);
