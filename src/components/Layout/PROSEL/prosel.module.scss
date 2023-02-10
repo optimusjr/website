@@ -10,13 +10,8 @@
 }
 
 .dialog {
-  position: relative;
-
-  box-shadow: v.$shadow-2xl;
-  max-width: 512px;
-  padding: 24px;
-
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: flex-start;
 
@@ -24,6 +19,10 @@
   opacity: 0;
   animation: fadeInTop 0.4s (0.4s * 2) ease-in-out;
   animation-fill-mode: forwards;
+
+  box-shadow: v.$shadow-2xl;
+  padding: 24px;
+  max-width: 512px;
 }
 
 .close {
@@ -34,9 +33,8 @@
   padding: 8px;
 
   svg {
+    fill: v.$gray-900;
     width: 24px;
     height: auto;
-
-    fill: v.$gray-900;
   }
 }

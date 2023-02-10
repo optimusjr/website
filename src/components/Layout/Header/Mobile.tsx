@@ -13,11 +13,11 @@ interface Props {
   hideShow: () => void;
 }
 
-export default function Mobile({ show, toggleShow, hideShow }: Props) {
+const Mobile = ({ show, toggleShow, hideShow }: Props) => {
   return (
     <>
       <div className={styles.menuButton}>
-        <Button onClick={toggleShow} aria-label="Abrir menu">
+        <Button aria-label="Abrir menu" onClick={toggleShow}>
           <MenuIcon open={show} />
         </Button>
       </div>
@@ -25,14 +25,14 @@ export default function Mobile({ show, toggleShow, hideShow }: Props) {
       <AnimatePresence initial={false}>
         {show && (
           <m.div
-            initial="collapsed"
-            animate="open"
-            exit="collapsed"
             variants={{
               open: { opacity: 1, height: "auto" },
               collapsed: { opacity: 0, height: 0 },
             }}
+            animate="open"
             className={styles.menuContainer}
+            exit="collapsed"
+            initial="collapsed"
           >
             <ul className={styles.menu}>
               <Links hideMobile={hideShow} />
@@ -48,4 +48,6 @@ export default function Mobile({ show, toggleShow, hideShow }: Props) {
       </AnimatePresence>
     </>
   );
-}
+};
+
+export default Mobile;

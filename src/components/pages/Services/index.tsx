@@ -54,16 +54,16 @@ const Services = () => {
   return (
     <div className={styles.pageContainer} ref={containerRef}>
       <div className={styles.sticky}>
-        <m.div style={{ rotate: isTouch ? rotate : springedRotate }} className={styles.gearTop}>
-          <Image src={gearIcon} alt="Ícone de uma engrenagem" width={256} />
+        <m.div className={styles.gearTop} style={{ rotate: isTouch ? rotate : springedRotate }}>
+          <Image alt="Ícone de uma engrenagem" src={gearIcon} width={256} />
         </m.div>
 
-        <m.div style={{ rotate: isTouch ? rotate : springedRotate }} className={styles.gearBottom}>
-          <Image src={gearIcon} alt="Ícone de uma engrenagem" width={256} />
+        <m.div className={styles.gearBottom} style={{ rotate: isTouch ? rotate : springedRotate }}>
+          <Image alt="Ícone de uma engrenagem" src={gearIcon} width={256} />
         </m.div>
 
         <m.div className={styles.scroll} ref={scrollRef} style={{ x: isTouch ? x : springedX }}>
-          <Page id="services" backgroundColor="none" fullHeight className={styles.services}>
+          <Page backgroundColor="none" className={styles.services} id="services" fullHeight>
             <Title>
               <span>Serviços</span>
               <h2>Conheça as&nbsp;nossas soluções</h2>
@@ -73,9 +73,9 @@ const Services = () => {
               <ServiceCard
                 image={
                   <Image
+                    alt="Luzes penduradas no teto"
                     placeholder="empty"
                     src={images.lights}
-                    alt="Luzes penduradas no teto"
                     width={640}
                   />
                 }
@@ -90,9 +90,9 @@ const Services = () => {
               <ServiceCard
                 image={
                   <Image
+                    alt="Foto de uma tomada"
                     placeholder="empty"
                     src={images.socket}
-                    alt="Foto de uma tomada"
                     width={640}
                   />
                 }
@@ -107,9 +107,9 @@ const Services = () => {
               <ServiceCard
                 image={
                   <Image
+                    alt="Foto de um quarto com televisão e ar condicionado"
                     placeholder="empty"
                     src={images.bedroom}
-                    alt="Foto de um quarto com televisão e ar condicionado"
                     width={640}
                   />
                 }
@@ -125,8 +125,8 @@ const Services = () => {
               <ServiceCard
                 image={
                   <Image
-                    src={images.curtains}
                     alt="Foto uma mulher controlando as cortinas por controle remoto"
+                    src={images.curtains}
                     width={640}
                   />
                 }
@@ -141,9 +141,9 @@ const Services = () => {
               <ServiceCard
                 image={
                   <Image
+                    alt="Foto de uma fechadura digital inteligente"
                     placeholder="empty"
                     src={images.lock}
-                    alt="Foto de uma fechadura digital inteligente"
                     width={640}
                   />
                 }
@@ -158,9 +158,9 @@ const Services = () => {
               <ServiceCard
                 image={
                   <Image
+                    alt="Foto de portão de garagem"
                     placeholder="empty"
                     src={images.gate}
-                    alt="Foto de portão de garagem"
                     width={640}
                   />
                 }
@@ -175,9 +175,9 @@ const Services = () => {
               <ServiceCard
                 image={
                   <Image
+                    alt="Foto de uma piscina"
                     placeholder="empty"
                     src={images.pool}
-                    alt="Foto de uma piscina"
                     width={640}
                   />
                 }
@@ -193,9 +193,9 @@ const Services = () => {
               <ServiceCard
                 image={
                   <Image
+                    alt="Foto de um sensor de presença"
                     placeholder="empty"
                     src={images.sensor}
-                    alt="Foto de um sensor de presença"
                     width={640}
                   />
                 }
@@ -210,8 +210,8 @@ const Services = () => {
               <ServiceCard
                 image={
                   <Image
-                    src={images.smart}
                     alt="Foto de um celular com uma interface para controlar a casa inteligente que está ao fundo"
+                    src={images.smart}
                     width={640}
                   />
                 }

@@ -9,18 +9,18 @@ import Illustration from "./Illustration";
 
 const Custom404 = () => {
   return (
-    <Page backgroundColor="secondary" firstFullHeight className={styles.custom404}>
+    <Page backgroundColor="secondary" className={styles.custom404} firstFullHeight>
       <div>
         <h1>Oops! Algo deu errado.</h1>
         <p>A Página que você está procurando não pôde ser encontrada.</p>
 
-        <m.div className={styles.right} whileHover="hover" animate="rest">
+        <m.div animate="rest" className={styles.right} whileHover="hover">
           <Button as={Link} href="/">
             <m.img
-              variants={{ hover: { x: [0, -5, 0], transition: { repeat: Infinity } } }}
-              src="/images/icons/arrow-left.svg"
               alt="Seta apontando para esquerda"
               height="24"
+              src="/images/icons/arrow-left.svg"
+              variants={{ hover: { x: [0, -5, 0], transition: { repeat: Infinity } } }}
               width="24"
             />
 

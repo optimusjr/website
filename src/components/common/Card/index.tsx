@@ -7,17 +7,17 @@ interface Props<T extends React.ElementType> {
   children?: React.ReactNode;
 }
 
-function Card<T extends React.ElementType = "div">({
+const Card = <T extends React.ElementType = "div">({
   as,
   className,
   cardLayout = "column",
   ...props
-}: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>) {
+}: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>) => {
   const Component = as || "div";
 
   const classes = `${styles.card} ${styles[cardLayout]} ${className}`;
 
   return <Component className={classes} {...props} />;
-}
+};
 
 export default Card;

@@ -11,7 +11,7 @@ interface Props {
 
 const Layout = ({ font, children }: Props) => {
   return (
-    <div style={{ display: "contents" }} className={font.className}>
+    <div className={font.className} style={{ display: "contents" }}>
       <Header />
       <main>{children}</main>
       <Footer />

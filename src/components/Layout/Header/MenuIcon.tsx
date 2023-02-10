@@ -4,13 +4,13 @@ interface Props {
   open: boolean;
 }
 
-export default function MenuIcon({ open }: Props) {
+const MenuIcon = ({ open }: Props) => {
   return (
     <svg
-      width="24"
-      height="24"
       fill="#ffffff"
+      height="24"
       viewBox="0 0 24 24"
+      width="24"
       xmlns="http://www.w3.org/2000/svg"
     >
       <m.path animate={{ x: open ? 24 : 0 }} d="m3 16h18v2h-18z" />
@@ -18,4 +18,6 @@ export default function MenuIcon({ open }: Props) {
       <m.path animate={{ x: open ? 24 : 0 }} d="m3 6h18v2h-18v-2" />
     </svg>
   );
-}
+};
+
+export default MenuIcon;

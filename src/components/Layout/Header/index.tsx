@@ -10,7 +10,7 @@ import styles from "./header.module.scss";
 import Links from "./Links";
 import Mobile from "./Mobile";
 
-export default function Header() {
+const Header = () => {
   const [showMobile, setShowMobile] = useState(false);
 
   const toggleShowMobile = () => {
@@ -30,18 +30,18 @@ export default function Header() {
           <Link href="/" onClick={hideMobile}>
             <div className={styles.iconWrapper}>
               <Image
-                placeholder="empty"
-                src="/icon.svg"
                 alt="Ícone da OPTIMUS Jr."
                 height="40"
+                placeholder="empty"
+                src="/icon.svg"
                 width="40"
               />
             </div>
             <Image
-              placeholder="empty"
-              src={wordmark}
               alt="'OPTIMUS Jr.' escrito em letras estilizadas"
               height="18"
+              placeholder="empty"
+              src={wordmark}
             />
           </Link>
         </div>
@@ -50,22 +50,24 @@ export default function Header() {
           <Links hideMobile={hideMobile} />
         </ul>
 
-        <m.div className={styles.right} whileHover="hover" animate="rest">
+        <m.div animate="rest" className={styles.right} whileHover="hover">
           <Button as={Link} href="/budget">
             <div>Faça um Orçamento</div>
 
             <m.img
-              variants={{ hover: { x: [0, 5, 0], transition: { repeat: Infinity } } }}
-              src="/images/icons/arrow-right.svg"
               alt="Seta apontando para direita"
               height="24"
+              src="/images/icons/arrow-right.svg"
+              variants={{ hover: { x: [0, 5, 0], transition: { repeat: Infinity } } }}
               width="24"
             />
           </Button>
         </m.div>
 
-        <Mobile show={showMobile} toggleShow={toggleShowMobile} hideShow={hideMobile} />
+        <Mobile hideShow={hideMobile} show={showMobile} toggleShow={toggleShowMobile} />
       </header>
     </div>
   );
-}
+};
+
+export default Header;

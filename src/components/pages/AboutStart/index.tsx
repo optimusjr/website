@@ -23,15 +23,15 @@ const AboutStart = () => {
             <h1>A Empresa Junior de Controle e Automação.</h1>
             <p>Trazemos conforto, segurança e economia para os seus ambientes.</p>
 
-            <m.div className={styles.right} whileHover="hover" animate="rest">
+            <m.div animate="rest" className={styles.right} whileHover="hover">
               <Button as={Link} href="/budget">
                 <div>Faça um Orçamento</div>
 
                 <m.img
-                  variants={{ hover: { x: [0, 5, 0], transition: { repeat: Infinity } } }}
-                  src="/images/icons/arrow-right.svg"
                   alt="Seta apontando para direita"
                   height="24"
+                  src="/images/icons/arrow-right.svg"
+                  variants={{ hover: { x: [0, 5, 0], transition: { repeat: Infinity } } }}
                   width="24"
                 />
               </Button>
@@ -40,9 +40,9 @@ const AboutStart = () => {
 
           <Card className={styles.image}>
             <Image
+              alt="Logotipo da OPTIMUS Jr."
               placeholder="empty"
               src={logo}
-              alt="Logotipo da OPTIMUS Jr."
               width={350}
               priority
             />

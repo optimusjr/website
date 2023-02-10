@@ -2,8 +2,8 @@
 @use "utils";
 
 .pageContainer {
-  height: 600vh;
   background-color: v.$secondary-100;
+  height: 600vh;
 }
 
 .sticky {
@@ -16,8 +16,8 @@
 .gearTop,
 .gearBottom {
   position: absolute;
-  line-height: 0;
   z-index: -1;
+  line-height: 0;
 
   @media (min-width: 425px) {
     img {
@@ -28,12 +28,12 @@
 }
 
 .gearTop {
-  left: -128px;
   top: -128px;
+  left: -128px;
 
   @media (min-width: 425px) {
-    left: -256px;
     top: -256px;
+    left: -256px;
   }
 }
 
@@ -56,13 +56,13 @@
   width: min-content;
 
   span {
-    text-align: left;
     font-size: calc(1rem + 3vw);
+    text-align: left;
   }
 
   h2 {
-    text-align: left;
     font-size: calc(2rem + 6vw);
+    text-align: left;
   }
 }
 

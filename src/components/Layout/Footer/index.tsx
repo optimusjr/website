@@ -10,23 +10,23 @@ import whatsappIcon from "@/images/icons/whatsapp.svg";
 
 import styles from "./footer.module.scss";
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <Image placeholder="empty" src={logo_horizontal} alt="Logo da OPTIMUS Jr." height={64} />
+      <Image alt="Logo da OPTIMUS Jr." height={64} placeholder="empty" src={logo_horizontal} />
 
       <div className={styles.links}>
         <Button as={Link} href="https://www.instagram.com/optimusjrautomacao/">
-          <Image placeholder="empty" src={instagramIcon} alt="Ícone do Instagram" width={32} />
+          <Image alt="Ícone do Instagram" placeholder="empty" src={instagramIcon} width={32} />
         </Button>
         <Button as={Link} href="http://wa.me/5571999112217">
-          <Image placeholder="empty" src={whatsappIcon} alt="Ícone do Whatsapp" width={32} />
+          <Image alt="Ícone do Whatsapp" placeholder="empty" src={whatsappIcon} width={32} />
         </Button>
         <Button as={Link} href="https://br.linkedin.com/company/optimus-jr-automacao">
-          <Image placeholder="empty" src={linkedinIcon} alt="Ícone do LinkedIn" width={32} />
+          <Image alt="Ícone do LinkedIn" placeholder="empty" src={linkedinIcon} width={32} />
         </Button>
         <Button as={Link} href="https://pt-br.facebook.com/OptimusJrAutomacao/">
-          <Image placeholder="empty" src={facebookIcon} alt="Ícone do Facebook" width={32} />
+          <Image alt="Ícone do Facebook" placeholder="empty" src={facebookIcon} width={32} />
         </Button>
       </div>
 
@@ -42,4 +42,6 @@ export default function Footer() {
       </p>
     </footer>
   );
-}
+};
+
+export default Footer;

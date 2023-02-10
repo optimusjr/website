@@ -8,13 +8,13 @@ interface Props<T extends React.ElementType> {
   children?: React.ReactNode;
 }
 
-function Button<T extends React.ElementType = "button">({
+const Button = <T extends React.ElementType = "button">({
   as,
   size = "normal",
   variant = "filled",
   className,
   ...props
-}: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>) {
+}: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>) => {
   const Component = as || "button";
 
   return (
@@ -23,6 +23,6 @@ function Button<T extends React.ElementType = "button">({
       {...props}
     />
   );
-}
+};
 
 export default Button;

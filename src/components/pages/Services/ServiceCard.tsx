@@ -15,7 +15,7 @@ const ServiceCard = ({ image, children }: Props) => {
   return (
     <ListCard className={styles.serviceCard}>
       <div className={styles.imageContainer}>
-        <m.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", duration: 1 }}>
+        <m.div transition={{ type: "spring", duration: 1 }} whileHover={{ scale: 1.1 }}>
           {image}
         </m.div>
       </div>

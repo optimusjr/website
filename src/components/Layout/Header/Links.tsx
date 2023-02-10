@@ -6,7 +6,7 @@ interface Props {
   hideMobile: () => void;
 }
 
-export default function Links({ hideMobile }: Props) {
+const Links = ({ hideMobile }: Props) => {
   return (
     <>
       <li className={styles.link}>
@@ -22,4 +22,6 @@ export default function Links({ hideMobile }: Props) {
       </li>
     </>
   );
-}
+};
+
+export default Links;

@@ -19,8 +19,8 @@ const ContactCard = ({ href, children }: Props) => {
         cardLayout="none"
         className={styles.contactCard}
         initial={{ scale: 1, boxShadow: variables.shadowMd }}
-        whileHover={{ scale: 1.01, boxShadow: variables.shadowLg }}
         transition={{ type: "spring", duration: 0.3 }}
+        whileHover={{ scale: 1.01, boxShadow: variables.shadowLg }}
       >
         {children}
       </Card>

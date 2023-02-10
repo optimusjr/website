@@ -19,13 +19,13 @@
   }
 
   p {
-    border-bottom: 1px solid;
     transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 1px solid;
+    max-width: 40vw;
+    overflow: hidden;
 
     text-overflow: ellipsis;
-    overflow: hidden;
     white-space: nowrap;
-    max-width: 40vw;
 
     &:hover {
       border-color: transparent;

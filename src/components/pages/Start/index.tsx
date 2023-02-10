@@ -9,35 +9,35 @@ import styles from "./start.module.scss";
 
 const Start = () => {
   return (
-    <Page backgroundColor="secondary" firstFullHeight className={styles.start}>
+    <Page backgroundColor="secondary" className={styles.start} firstFullHeight>
       <div className={styles.text}>
         <h1>Leve o futuro para o seu lar.</h1>
         <p>Transformamos sua casa com as nossas soluções de automação residencial.</p>
       </div>
 
       <div className={styles.image}>
-        <m.div whileHover={{ scale: 1.1 }} transition={{ type: "spring", bounce: 0, duration: 1 }}>
+        <m.div transition={{ type: "spring", bounce: 0, duration: 1 }} whileHover={{ scale: 1.1 }}>
           <div>
             <Image
+              alt="Quarto com as luzes apagadas"
               placeholder="empty"
-              priority
               src={bedroomOff}
               width={1924}
-              alt="Quarto com as luzes apagadas"
+              priority
             />
           </div>
 
           <m.div
-            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
             transition={{ repeat: Infinity, repeatType: "reverse", delay: 5, repeatDelay: 5 }}
           >
             <Image
-              priority
-              src={bedroomOn}
-              width={1924}
               alt="Quarto com as luzes acessas"
+              src={bedroomOn}
               style={{ position: "absolute" }}
+              width={1924}
+              priority
             />
           </m.div>
         </m.div>

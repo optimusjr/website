@@ -19,8 +19,8 @@ const PROSEL = () => {
       {isOpen && (
         <m.div
           className={styles.container}
-          initial={{ y: 0, opacity: 1 }}
           exit={{ y: 20, opacity: 0 }}
+          initial={{ y: 0, opacity: 1 }}
           transition={{ linear: true }}
         >
           <Card cardLayout="none" className={styles.dialog}>
@@ -33,7 +33,7 @@ const PROSEL = () => {
             <Button as={Link} href="/prosel" onClick={() => setIsOpen(false)}>
               Quero me Inscrever!
             </Button>
-            <Button variant="text" className={styles.close} onClick={() => setIsOpen(false)}>
+            <Button className={styles.close} onClick={() => setIsOpen(false)} variant="text">
               <CloseIcon />
             </Button>
           </Card>

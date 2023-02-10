@@ -13,7 +13,7 @@ import WhatsappIcon from "./icons/Whatsapp";
 
 const Contacts = () => {
   return (
-    <Page id="contact" backgroundColor="secondary">
+    <Page backgroundColor="secondary" id="contact">
       <Title>
         <span>Contato</span>
         <h2>Fale conosco</h2>
@@ -45,18 +45,18 @@ const Contacts = () => {
         </ContactCard>
 
         <Card
+          action="https://formsubmit.co/contato@optimusjr.com.br"
           as="form"
           className={styles.contactForm}
-          action="https://formsubmit.co/contato@optimusjr.com.br"
           method="POST"
         >
           <h3>Mande uma mensagem</h3>
 
           <TextField label="Nome:" name={"nome"} required />
           <TextField label="E-mail:" name={"email"} type="email" required />
-          <TextField label="Sua mensagem:" name={"mensagem"} required multiline />
+          <TextField label="Sua mensagem:" name={"mensagem"} multiline required />
 
-          <input type="hidden" name="_next" value="https://optimusjr.com.br/thanks" />
+          <input name="_next" type="hidden" value="https://optimusjr.com.br/thanks" />
 
           <Button type="submit">
             <SendIcon />

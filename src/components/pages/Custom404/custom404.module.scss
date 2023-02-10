@@ -8,8 +8,8 @@
 
   @media (max-width: 767px) {
     grid-template-columns: 1fr;
-    justify-items: center;
     align-content: center;
+    justify-items: center;
   }
 
   div {
@@ -30,19 +30,19 @@
   }
 
   p {
+    margin: 0;
     color: v.$gray-900;
     font-size: calc(0.5rem + 1.5vw);
-    margin: 0;
   }
 
   svg {
-    width: 50vw;
-    height: auto;
+    box-shadow: v.$shadow-md;
 
     border-radius: v.$radius;
-    box-shadow: v.$shadow-md;
     background-color: v.$gray-050;
     padding: 32px;
+    width: 50vw;
+    height: auto;
 
     @media (max-width: 767px) {
       width: 80vw;

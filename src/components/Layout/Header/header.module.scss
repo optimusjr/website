@@ -12,18 +12,18 @@
 
 .header {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 64px auto;
-
-  border-radius: 0 0 v.$radius v.$radius;
-  background-color: v.$gray-300;
-
-  font-size: 1.2rem;
-  overflow: hidden;
+  grid-template-columns: 1fr 1fr 1fr;
 
   transform: translateY(-100%);
   animation: slideFromTop 0.4s 0.4s ease-in-out;
   animation-fill-mode: forwards;
+
+  border-radius: 0 0 v.$radius v.$radius;
+  background-color: v.$gray-300;
+  overflow: hidden;
+
+  font-size: 1.2rem;
 
   @media (max-width: 856px) {
     grid-template-columns: 1fr 1fr;
@@ -32,8 +32,8 @@
 
 .left {
   display: flex;
-  align-items: center;
   justify-content: left;
+  align-items: center;
 
   a {
     display: contents;
@@ -53,8 +53,8 @@
 
 .center {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
   gap: 16px;
 
@@ -65,8 +65,8 @@
 
 .right {
   display: flex;
-  align-items: center;
   justify-content: right;
+  align-items: center;
 
   a {
     margin: 12px;

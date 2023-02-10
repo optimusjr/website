@@ -14,7 +14,7 @@ const TextField = ({ label, name, type, required, multiline }: Props) => {
   return (
     <label className={styles.textField}>
       <span>{label}</span>
-      <InputComponent name={name} type={type} required={required} />
+      <InputComponent name={name} required={required} type={type} />
     </label>
   );
 };

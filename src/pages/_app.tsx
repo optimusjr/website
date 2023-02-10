@@ -12,22 +12,22 @@ const league = League_Spartan({
   display: "swap",
 });
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
         {/* A Tag Viewport não deve ser usada no _document.tsx, por isso está nesse arquivo */}
         {/* Para mais informações acesse: https://nextjs.org/docs/messages/no-document-viewport-meta */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       </Head>
 
-      <LazyMotion strict features={domAnimation}>
+      <LazyMotion features={domAnimation} strict>
         <Layout font={league}>
           <Component {...pageProps} />
         </Layout>
       </LazyMotion>
     </>
   );
-}
+};
 
 export default MyApp;

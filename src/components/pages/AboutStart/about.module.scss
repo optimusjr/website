@@ -4,14 +4,14 @@
 .intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-items: center;
   align-content: center;
-
-  padding: 64px 0;
+  justify-items: center;
   gap: 16px;
 
   animation: fadeInTop 0.4s ease-in-out;
   animation-fill-mode: forwards;
+
+  padding: 64px 0;
 
   @media (max-width: 767px) {
     grid-template-columns: 1fr;
@@ -22,17 +22,17 @@
   }
 
   .image {
+    margin-left: auto;
     background-color: v.$gray-050;
     padding: 64px;
-    margin-left: auto;
 
     img {
       margin: auto;
     }
 
     @media (max-width: 1023px) {
-      padding: 64px;
       margin: auto;
+      padding: 64px;
       img {
         width: 256px;
         height: auto;
@@ -60,9 +60,9 @@
   }
 
   p {
+    margin: 0;
     color: v.$gray-900;
     font-size: calc(1rem + 1vw);
-    margin: 0;
   }
 }
 
@@ -83,8 +83,8 @@
   }
 
   .values {
-    text-align: start;
-    font-size: 1.2rem;
     color: v.$gray-900;
+    font-size: 1.2rem;
+    text-align: start;
   }
 }
