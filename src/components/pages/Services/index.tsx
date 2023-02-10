@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "@/components/common/Image";
 import Page from "@/components/common/Page";
 import Title from "@/components/common/Title";
-import gearIcon from "@/images/icons/gear.svg";
+import GearIcon from "@/components/icons/Gear";
 
 import images from "./images";
 import ServiceCard from "./ServiceCard";
@@ -55,11 +55,11 @@ const Services = () => {
     <div className={styles.pageContainer} ref={containerRef}>
       <div className={styles.sticky}>
         <m.div className={styles.gearTop} style={{ rotate: isTouch ? rotate : springedRotate }}>
-          <Image alt="Ícone de uma engrenagem" src={gearIcon} width={256} />
+          <GearIcon />
         </m.div>
 
         <m.div className={styles.gearBottom} style={{ rotate: isTouch ? rotate : springedRotate }}>
-          <Image alt="Ícone de uma engrenagem" src={gearIcon} width={256} />
+          <GearIcon />
         </m.div>
 
         <m.div className={styles.scroll} ref={scrollRef} style={{ x: isTouch ? x : springedX }}>

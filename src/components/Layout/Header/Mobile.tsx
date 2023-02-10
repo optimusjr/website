@@ -2,9 +2,9 @@ import { AnimatePresence, m } from "framer-motion";
 import Link from "next/link";
 
 import Button from "@/components/common/Button";
+import MenuIcon from "@/components/icons/Menu";
 
 import Links from "./Links";
-import MenuIcon from "./MenuIcon";
 import styles from "./mobile.module.scss";
 
 interface Props {

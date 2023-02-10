@@ -3,10 +3,10 @@ import Page from "@/components/common/Page";
 import Title from "@/components/common/Title";
 
 import styles from "./differentials.module.scss";
-import CapIcon from "./icons/Cap";
-import CheckIcon from "./icons/Check";
-import HandIcon from "./icons/Hand";
-import TenIcon from "./icons/Ten";
+import CapIcon from "@/components/icons/Cap";
+import CheckIcon from "@/components/icons/Check";
+import HandIcon from "@/components/icons/Hand";
+import TenIcon from "@/components/icons/Ten";
 
 const Differentials = () => {
   return (

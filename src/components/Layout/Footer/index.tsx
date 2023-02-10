@@ -2,11 +2,11 @@ import Link from "next/link";
 
 import Button from "@/components/common/Button";
 import Image from "@/components/common/Image";
-import facebookIcon from "@/images/icons/facebook.svg";
-import instagramIcon from "@/images/icons/instagram.svg";
-import linkedinIcon from "@/images/icons/linkedin.svg";
-import logo_horizontal from "@/images/icons/OPTIMUS/logo_white_horizontal.svg";
-import whatsappIcon from "@/images/icons/whatsapp.svg";
+import FacebookIcon from "@/components/icons/Facebook";
+import InstagramIcon from "@/components/icons/Instagram";
+import LinkedinIcon from "@/components/icons/LinkedIn";
+import WhatsappIcon from "@/components/icons/Whatsapp";
+import logo_horizontal from "@/images/OPTIMUS/logo_white_horizontal.svg";
 
 import styles from "./footer.module.scss";
 
@@ -17,16 +17,16 @@ const Footer = () => {
 
       <div className={styles.links}>
         <Button as={Link} href="https://www.instagram.com/optimusjrautomacao/">
-          <Image alt="Ícone do Instagram" src={instagramIcon} width={32} />
+          <InstagramIcon />
         </Button>
         <Button as={Link} href="http://wa.me/5571999112217">
-          <Image alt="Ícone do Whatsapp" src={whatsappIcon} width={32} />
+          <WhatsappIcon />
         </Button>
         <Button as={Link} href="https://br.linkedin.com/company/optimus-jr-automacao">
-          <Image alt="Ícone do LinkedIn" src={linkedinIcon} width={32} />
+          <LinkedinIcon />
         </Button>
         <Button as={Link} href="https://pt-br.facebook.com/OptimusJrAutomacao/">
-          <Image alt="Ícone do Facebook" src={facebookIcon} width={32} />
+          <FacebookIcon />
         </Button>
       </div>
 

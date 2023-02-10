@@ -4,8 +4,8 @@ import { useState } from "react";
 
 import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
+import CloseIcon from "@/components/icons/Close";
 
-import CloseIcon from "./close";
 import styles from "./prosel.module.scss";
 
 const PROSEL = () => {

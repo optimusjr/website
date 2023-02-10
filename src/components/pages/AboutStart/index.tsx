@@ -6,10 +6,11 @@ import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
 import ListCard from "@/components/common/ListCard";
 import Page from "@/components/common/Page";
-import DiamondIcon from "@/components/pages/AboutStart/icons/Diamond";
-import EyeIcon from "@/components/pages/AboutStart/icons/Eye";
-import TargetIcon from "@/components/pages/AboutStart/icons/Target";
-import logo from "@/images/icons/OPTIMUS/logo.svg";
+import ArrowRightIcon from "@/components/icons/ArrowRight";
+import DiamondIcon from "@/components/icons/Diamond";
+import EyeIcon from "@/components/icons/Eye";
+import TargetIcon from "@/components/icons/Target";
+import logo from "@/images/OPTIMUS/logo.svg";
 
 import styles from "./about.module.scss";
 
@@ -23,16 +24,13 @@ const AboutStart = () => {
             <h1>A Empresa Junior de Controle e Automação.</h1>
             <p>Trazemos conforto, segurança e economia para os seus ambientes.</p>
 
-            <m.div animate="rest" className={styles.right} whileHover="hover">
+            <m.div animate="rest" whileHover="hover">
               <Button as={Link} href="/budget">
                 <div>Faça um Orçamento</div>
 
-                <m.img
-                  alt="Seta apontando para direita"
-                  height="24"
-                  src="/images/icons/arrow-right.svg"
+                <ArrowRightIcon
+                  as={m.svg}
                   variants={{ hover: { x: [0, 5, 0], transition: { repeat: Infinity } } }}
-                  width="24"
                 />
               </Button>
             </m.div>

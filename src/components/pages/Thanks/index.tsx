@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 import Button from "@/components/common/Button";
 import Page from "@/components/common/Page";
+import ArrowLeftIcon from "@/components/icons/ArrowLeft";
 
 import styles from "./thanks.module.scss";
 
@@ -30,14 +31,11 @@ const Thanks = () => {
         <h1>Muito Obrigado!</h1>
         <p>Recebemos sua mensagem. Entraremos em contato com você o mais rápido possível.</p>
 
-        <m.div animate="rest" className={styles.right} whileHover="hover">
+        <m.div animate="rest" whileHover="hover">
           <Button as={Link} href="/">
-            <m.img
-              alt="Seta apontando para esquerda"
-              height="24"
-              src="/images/icons/arrow-left.svg"
+            <ArrowLeftIcon
+              as={m.svg}
               variants={{ hover: { x: [0, -5, 0], transition: { repeat: Infinity } } }}
-              width="24"
             />
 
             <div>Voltar para página inicial</div>

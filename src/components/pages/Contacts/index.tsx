@@ -3,13 +3,13 @@ import Card from "@/components/common/Card";
 import Page from "@/components/common/Page";
 import TextField from "@/components/common/TextField";
 import Title from "@/components/common/Title";
+import EmailIcon from "@/components/icons/Email";
+import PhoneIcon from "@/components/icons/Phone";
+import SendIcon from "@/components/icons/Send";
+import WhatsappIcon from "@/components/icons/Whatsapp";
 
 import ContactCard from "./ContactCard";
 import styles from "./contacts.module.scss";
-import EmailIcon from "./icons/Email";
-import PhoneIcon from "./icons/Phone";
-import SendIcon from "./icons/Send";
-import WhatsappIcon from "./icons/Whatsapp";
 
 const Contacts = () => {
   return (

@@ -4,7 +4,8 @@ import { useState } from "react";
 
 import Button from "@/components/common/Button";
 import Image from "@/components/common/Image";
-import wordmark from "@/images/icons/OPTIMUS/wordmark.svg";
+import ArrowRightIcon from "@/components/icons/ArrowRight";
+import wordmark from "@/images/OPTIMUS/wordmark.svg";
 
 import styles from "./header.module.scss";
 import Links from "./Links";
@@ -43,12 +44,9 @@ const Header = () => {
           <Button as={Link} href="/budget">
             <div>Faça um Orçamento</div>
 
-            <m.img
-              alt="Seta apontando para direita"
-              height="24"
-              src="/images/icons/arrow-right.svg"
+            <ArrowRightIcon
+              as={m.svg}
               variants={{ hover: { x: [0, 5, 0], transition: { repeat: Infinity } } }}
-              width="24"
             />
           </Button>
         </m.div>

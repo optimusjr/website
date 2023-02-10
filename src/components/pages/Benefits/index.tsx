@@ -3,12 +3,12 @@ import Page from "@/components/common/Page";
 import Title from "@/components/common/Title";
 
 import styles from "./benefits.module.scss";
-import DeviceIcon from "./icons/Devices";
-import HomeAssistantIcon from "./icons/HomeAssistant";
-import LeafIcon from "./icons/Leaf";
-import RocketIcon from "./icons/Rocket";
-import ShieldHomeIcon from "./icons/ShieldHome";
-import SofaIcon from "./icons/Sofa";
+import DeviceIcon from "@/components/icons/Devices";
+import HomeAssistantIcon from "@/components/icons/HomeAssistant";
+import LeafIcon from "@/components/icons/Leaf";
+import RocketIcon from "@/components/icons/Rocket";
+import ShieldHomeIcon from "@/components/icons/ShieldHome";
+import SofaIcon from "@/components/icons/Sofa";
 
 const Benefits = () => {
   return (
