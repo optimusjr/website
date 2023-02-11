@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import Button from "@/components/common/Button";
 import Image from "@/components/common/Image";
+import Typography from "@/components/common/Typography";
 import FacebookIcon from "@/components/icons/Facebook";
 import InstagramIcon from "@/components/icons/Instagram";
 import LinkedinIcon from "@/components/icons/LinkedIn";
@@ -30,16 +31,16 @@ const Footer = () => {
         </Button>
       </div>
 
-      <p>
+      <Typography>
         Rua Aristides Novis, 02, 6º andar
         <br />
         Salvador, Bahia.
-      </p>
+      </Typography>
 
-      <p>
+      <Typography>
         &copy;{new Date().getFullYear()} OPTIMUS Jr. Controle e Automação. <br />
         Todos os direitos reservados
-      </p>
+      </Typography>
     </footer>
   );
 };

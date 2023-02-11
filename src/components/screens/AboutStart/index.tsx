@@ -6,6 +6,7 @@ import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
 import ListCard from "@/components/common/ListCard";
 import Screen from "@/components/common/Screen";
+import Typography from "@/components/common/Typography";
 import ArrowRightIcon from "@/components/icons/ArrowRight";
 import CheckOutlineIcon from "@/components/icons/CheckOutline";
 import DiamondIcon from "@/components/icons/Diamond";
@@ -45,44 +46,44 @@ const AboutStart = () => {
           <ListCard>
             <TargetIcon />
 
-            <h3>Missão</h3>
-            <p>
+            <Typography variant="h3">Missão</Typography>
+            <Typography>
               Desenvolver nossos membros na área de automação, através da vivência empresarial, com
               foco em trazer a melhor experiência (e sucesso) para os nossos clientes.
-            </p>
+            </Typography>
           </ListCard>
 
           <ListCard>
             <DiamondIcon />
 
-            <h3>Valores</h3>
+            <Typography variant="h3">Valores</Typography>
             <ul className={styles.values}>
-              <li>
+              <Typography component="li" variant="p">
                 <CheckOutlineIcon /> Autonomia
-              </li>
-              <li>
+              </Typography>
+              <Typography component="li" variant="p">
                 <CheckOutlineIcon /> Resiliência
-              </li>
-              <li>
+              </Typography>
+              <Typography component="li" variant="p">
                 <CheckOutlineIcon /> Comprometimento com resultados
-              </li>
-              <li>
+              </Typography>
+              <Typography component="li" variant="p">
                 <CheckOutlineIcon /> Sentimento de Ser Dono
-              </li>
-              <li>
+              </Typography>
+              <Typography component="li" variant="p">
                 <CheckOutlineIcon /> Orgulho de ser OPTIMUS
-              </li>
+              </Typography>
             </ul>
           </ListCard>
 
           <ListCard>
             <EyeIcon />
 
-            <h3>Visão</h3>
-            <p>
+            <Typography variant="h3">Visão</Typography>
+            <Typography>
               Entrar e atuar com constância no mercado de automação residencial, com preços justos e
               qualidade de excelência, gerando conforto, praticidade e economia para os clientes.
-            </p>
+            </Typography>
           </ListCard>
         </ul>
       </Screen>

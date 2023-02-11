@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
+import Typography from "@/components/common/Typography";
 import CloseIcon from "@/components/icons/Close";
 
 import styles from "./prosel.module.scss";
@@ -26,11 +27,11 @@ const PROSEL = () => {
           transition={{ linear: true }}
         >
           <Card cardLayout="none" className={styles.dialog}>
-            <h3>Estamos contratando!</h3>
-            <p>
+            <Typography variant="h3">Estamos contratando!</Typography>
+            <Typography>
               Estão abertas as inscrições para o nosso processo seletivo. Venha trabalhar com a
               gente!
-            </p>
+            </Typography>
 
             <Button as={Link} href={subscribeLink} onClick={() => setIsOpen(false)}>
               Quero me Inscrever!

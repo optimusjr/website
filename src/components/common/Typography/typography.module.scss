@@ -1,0 +1,12 @@
+@use "variables" as v;
+@use "utils" as u;
+
+.h3 {
+  color: v.$primary-800;
+  font-size: u.rem(24);
+}
+
+.p {
+  font-size: u.rem(18);
+  line-height: 1.2;
+}

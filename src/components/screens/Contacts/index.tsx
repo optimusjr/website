@@ -3,6 +3,7 @@ import Card from "@/components/common/Card";
 import Screen from "@/components/common/Screen";
 import TextField from "@/components/common/TextField";
 import Title from "@/components/common/Title";
+import Typography from "@/components/common/Typography";
 import EmailIcon from "@/components/icons/Email";
 import PhoneIcon from "@/components/icons/Phone";
 import SendIcon from "@/components/icons/Send";
@@ -23,24 +24,24 @@ const Contacts = () => {
         <ContactCard href="http://wa.me/5571999112217">
           <WhatsappIcon />
           <div>
-            <h3>Chame no WhatsApp</h3>
-            <p>+55 71 99911-2217</p>
+            <Typography variant="h3">Chame no WhatsApp</Typography>
+            <Typography>+55 71 99911-2217</Typography>
           </div>
         </ContactCard>
 
         <ContactCard href="mailto:contato@optimusjr.com.br">
           <EmailIcon />
           <div>
-            <h3>Mande um e-mail</h3>
-            <p>contato@optimusjr.com.br</p>
+            <Typography variant="h3">Mande um e-mail</Typography>
+            <Typography>contato@optimusjr.com.br</Typography>
           </div>
         </ContactCard>
 
         <ContactCard href="tel:+5571999112217">
           <PhoneIcon />
           <div>
-            <h3>Ligue pra gente</h3>
-            <p>(71) 99911-2217</p>
+            <Typography variant="h3">Ligue pra gente</Typography>
+            <Typography>(71) 99911-2217</Typography>
           </div>
         </ContactCard>
 
@@ -50,11 +51,11 @@ const Contacts = () => {
           className={styles.contactForm}
           method="POST"
         >
-          <h3>Mande uma mensagem</h3>
+          <Typography variant="h3">Mande uma mensagem</Typography>
 
-          <TextField label="Nome:" name={"nome"} required />
-          <TextField label="E-mail:" name={"email"} type="email" required />
-          <TextField label="Sua mensagem:" name={"mensagem"} multiline required />
+          <TextField label="Nome:" name="nome" required />
+          <TextField label="E-mail:" name="email" type="email" required />
+          <TextField label="Sua mensagem:" name="mensagem" multiline required />
 
           <input name="_next" type="hidden" value="https://optimusjr.com.br/thanks" />
 
