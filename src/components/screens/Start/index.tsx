@@ -5,11 +5,14 @@ import Screen from "@/components/common/Screen";
 import bedroomOff from "@/images/bedroom-off.png";
 import bedroomOn from "@/images/bedroom-on.png";
 
+import Divider from "./Divider";
 import styles from "./start.module.scss";
 
 const Start = () => {
   return (
     <Screen backgroundColor="secondary" className={styles.start} firstFullHeight>
+      <Divider />
+
       <div className={styles.text}>
         <h1>Leve o futuro para o seu lar.</h1>
         <p>Transformamos sua casa com as nossas soluções de automação residencial.</p>

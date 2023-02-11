@@ -2,6 +2,7 @@
 @use "utils";
 
 .start {
+  position: relative;
   flex-direction: row;
 
   @media (max-width: 768px) {
@@ -59,6 +60,7 @@
 
   img {
     top: 0;
+
     width: 100%;
     height: auto;
   }
