@@ -15,10 +15,7 @@ import styles from "./contacts.module.scss";
 const Contacts = () => {
   return (
     <Screen backgroundColor="secondary" id="contact">
-      <Title>
-        <span>Contato</span>
-        <h2>Fale conosco</h2>
-      </Title>
+      <Title strap="Contato">Fale conosco</Title>
 
       <div className={styles.content}>
         <ContactCard href="http://wa.me/5571999112217">

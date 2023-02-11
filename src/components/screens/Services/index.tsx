@@ -65,10 +65,7 @@ const Services = () => {
 
         <m.div className={styles.scroll} ref={scrollRef} style={{ x: isTouch ? x : springedX }}>
           <Screen backgroundColor="none" className={styles.services} id="services" fullHeight>
-            <Title>
-              <span>Serviços</span>
-              <h2>Conheça as&nbsp;nossas soluções</h2>
-            </Title>
+            <Title strap="Serviços">Conheça as&nbsp;nossas soluções</Title>
 
             <ul className={styles.list}>
               <ServiceCard

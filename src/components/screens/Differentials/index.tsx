@@ -12,10 +12,7 @@ import styles from "./differentials.module.scss";
 const Differentials = () => {
   return (
     <Screen backgroundColor="white">
-      <Title>
-        <span>Diferenciais</span>
-        <h2>Por que somos a escolha certa?</h2>
-      </Title>
+      <Title strap="Diferenciais">Por que somos a escolha certa?</Title>
 
       <ul className={styles.list}>
         <ListCard layout="row">

@@ -14,10 +14,7 @@ import styles from "./benefits.module.scss";
 const Benefits = () => {
   return (
     <Screen backgroundColor="white">
-      <Title>
-        <span>Vantagens</span>
-        <h2>Por que automatizar sua casa?</h2>
-      </Title>
+      <Title strap="Vantagens">Por que automatizar sua casa?</Title>
 
       <ul className={styles.list}>
         <ListCard>

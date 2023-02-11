@@ -1,7 +1,7 @@
 import styles from "./typography.module.scss";
 
 interface Props<T extends React.ElementType> {
-  variant?: "h3" | "p" | "span" | "strap";
+  variant?: "h2" | "h3" | "p" | "span" | "strap";
   component?: T;
   className?: string;
 }
