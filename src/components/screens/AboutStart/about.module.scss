@@ -12,6 +12,9 @@
   animation-fill-mode: forwards;
 
   padding: 64px 0;
+  @media (max-width: 1135px) {
+    padding: 32px 0;
+  }
 
   @media (max-width: 767px) {
     grid-template-columns: 1fr;
