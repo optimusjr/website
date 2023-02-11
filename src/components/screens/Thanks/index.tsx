@@ -37,8 +37,7 @@ const Thanks = () => {
               as={m.svg}
               variants={{ hover: { x: [0, -5, 0], transition: { repeat: Infinity } } }}
             />
-
-            <div>Voltar para página inicial</div>
+            Voltar para página inicial
           </Button>
         </m.div>
       </div>

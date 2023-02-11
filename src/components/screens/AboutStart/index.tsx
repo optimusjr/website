@@ -7,6 +7,7 @@ import Card from "@/components/common/Card";
 import ListCard from "@/components/common/ListCard";
 import Screen from "@/components/common/Screen";
 import ArrowRightIcon from "@/components/icons/ArrowRight";
+import CheckOutlineIcon from "@/components/icons/CheckOutline";
 import DiamondIcon from "@/components/icons/Diamond";
 import EyeIcon from "@/components/icons/Eye";
 import TargetIcon from "@/components/icons/Target";
@@ -26,8 +27,7 @@ const AboutStart = () => {
 
             <m.div animate="rest" whileHover="hover">
               <Button as={Link} href="/budget">
-                <div>Faça um Orçamento</div>
-
+                Faça um Orçamento
                 <ArrowRightIcon
                   as={m.svg}
                   variants={{ hover: { x: [0, 5, 0], transition: { repeat: Infinity } } }}
@@ -53,6 +53,29 @@ const AboutStart = () => {
           </ListCard>
 
           <ListCard>
+            <DiamondIcon />
+
+            <h3>Valores</h3>
+            <ul className={styles.values}>
+              <li>
+                <CheckOutlineIcon /> Autonomia
+              </li>
+              <li>
+                <CheckOutlineIcon /> Resiliência
+              </li>
+              <li>
+                <CheckOutlineIcon /> Comprometimento com resultados
+              </li>
+              <li>
+                <CheckOutlineIcon /> Sentimento de Ser Dono
+              </li>
+              <li>
+                <CheckOutlineIcon /> Orgulho de ser OPTIMUS
+              </li>
+            </ul>
+          </ListCard>
+
+          <ListCard>
             <EyeIcon />
 
             <h3>Visão</h3>
@@ -60,19 +83,6 @@ const AboutStart = () => {
               Entrar e atuar com constância no mercado de automação residencial, com preços justos e
               qualidade de excelência, gerando conforto, praticidade e economia para os clientes.
             </p>
-          </ListCard>
-
-          <ListCard>
-            <DiamondIcon />
-
-            <h3>Valores</h3>
-            <ul className={styles.values}>
-              <li>&#8226;&nbsp;Autonomia</li>
-              <li>&#8226;&nbsp;Resiliência</li>
-              <li>&#8226;&nbsp;Comprometimento com os resultados</li>
-              <li>&#8226;&nbsp;Ser Dono</li>
-              <li>&#8226;&nbsp;Orgulho de ser OPTIMUS</li>
-            </ul>
           </ListCard>
         </ul>
       </Screen>

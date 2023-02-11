@@ -42,8 +42,7 @@ const Header = () => {
 
         <m.div animate="rest" className={styles.right} whileHover="hover">
           <Button as={Link} href="/budget">
-            <div>Faça um Orçamento</div>
-
+            Faça um Orçamento
             <ArrowRightIcon
               as={m.svg}
               variants={{ hover: { x: [0, 5, 0], transition: { repeat: Infinity } } }}
