@@ -19,7 +19,7 @@ const Button = <T extends React.ElementType = "button">({
 
   return (
     <Component
-      className={`${styles.button} ${styles[size]} ${styles[variant]} ${className}`}
+      className={[styles.button, styles[size], styles[variant], className].join(" ")}
       {...props}
     />
   );

@@ -15,9 +15,9 @@ const Card = <T extends React.ElementType = "div">({
 }: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>) => {
   const Component = as || "div";
 
-  const classes = `${styles.card} ${styles[cardLayout]} ${className}`;
-
-  return <Component className={classes} {...props} />;
+  return (
+    <Component className={[styles.card, styles[cardLayout], className].join(" ")} {...props} />
+  );
 };
 
 export default Card;

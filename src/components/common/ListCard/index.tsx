@@ -25,7 +25,7 @@ const ListCard = ({ layout, customAnime, className, children }: Props) => {
     <Card
       as={m.li}
       cardLayout={layout}
-      className={`${className} ${styles.listCard}`}
+      className={[styles.listCard, className].join(" ")}
       {...animation}
     >
       {children}

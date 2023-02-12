@@ -19,9 +19,13 @@ const Screen = ({
 }: Props) => {
   return (
     <article
-      className={`${styles.screen} ${styles[backgroundColor]} ${fullHeight ? styles.full : ""} ${
-        firstFullHeight ? styles.firstFull : ""
-      } ${className}`}
+      className={[
+        styles.screen,
+        styles[backgroundColor],
+        fullHeight ? styles.full : "",
+        firstFullHeight ? styles.firstFull : "",
+        className,
+      ].join(" ")}
       id={id}
     >
       {children}

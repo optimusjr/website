@@ -19,7 +19,7 @@ const Typography = <T extends React.ElementType = "div">({
     Component = "span";
   }
 
-  return <Component className={`${styles[Variant]} ${className}`} {...props} />;
+  return <Component className={[styles[Variant], className].join(" ")} {...props} />;
 };
 
 export default Typography;
