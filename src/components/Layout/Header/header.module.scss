@@ -1,5 +1,5 @@
 @use "variables" as v;
-@use "utils";
+@use "utils" as u;
 
 .container {
   background-color: v.$secondary-100;
@@ -23,7 +23,7 @@
   background-color: v.$gray-300;
   overflow: hidden;
 
-  font-size: 1.2rem;
+  font-size: u.rem(20);
 
   @media (max-width: 856px) {
     grid-template-columns: 1fr 1fr;

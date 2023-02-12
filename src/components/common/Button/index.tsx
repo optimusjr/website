@@ -2,7 +2,7 @@ import styles from "./button.module.scss";
 
 interface Props<T extends React.ElementType> {
   as?: T;
-  size?: "normal" | "large";
+  size?: "normal";
   variant?: "filled" | "text";
   className?: string;
   children?: React.ReactNode;
