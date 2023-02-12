@@ -1,3 +1,5 @@
+import Typography from "@/components/common/Typography";
+
 import styles from "./textField.module.scss";
 
 interface Props {
@@ -13,8 +15,10 @@ const TextField = ({ label, name, type, required, multiline }: Props) => {
 
   return (
     <label className={styles.textField}>
-      <span>{label}</span>
-      <InputComponent name={name} type={type} required={required} />
+      <Typography component="span" variant="p">
+        {label}
+      </Typography>
+      <InputComponent name={name} required={required} type={type} />
     </label>
   );
 };

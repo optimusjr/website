@@ -3,15 +3,14 @@
 .link {
   display: contents;
   a {
-    white-space: nowrap;
-
     transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-    color: #5a5a5a;
-
-    &:hover {
-      color: v.$gray;
-    }
+    color: v.$gray-800;
 
     text-align: center;
+    white-space: nowrap;
+
+    &:hover {
+      color: v.$gray-900;
+    }
   }
 }

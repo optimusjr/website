@@ -3,10 +3,10 @@
 @use "variables" as v;
 
 :export {
-  primaryColor: v.$primary;
-  secondaryColor: v.$secondary;
-
-  gray: v.$gray;
+  // Coloque mais cores caso necessário
+  colorPrimary800: v.$primary-800;
+  colorSecondary100: v.$secondary-100;
+  colorGray900: v.$gray-900;
 
   shadowMd: v.$shadow-md;
   shadowLg: v.$shadow-lg;

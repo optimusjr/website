@@ -3,82 +3,82 @@ import Document, { Head, Html, Main, NextScript } from "next/document";
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="pt-br" dir="ltr">
+      <Html dir="ltr" lang="pt-br">
         <Head>
           {/* Primary Meta Tags*/}
           <meta charSet="utf-8" />
-          <meta httpEquiv="content-type" content="text/html" />
+          <meta content="text/html" httpEquiv="content-type" />
 
           {/* SEO Meta Tags*/}
-          <meta name="author" content="OPTIMUS Jr. Controle e Automação" />
+          <meta content="OPTIMUS Jr. Controle e Automação" name="author" />
           <meta
-            name="description"
             content="Empresa júnior de automação residencial, oferecemos soluções inovadoras e personalizadas para tornar sua casa mais inteligente."
+            name="description"
           />
 
           {/* Open Graph / Facebook*/}
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content={process.env.SITE_URL} />
+          <meta content="website" property="og:type" />
+          <meta content={process.env.SITE_URL} property="og:url" />
           <meta
-            property="og:title"
             content="OPTIMUS Jr. Controle e Automação | Empresa de Automação em Salvador"
+            property="og:title"
           />
-          <meta property="og:image" content={`${process.env.SITE_URL}/card.png`} />
+          <meta content={`${process.env.SITE_URL}/card.png`} property="og:image" />
           <meta
-            property="og:image:alt"
             content="ícone da OPTIMUS Jr. em um fundo branco. O ícone é um circulo verde com uma engrenagem dentro, e dentro da engrenagem um sinal de onda."
+            property="og:image:alt"
           />
-          <meta property="og:locale" content="pt_BR" />
+          <meta content="pt_BR" property="og:locale" />
           <meta
-            property="og:description"
             content="Empresa júnior de automação residencial, oferecemos soluções inovadoras e personalizadas para tornar sua casa mais inteligente."
+            property="og:description"
           />
 
           {/* Twitter*/}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:url" content={process.env.SITE_URL} />
-          <meta name="twitter:title" content="OPTIMUS Jr. Controle e Automação" />
-          <meta name="twitter:image" content={`${process.env.SITE_URL}/card.png`} />
+          <meta content="summary_large_image" name="twitter:card" />
+          <meta content={process.env.SITE_URL} name="twitter:url" />
+          <meta content="OPTIMUS Jr. Controle e Automação" name="twitter:title" />
+          <meta content={`${process.env.SITE_URL}/card.png`} name="twitter:image" />
           {
             // TODO: Criar um Twitter para a OPTIMUS e colocar o @ aqui
             // <meta name="twitter:creator" content="@???" />
           }
           <meta
-            name="twitter:description"
             content="Empresa júnior de automação residencial, oferecemos soluções inovadoras e personalizadas para tornar sua casa mais inteligente."
+            name="twitter:description"
           />
 
           {/* Icons*/}
           <link
+            href={`${process.env.SITE_URL}/icons/apple-touch-icon.png`}
             rel="apple-touch-icon"
             sizes="180x180"
-            href={`${process.env.SITE_URL}/icons/apple-touch-icon.png`}
           />
           <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
             href={`${process.env.SITE_URL}/icons/favicon-32x32.png`}
-          />
-          <link
             rel="icon"
+            sizes="32x32"
             type="image/png"
-            sizes="16x16"
-            href={`${process.env.SITE_URL}/icons/favicon-16x16.png`}
           />
-          <link rel="manifest" href={`${process.env.SITE_URL}/icons/site.webmanifest`} />
           <link
-            rel="mask-icon"
-            href={`${process.env.SITE_URL}/icons/safari-pinned-tab.svg`}
+            href={`${process.env.SITE_URL}/icons/favicon-16x16.png`}
+            rel="icon"
+            sizes="16x16"
+            type="image/png"
+          />
+          <link href={`${process.env.SITE_URL}/icons/site.webmanifest`} rel="manifest" />
+          <link
             color="#f45d22"
+            href={`${process.env.SITE_URL}/icons/safari-pinned-tab.svg`}
+            rel="mask-icon"
           />
-          <link rel="shortcut icon" href={`${process.env.SITE_URL}/icons/favicon.ico`} />
-          <meta name="msapplication-TileColor" content="#da532c" />
+          <link href={`${process.env.SITE_URL}/icons/favicon.ico`} rel="shortcut icon" />
+          <meta content="#da532c" name="msapplication-TileColor" />
           <meta
-            name="msapplication-config"
             content={`${process.env.SITE_URL}/icons/browserconfig.xml`}
+            name="msapplication-config"
           />
-          <meta name="theme-color" content="#efefef" />
+          <meta content="#efefef" name="theme-color" />
         </Head>
         <body>
           <Main />

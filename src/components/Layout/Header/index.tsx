@@ -1,16 +1,17 @@
 import { m } from "framer-motion";
 import Link from "next/link";
-import Image from "next-image-export-optimizer";
 import { useState } from "react";
 
 import Button from "@/components/common/Button";
-import wordmark from "@/images/icons/OPTIMUS/wordmark.svg";
+import Image from "@/components/common/Image";
+import ArrowRightIcon from "@/components/icons/ArrowRight";
+import wordmark from "@/images/OPTIMUS/wordmark.svg";
 
 import styles from "./header.module.scss";
 import Links from "./Links";
 import Mobile from "./Mobile";
 
-export default function Header() {
+const Header = () => {
   const [showMobile, setShowMobile] = useState(false);
 
   const toggleShowMobile = () => {
@@ -29,20 +30,9 @@ export default function Header() {
         <div className={styles.left}>
           <Link href="/" onClick={hideMobile}>
             <div className={styles.iconWrapper}>
-              <Image
-                placeholder="empty"
-                src="/icon.svg"
-                alt="Ícone da OPTIMUS Jr."
-                height="40"
-                width="40"
-              />
+              <Image alt="Ícone da OPTIMUS Jr." height="40" src="/icon.svg" width="40" />
             </div>
-            <Image
-              placeholder="empty"
-              src={wordmark}
-              alt="'OPTIMUS Jr.' escrito em letras estilizadas"
-              height="18"
-            />
+            <Image alt="'OPTIMUS Jr.' escrito em letras estilizadas" height="18" src={wordmark} />
           </Link>
         </div>
 
@@ -50,22 +40,20 @@ export default function Header() {
           <Links hideMobile={hideMobile} />
         </ul>
 
-        <m.div className={styles.right} whileHover="hover" animate="rest">
+        <m.div animate="rest" className={styles.right} whileHover="hover">
           <Button as={Link} href="/budget">
-            <div>Faça um Orçamento</div>
-
-            <m.img
+            Faça um Orçamento
+            <ArrowRightIcon
+              as={m.svg}
               variants={{ hover: { x: [0, 5, 0], transition: { repeat: Infinity } } }}
-              src="/images/icons/arrow-right.svg"
-              alt="Seta apontando para direita"
-              height="24"
-              width="24"
             />
           </Button>
         </m.div>
 
-        <Mobile show={showMobile} toggleShow={toggleShowMobile} hideShow={hideMobile} />
+        <Mobile hideShow={hideMobile} show={showMobile} toggleShow={toggleShowMobile} />
       </header>
     </div>
   );
-}
+};
+
+export default Header;

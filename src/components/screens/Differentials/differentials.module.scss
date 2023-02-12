@@ -1,0 +1,30 @@
+@use "variables" as v;
+@use "utils";
+
+.list {
+  @extend %defaultGaps;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+
+  @media (max-width: 1180px) {
+    gap: 32px;
+  }
+
+  @media (max-width: 919px) {
+    grid-template-columns: 1fr;
+  }
+
+  li {
+    p {
+      padding-top: 4px;
+    }
+
+    @media (max-width: 424px) {
+      svg {
+        width: 100%;
+      }
+    }
+  }
+}

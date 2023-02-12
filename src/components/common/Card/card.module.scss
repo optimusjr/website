@@ -1,25 +1,12 @@
 @use "variables" as v;
 
 .card {
-  background-color: white;
-  padding: 32px;
-
-  border-radius: v.$radius;
+  gap: 16px;
   box-shadow: v.$shadow-md;
 
-  gap: 16px;
-
-  h3 {
-    color: v.$primary;
-    font-size: 1.5rem;
-  }
-
-  p {
-    margin: 0;
-
-    color: v.$gray;
-    font-size: 1.2rem;
-  }
+  border-radius: v.$radius;
+  background-color: v.$gray-050;
+  padding: 32px;
 }
 
 .column {
@@ -30,8 +17,8 @@
 
 .row {
   display: grid;
-  grid-auto-rows: 1fr;
   grid-template-columns: 1fr 2fr;
+  grid-auto-rows: 1fr;
 
   text-align: start;
 }

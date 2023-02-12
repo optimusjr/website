@@ -1,0 +1,34 @@
+@use "variables" as v;
+@use "utils";
+
+.contactCard {
+  display: grid;
+  grid-template-columns: 64px auto;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  svg {
+    fill: v.$gray-900;
+    place-self: center;
+    width: 64px;
+  }
+
+  p {
+    transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 1px solid;
+    max-width: 40vw;
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+}

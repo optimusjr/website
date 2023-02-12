@@ -1,0 +1,36 @@
+@use "variables" as v;
+@use "utils";
+
+.content {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  grid-template-columns: 1fr 2fr;
+  gap: 16px;
+  @media (max-width: 767px) {
+    grid-template-rows: unset;
+    grid-template-columns: 1fr;
+
+    width: 100%;
+  }
+
+  > a {
+    display: contents;
+  }
+}
+
+.contactForm {
+  display: flex;
+
+  grid-row: 1/4;
+  grid-column: 2/3;
+  flex-direction: column;
+  @media (max-width: 767px) {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  button {
+    margin-left: auto;
+  }
+}

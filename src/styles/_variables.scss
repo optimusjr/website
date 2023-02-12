@@ -1,12 +1,37 @@
 //colors
 
-$primary: #136041;
-$primary-light: #478e6c;
-$primary-dark: #00351a;
+$primary-050: #e0f1eb;
+$primary-100: #b3dccd;
+$primary-200: #83c5ae;
+$primary-300: #56ae8f;
+$primary-400: #389d7a;
+$primary-500: #248c67;
+$primary-600: #207f5c;
+$primary-700: #1a704e;
+$primary-800: #136041; // Verde OPTIMUS
+$primary-900: #084529;
 
-$secondary: #c9e4ca;
-$gray: #2f2f2f;
-$white: #efefef;
+$secondary-050: #e8f5e9;
+$secondary-100: #c8e7c8; // Verde usado no background
+$secondary-200: #a4d7a6;
+$secondary-300: #80c982;
+$secondary-400: #64bd67;
+$secondary-500: #48b14c;
+$secondary-600: #3fa243;
+$secondary-700: #349038;
+$secondary-800: #297f2d;
+$secondary-900: #13601b;
+
+$gray-050: #fdfdfd;
+$gray-100: #f8f8f8;
+$gray-200: #f3f3f3;
+$gray-300: #eeeeee;
+$gray-400: #cecece;
+$gray-500: #b1b1b1;
+$gray-600: #868686;
+$gray-700: #717171;
+$gray-800: #515151;
+$gray-900: #2f2f2f; // Cor do texto na Logo
 
 // Shadows
 
@@ -16,4 +41,4 @@ $shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 $shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 
 //others
-$radius: 28px;
+$radius: 24px;

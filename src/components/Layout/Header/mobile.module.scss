@@ -2,8 +2,8 @@
 
 .menuButton {
   display: flex;
-  align-items: center;
   justify-content: right;
+  align-items: center;
 
   button {
     margin: 8px;
@@ -33,6 +33,5 @@
   display: contents;
   a {
     margin: auto;
-    min-height: 40px;
   }
 }

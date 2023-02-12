@@ -1,0 +1,15 @@
+@use "variables" as v;
+@use "utils";
+
+.illustration {
+  box-shadow: v.$shadow-md;
+
+  border-radius: v.$radius;
+  background-color: v.$gray-050;
+  padding: 32px;
+  width: 50vw;
+
+  @media (max-width: 767px) {
+    width: 80vw;
+  }
+}

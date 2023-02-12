@@ -3,18 +3,18 @@
 
 .footer {
   @extend %defaultPaddings;
-  background-color: v.$gray;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 1fr;
-  justify-items: center;
   align-items: center;
+  justify-items: center;
 
   gap: 16px;
+  background-color: v.$gray-900;
 
   p {
-    color: white;
+    color: v.$gray-050;
     text-align: center;
   }
 
@@ -31,8 +31,9 @@
     padding: 0;
   }
 
-  img {
-    padding: 8px;
+  svg {
     box-sizing: content-box;
+    padding: 8px;
+    width: 32px;
   }
 }
