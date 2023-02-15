@@ -18,7 +18,7 @@ const Contacts = () => {
       <Title strap="Contato">Fale conosco</Title>
 
       <div className={styles.content}>
-        <ContactCard href="http://wa.me/5571999112217">
+        <ContactCard href="https://wa.me/5571999112217">
           <WhatsappIcon />
           <div>
             <Typography variant="h3">Chame no WhatsApp</Typography>

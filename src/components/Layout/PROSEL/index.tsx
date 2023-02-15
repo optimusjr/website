@@ -1,9 +1,9 @@
 import { AnimatePresence, m } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
 
 import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
+import Link from "@/components/common/Link";
 import Typography from "@/components/common/Typography";
 import CloseIcon from "@/components/icons/Close";
 
@@ -11,7 +11,7 @@ import styles from "./prosel.module.scss";
 
 const PROSEL = () => {
   // Comente a linha abaixo para ativar o banner quando for época de processo seletivo.
-  // return null;
+  return null;
 
   const [isOpen, setIsOpen] = useState(true);
 

@@ -1,7 +1,7 @@
 import { m } from "framer-motion";
-import Link from "next/link";
 
 import Card from "@/components/common/Card";
+import Link from "@/components/common/Link";
 import variables from "@/styles/variables.module.scss";
 
 import styles from "./contactCard.module.scss";

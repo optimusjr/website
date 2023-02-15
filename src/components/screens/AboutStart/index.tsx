@@ -1,9 +1,9 @@
 import { m } from "framer-motion";
-import Link from "next/link";
 import Image from "next-image-export-optimizer";
 
 import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
+import Link from "@/components/common/Link";
 import ListCard from "@/components/common/ListCard";
 import Screen from "@/components/common/Screen";
 import Typography from "@/components/common/Typography";
@@ -27,7 +27,7 @@ const AboutStart = () => {
             <p>Trazemos conforto, segurança e economia para os seus ambientes.</p>
 
             <m.div animate="rest" whileHover="hover">
-              <Button as={Link} href="/budget">
+              <Button as={Link} href="https://k4x8qpevahv.typeform.com/to/RF8uSRDA">
                 Faça um Orçamento
                 <ArrowRightIcon
                   as={m.svg}
@@ -38,7 +38,13 @@ const AboutStart = () => {
           </div>
 
           <Card className={styles.image}>
-            <Image alt="Logotipo da OPTIMUS Jr." src={logo} width={350} priority />
+            <Image
+              alt="Logotipo da OPTIMUS Jr."
+              placeholder="empty"
+              src={logo}
+              width={350}
+              priority
+            />
           </Card>
         </section>
 

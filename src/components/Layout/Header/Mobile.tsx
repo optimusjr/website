@@ -1,7 +1,7 @@
 import { AnimatePresence, m } from "framer-motion";
-import Link from "next/link";
 
 import Button from "@/components/common/Button";
+import Link from "@/components/common/Link";
 import MenuIcon from "@/components/icons/Menu";
 
 import Links from "./Links";
@@ -38,7 +38,7 @@ const Mobile = ({ show, toggleShow, hideShow }: Props) => {
               <Links hideMobile={hideShow} />
 
               <li className={styles.button}>
-                <Button as={Link} href="/budget">
+                <Button as={Link} href="https://k4x8qpevahv.typeform.com/to/RF8uSRDA">
                   Faça um Orçamento
                 </Button>
               </li>

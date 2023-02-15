@@ -12,7 +12,7 @@ const nextConfig = {
   },
   env: {
     SITE_URL: process.env.SITE_URL,
-    nextImageExportOptimizer_generateAndUseBlurImages: false,
+    // nextImageExportOptimizer_generateAndUseBlurImages: false,
   },
 
   images: {

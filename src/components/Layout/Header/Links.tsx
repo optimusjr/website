@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/common/Link";
 
 import styles from "./links.module.scss";
 
