@@ -37,13 +37,12 @@
   color: v.$primary-800;
 
   &:hover {
-    box-shadow: v.$shadow-md;
-    background-color: v.$gray-300;
+    background-color: v.$gray-400;
   }
 
   &:active {
     box-shadow: none;
-    background-color: v.$gray-400;
+    background-color: v.$gray-500;
   }
 }
 
