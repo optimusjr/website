@@ -5,6 +5,7 @@ import { useState } from "react";
 import Button from "@/components/common/Button";
 import Image from "@/components/common/Image";
 import ArrowRightIcon from "@/components/icons/ArrowRight";
+import OPTIMUSIcon from "@/images/OPTIMUS/icon.svg";
 import wordmark from "@/images/OPTIMUS/wordmark.svg";
 
 import styles from "./header.module.scss";
@@ -30,9 +31,14 @@ const Header = () => {
         <div className={styles.left}>
           <Link href="/" onClick={hideMobile}>
             <div className={styles.iconWrapper}>
-              <Image alt="Ícone da OPTIMUS Jr." height="40" src="/icon.svg" width="40" />
+              <Image alt="Ícone da OPTIMUS Jr." placeholder="empty" src={OPTIMUSIcon} width="40" />
             </div>
-            <Image alt="'OPTIMUS Jr.' escrito em letras estilizadas" height="18" src={wordmark} />
+            <Image
+              alt="'OPTIMUS Jr.' escrito em letras estilizadas"
+              height="18"
+              placeholder="empty"
+              src={wordmark}
+            />
           </Link>
         </div>
 
@@ -41,7 +47,7 @@ const Header = () => {
         </ul>
 
         <m.div animate="rest" className={styles.right} whileHover="hover">
-          <Button as={Link} href="/budget">
+          <Button as={Link} href="https://k4x8qpevahv.typeform.com/to/RF8uSRDA">
             Faça um Orçamento
             <ArrowRightIcon
               as={m.svg}

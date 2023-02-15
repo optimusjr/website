@@ -11,7 +11,7 @@ import styles from "./prosel.module.scss";
 
 const PROSEL = () => {
   // Comente a linha abaixo para ativar o banner quando for época de processo seletivo.
-  // return null;
+  return null;
 
   const [isOpen, setIsOpen] = useState(true);
 

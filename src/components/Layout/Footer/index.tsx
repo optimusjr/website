@@ -14,7 +14,7 @@ import styles from "./footer.module.scss";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <Image alt="Logo da OPTIMUS Jr." height={64} src={logo_horizontal} />
+      <Image alt="Logo da OPTIMUS Jr." height={64} placeholder="empty" src={logo_horizontal} />
 
       <div className={styles.links}>
         <Button as={Link} href="https://www.instagram.com/optimusjrautomacao/">

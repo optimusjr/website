@@ -21,7 +21,7 @@ const ServiceCard = ({ image, children }: Props) => {
       </div>
       <div className={styles.content}>
         {children}
-        <Button as={Link} href="/budget">
+        <Button as={Link} href="https://k4x8qpevahv.typeform.com/to/RF8uSRDA">
           Faça um Orçamento
         </Button>
       </div>
