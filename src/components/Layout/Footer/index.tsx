@@ -1,7 +1,6 @@
-import Link from "next/link";
-
 import Button from "@/components/common/Button";
 import Image from "@/components/common/Image";
+import Link from "@/components/common/Link";
 import Typography from "@/components/common/Typography";
 import FacebookIcon from "@/components/icons/Facebook";
 import InstagramIcon from "@/components/icons/Instagram";

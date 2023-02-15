@@ -1,9 +1,9 @@
 import { m } from "framer-motion";
-import Link from "next/link";
 import Image from "next-image-export-optimizer";
 
 import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
+import Link from "@/components/common/Link";
 import ListCard from "@/components/common/ListCard";
 import Screen from "@/components/common/Screen";
 import Typography from "@/components/common/Typography";

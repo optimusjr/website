@@ -1,9 +1,9 @@
 import { m } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
 
 import Button from "@/components/common/Button";
 import Image from "@/components/common/Image";
+import Link from "@/components/common/Link";
 import ArrowRightIcon from "@/components/icons/ArrowRight";
 import OPTIMUSIcon from "@/images/OPTIMUS/icon.svg";
 import wordmark from "@/images/OPTIMUS/wordmark.svg";

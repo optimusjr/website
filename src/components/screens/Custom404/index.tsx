@@ -1,7 +1,7 @@
 import { m } from "framer-motion";
-import Link from "next/link";
 
 import Button from "@/components/common/Button";
+import Link from "@/components/common/Link";
 import Screen from "@/components/common/Screen";
 import ArrowLeftIcon from "@/components/icons/ArrowLeft";
 
