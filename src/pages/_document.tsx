@@ -39,10 +39,7 @@ export default class MyDocument extends Document {
           <meta content={process.env.SITE_URL} name="twitter:url" />
           <meta content="OPTIMUS Jr. Controle e Automação" name="twitter:title" />
           <meta content={`${process.env.SITE_URL}/card.png`} name="twitter:image" />
-          {
-            // TODO: Criar um Twitter para a OPTIMUS e colocar o @ aqui
-            // <meta name="twitter:creator" content="@???" />
-          }
+          <meta content="@OPTIMUSJrBA" name="twitter:creator" />
           <meta
             content="Empresa júnior de automação residencial, oferecemos soluções inovadoras e personalizadas para tornar sua casa mais inteligente."
             name="twitter:description"
