@@ -15,7 +15,7 @@ const PROSEL = () => {
 
   const [isOpen, setIsOpen] = useState(true);
 
-  const subscribeLink = "/prosel";
+  const subscribeLink = "https://forms.gle/YYviJ7yPabRXaSZn8";
 
   return (
     <AnimatePresence>
