@@ -12,6 +12,7 @@ specifiers:
   next-sitemap: ^3.1.52
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-gtm-ts: ^1.0.27
   sass: ^1.58.1
   sharp: ^0.31.3
   typescript: ^4.9.5
@@ -24,6 +25,7 @@ dependencies:
   next-image-export-optimizer: 1.2.1_next@13.1.6+react@18.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-gtm-ts: 1.0.27
   sharp: 0.31.3
 
 devDependencies:
@@ -1891,6 +1893,10 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+
+  /react-gtm-ts/1.0.27:
+    resolution: {integrity: sha512-npE9OtNFjxiJmMVG46mQJ0Op0fZB6mba10lr4PFvETc2pE+mUJu9v0cTB2OeotfyBhVL05T9aGVPBJD+4ykQ4w==}
+    dev: false
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
