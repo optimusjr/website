@@ -26,7 +26,7 @@ const Thanks = () => {
   }, []);
 
   return (
-    <Screen backgroundColor="secondary" className={styles.custom404} firstFullHeight>
+    <Screen backgroundColor="secondary" className={styles.thanks} firstFullHeight>
       <div>
         <h1>Muito Obrigado!</h1>
         <p>Recebemos sua mensagem. Entraremos em contato com você o mais rápido possível.</p>

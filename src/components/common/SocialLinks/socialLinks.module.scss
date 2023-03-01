@@ -1,0 +1,14 @@
+.socialLinks {
+  display: flex;
+  gap: 16px;
+
+  a {
+    padding: 0;
+  }
+
+  svg {
+    box-sizing: content-box;
+    padding: 8px;
+    width: 32px;
+  }
+}
