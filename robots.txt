@@ -1,6 +1,9 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /thanks
+Disallow: /404
+Disallow: /links
 
 # Host
 Host: https://optimusjr.com.br
