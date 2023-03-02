@@ -10,12 +10,11 @@ import CloseIcon from "@/components/icons/Close";
 import styles from "./prosel.module.scss";
 
 const PROSEL = () => {
-  // Comente a linha abaixo para ativar o banner quando for época de processo seletivo.
-  return null;
-
   const [isOpen, setIsOpen] = useState(true);
 
-  const subscribeLink = "https://forms.gle/YYviJ7yPabRXaSZn8";
+  if (process.env.IS_PROSEL !== "true") {
+    return null;
+  }
 
   return (
     <AnimatePresence>
@@ -33,7 +32,11 @@ const PROSEL = () => {
               gente!
             </Typography>
 
-            <Button as={Link} href={subscribeLink} onClick={() => setIsOpen(false)}>
+            <Button
+              as={Link}
+              href={process.env.PROSEL_FORM_URL as string}
+              onClick={() => setIsOpen(false)}
+            >
               Quero me Inscrever!
             </Button>
             <Button className={styles.close} onClick={() => setIsOpen(false)} variant="text">

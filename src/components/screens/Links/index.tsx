@@ -8,6 +8,7 @@ import SocialLinks from "@/components/common/SocialLinks";
 import Typography from "@/components/common/Typography";
 import ClipboardIcon from "@/components/icons/Clipboard";
 import MessageIcon from "@/components/icons/message";
+import PROSELIcon from "@/components/icons/PROSEL";
 import WebIcon from "@/components/icons/Web";
 import OPTIMUSIcon from "@/images/OPTIMUS/icon.svg";
 import variables from "@/styles/variables.module.scss";
@@ -32,6 +33,16 @@ const Links = () => {
       <SocialLinks />
 
       <ul className={styles.links}>
+        {process.env.IS_PROSEL === "true" && (
+          <LinkCard href={process.env.PROSEL_FORM_URL as string}>
+            <PROSELIcon />
+
+            <Typography component="h2" variant="h3">
+              Se inscreva no PROSEL
+            </Typography>
+          </LinkCard>
+        )}
+
         <LinkCard href="https://k4x8qpevahv.typeform.com/to/RF8uSRDA">
           <ClipboardIcon />
 
