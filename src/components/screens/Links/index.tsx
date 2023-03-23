@@ -43,7 +43,7 @@ const Links = () => {
           </LinkCard>
         )}
 
-        <LinkCard href="https://k4x8qpevahv.typeform.com/to/RF8uSRDA">
+        <LinkCard href={process.env.PROSEL_FORM_URL || ""}>
           <ClipboardIcon />
 
           <Typography component="h2" variant="h3">

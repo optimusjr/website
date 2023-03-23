@@ -18,32 +18,32 @@ const Contacts = () => {
       <Title strap="Contato">Fale conosco</Title>
 
       <div className={styles.content}>
-        <ContactCard href="https://wa.me/5571999112217">
+        <ContactCard href={`https://wa.me/${process.env.WHATSAPP?.replace(/[^0-9]/g, "")}`}>
           <WhatsappIcon />
           <div>
             <Typography variant="h3">Chame no WhatsApp</Typography>
-            <Typography>+55 71 99911-2217</Typography>
+            <Typography>{process.env.WHATSAPP}</Typography>
           </div>
         </ContactCard>
 
-        <ContactCard href="mailto:contato@optimusjr.com.br">
+        <ContactCard href={`mailto:${process.env.EMAIL}`}>
           <EmailIcon />
           <div>
             <Typography variant="h3">Mande um e-mail</Typography>
-            <Typography>contato@optimusjr.com.br</Typography>
+            <Typography>{process.env.EMAIL}</Typography>
           </div>
         </ContactCard>
 
-        <ContactCard href="tel:+5571999112217">
+        <ContactCard href={`tel:${process.env.PHONE_NUMBER?.replace(/[^0-9]/g, "")}`}>
           <PhoneIcon />
           <div>
             <Typography variant="h3">Ligue pra gente</Typography>
-            <Typography>(71) 99911-2217</Typography>
+            <Typography>{process.env.PHONE_NUMBER}</Typography>
           </div>
         </ContactCard>
 
         <Card
-          action="https://formsubmit.co/contato@optimusjr.com.br"
+          action={`https://formsubmit.co/${process.env.EMAIL}`}
           as="form"
           className={styles.contactForm}
           method="POST"
@@ -54,7 +54,7 @@ const Contacts = () => {
           <TextField label="E-mail:" name="email" type="email" required />
           <TextField label="Sua mensagem:" name="mensagem" multiline required />
 
-          <input name="_next" type="hidden" value="https://optimusjr.com.br/thanks" />
+          <input name="_next" type="hidden" value={`${process.env.SITE_URL}/thanks`} />
 
           <Button type="submit">
             <SendIcon />

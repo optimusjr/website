@@ -13,7 +13,7 @@ const SocialLinks = () => {
       <Button as={Link} href="https://www.instagram.com/optimusjrautomacao/">
         <InstagramIcon />
       </Button>
-      <Button as={Link} href="http://wa.me/5571999112217">
+      <Button as={Link} href={`https://wa.me/${process.env.WHATSAPP?.replace(/[^0-9]/g, "")}`}>
         <WhatsappIcon />
       </Button>
       <Button as={Link} href="https://br.linkedin.com/company/optimus-jr-automacao">
