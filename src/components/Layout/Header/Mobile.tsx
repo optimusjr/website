@@ -3,6 +3,7 @@ import { AnimatePresence, m } from "framer-motion";
 import Button from "@/components/common/Button";
 import Link from "@/components/common/Link";
 import MenuIcon from "@/components/icons/Menu";
+import config from "@/config";
 
 import Links from "./Links";
 import styles from "./mobile.module.scss";
@@ -38,7 +39,7 @@ const Mobile = ({ show, toggleShow, hideShow }: Props) => {
               <Links hideMobile={hideShow} />
 
               <li className={styles.button}>
-                <Button as={Link} href={process.env.PROSEL_FORM_URL || ""}>
+                <Button as={Link} href={config.BUDGET_URL}>
                   Faça um Orçamento
                 </Button>
               </li>

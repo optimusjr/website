@@ -10,6 +10,7 @@ import ClipboardIcon from "@/components/icons/Clipboard";
 import MessageIcon from "@/components/icons/message";
 import PROSELIcon from "@/components/icons/PROSEL";
 import WebIcon from "@/components/icons/Web";
+import config from "@/config";
 import OPTIMUSIcon from "@/images/OPTIMUS/icon.svg";
 import variables from "@/styles/variables.module.scss";
 
@@ -33,8 +34,8 @@ const Links = () => {
       <SocialLinks />
 
       <ul className={styles.links}>
-        {process.env.IS_PROSEL === "true" && (
-          <LinkCard href={process.env.PROSEL_FORM_URL as string}>
+        {config.IS_PROSEL && (
+          <LinkCard href={config.PROSEL_FORM_URL}>
             <PROSELIcon />
 
             <Typography component="h2" variant="h3">
@@ -43,7 +44,7 @@ const Links = () => {
           </LinkCard>
         )}
 
-        <LinkCard href={process.env.PROSEL_FORM_URL || ""}>
+        <LinkCard href={config.BUDGET_URL}>
           <ClipboardIcon />
 
           <Typography component="h2" variant="h3">

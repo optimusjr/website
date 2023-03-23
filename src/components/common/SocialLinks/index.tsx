@@ -4,6 +4,7 @@ import FacebookIcon from "@/components/icons/Facebook";
 import InstagramIcon from "@/components/icons/Instagram";
 import LinkedinIcon from "@/components/icons/LinkedIn";
 import WhatsappIcon from "@/components/icons/Whatsapp";
+import config from "@/config";
 
 import styles from "./socialLinks.module.scss";
 
@@ -13,7 +14,7 @@ const SocialLinks = () => {
       <Button as={Link} href="https://www.instagram.com/optimusjrautomacao/">
         <InstagramIcon />
       </Button>
-      <Button as={Link} href={`https://wa.me/${process.env.WHATSAPP?.replace(/[^0-9]/g, "")}`}>
+      <Button as={Link} href={`https://wa.me/${config.WHATSAPP.replace(/[^0-9]/g, "")}`}>
         <WhatsappIcon />
       </Button>
       <Button as={Link} href="https://br.linkedin.com/company/optimus-jr-automacao">

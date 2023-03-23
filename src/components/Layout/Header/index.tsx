@@ -5,6 +5,7 @@ import Button from "@/components/common/Button";
 import Image from "@/components/common/Image";
 import Link from "@/components/common/Link";
 import ArrowRightIcon from "@/components/icons/ArrowRight";
+import config from "@/config";
 import OPTIMUSIcon from "@/images/OPTIMUS/icon.svg";
 import wordmark from "@/images/OPTIMUS/wordmark.svg";
 
@@ -47,7 +48,7 @@ const Header = () => {
         </ul>
 
         <m.div animate="rest" className={styles.right} whileHover="hover">
-          <Button as={Link} href={process.env.PROSEL_FORM_URL || ""}>
+          <Button as={Link} href={config.BUDGET_URL}>
             Faça um Orçamento
             <ArrowRightIcon
               as={m.svg}

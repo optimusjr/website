@@ -12,6 +12,7 @@ import CheckOutlineIcon from "@/components/icons/CheckOutline";
 import DiamondIcon from "@/components/icons/Diamond";
 import EyeIcon from "@/components/icons/Eye";
 import TargetIcon from "@/components/icons/Target";
+import config from "@/config";
 import logo from "@/images/OPTIMUS/logo.svg";
 
 import styles from "./about.module.scss";
@@ -27,7 +28,7 @@ const AboutStart = () => {
             <p>Trazemos conforto, segurança e economia para os seus ambientes.</p>
 
             <m.div animate="rest" whileHover="hover">
-              <Button as={Link} href={process.env.PROSEL_FORM_URL || ""}>
+              <Button as={Link} href={config.BUDGET_URL}>
                 Faça um Orçamento
                 <ArrowRightIcon
                   as={m.svg}

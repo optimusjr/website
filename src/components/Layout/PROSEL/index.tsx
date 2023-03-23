@@ -6,13 +6,14 @@ import Card from "@/components/common/Card";
 import Link from "@/components/common/Link";
 import Typography from "@/components/common/Typography";
 import CloseIcon from "@/components/icons/Close";
+import config from "@/config";
 
 import styles from "./prosel.module.scss";
 
 const PROSEL = () => {
   const [isOpen, setIsOpen] = useState(true);
 
-  if (process.env.IS_PROSEL !== "true") {
+  if (!config.IS_PROSEL) {
     return null;
   }
 
@@ -32,11 +33,7 @@ const PROSEL = () => {
               gente!
             </Typography>
 
-            <Button
-              as={Link}
-              href={process.env.PROSEL_FORM_URL as string}
-              onClick={() => setIsOpen(false)}
-            >
+            <Button as={Link} href={config.PROSEL_FORM_URL} onClick={() => setIsOpen(false)}>
               Quero me Inscrever!
             </Button>
             <Button className={styles.close} onClick={() => setIsOpen(false)} variant="text">

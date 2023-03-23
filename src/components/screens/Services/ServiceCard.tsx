@@ -3,6 +3,7 @@ import { m } from "framer-motion";
 import Button from "@/components/common/Button";
 import Link from "@/components/common/Link";
 import ListCard from "@/components/common/ListCard";
+import config from "@/config";
 
 import styles from "./servicesCard.module.scss";
 
@@ -21,7 +22,7 @@ const ServiceCard = ({ image, children }: Props) => {
       </div>
       <div className={styles.content}>
         {children}
-        <Button as={Link} href={process.env.PROSEL_FORM_URL || ""}>
+        <Button as={Link} href={config.BUDGET_URL}>
           Faça um Orçamento
         </Button>
       </div>

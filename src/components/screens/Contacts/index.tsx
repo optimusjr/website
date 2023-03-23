@@ -8,6 +8,7 @@ import EmailIcon from "@/components/icons/Email";
 import PhoneIcon from "@/components/icons/Phone";
 import SendIcon from "@/components/icons/Send";
 import WhatsappIcon from "@/components/icons/Whatsapp";
+import config from "@/config";
 
 import ContactCard from "./ContactCard";
 import styles from "./contacts.module.scss";
@@ -18,32 +19,32 @@ const Contacts = () => {
       <Title strap="Contato">Fale conosco</Title>
 
       <div className={styles.content}>
-        <ContactCard href={`https://wa.me/${process.env.WHATSAPP?.replace(/[^0-9]/g, "")}`}>
+        <ContactCard href={`https://wa.me/${config.WHATSAPP.replace(/[^0-9]/g, "")}`}>
           <WhatsappIcon />
           <div>
             <Typography variant="h3">Chame no WhatsApp</Typography>
-            <Typography>{process.env.WHATSAPP}</Typography>
+            <Typography>{config.WHATSAPP}</Typography>
           </div>
         </ContactCard>
 
-        <ContactCard href={`mailto:${process.env.EMAIL}`}>
+        <ContactCard href={`mailto:${config.EMAIL}`}>
           <EmailIcon />
           <div>
             <Typography variant="h3">Mande um e-mail</Typography>
-            <Typography>{process.env.EMAIL}</Typography>
+            <Typography>{config.EMAIL}</Typography>
           </div>
         </ContactCard>
 
-        <ContactCard href={`tel:${process.env.PHONE_NUMBER?.replace(/[^0-9]/g, "")}`}>
+        <ContactCard href={`tel:${config.PHONE_NUMBER.replace(/[^0-9]/g, "")}`}>
           <PhoneIcon />
           <div>
             <Typography variant="h3">Ligue pra gente</Typography>
-            <Typography>{process.env.PHONE_NUMBER}</Typography>
+            <Typography>{config.PHONE_NUMBER}</Typography>
           </div>
         </ContactCard>
 
         <Card
-          action={`https://formsubmit.co/${process.env.EMAIL}`}
+          action={`https://formsubmit.co/${config.EMAIL}`}
           as="form"
           className={styles.contactForm}
           method="POST"
