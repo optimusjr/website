@@ -1,8 +1,8 @@
 import "@/styles/globals.scss";
 
-import { League_Spartan } from "next/font/google";
 import { domAnimation, LazyMotion } from "framer-motion";
 import type { AppProps } from "next/app";
+import { League_Spartan } from "next/font/google";
 import Head from "next/head";
 import { ReactTagManager } from "react-gtm-ts";
 
