@@ -1,6 +1,6 @@
 import "@/styles/globals.scss";
 
-import { League_Spartan } from "@next/font/google";
+import { League_Spartan } from "next/font/google";
 import { domAnimation, LazyMotion } from "framer-motion";
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -29,7 +29,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       </Head>
 
       <LazyMotion features={domAnimation} strict>
-        <Layout font={league}>
+        <Layout className={league.className}>
           <Component {...pageProps} />
         </Layout>
       </LazyMotion>

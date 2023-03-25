@@ -13,22 +13,21 @@
     "lint": "next lint"
   },
   "devDependencies": {
-    "@types/node": "^18.13.0",
-    "@types/react": "^18.0.28",
+    "@types/node": "^18.15.9",
+    "@types/react": "^18.0.29",
     "eslint-config-silash35": "^2.0.1",
-    "next-sitemap": "^3.1.52",
-    "sass": "^1.58.1",
-    "typescript": "^4.9.5"
+    "next-sitemap": "^4.0.6",
+    "sass": "^1.60.0",
+    "typescript": "^5.0.2"
   },
   "dependencies": {
-    "@next/font": "^13.1.6",
-    "framer-motion": "^9.0.4",
+    "framer-motion": "9.0.4",
     "js-confetti": "^0.11.0",
-    "next": "^13.1.6",
-    "next-image-export-optimizer": "^1.2.1",
+    "next": "^13.2.4",
+    "next-image-export-optimizer": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-gtm-ts": "^1.0.27",
-    "sharp": "^0.31.3"
+    "sharp": "^0.32.0"
   }
 }
