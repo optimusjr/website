@@ -52,14 +52,22 @@
   border-radius: v.$radius;
   overflow: hidden;
 
-  div {
-    line-height: 0;
-  }
+  line-height: 0;
 
   img {
-    top: 0;
-
     width: 100%;
     height: auto;
   }
+
+  .topImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: opacity 300ms ease-in-out;
+  }
+}
+
+.zoomOnHover {
+  @extend %zoomOnHover;
 }

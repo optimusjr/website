@@ -1,4 +1,4 @@
-import { m } from "framer-motion";
+import { useEffect, useState } from "react";
 
 import Image from "@/components/common/Image";
 import Screen from "@/components/common/Screen";
@@ -9,6 +9,17 @@ import Divider from "./Divider";
 import styles from "./start.module.scss";
 
 const Start = () => {
+  const [light, setLight] = useState(false);
+  const [disableTimer, setDisableTimer] = useState(false);
+
+  let timer: NodeJS.Timeout | undefined;
+
+  useEffect(() => {
+    if (!disableTimer) {
+      timer = setTimeout(() => setLight(!light), 5000);
+    }
+  }, [light]);
+
   return (
     <Screen backgroundColor="secondary" className={styles.start} firstFullHeight>
       <Divider />
@@ -19,25 +30,39 @@ const Start = () => {
       </div>
 
       <div className={styles.image}>
-        <m.div transition={{ type: "spring", bounce: 0, duration: 1 }} whileHover={{ scale: 1.1 }}>
-          <div>
-            <Image alt="Quarto com as luzes apagadas" src={bedroomOff} width={1924} priority />
-          </div>
+        <div className={styles.zoomOnHover}>
+          <Image alt="Quarto com as luzes apagadas" src={bedroomOff} width={1924} priority />
 
-          <m.div
-            animate={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            transition={{ repeat: Infinity, repeatType: "reverse", delay: 5, repeatDelay: 5 }}
-          >
-            <Image
-              alt="Quarto com as luzes acessas"
-              src={bedroomOn}
-              style={{ position: "absolute" }}
-              width={1924}
-              priority
-            />
-          </m.div>
-        </m.div>
+          <Image
+            alt="Quarto com as luzes acessas"
+            className={styles.topImage}
+            src={bedroomOn}
+            style={{ opacity: light ? 1 : 0 }}
+            width={1924}
+            priority
+          />
+
+          <button
+            onClick={() => {
+              setLight(!light);
+              if (!disableTimer) {
+                setDisableTimer(true);
+                clearTimeout(timer);
+              }
+            }}
+            style={{
+              // Isso faz com que o botão sempre flutue em cima da posição certa da imagem
+              // Valores gerados usando o site https://zaneray.com/responsive-image-map/
+              position: "absolute",
+              left: "40.38%",
+              top: "66.75%",
+              width: "52.54%",
+              height: "20.31%",
+
+              opacity: 0,
+            }}
+          ></button>
+        </div>
       </div>
     </Screen>
   );

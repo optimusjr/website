@@ -24,8 +24,15 @@
   }
 }
 
-// Animações CSS
+// Animações e transições CSS
 // Se possível, previra usar elas do que utilizar o Framer Motion para ter maior desempenho.
+
+%zoomOnHover {
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 1s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
 
 @keyframes slideFromTop {
   0% {
