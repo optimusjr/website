@@ -56,7 +56,7 @@ const AboutStart = () => {
             <Typography variant="h3">Missão</Typography>
             <Typography>
               Desenvolver nossos membros na área de automação, através da vivência empresarial, com
-              foco em trazer a melhor experiência (e sucesso) para os nossos clientes.
+              foco em trazer a melhor experiência para os nossos clientes.
             </Typography>
           </ListCard>
 
