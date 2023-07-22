@@ -6,6 +6,7 @@ import Screen from "@/components/common/Screen";
 import Title from "@/components/common/Title";
 import Typography from "@/components/common/Typography";
 import GearIcon from "@/components/icons/Gear";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 import images from "./images";
 import ServiceCard from "./ServiceCard";
@@ -23,6 +24,12 @@ const Services = () => {
 
   useEffect(() => {
     const loadMaxScroll = () => {
+      if (typeof window !== "undefined") {
+        if (window.matchMedia("(pointer: coarse)").matches) {
+          return;
+        }
+      }
+
       const scrollWidth =
         scrollRef.current?.getBoundingClientRect().width || scrollRef.current?.offsetWidth;
       const containerWidth =
@@ -43,27 +50,47 @@ const Services = () => {
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -maxScroll / 8]);
   const springedRotate = useSpring(rotate, { damping: 15, mass: 0.27, stiffness: 55 });
 
-  const [isTouch, setIsTouch] = useState(false);
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (window.matchMedia("(pointer: coarse)").matches) {
-        setIsTouch(true);
-      }
-    }
-  }, []);
+  const isTouch = useMediaQuery("(pointer: coarse)");
+
+  const containerMobileRef = useRef<HTMLDivElement>(null);
+  const { scrollXProgress } = useScroll({
+    container: containerMobileRef,
+    offset: ["start start", "end end"],
+  });
+  const rotateY = useTransform(scrollXProgress, [0, 1], [0, -maxScroll / 8]);
+
+  console.log(scrollXProgress.get());
 
   return (
     <div className={styles.screenContainer} ref={containerRef}>
-      <div className={styles.sticky}>
-        <m.div className={styles.gearTop} style={{ rotate: isTouch ? rotate : springedRotate }}>
-          <GearIcon />
-        </m.div>
+      <div className={styles.sticky} ref={containerMobileRef}>
+        {!isTouch && (
+          <>
+            <m.div className={styles.gearTop} style={{ rotate: springedRotate }}>
+              <GearIcon />
+            </m.div>
 
-        <m.div className={styles.gearBottom} style={{ rotate: isTouch ? rotate : springedRotate }}>
-          <GearIcon />
-        </m.div>
+            <m.div className={styles.gearBottom} style={{ rotate: springedRotate }}>
+              <GearIcon />
+            </m.div>
+          </>
+        )}
 
-        <m.div className={styles.scroll} ref={scrollRef} style={{ x: isTouch ? x : springedX }}>
+        <m.div className={styles.scroll} ref={scrollRef} style={{ x: isTouch ? 0 : springedX }}>
+          {isTouch && (
+            <div style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0 }}>
+              <div style={{ position: "sticky", width: "100vw", height: "100%", top: 0, left: 0 }}>
+                <m.div className={styles.gearTop} style={{ rotate: rotateY }}>
+                  <GearIcon />
+                </m.div>
+
+                <m.div className={styles.gearBottom} style={{ rotate: rotateY }}>
+                  <GearIcon />
+                </m.div>
+              </div>
+            </div>
+          )}
+
           <Screen backgroundColor="none" className={styles.services} id="services" fullHeight>
             <Title strap="Serviços">Conheça as&nbsp;nossas soluções</Title>
 
