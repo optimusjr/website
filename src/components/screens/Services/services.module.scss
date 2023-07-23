@@ -4,12 +4,6 @@
 .screenContainer {
   background-color: v.$secondary-100;
   height: 600vh;
-
-  scroll-snap-align: start;
-
-  @media (pointer: coarse) {
-    height: 100vh;
-  }
 }
 
 .sticky {
@@ -17,11 +11,6 @@
   top: 0;
 
   overflow: hidden;
-
-  @media (pointer: coarse) {
-    position: relative;
-    overflow-x: scroll;
-  }
 }
 
 .gearTop,
@@ -29,11 +18,6 @@
   position: absolute;
   z-index: -1;
   line-height: 0;
-
-  @media (pointer: coarse) {
-    // position: sticky;
-    z-index: 1;
-  }
 
   svg {
     fill: v.$gray-050;
@@ -67,32 +51,26 @@
 
 .scroll {
   width: min-content;
-
-  @media (pointer: coarse) {
-    position: relative;
-  }
 }
 
-.services {
-  flex-direction: row;
-  width: min-content;
+// Mobile
 
-  @media (pointer: coarse) {
-    position: relative;
-  }
-
-  span {
-    font-size: calc(1rem + 3vw);
-    text-align: left;
-  }
-
-  h2 {
-    font-size: calc(2rem + 6vw);
-    text-align: left;
-  }
+.screenContainerMobile {
+  @extend .screenContainer;
+  height: 100vh;
+  scroll-snap-align: start;
 }
 
-.list {
-  display: flex;
-  @extend %defaultGaps;
+.slide {
+  position: relative;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.gearsContainer {
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
