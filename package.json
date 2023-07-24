@@ -5,6 +5,9 @@
   "author": "OPTIMUS Jr. <contato@optimusjr.com.br>",
   "license": "Unlicense",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build && next-sitemap",
@@ -13,21 +16,21 @@
     "lint": "next lint"
   },
   "devDependencies": {
-    "@types/node": "^18.15.9",
-    "@types/react": "^18.0.29",
+    "@types/node": "^20.4.4",
+    "@types/react": "^18.2.15",
     "eslint-config-silash35": "^2.0.1",
-    "next-sitemap": "^4.0.6",
-    "sass": "^1.60.0",
-    "typescript": "^5.0.2"
+    "next-sitemap": "^4.1.8",
+    "sass": "^1.64.1",
+    "typescript": "^5.1.6"
   },
   "dependencies": {
-    "framer-motion": "9.0.4",
+    "framer-motion": "10.13.0",
     "js-confetti": "^0.11.0",
-    "next": "^13.2.4",
-    "next-image-export-optimizer": "^1.4.1",
+    "next": "^13.4.12",
+    "next-image-export-optimizer": "^1.8.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-gtm-ts": "^1.0.27",
-    "sharp": "^0.32.0"
+    "react-gtm-ts": "^1.0.44",
+    "sharp": "^0.32.4"
   }
 }
