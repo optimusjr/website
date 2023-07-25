@@ -24,7 +24,6 @@ const ServicesDesktop = () => {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"],
   });
 
   useEffect(() => {
@@ -72,7 +71,6 @@ const ServicesMobile = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollXProgress } = useScroll({
     container: containerRef,
-    offset: ["start start", "end end"],
   });
 
   const containerWidth: number = containerRef.current?.scrollWidth || 3000;
