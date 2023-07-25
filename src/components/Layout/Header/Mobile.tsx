@@ -27,7 +27,16 @@ const Mobile = ({ show, toggleShow, hideShow }: Props) => {
         {show && (
           <m.div
             variants={{
-              open: { opacity: 1, height: "auto" },
+              open: {
+                opacity: 1,
+                height: "auto",
+                transition: {
+                  type: "spring",
+                  stiffness: 550,
+                  damping: 30,
+                  restSpeed: 10,
+                },
+              },
               collapsed: { opacity: 0, height: 0 },
             }}
             animate="open"

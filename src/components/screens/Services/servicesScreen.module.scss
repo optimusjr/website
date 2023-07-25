@@ -1,0 +1,23 @@
+@use "variables" as v;
+@use "utils";
+
+.serviceScreen {
+  position: relative;
+  flex-direction: row;
+  width: min-content;
+
+  span {
+    font-size: calc(1rem + 3vw);
+    text-align: left;
+  }
+
+  h2 {
+    font-size: calc(2rem + 6vw);
+    text-align: left;
+  }
+}
+
+.list {
+  display: flex;
+  @extend %defaultGaps;
+}

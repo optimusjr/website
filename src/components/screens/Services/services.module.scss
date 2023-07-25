@@ -53,22 +53,24 @@
   width: min-content;
 }
 
-.services {
-  flex-direction: row;
-  width: min-content;
+// Mobile
 
-  span {
-    font-size: calc(1rem + 3vw);
-    text-align: left;
-  }
-
-  h2 {
-    font-size: calc(2rem + 6vw);
-    text-align: left;
-  }
+.screenContainerMobile {
+  @extend .screenContainer;
+  height: 100vh;
+  scroll-snap-align: start;
 }
 
-.list {
-  display: flex;
-  @extend %defaultGaps;
+.slide {
+  position: relative;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.gearsContainer {
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }

@@ -17,7 +17,7 @@
   }
 
   img {
-    transform: translateY(-0.5px); // Para esconder a estranha borda branca que fica
+    // transform: translateY(-0.5px); // Para esconder a estranha borda branca que fica
 
     width: 100%;
     height: auto;
@@ -35,4 +35,8 @@
   a {
     margin: auto auto 0 auto;
   }
+}
+
+.zoomOnHover {
+  @extend %zoomOnHover;
 }

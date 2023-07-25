@@ -1,5 +1,3 @@
-import { m } from "framer-motion";
-
 import Button from "@/components/common/Button";
 import Link from "@/components/common/Link";
 import ListCard from "@/components/common/ListCard";
@@ -16,9 +14,7 @@ const ServiceCard = ({ image, children }: Props) => {
   return (
     <ListCard className={styles.serviceCard}>
       <div className={styles.imageContainer}>
-        <m.div transition={{ type: "spring", duration: 1 }} whileHover={{ scale: 1.1 }}>
-          {image}
-        </m.div>
+        <div className={styles.zoomOnHover}>{image}</div>
       </div>
       <div className={styles.content}>
         {children}
