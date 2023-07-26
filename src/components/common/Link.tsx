@@ -1,10 +1,6 @@
-import NextLink, { LinkProps } from "next/link";
+import NextLink from "next/link";
 
-interface Props extends LinkProps {
-  children: React.ReactNode;
-}
-
-const Link = (props: Props) => {
+const Link = (props: React.ComponentProps<typeof NextLink>) => {
   const isExternal = props.href.toString().startsWith("https");
 
   return (
