@@ -6,6 +6,7 @@ const path = require("node:path");
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
+  output: "export",
   reactStrictMode: true,
   sassOptions: {
     includePaths: [path.join(__dirname, "src/styles")],

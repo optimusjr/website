@@ -10,8 +10,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next-sitemap",
-    "export": "next export && next-image-export-optimizer",
+    "build": "next build && next-sitemap && next-image-export-optimizer",
     "start": "next start",
     "lint": "next lint"
   },
