@@ -8,14 +8,6 @@
   min-width: 300px;
   max-width: 512px;
 
-  .imageContainer {
-    display: table;
-    border-radius: v.$radius;
-
-    overflow: hidden;
-    line-height: 0;
-  }
-
   img {
     // transform: translateY(-0.5px); // Para esconder a estranha borda branca que fica
 
@@ -23,18 +15,26 @@
     height: auto;
   }
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 16px;
-
-    height: 100%;
-  }
-
   a {
     margin: auto auto 0 auto;
   }
+}
+
+.imageContainer {
+  display: table;
+  border-radius: v.$radius;
+
+  overflow: hidden;
+  line-height: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+
+  height: 100%;
 }
 
 .zoomOnHover {

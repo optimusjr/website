@@ -14,6 +14,7 @@ const ServicesScreen = () => {
 
       <ul className={styles.list}>
         <ServiceCard
+          aboutPage="/lp/lights"
           image={<Image alt="Luzes penduradas no teto" src={images.lights} width={640} />}
         >
           <Typography variant="h3">Controle de Iluminação</Typography>

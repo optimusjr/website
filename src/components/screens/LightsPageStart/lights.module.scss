@@ -1,0 +1,45 @@
+@use "variables" as v;
+@use "utils";
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  animation: fadeInTop 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+
+  padding: 64px 0;
+  @media (max-width: 1135px) {
+    padding: 32px 0;
+  }
+
+  text-align: center;
+
+  span {
+    color: v.$primary-800;
+    font-weight: bold;
+    font-size: calc(1rem + 1vw);
+  }
+
+  h1 {
+    color: v.$gray-900;
+    font-size: calc(2rem + 2vw);
+  }
+
+  p {
+    color: v.$gray-900;
+    font-size: calc(1rem + 1vw);
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: 1fr;
+  }
+}

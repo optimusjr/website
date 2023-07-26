@@ -6,11 +6,12 @@ import config from "@/config";
 import styles from "./servicesCard.module.scss";
 
 export interface Props {
+  aboutPage?: string;
   image: React.ReactNode;
   children: React.ReactNode;
 }
 
-const ServiceCard = ({ image, children }: Props) => {
+const ServiceCard = ({ aboutPage, image, children }: Props) => {
   return (
     <ListCard className={styles.serviceCard}>
       <div className={styles.imageContainer}>
@@ -18,9 +19,16 @@ const ServiceCard = ({ image, children }: Props) => {
       </div>
       <div className={styles.content}>
         {children}
-        <Button as={Link} href={config.BUDGET_URL}>
-          Faça um Orçamento
-        </Button>
+
+        {aboutPage ? (
+          <Button as={Link} href={aboutPage}>
+            Confira Mais Detalhes
+          </Button>
+        ) : (
+          <Button as={Link} href={config.BUDGET_URL}>
+            Faça um Orçamento
+          </Button>
+        )}
       </div>
     </ListCard>
   );
