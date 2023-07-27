@@ -1,4 +1,5 @@
 import Card from "@/components/common/Card";
+import Image from "@/components/common/Image";
 import Screen from "@/components/common/Screen";
 
 import Parallax from "./Parallax";
@@ -9,16 +10,36 @@ const Showcase = () => {
     <Screen backgroundColor="secondary" className={styles.page} id="showcase">
       <Parallax baseVelocity={2}>
         <Card className={styles.card}>
-          <img alt="Imagem do serviço" src="https://random.imagecdn.app/1080/1080" />
+          <Image
+            alt="Imagem do serviço"
+            height={600}
+            src="https://random.imagecdn.app/1080/1080"
+            width={600}
+          />
         </Card>
         <Card className={styles.card}>
-          <img alt="Imagem do serviço" src="https://random.imagecdn.app/1081/1081" />
+          <Image
+            alt="Imagem do serviço"
+            height={600}
+            src="https://random.imagecdn.app/1081/1081"
+            width={600}
+          />
         </Card>
         <Card className={styles.card}>
-          <img alt="Imagem do serviço" src="https://random.imagecdn.app/1082/1082" />
+          <Image
+            alt="Imagem do serviço"
+            height={600}
+            src="https://random.imagecdn.app/1082/1082"
+            width={600}
+          />
         </Card>
         <Card className={styles.card}>
-          <img alt="Imagem do serviço" src="https://random.imagecdn.app/1083/1083" />
+          <Image
+            alt="Imagem do serviço"
+            height={600}
+            src="https://random.imagecdn.app/1083/1083"
+            width={600}
+          />
         </Card>
       </Parallax>
     </Screen>

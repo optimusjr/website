@@ -1,4 +1,5 @@
 import Card from "@/components/common/Card";
+import Image from "@/components/common/Image";
 import Link from "@/components/common/Link";
 import Screen from "@/components/common/Screen";
 import Title from "@/components/common/Title";
@@ -14,7 +15,12 @@ const Testimonials = () => {
       <div className={styles.content}>
         <Card cardLayout="row" className={styles.testimonialCard}>
           <div className={styles.imageContainer}>
-            <img alt="Foto de Julia Polena" src="https://picsum.photos/1080" />
+            <Image
+              alt="Foto de Julia Polena"
+              height={200}
+              src="https://picsum.photos/1080"
+              width={200}
+            />
           </div>
 
           <div className={styles.text}>
@@ -38,7 +44,12 @@ const Testimonials = () => {
 
         <Card cardLayout="row" className={styles.testimonialCard}>
           <div className={styles.imageContainer}>
-            <img alt="Foto de Pedro Gustavo" src="https://picsum.photos/1080" />
+            <Image
+              alt="Foto de Pedro Gustavo"
+              height={200}
+              src="https://picsum.photos/1080"
+              width={200}
+            />
           </div>
 
           <div className={styles.text}>
