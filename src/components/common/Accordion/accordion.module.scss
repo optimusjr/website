@@ -1,0 +1,21 @@
+@use "variables" as v;
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  display: flex;
+
+  h3 {
+    color: v.$gray-900;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

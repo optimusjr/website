@@ -7,7 +7,7 @@ import Screen from "@/components/common/Screen";
 import SocialLinks from "@/components/common/SocialLinks";
 import Typography from "@/components/common/Typography";
 import ClipboardIcon from "@/components/icons/Clipboard";
-import MessageIcon from "@/components/icons/message";
+import MessageIcon from "@/components/icons/Message";
 import PROSELIcon from "@/components/icons/PROSEL";
 import WebIcon from "@/components/icons/Web";
 import config from "@/config";

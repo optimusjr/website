@@ -1,0 +1,12 @@
+@use "variables" as v;
+@use "utils";
+
+.screen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.title {
+  text-align: left;
+}
