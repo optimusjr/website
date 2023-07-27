@@ -1,3 +1,4 @@
+import { AnimatePresence, m } from "framer-motion";
 import { useState } from "react";
 
 import Button from "@/components/common/Button";
@@ -19,15 +20,28 @@ const Accordion = ({ title, children }: Props) => {
   };
 
   return (
-    <li className={styles.item}>
+    <m.li className={styles.item}>
       <div className={styles.title}>
         <Typography variant="h3">{title}</Typography>
         <Button onClick={toggleOpen} variant="text">
           <ChevronIcon open={open} />
         </Button>
       </div>
-      {open ? children : null}
-    </li>
+
+      <AnimatePresence>
+        {open ? (
+          <m.div
+            animate={{ opacity: 1, height: "auto" }}
+            className={styles.contentContainer}
+            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, height: 0 }}
+          >
+            <div className={styles.content}>{children}</div>
+          </m.div>
+        ) : null}
+      </AnimatePresence>
+      <hr className={styles.line} />
+    </m.li>
   );
 };
 
