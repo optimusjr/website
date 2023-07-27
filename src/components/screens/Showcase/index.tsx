@@ -7,7 +7,7 @@ import styles from "./showcase.module.scss";
 
 const Showcase = () => {
   return (
-    <Screen backgroundColor="secondary" className={styles.page} id="showcase">
+    <Screen backgroundColor="secondary" className={styles.screen} id="showcase">
       <Parallax baseVelocity={2}>
         <Card className={styles.card}>
           <Image
