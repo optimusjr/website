@@ -13,7 +13,9 @@ const Testimonials = () => {
 
       <div className={styles.content}>
         <Card cardLayout="row" className={styles.testimonialCard}>
-          <img alt="Foto de Julia Polena" src="https://picsum.photos/1080" />
+          <div className={styles.imageContainer}>
+            <img alt="Foto de Julia Polena" src="https://picsum.photos/1080" />
+          </div>
 
           <div className={styles.text}>
             <Typography variant="p">
@@ -35,7 +37,9 @@ const Testimonials = () => {
         </Card>
 
         <Card cardLayout="row" className={styles.testimonialCard}>
-          <img alt="Foto de Pedro Gustavo" src="https://picsum.photos/1080" />
+          <div className={styles.imageContainer}>
+            <img alt="Foto de Pedro Gustavo" src="https://picsum.photos/1080" />
+          </div>
 
           <div className={styles.text}>
             <Typography variant="p">

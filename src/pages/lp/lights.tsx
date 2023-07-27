@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import LightsPageStart from "@/components/screens/LightsPageStart";
+import Showcase from "@/components/screens/Showcase";
 import Testimonials from "@/components/screens/Testimonials";
 
 const Lights = () => {
@@ -12,6 +13,7 @@ const Lights = () => {
 
       <LightsPageStart />
       <Testimonials />
+      <Showcase />
     </>
   );
 };

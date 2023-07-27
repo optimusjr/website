@@ -7,15 +7,25 @@
 
   @extend %defaultGaps;
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 }
 
 .testimonialCard {
-  img {
+  .imageContainer {
+    display: flex;
+
+    margin: auto;
     border-radius: 50%;
     width: 100%;
+    max-width: 200px;
+    overflow: hidden;
+
+    img {
+      @extend %zoomOnHover;
+      width: 100%;
+    }
   }
 
   .text {
@@ -37,10 +47,7 @@
       display: block;
       transition: border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
       border-bottom: 1px solid transparent;
-      max-width: 40vw;
-      overflow: hidden;
 
-      text-overflow: ellipsis;
       white-space: nowrap;
 
       &:hover {
@@ -49,13 +56,12 @@
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     display: flex;
     flex-direction: column;
 
-    img {
-      margin: auto;
-      width: 128px;
+    .imageContainer {
+      max-width: 128px;
     }
 
     .text {

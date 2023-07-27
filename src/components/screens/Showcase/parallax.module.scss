@@ -1,0 +1,13 @@
+@use "variables" as v;
+@use "utils";
+
+.parallaxContainer {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.parallax {
+  display: flex;
+  width: min-content;
+}
