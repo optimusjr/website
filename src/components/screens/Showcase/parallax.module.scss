@@ -10,4 +10,8 @@
 .parallax {
   display: flex;
   width: min-content;
+
+  @extend %defaultPaddings;
+  padding-right: 0;
+  padding-left: 0;
 }
