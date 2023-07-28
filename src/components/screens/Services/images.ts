@@ -1,12 +1,12 @@
-import bedroom from "@/images/bedroom.jpg";
-import curtains from "@/images/curtains.jpg";
-import gate from "@/images/gate.jpg";
-import lights from "@/images/lights.jpg";
-import lock from "@/images/lock.png";
-import pool from "@/images/pool.jpg";
-import sensor from "@/images/sensor.jpg";
-import smart from "@/images/smart.png";
-import socket from "@/images/socket.png";
+import bedroom from "@/images/services/bedroom.jpg";
+import curtains from "@/images/services/curtains.jpg";
+import gate from "@/images/services/gate.jpg";
+import lights from "@/images/services/lights.jpg";
+import lock from "@/images/services/lock.png";
+import pool from "@/images/services/pool.jpg";
+import sensor from "@/images/services/sensor.jpg";
+import smart from "@/images/services/smart.png";
+import socket from "@/images/services/socket.png";
 
 export default {
   bedroom,
