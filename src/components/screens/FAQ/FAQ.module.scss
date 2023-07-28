@@ -1,6 +1,18 @@
 @use "variables" as v;
 @use "utils";
 
+.screen {
+  padding: 0;
+
+  .title {
+    @extend %defaultPaddings;
+  }
+
+  ul {
+    @extend %defaultPaddings;
+  }
+}
+
 @media (min-width: 768px) {
   .screen {
     display: grid;
@@ -9,6 +21,8 @@
   }
 
   .title {
+    position: sticky;
+    top: 0;
     text-align: left;
   }
 }
