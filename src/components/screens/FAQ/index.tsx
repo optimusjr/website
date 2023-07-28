@@ -13,65 +13,74 @@ const FAQ = () => {
       </Title>
 
       <AccordionContainer>
-        <Accordion title="É necessário instalar equipamentos adicionais?">
+        <Accordion title="É necessário quebrar paredes para fazer a automação de lâmpadas?">
           <Typography>
-            Geralmente, a automação de lâmpadas requer lâmpadas inteligentes compatíveis com a
-            tecnologia de controle remoto ou assistente virtual. É possível também utilizar
-            dispositivos como hubs ou bridges para gerenciar várias lâmpadas em conjunto.
+            De maneira nenhuma. Com a OPTIMUS Jr., não é preciso quebrar paredes para realizar a
+            automação de lâmpadas. Nossas soluções de automação são projetadas para serem instaladas
+            de forma não invasiva, sem a necessidade de qualquer intervenção estrutural em sua casa.
+            Assim, você pode desfrutar dos benefícios da automação de lâmpadas de maneira prática e
+            rápida, sem se preocupar com reformas ou danos nas paredes.
           </Typography>
         </Accordion>
 
         <Accordion title="Como programar horários para as lâmpadas?">
           <Typography>
-            Através do aplicativo dedicado, você pode facilmente configurar horários para que as
-            lâmpadas liguem e desliguem automaticamente. Isso permite criar cenários personalizados
-            para diferentes momentos do dia.
+            Simples, bastar acessar aplicativo que nós iremos configurar no seu dispositivo. Lá você
+            pode facilmente configurar horários para que as suas lâmpadas liguem e desliguem
+            automaticamente. Isso permite criar cenários personalizados para diferentes momentos do
+            dia.
           </Typography>
         </Accordion>
 
-        <Accordion title="Posso usar a automação de lâmpadas em ambientes externos?">
+        <Accordion title="A OPTIMUS Jr. faz automação de lâmpadas em ambientes externos?">
           <Typography>
-            Isso depende das especificações do produto. Algumas lâmpadas inteligentes são projetadas
-            para uso interno, enquanto outras são resistentes a intempéries e podem ser usadas em
-            ambientes externos.
+            Sim, com certeza! Nossos sistemas de automação de lâmpadas são perfeitamente adequados
+            para uso em ambientes externos como jardins, quintais, varandas e áreas de lazer. Na
+            OPTIMUS Jr., entendemos a importância de proporcionar iluminação inteligente e
+            conveniente tanto dentro quanto fora de sua casa.
           </Typography>
         </Accordion>
 
-        <Accordion title="A automação de lâmpadas é segura?">
+        <Accordion title="Posso automatizar apenas algumas lâmpadas ou é necessário automatizar todas de uma vez?">
           <Typography>
-            Sim, a automação de lâmpadas é segura. Os dispositivos utilizados seguem padrões de
-            segurança e criptografia para proteger seus dados e garantir a privacidade.
+            Você escolhe! Você pode contratar a automação de apenas uma lâmpada ou fazer logo de
+            todas de uma vez, tudo de acordo com suas necessidades e orçamento.
           </Typography>
         </Accordion>
 
-        <Accordion title="As lâmpadas inteligentes funcionam com assistentes virtuais?">
+        <Accordion title="Eu preciso ter uma Alexa para automatizar minhas lâmpadas?">
           <Typography>
-            Sim, as lâmpadas inteligentes são compatíveis com assistentes virtuais populares, como
-            Amazon Alexa e Google Assistant. Basta sincronizar as lâmpadas com o assistente virtual
-            e usar comandos de voz para controlá-las.
+            Não, você não precisa ter uma Alexa para automatizar suas lâmpadas. Apesar de ser mais
+            legal utilizar o comando de voz pela Alexa, também é possível utilizar apenas o
+            aplicativo para controlar as lâmpadas, ou usar o comando de voz por meio do Google
+            Assistant do seu celular.
           </Typography>
         </Accordion>
 
-        <Accordion title="Quantas lâmpadas posso controlar com a automação?">
+        <Accordion title="A automação de lâmpadas é compatível com diferentes tipos de lâmpadas, como LED, fluorescentes ou incandescentes?">
           <Typography>
-            Você pode controlar quantas lâmpadas forem compatíveis com a tecnologia de automação que
-            você escolher. É possível gerenciar várias lâmpadas em um único aplicativo ou hub.
+            Sim, nós automatizamos qualquer tipo de lâmpada. O sistema de automação trabalha
+            diretamente no circuito elétrico da casa, permitindo que você automatize qualquer
+            lâmpada conectada a esse circuito.
           </Typography>
         </Accordion>
 
-        <Accordion title="É necessário ter conhecimento técnico para configurar a automação?">
+        <Accordion title="Quero automatizar as lâmpadas, mas manter os interruptores que já tenho em casa. É possível?">
           <Typography>
-            Não é necessário ter conhecimento técnico avançado. A maioria das lâmpadas inteligentes
-            é fácil de configurar e utilizar, e a instalação é simples, bastando seguir as
-            instruções do fabricante.
+            Sim! Apesar de termos interruptores inteligentes com design moderno e controle por
+            touch, entendemos que algumas pessoas preferem manter a estética e a familiaridade de
+            seus interruptores convencionais. Por isso, oferecemos soluções de automação que podem
+            ser instaladas de forma discreta por trás dos interruptores existentes, permitindo que
+            você controle suas lâmpadas de maneira automatizada sem afetar o funcionamento dos
+            interruptores que você já possui.
           </Typography>
         </Accordion>
 
-        <Accordion title="As lâmpadas inteligentes são compatíveis com diferentes tipos de soquetes?">
+        <Accordion title="Oque acontece com as automações quando a internet cai?">
           <Typography>
-            Sim, existem lâmpadas inteligentes com diferentes tipos de soquetes, como E27, E14,
-            GU10, entre outros. Certifique-se de escolher lâmpadas que se encaixem nos soquetes de
-            suas luminárias.
+            Quando a conexão com a internet estiver inativa, o controle remoto das lâmpadas através
+            do aplicativo ou assistente de voz pode ser temporariamente afetado. No entanto, o
+            controle manual através dos interruptores físicos continua funcionando normalmente.
           </Typography>
         </Accordion>
       </AccordionContainer>
