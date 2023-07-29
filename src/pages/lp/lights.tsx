@@ -1,5 +1,6 @@
 import Head from "next/head";
 
+import CallToAction from "@/components/screens/CallToAction";
 import FAQ from "@/components/screens/FAQ";
 import LightsPageStart from "@/components/screens/LightsPageStart";
 import Showcase from "@/components/screens/Showcase";
@@ -16,6 +17,7 @@ const Lights = () => {
       <Testimonials />
       <Showcase />
       <FAQ />
+      <CallToAction />
     </>
   );
 };
