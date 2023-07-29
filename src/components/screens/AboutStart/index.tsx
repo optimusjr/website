@@ -1,18 +1,14 @@
-import { m } from "framer-motion";
 import Image from "next-image-export-optimizer";
 
-import Button from "@/components/common/Button";
+import BudgetButton from "@/components/common/BudgetButton";
 import Card from "@/components/common/Card";
-import Link from "@/components/common/Link";
 import ListCard from "@/components/common/ListCard";
 import Screen from "@/components/common/Screen";
 import Typography from "@/components/common/Typography";
-import ArrowRightIcon from "@/components/icons/ArrowRight";
 import CheckOutlineIcon from "@/components/icons/CheckOutline";
 import DiamondIcon from "@/components/icons/Diamond";
 import EyeIcon from "@/components/icons/Eye";
 import TargetIcon from "@/components/icons/Target";
-import config from "@/config";
 import logo from "@/images/OPTIMUS/logo.svg";
 
 import styles from "./about.module.scss";
@@ -27,15 +23,7 @@ const AboutStart = () => {
             <h1>A Empresa Junior de Controle e Automação.</h1>
             <p>Trazemos conforto, segurança e economia para os seus ambientes.</p>
 
-            <m.div animate="rest" whileHover="hover">
-              <Button as={Link} href={config.BUDGET_URL}>
-                Faça um Orçamento
-                <ArrowRightIcon
-                  as={m.svg}
-                  variants={{ hover: { x: [0, 5, 0], transition: { repeat: Infinity } } }}
-                />
-              </Button>
-            </m.div>
+            <BudgetButton />
           </div>
 
           <Card className={styles.image}>

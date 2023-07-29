@@ -1,15 +1,10 @@
-import { m } from "framer-motion";
-
-import Button from "@/components/common/Button";
-import Link from "@/components/common/Link";
+import BudgetButton from "@/components/common/BudgetButton";
 import ListCard from "@/components/common/ListCard";
 import Screen from "@/components/common/Screen";
 import Typography from "@/components/common/Typography";
-import ArrowRightIcon from "@/components/icons/ArrowRight";
 import Leaf from "@/components/icons/Leaf";
 import ShieldHome from "@/components/icons/ShieldHome";
 import SofaIcon from "@/components/icons/Sofa";
-import config from "@/config";
 
 import styles from "./lights.module.scss";
 
@@ -26,15 +21,7 @@ const LightsStart = () => {
           </h1>
           <p>Economize energia e torne sua casa mais conectada</p>
 
-          <m.div animate="rest" whileHover="hover">
-            <Button as={Link} href={config.BUDGET_URL}>
-              Faça um Orçamento
-              <ArrowRightIcon
-                as={m.svg}
-                variants={{ hover: { x: [0, 5, 0], transition: { repeat: Infinity } } }}
-              />
-            </Button>
-          </m.div>
+          <BudgetButton />
         </section>
 
         <ul className={styles.list}>
