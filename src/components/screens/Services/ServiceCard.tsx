@@ -22,7 +22,7 @@ const ServiceCard = ({ aboutPage, image, children }: Props) => {
 
         {aboutPage ? (
           <Button as={Link} href={aboutPage}>
-            Confira Mais Detalhes
+            Confira mais Detalhes
           </Button>
         ) : (
           <Button as={Link} href={config.BUDGET_URL}>
