@@ -1,6 +1,7 @@
-import Card from "@/components/common/Card";
+import FiveStars from "@/components/common/FiveStars";
 import Image from "@/components/common/Image";
 import Link from "@/components/common/Link";
+import ListCard from "@/components/common/ListCard";
 import Screen from "@/components/common/Screen";
 import Title from "@/components/common/Title";
 import Typography from "@/components/common/Typography";
@@ -12,8 +13,8 @@ const Testimonials = () => {
     <Screen backgroundColor="white" id="testimonials">
       <Title strap="Depoimentos">O que os nossos clientes dizem?</Title>
 
-      <div className={styles.content}>
-        <Card cardLayout="row" className={styles.testimonialCard}>
+      <ul className={styles.content}>
+        <ListCard className={styles.testimonialCard} layout="row">
           <div className={styles.imageContainer}>
             <Image
               alt="Foto de Julia Polena"
@@ -29,7 +30,9 @@ const Testimonials = () => {
               profissionalismo, além do bom papo durante a execução! A instalação tem ajudado muito
               nas demandas da casa!!
             </Typography>
-            <div>
+            <div className={styles.info}>
+              <FiveStars />
+
               <Typography variant="h3">Júlia Polena</Typography>
               <Typography
                 component={Link}
@@ -40,37 +43,39 @@ const Testimonials = () => {
               </Typography>
             </div>
           </div>
-        </Card>
+        </ListCard>
 
-        <Card cardLayout="row" className={styles.testimonialCard}>
+        <ListCard className={styles.testimonialCard} layout="row">
           <div className={styles.imageContainer}>
             <Image
               alt="Foto de Pedro Gustavo"
               height={200}
-              src="https://picsum.photos/1080"
+              src="https://picsum.photos/1081"
               width={200}
             />
           </div>
 
           <div className={styles.text}>
             <Typography variant="p">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt euismod lacus.
-              Integer ac quam vitae urna ultricies pellentesque vitae et felis. Nam quis arcu vel
-              lorem scelerisque ornare vitae eget tortor.
+              Muito empenhados em resolver o problema! Gostei muito da tecnicidade e
+              profissionalismo, além do bom papo durante a execução! A instalação tem ajudado muito
+              nas demandas da casa!!
             </Typography>
-            <div>
-              <Typography variant="h3">Pedro Gustavo</Typography>
+            <div className={styles.info}>
+              <FiveStars />
+
+              <Typography variant="h3">Pedro Enrique</Typography>
               <Typography
                 component={Link}
                 href="https://www.instagram.com/pedrogustavo/"
                 variant="p"
               >
-                @pedrogustavo
+                @pedro_enrique
               </Typography>
             </div>
           </div>
-        </Card>
-      </div>
+        </ListCard>
+      </ul>
     </Screen>
   );
 };
