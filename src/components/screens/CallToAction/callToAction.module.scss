@@ -10,6 +10,16 @@
   animation: fadeInTop 0.4s ease-in-out;
   animation-fill-mode: forwards;
 
+  padding: 64px;
+
+  @media (max-width: 768px) {
+    padding: 64px 32px;
+  }
+
+  @media (max-width: 375px) {
+    padding: 64px 8px;
+  }
+
   text-align: center;
 
   h2 {
