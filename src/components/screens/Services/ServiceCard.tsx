@@ -11,27 +11,25 @@ export interface Props {
   children: React.ReactNode;
 }
 
-const ServiceCard = ({ aboutPage, image, children }: Props) => {
-  return (
-    <ListCard className={styles.serviceCard}>
-      <div className={styles.imageContainer}>
-        <div className={styles.zoomOnHover}>{image}</div>
-      </div>
-      <div className={styles.content}>
-        {children}
+const ServiceCard = ({ aboutPage, image, children }: Props) => (
+  <ListCard className={styles.serviceCard}>
+    <div className={styles.imageContainer}>
+      <div className={styles.zoomOnHover}>{image}</div>
+    </div>
+    <div className={styles.content}>
+      {children}
 
-        {aboutPage ? (
-          <Button as={Link} href={aboutPage}>
-            Confira mais Detalhes
-          </Button>
-        ) : (
-          <Button as={Link} href={config.BUDGET_URL}>
-            Faça um Orçamento
-          </Button>
-        )}
-      </div>
-    </ListCard>
-  );
-};
+      {aboutPage ? (
+        <Button as={Link} href={aboutPage}>
+          Confira mais Detalhes
+        </Button>
+      ) : (
+        <Button as={Link} href={config.BUDGET_URL}>
+          Faça um Orçamento
+        </Button>
+      )}
+    </div>
+  </ListCard>
+);
 
 export default ServiceCard;

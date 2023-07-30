@@ -16,21 +16,19 @@ const Screen = ({
   fullHeight,
   firstFullHeight,
   backgroundColor,
-}: Props) => {
-  return (
-    <article
-      className={[
-        styles.screen,
-        styles[backgroundColor],
-        fullHeight ? styles.full : "",
-        firstFullHeight ? styles.firstFull : "",
-        className,
-      ].join(" ")}
-      id={id}
-    >
-      {children}
-    </article>
-  );
-};
+}: Props) => (
+  <article
+    className={[
+      styles.screen,
+      styles[backgroundColor],
+      fullHeight ? styles.full : "",
+      firstFullHeight ? styles.firstFull : "",
+      className,
+    ].join(" ")}
+    id={id}
+  >
+    {children}
+  </article>
+);
 
 export default Screen;

@@ -8,27 +8,25 @@ import ArrowLeftIcon from "@/components/icons/ArrowLeft";
 import styles from "./custom404.module.scss";
 import Illustration from "./Illustration";
 
-const Custom404 = () => {
-  return (
-    <Screen backgroundColor="secondary" className={styles.custom404} firstFullHeight>
-      <div className={styles.text}>
-        <h1>Oops! Algo deu errado.</h1>
-        <p>A Página que você está procurando não pôde ser encontrada.</p>
+const Custom404 = () => (
+  <Screen backgroundColor="secondary" className={styles.custom404} firstFullHeight>
+    <div className={styles.text}>
+      <h1>Oops! Algo deu errado.</h1>
+      <p>A Página que você está procurando não pôde ser encontrada.</p>
 
-        <m.div animate="rest" whileHover="hover">
-          <Button as={Link} href="/">
-            <ArrowLeftIcon
-              as={m.svg}
-              variants={{ hover: { x: [0, -5, 0], transition: { repeat: Infinity } } }}
-            />
-            Voltar para página inicial
-          </Button>
-        </m.div>
-      </div>
+      <m.div animate="rest" whileHover="hover">
+        <Button as={Link} href="/">
+          <ArrowLeftIcon
+            as={m.svg}
+            variants={{ hover: { x: [0, -5, 0], transition: { repeat: Infinity } } }}
+          />
+          Voltar para página inicial
+        </Button>
+      </m.div>
+    </div>
 
-      <Illustration />
-    </Screen>
-  );
-};
+    <Illustration />
+  </Screen>
+);
 
 export default Custom404;

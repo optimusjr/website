@@ -2,16 +2,14 @@ import Head from "next/head";
 
 import Links from "@/components/screens/Links";
 
-const ThanksPage = () => {
-  return (
-    <>
-      <Head>
-        <title>Conecte-se Conosco</title>
-      </Head>
+const ThanksPage = () => (
+  <>
+    <Head>
+      <title>Conecte-se Conosco</title>
+    </Head>
 
-      <Links />
-    </>
-  );
-};
+    <Links />
+  </>
+);
 
 export default ThanksPage;

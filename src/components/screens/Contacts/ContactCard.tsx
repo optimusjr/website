@@ -11,21 +11,19 @@ interface Props {
   children: React.ReactNode;
 }
 
-const ContactCard = ({ href, children }: Props) => {
-  return (
-    <Link href={href}>
-      <Card
-        as={m.div}
-        cardLayout="none"
-        className={styles.contactCard}
-        initial={{ scale: 1, boxShadow: variables.shadowMd }}
-        transition={{ type: "spring", duration: 0.3 }}
-        whileHover={{ scale: 1.01, boxShadow: variables.shadowLg }}
-      >
-        {children}
-      </Card>
-    </Link>
-  );
-};
+const ContactCard = ({ href, children }: Props) => (
+  <Link href={href}>
+    <Card
+      as={m.div}
+      cardLayout="none"
+      className={styles.contactCard}
+      initial={{ scale: 1, boxShadow: variables.shadowMd }}
+      transition={{ type: "spring", duration: 0.3 }}
+      whileHover={{ scale: 1.01, boxShadow: variables.shadowLg }}
+    >
+      {children}
+    </Card>
+  </Link>
+);
 
 export default ContactCard;

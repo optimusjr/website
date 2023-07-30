@@ -8,13 +8,11 @@ interface Props {
   className?: string;
 }
 
-const Title = ({ strap, className, children }: Props) => {
-  return (
-    <div className={[styles.title, className].join(" ")}>
-      {strap && <Typography variant="strap">{strap}</Typography>}
-      <Typography variant="h2">{children}</Typography>
-    </div>
-  );
-};
+const Title = ({ strap, className, children }: Props) => (
+  <div className={[styles.title, className].join(" ")}>
+    {strap && <Typography variant="strap">{strap}</Typography>}
+    <Typography variant="h2">{children}</Typography>
+  </div>
+);
 
 export default Title;

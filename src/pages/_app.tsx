@@ -19,22 +19,20 @@ ReactTagManager.init({
   debug: false, // debug mode (default false)
 });
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
-  return (
-    <>
-      <Head>
-        {/* A Tag Viewport não deve ser usada no _document.tsx, por isso está nesse arquivo */}
-        {/* Para mais informações acesse: https://nextjs.org/docs/messages/no-document-viewport-meta */}
-        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-      </Head>
+const MyApp = ({ Component, pageProps }: AppProps) => (
+  <>
+    <Head>
+      {/* A Tag Viewport não deve ser usada no _document.tsx, por isso está nesse arquivo */}
+      {/* Para mais informações acesse: https://nextjs.org/docs/messages/no-document-viewport-meta */}
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    </Head>
 
-      <LazyMotion features={domAnimation} strict>
-        <Layout className={league.className}>
-          <Component {...pageProps} />
-        </Layout>
-      </LazyMotion>
-    </>
-  );
-};
+    <LazyMotion features={domAnimation} strict>
+      <Layout className={league.className}>
+        <Component {...pageProps} />
+      </Layout>
+    </LazyMotion>
+  </>
+);
 
 export default MyApp;

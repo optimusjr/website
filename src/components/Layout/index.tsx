@@ -7,15 +7,13 @@ interface Props {
   children: React.ReactNode;
 }
 
-const Layout = ({ className, children }: Props) => {
-  return (
-    <div className={className} style={{ display: "contents" }}>
-      <Header />
-      <main>{children}</main>
-      <Footer />
-      <PROSEL />
-    </div>
-  );
-};
+const Layout = ({ className, children }: Props) => (
+  <div className={className} style={{ display: "contents" }}>
+    <Header />
+    <main>{children}</main>
+    <Footer />
+    <PROSEL />
+  </div>
+);
 
 export default Layout;

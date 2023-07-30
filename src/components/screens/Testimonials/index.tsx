@@ -8,76 +8,66 @@ import Typography from "@/components/common/Typography";
 
 import styles from "./testimonials.module.scss";
 
-const Testimonials = () => {
-  return (
-    <Screen backgroundColor="white" id="testimonials">
-      <Title strap="Depoimentos">O que os nossos clientes dizem?</Title>
+const Testimonials = () => (
+  <Screen backgroundColor="white" id="testimonials">
+    <Title strap="Depoimentos">O que os nossos clientes dizem?</Title>
 
-      <ul className={styles.content}>
-        <ListCard className={styles.testimonialCard} layout="row">
-          <div className={styles.imageContainer}>
-            <Image
-              alt="Foto de Julia Polena"
-              height={200}
-              src="https://picsum.photos/1080"
-              width={200}
-            />
-          </div>
+    <ul className={styles.content}>
+      <ListCard className={styles.testimonialCard} layout="row">
+        <div className={styles.imageContainer}>
+          <Image
+            alt="Foto de Julia Polena"
+            height={200}
+            src="https://picsum.photos/1080"
+            width={200}
+          />
+        </div>
 
-          <div className={styles.text}>
-            <Typography variant="p">
-              Muito empenhados em resolver o problema! Gostei muito da tecnicidade e
-              profissionalismo, além do bom papo durante a execução! A instalação tem ajudado muito
-              nas demandas da casa!!
+        <div className={styles.text}>
+          <Typography variant="p">
+            Muito empenhados em resolver o problema! Gostei muito da tecnicidade e profissionalismo,
+            além do bom papo durante a execução! A instalação tem ajudado muito nas demandas da
+            casa!!
+          </Typography>
+          <div className={styles.info}>
+            <FiveStars />
+
+            <Typography variant="h3">Júlia Polena</Typography>
+            <Typography component={Link} href="https://www.instagram.com/juliapolena/" variant="p">
+              @juliapolena
             </Typography>
-            <div className={styles.info}>
-              <FiveStars />
-
-              <Typography variant="h3">Júlia Polena</Typography>
-              <Typography
-                component={Link}
-                href="https://www.instagram.com/juliapolena/"
-                variant="p"
-              >
-                @juliapolena
-              </Typography>
-            </div>
           </div>
-        </ListCard>
+        </div>
+      </ListCard>
 
-        <ListCard className={styles.testimonialCard} layout="row">
-          <div className={styles.imageContainer}>
-            <Image
-              alt="Foto de Pedro Gustavo"
-              height={200}
-              src="https://picsum.photos/1081"
-              width={200}
-            />
-          </div>
+      <ListCard className={styles.testimonialCard} layout="row">
+        <div className={styles.imageContainer}>
+          <Image
+            alt="Foto de Pedro Gustavo"
+            height={200}
+            src="https://picsum.photos/1081"
+            width={200}
+          />
+        </div>
 
-          <div className={styles.text}>
-            <Typography variant="p">
-              Muito empenhados em resolver o problema! Gostei muito da tecnicidade e
-              profissionalismo, além do bom papo durante a execução! A instalação tem ajudado muito
-              nas demandas da casa!!
+        <div className={styles.text}>
+          <Typography variant="p">
+            Muito empenhados em resolver o problema! Gostei muito da tecnicidade e profissionalismo,
+            além do bom papo durante a execução! A instalação tem ajudado muito nas demandas da
+            casa!!
+          </Typography>
+          <div className={styles.info}>
+            <FiveStars />
+
+            <Typography variant="h3">Pedro Enrique</Typography>
+            <Typography component={Link} href="https://www.instagram.com/pedrogustavo/" variant="p">
+              @pedro_enrique
             </Typography>
-            <div className={styles.info}>
-              <FiveStars />
-
-              <Typography variant="h3">Pedro Enrique</Typography>
-              <Typography
-                component={Link}
-                href="https://www.instagram.com/pedrogustavo/"
-                variant="p"
-              >
-                @pedro_enrique
-              </Typography>
-            </div>
           </div>
-        </ListCard>
-      </ul>
-    </Screen>
-  );
-};
+        </div>
+      </ListCard>
+    </ul>
+  </Screen>
+);
 
 export default Testimonials;
