@@ -1,5 +1,3 @@
-import * as React from "react";
-
 const ShieldHomeIcon = () => (
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <title>Casa protegida por um escudo</title>
