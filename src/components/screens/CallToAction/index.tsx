@@ -1,9 +1,9 @@
 import BudgetButton from "@/components/common/BudgetButton";
+import Pattern from "@/components/common/Pattern";
 import Screen from "@/components/common/Screen";
 import CogsPattern from "@/components/patterns/Cogs";
 
 import styles from "./callToAction.module.scss";
-import Pattern from "@/components/common/Pattern";
 
 const CallToAction = () => (
   <Screen backgroundColor="none" className={styles.screen}>

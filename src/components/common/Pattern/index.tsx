@@ -1,10 +1,9 @@
 import { m, useScroll, useSpring, useTransform } from "framer-motion";
 import { useId, useRef } from "react";
 
-import variables from "@/styles/variables.module.scss";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 import styles from "./pattern.module.scss";
-import useMediaQuery from "@/hooks/useMediaQuery";
 
 interface Props {
   SVGPattern: React.ComponentType<{ id: string }>;
@@ -42,11 +41,11 @@ const Pattern = ({ SVGPattern, backgroundColor }: Props) => {
           <SVGPattern id={patternId} />
 
           <radialGradient id={gradientId}>
-            <stop offset="50%" className={styles.gradientColor} />
-            <stop offset="100%" className={styles.gradientTransparent} />
+            <stop className={styles.gradientColor} offset="50%" />
+            <stop className={styles.gradientTransparent} offset="100%" />
           </radialGradient>
         </defs>
-        <m.rect fill={`url(#${patternId})`} style={{ y }} className={styles.patternRect} />
+        <m.rect className={styles.patternRect} fill={`url(#${patternId})`} style={{ y }} />
         <rect fill={`url(#${gradientId})`} height="100%" width="100%" />
       </svg>
     </div>
