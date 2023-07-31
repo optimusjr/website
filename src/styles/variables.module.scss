@@ -1,15 +1,12 @@
 // Arquivo para exportar as variáveis SCSS e poder utilizar-las no TypeScript
 
 @use "variables" as v;
-@use "sass:color";
 
 :export {
   // Coloque mais cores caso necessário
   colorPrimary800: v.$primary-800;
   colorSecondary100: v.$secondary-100;
   colorGray900: v.$gray-900;
-
-  transparentColorSecondary100: color.change(v.$secondary-100, $alpha: 0);
 
   shadowMd: v.$shadow-md;
   shadowLg: v.$shadow-lg;
