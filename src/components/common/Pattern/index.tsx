@@ -35,19 +35,21 @@ const Pattern = ({ SVGPattern, backgroundColor }: Props) => {
   const gradientId = useId();
 
   return (
-    <div className={[styles.pattern, styles[backgroundColor]].join(" ")} ref={containerRef}>
-      <svg xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <SVGPattern id={patternId} />
+    <div className={styles.container} ref={containerRef}>
+      <div className={[styles.pattern, styles[backgroundColor]].join(" ")}>
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <SVGPattern id={patternId} />
 
-          <radialGradient id={gradientId}>
-            <stop className={styles.gradientColor} offset="50%" />
-            <stop className={styles.gradientTransparent} offset="100%" />
-          </radialGradient>
-        </defs>
-        <m.rect className={styles.patternRect} fill={`url(#${patternId})`} style={{ y }} />
-        <rect fill={`url(#${gradientId})`} height="100%" width="100%" />
-      </svg>
+            <radialGradient id={gradientId}>
+              <stop className={styles.gradientColor} offset="50%" />
+              <stop className={styles.gradientTransparent} offset="100%" />
+            </radialGradient>
+          </defs>
+          <m.rect className={styles.patternRect} fill={`url(#${patternId})`} style={{ y }} />
+          <rect fill={`url(#${gradientId})`} height="100%" width="100%" />
+        </svg>
+      </div>
     </div>
   );
 };
