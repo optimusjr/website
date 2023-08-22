@@ -22,15 +22,6 @@ const FAQ = () => (
         </Typography>
       </Accordion>
 
-      <Accordion title="Como programar horários para as lâmpadas?">
-        <Typography>
-          Simples, bastar acessar aplicativo que nós iremos configurar no seu dispositivo. Lá você
-          pode facilmente configurar horários para que as suas lâmpadas liguem e desliguem
-          automaticamente. Isso permite criar cenários personalizados para diferentes momentos do
-          dia.
-        </Typography>
-      </Accordion>
-
       <Accordion title="A OPTIMUS Jr. faz automação de lâmpadas em ambientes externos?">
         <Typography>
           Sim, com certeza! Nossos sistemas de automação de lâmpadas são perfeitamente adequados
