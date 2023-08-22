@@ -4,6 +4,8 @@
 .screen {
   position: relative;
   gap: 16px;
+
+  box-shadow: inset v.$shadow-md;
   padding: 64px;
 
   @media (max-width: 768px) {
