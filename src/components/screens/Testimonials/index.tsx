@@ -5,6 +5,7 @@ import ListCard from "@/components/common/ListCard";
 import Screen from "@/components/common/Screen";
 import Title from "@/components/common/Title";
 import Typography from "@/components/common/Typography";
+import juliaPolena from "@/images/clients/juliaPolena.jpg";
 
 import styles from "./testimonials.module.scss";
 
@@ -15,12 +16,7 @@ const Testimonials = () => (
     <ul className={styles.content}>
       <ListCard className={styles.testimonialCard} layout="row">
         <div className={styles.imageContainer}>
-          <Image
-            alt="Foto de Julia Polena"
-            height={200}
-            src="https://picsum.photos/1080"
-            width={200}
-          />
+          <Image alt="Foto de Júlia Polena" height={200} src={juliaPolena} width={200} />
         </div>
 
         <div className={styles.text}>
