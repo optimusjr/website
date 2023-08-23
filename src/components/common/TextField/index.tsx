@@ -6,11 +6,12 @@ interface Props {
   label: string;
   name: string;
   type?: React.HTMLInputTypeAttribute;
+  placeholder?: string;
   required?: boolean;
   multiline?: boolean;
 }
 
-const TextField = ({ label, name, type, required, multiline }: Props) => {
+const TextField = ({ label, name, type, placeholder, required, multiline }: Props) => {
   const InputComponent = multiline ? "textarea" : "input";
 
   return (
@@ -18,7 +19,7 @@ const TextField = ({ label, name, type, required, multiline }: Props) => {
       <Typography component="span" variant="p">
         {label}
       </Typography>
-      <InputComponent name={name} required={required} type={type} />
+      <InputComponent name={name} placeholder={placeholder} required={required} type={type} />
     </label>
   );
 };

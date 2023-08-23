@@ -1,0 +1,23 @@
+@use "variables" as v;
+@use "utils" as u;
+
+.formPage {
+  h2 {
+    color: v.$primary-800;
+    font-size: u.rem(32);
+    text-transform: none;
+  }
+
+  p {
+    margin: 8px;
+    font-size: u.rem(24);
+  }
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  margin: 32px 0;
+}
