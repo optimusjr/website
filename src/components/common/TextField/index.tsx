@@ -2,26 +2,31 @@ import Typography from "@/components/common/Typography";
 
 import styles from "./textField.module.scss";
 
-interface Props {
+interface TextFieldProps extends React.HTMLProps<HTMLInputElement> {
   label: string;
-  name: string;
-  type?: React.HTMLInputTypeAttribute;
-  placeholder?: string;
-  required?: boolean;
-  multiline?: boolean;
 }
 
-const TextField = ({ label, name, type, placeholder, required, multiline }: Props) => {
-  const InputComponent = multiline ? "textarea" : "input";
+const TextField = ({ label, ...props }: TextFieldProps) => (
+  <label className={styles.textField}>
+    <Typography component="span" variant="p">
+      {label}
+    </Typography>
+    <input {...props} />
+  </label>
+);
 
-  return (
-    <label className={styles.textField}>
-      <Typography component="span" variant="p">
-        {label}
-      </Typography>
-      <InputComponent name={name} placeholder={placeholder} required={required} type={type} />
-    </label>
-  );
-};
+interface TextAreaProps extends React.HTMLProps<HTMLTextAreaElement> {
+  label: string;
+}
+
+const TextArea = ({ label, ...props }: TextAreaProps) => (
+  <label className={styles.textField}>
+    <Typography component="span" variant="p">
+      {label}
+    </Typography>
+    <textarea {...props} />
+  </label>
+);
 
 export default TextField;
+export { TextArea, TextField };

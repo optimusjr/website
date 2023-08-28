@@ -1,7 +1,7 @@
 import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
 import Screen from "@/components/common/Screen";
-import TextField from "@/components/common/TextField";
+import { TextArea, TextField } from "@/components/common/TextField";
 import Title from "@/components/common/Title";
 import Typography from "@/components/common/Typography";
 import EmailIcon from "@/components/icons/Email";
@@ -52,7 +52,7 @@ const Contacts = () => (
 
         <TextField label="Nome:" name="nome" required />
         <TextField label="E-mail:" name="email" type="email" required />
-        <TextField label="Sua mensagem:" name="mensagem" multiline required />
+        <TextArea label="Sua mensagem:" name="mensagem" required />
 
         <input name="_next" type="hidden" value={`${process.env.SITE_URL}/thanks`} />
 

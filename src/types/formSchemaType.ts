@@ -4,15 +4,24 @@ interface Option {
   icon?: () => React.ReactElement;
 }
 
-interface Question {
-  type: "text" | "email" | "tel" | "checkbox";
+interface GenericQuestion {
   label: string;
   name: string;
-  placeholder?: string;
   required?: boolean;
+}
 
+interface TextQuestion extends GenericQuestion {
+  type: "text" | "email" | "tel";
+  multiline?: boolean;
+  placeholder?: string;
+}
+
+interface SelectQuestion extends GenericQuestion {
+  type: "checkbox";
   options?: Option[];
 }
+
+type Question = TextQuestion | SelectQuestion;
 
 interface Condition {
   variable: string;
