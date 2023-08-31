@@ -1,4 +1,4 @@
-interface Option {
+export interface Option {
   label: string;
   name: string;
   icon?: () => React.ReactElement;
@@ -6,22 +6,22 @@ interface Option {
 
 interface GenericQuestion {
   label: string;
-  name: string;
-  required?: boolean;
 }
 
-interface TextQuestion extends GenericQuestion {
+export interface TextQuestion extends GenericQuestion {
   type: "text" | "email" | "tel";
+  name: string;
+  required?: boolean;
   multiline?: boolean;
   placeholder?: string;
 }
 
-interface SelectQuestion extends GenericQuestion {
+export interface SelectQuestion extends GenericQuestion {
   type: "checkbox";
-  options?: Option[];
+  options: Option[];
 }
 
-type Question = TextQuestion | SelectQuestion;
+export type Question = TextQuestion | SelectQuestion;
 
 interface Condition {
   variable: string;
@@ -33,20 +33,18 @@ interface Rule {
   condition: Condition;
 }
 
-interface FormPage {
+export interface Page {
   title: string;
   description?: string;
   rule?: Rule;
   questions?: Question[];
 }
 
-interface FormSchema {
+export interface Schema {
   title: string;
-  pages: FormPage[];
+  pages: Page[];
 }
 
-interface FormAnswers {
+export interface Answers {
   [key: string]: string | boolean;
 }
-
-export type { FormAnswers, FormPage, FormSchema };

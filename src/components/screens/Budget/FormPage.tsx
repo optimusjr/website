@@ -1,48 +1,24 @@
-import { ChangeEvent, ComponentProps, Dispatch, SetStateAction } from "react";
-
-import { TextArea, TextField } from "@/components/common/TextField";
-import type { FormAnswers, FormPage } from "@/types/formSchemaType";
+import Question from "@/components/screens/Budget/Question";
+import type * as Form from "@/types/formSchemaType";
 
 import styles from "./FormPage.module.scss";
 
 interface Props {
-  data: FormAnswers;
-  setData: Dispatch<SetStateAction<FormAnswers>>;
-  page: FormPage;
+  page: Form.Page;
 }
 
-const FormPage = ({ page, data, setData }: Props) => {
-  return (
-    <div className={styles.formPage}>
-      <h2>{page.title}</h2>
-      {page.description && <p>{page.description}</p>}
+const FormPage = ({ page }: Props) => (
+  <fieldset className={styles.formPage}>
+    <legend className={styles.pageTitle}>{page.title}</legend>
+    {page.description && <p className={styles.pageDescription}>{page.description}</p>}
 
+    {page.questions && (
       <div className={styles.questions}>
-        {page.questions &&
-          page.questions.map((question, key) => {
-            if (question.type === "text" || question.type === "email" || question.type === "tel") {
-              const props: ComponentProps<typeof TextField> & ComponentProps<typeof TextArea> = {
-                key: key,
-                label: question.label,
-                name: question.name,
-                placeholder: question.placeholder,
-                required: question.required,
-                type: question.type,
-
-                value: data[question.name] as string,
-                onChange: (e: ChangeEvent<HTMLInputElement & HTMLTextAreaElement>) =>
-                  setData((data) => {
-                    data[question.name] = e.target.value;
-                    return data;
-                  }),
-              };
-
-              return question.multiline ? <TextArea {...props} /> : <TextField {...props} />;
-            }
-          })}
+        {page.questions.map((question, key) => (
+          <Question key={key} question={question} />
+        ))}
       </div>
-    </div>
-  );
-};
-
+    )}
+  </fieldset>
+);
 export default FormPage;

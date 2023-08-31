@@ -2,13 +2,17 @@
 @use "utils" as u;
 
 .formPage {
-  h2 {
+  .pageTitle {
+    width: 100%;
     color: v.$primary-800;
+    font-weight: 700;
     font-size: u.rem(32);
+
+    text-align: center;
     text-transform: none;
   }
 
-  p {
+  .pageDescription {
     margin: 8px;
     font-size: u.rem(24);
   }
@@ -20,4 +24,17 @@
   gap: 32px;
 
   margin: 32px 0;
+}
+
+.checkboxQuestion {
+  legend {
+    font-size: u.rem(32);
+  }
+
+  .optionsContainer {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
 }
