@@ -10,6 +10,7 @@ const TextField = ({ label, ...props }: TextFieldProps) => (
   <label className={styles.textField}>
     <Typography component="span" variant="p">
       {label}
+      {props.required && "*"}
     </Typography>
     <input {...props} />
   </label>
