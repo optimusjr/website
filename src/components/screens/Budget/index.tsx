@@ -23,6 +23,7 @@ const Budget = () => {
         <Card
           onSubmit={(e: React.FormEvent) => {
             e.preventDefault();
+            setCurrentPage(currentPage + 1);
           }}
           as="form"
           className={styles.budgetForm}
@@ -30,19 +31,14 @@ const Budget = () => {
           <FormPage page={budgetFormSchema.pages[currentPage]} />
 
           <div className={styles.controlButtons}>
-            <Button
-              onClick={() => {
-                setCurrentPage(currentPage + 1);
-              }}
-            >
-              {currentPage === 0 ? "Vamos lá!" : "Próxima Página"}
-            </Button>
+            <Button>{currentPage === 0 ? "Vamos lá!" : "Próxima Página"}</Button>
 
             {currentPage !== 0 && (
               <Button
                 onClick={() => {
                   setCurrentPage(currentPage - 1);
                 }}
+                type="button"
               >
                 Página Anterior
               </Button>
