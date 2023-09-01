@@ -1,7 +1,7 @@
 import SofaIcon from "@/components/icons/Sofa";
-import { FormSchema } from "@/types/formSchemaType";
+import type * as Form from "@/types/formSchemaType";
 
-const budgetFormSchema: FormSchema = {
+const budgetFormSchema: Form.Schema = {
   title: "Formulário de Orçamento",
   pages: [
     {
@@ -58,7 +58,6 @@ const budgetFormSchema: FormSchema = {
         {
           type: "checkbox",
           label: "Selecione os serviços:",
-          name: "serviços",
           options: [
             {
               label: "Controle de Iluminação",
@@ -122,7 +121,6 @@ const budgetFormSchema: FormSchema = {
         {
           type: "checkbox",
           label: "Selecione os cômodos:",
-          name: "cômodoIluminação",
           options: [
             {
               label: "Sala de Estar/Jantar",
