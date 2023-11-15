@@ -30,39 +30,37 @@ const Start = () => {
       </div>
 
       <div className={styles.image}>
-        <div className={styles.zoomOnHover}>
-          <Image alt="Quarto com as luzes apagadas" src={bedroomOff} width={1924} priority />
+        <Image alt="Quarto com as luzes apagadas" src={bedroomOff} width={1924} priority />
 
-          <Image
-            alt="Quarto com as luzes acessas"
-            className={styles.topImage}
-            src={bedroomOn}
-            style={{ opacity: light ? 1 : 0 }}
-            width={1924}
-            priority
-          />
+        <Image
+          alt="Quarto com as luzes acessas"
+          className={styles.topImage}
+          src={bedroomOn}
+          style={{ opacity: light ? 1 : 0 }}
+          width={1924}
+          priority
+        />
 
-          <button
-            onClick={() => {
-              setLight(!light);
-              if (!disableTimer) {
-                setDisableTimer(true);
-                clearTimeout(timer);
-              }
-            }}
-            style={{
-              // Isso faz com que o botão sempre flutue em cima da posição certa da imagem
-              // Valores gerados usando o site https://zaneray.com/responsive-image-map/
-              position: "absolute",
-              left: "40.38%",
-              top: "66.75%",
-              width: "52.54%",
-              height: "20.31%",
+        <button
+          onClick={() => {
+            setLight(!light);
+            if (!disableTimer) {
+              setDisableTimer(true);
+              clearTimeout(timer);
+            }
+          }}
+          style={{
+            // Isso faz com que o botão sempre flutue em cima da posição certa da imagem
+            // Valores gerados usando o site https://zaneray.com/responsive-image-map/
+            position: "absolute",
+            left: "40.38%",
+            top: "66.75%",
+            width: "52.54%",
+            height: "20.31%",
 
-              opacity: 0,
-            }}
-          ></button>
-        </div>
+            opacity: 0,
+          }}
+        />
       </div>
     </Screen>
   );
