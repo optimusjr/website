@@ -58,7 +58,6 @@
 .screenContainerMobile {
   @extend .screenContainer;
   height: 100vh;
-  scroll-snap-align: start;
 }
 
 .slide {
