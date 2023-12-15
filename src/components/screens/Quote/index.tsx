@@ -1,23 +1,23 @@
 import { useState } from "react";
 
-import budgetFormSchema from "@/budgetFormSchema";
 import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
 import Screen from "@/components/common/Screen";
 import Typography from "@/components/common/Typography";
 import { FormDataProvider } from "@/context/FormDataContext";
+import quoteFormSchema from "@/quoteFormSchema";
 
-import styles from "./budget.module.scss";
 import FormPage from "./FormPage";
+import styles from "./quote.module.scss";
 
-const Budget = () => {
+const Quote = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
   return (
     <FormDataProvider>
-      <Screen backgroundColor="secondary" className={styles.budget} firstFullHeight>
+      <Screen backgroundColor="secondary" className={styles.quote} firstFullHeight>
         <Typography component="h1" variant="h2">
-          {budgetFormSchema.title}
+          {quoteFormSchema.title}
         </Typography>
 
         <Card
@@ -26,9 +26,9 @@ const Budget = () => {
             setCurrentPage(currentPage + 1);
           }}
           as="form"
-          className={styles.budgetForm}
+          className={styles.quoteForm}
         >
-          <FormPage page={budgetFormSchema.pages[currentPage]} />
+          <FormPage page={quoteFormSchema.pages[currentPage]} />
 
           <div className={styles.controlButtons}>
             <Button>{currentPage === 0 ? "Vamos lá!" : "Próxima Página"}</Button>
@@ -50,4 +50,4 @@ const Budget = () => {
   );
 };
 
-export default Budget;
+export default Quote;

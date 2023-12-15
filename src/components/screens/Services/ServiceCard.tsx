@@ -24,7 +24,7 @@ const ServiceCard = ({ aboutPage, image, children }: Props) => (
           Confira mais Detalhes
         </Button>
       ) : (
-        <Button as={Link} href={config.BUDGET_URL}>
+        <Button as={Link} href={config.QUOTE_URL}>
           Faça um Orçamento
         </Button>
       )}

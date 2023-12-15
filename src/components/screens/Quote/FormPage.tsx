@@ -1,4 +1,4 @@
-import Question from "@/components/screens/Budget/Question";
+import Question from "@/components/screens/Quote/Question";
 import type * as Form from "@/types/formSchemaType";
 
 import styles from "./FormPage.module.scss";

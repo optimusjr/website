@@ -47,7 +47,7 @@ const Mobile = ({ show, toggleShow, hideShow }: Props) => (
             <Links hideMobile={hideShow} />
 
             <li className={styles.button}>
-              <Button as={Link} href={config.BUDGET_URL}>
+              <Button as={Link} href={config.QUOTE_URL}>
                 Faça um Orçamento
               </Button>
             </li>

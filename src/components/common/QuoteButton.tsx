@@ -5,9 +5,9 @@ import Link from "@/components/common/Link";
 import ArrowRightIcon from "@/components/icons/ArrowRight";
 import config from "@/config";
 
-const BudgetButton = () => (
+const QuoteButton = () => (
   <m.div animate="rest" whileHover="hover">
-    <Button as={Link} href={config.BUDGET_URL}>
+    <Button as={Link} href={config.QUOTE_URL}>
       Faça um Orçamento
       <ArrowRightIcon
         as={m.svg}
@@ -17,4 +17,4 @@ const BudgetButton = () => (
   </m.div>
 );
 
-export default BudgetButton;
+export default QuoteButton;

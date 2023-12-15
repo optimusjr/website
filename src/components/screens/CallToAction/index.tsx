@@ -1,5 +1,5 @@
-import BudgetButton from "@/components/common/BudgetButton";
 import Pattern from "@/components/common/Pattern";
+import QuoteButton from "@/components/common/QuoteButton";
 import Screen from "@/components/common/Screen";
 import CogsPattern from "@/components/patterns/Cogs";
 
@@ -12,7 +12,7 @@ const CallToAction = () => (
     <h2>O que você está esperando?</h2>
     <p>Descubra como a automação pode tornar sua vida mais confortável e eficiente.</p>
 
-    <BudgetButton />
+    <QuoteButton />
   </Screen>
 );
 

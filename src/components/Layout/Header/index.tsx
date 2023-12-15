@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import BudgetButton from "@/components/common/BudgetButton";
 import Image from "@/components/common/Image";
 import Link from "@/components/common/Link";
+import QuoteButton from "@/components/common/QuoteButton";
 import OPTIMUSIcon from "@/images/OPTIMUS/icon.svg";
 import wordmark from "@/images/OPTIMUS/wordmark.svg";
 
@@ -45,7 +45,7 @@ const Header = () => {
         </ul>
 
         <div className={styles.right}>
-          <BudgetButton />
+          <QuoteButton />
         </div>
 
         <Mobile hideShow={hideMobile} show={showMobile} toggleShow={toggleShowMobile} />

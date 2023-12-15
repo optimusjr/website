@@ -43,7 +43,7 @@ const Links = () => (
         </LinkCard>
       )}
 
-      <LinkCard href={config.BUDGET_URL}>
+      <LinkCard href={config.QUOTE_URL}>
         <ClipboardIcon />
 
         <Typography component="h2" variant="h3">

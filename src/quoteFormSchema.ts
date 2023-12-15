@@ -1,7 +1,7 @@
 import SofaIcon from "@/components/icons/Sofa";
 import type * as Form from "@/types/formSchemaType";
 
-const budgetFormSchema: Form.Schema = {
+const quoteFormSchema: Form.Schema = {
   title: "Formulário de Orçamento",
   pages: [
     {
@@ -145,4 +145,4 @@ const budgetFormSchema: Form.Schema = {
   ],
 };
 
-export default budgetFormSchema;
+export default quoteFormSchema;

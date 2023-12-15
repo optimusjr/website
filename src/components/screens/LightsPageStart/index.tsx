@@ -1,5 +1,5 @@
-import BudgetButton from "@/components/common/BudgetButton";
 import ListCard from "@/components/common/ListCard";
+import QuoteButton from "@/components/common/QuoteButton";
 import Screen from "@/components/common/Screen";
 import Typography from "@/components/common/Typography";
 import Leaf from "@/components/icons/Leaf";
@@ -19,7 +19,7 @@ const LightsStart = () => (
       </h1>
       <p>Economize energia e torne sua casa mais conectada</p>
 
-      <BudgetButton />
+      <QuoteButton />
     </section>
 
     <ul className={styles.list}>

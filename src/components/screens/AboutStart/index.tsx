@@ -1,8 +1,8 @@
 import Image from "next-image-export-optimizer";
 
-import BudgetButton from "@/components/common/BudgetButton";
 import Card from "@/components/common/Card";
 import ListCard from "@/components/common/ListCard";
+import QuoteButton from "@/components/common/QuoteButton";
 import Screen from "@/components/common/Screen";
 import Typography from "@/components/common/Typography";
 import CheckOutlineIcon from "@/components/icons/CheckOutline";
@@ -21,7 +21,7 @@ const AboutStart = () => (
         <h1>A Empresa Junior de Controle e Automação.</h1>
         <p>Trazemos conforto, segurança e economia para os seus ambientes.</p>
 
-        <BudgetButton />
+        <QuoteButton />
       </div>
 
       <Card className={styles.image}>
