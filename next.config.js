@@ -14,7 +14,7 @@ const nextConfig = {
   env: {
     // Basic
     SITE_URL: process.env.SITE_URL,
-    nextImageExportOptimizer_generateAndUseBlurImages: true,
+    nextImageExportOptimizer_generateAndUseBlurImages: "true",
   },
 
   images: {
