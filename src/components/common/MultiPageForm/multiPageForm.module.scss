@@ -1,0 +1,12 @@
+@use "variables" as v;
+@use "utils" as u;
+
+.card {
+  max-width: 800px;
+}
+
+.controlButtons {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}

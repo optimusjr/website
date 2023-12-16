@@ -1,0 +1,19 @@
+@use "variables" as v;
+@use "utils" as u;
+
+.formPage {
+  .pageTitle {
+    width: 100%;
+    color: v.$primary-800;
+    font-weight: 700;
+    font-size: u.rem(32);
+
+    text-align: center;
+    text-transform: none;
+  }
+
+  .pageDescription {
+    margin: 8px;
+    font-size: u.rem(24);
+  }
+}

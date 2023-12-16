@@ -2,10 +2,10 @@ import { ChangeEvent, ComponentProps, useState, useTransition } from "react";
 
 import Checkbox from "@/components/common/Checkbox";
 import { TextArea, TextField } from "@/components/common/TextField";
-import useFormData from "@/hooks/useFormData";
+import useMultiForm from "@/hooks/useMultiForm";
 import type * as Form from "@/types/formSchemaType";
 
-import styles from "./FormPage.module.scss";
+import styles from "./question.module.scss";
 
 const Question = ({ question }: { question: Form.Question }) => {
   if (question.type === "text" || question.type === "email" || question.type === "tel") {
@@ -15,9 +15,11 @@ const Question = ({ question }: { question: Form.Question }) => {
   }
 };
 
+export default Question;
+
 const TextQuestion = ({ question }: { question: Form.TextQuestion }) => {
   const [, startTransition] = useTransition();
-  const { formData, setFormData } = useFormData();
+  const { formData, setFormData } = useMultiForm();
   const [answer, setAnswer] = useState(
     typeof formData[question.name] === "string" ? (formData[question.name] as string) : ""
   );
@@ -59,7 +61,7 @@ const SelectQuestion = ({ question }: { question: Form.SelectQuestion }) => (
 
 const SelectQuestionOption = ({ option }: { option: Form.Option }) => {
   const [, startTransition] = useTransition();
-  const { formData, setFormData } = useFormData();
+  const { formData, setFormData } = useMultiForm();
   const [isChecked, setChecked] = useState(
     typeof formData[option.name] === "boolean" ? (formData[option.name] as boolean) : false
   );
@@ -79,5 +81,3 @@ const SelectQuestionOption = ({ option }: { option: Form.Option }) => {
     <Checkbox checked={isChecked} label={option.label} name={option.name} onChange={handleChange} />
   );
 };
-
-export default Question;

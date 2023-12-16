@@ -1,18 +1,6 @@
 @use "variables" as v;
-@use "utils";
+@use "utils" as u;
 
-.quote {
-  h1 {
-    text-align: center;
-  }
-
-  form {
-    max-width: 800px;
-  }
-}
-
-.controlButtons {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+.title {
+  text-align: center;
 }
