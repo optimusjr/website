@@ -44,7 +44,11 @@ const TextQuestion = ({ question }: { question: Form.TextQuestion }) => {
     onChange: handleChange,
   };
 
-  return question.multiline ? <TextArea {...props} /> : <TextField {...props} />;
+  return (
+    <div className={styles.textQuestion}>
+      {question.multiline ? <TextArea {...props} /> : <TextField {...props} />}
+    </div>
+  );
 };
 
 const SelectQuestion = ({ question }: { question: Form.SelectQuestion }) => (

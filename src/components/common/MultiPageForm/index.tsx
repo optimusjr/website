@@ -42,12 +42,12 @@ const FormCard = () => {
             ? "Vamos lá!"
             : currentPage.position === PAGE_POSITION.LAST
             ? "Enviar"
-            : "Próxima Página"}
+            : "Próxima página"}
         </Button>
 
         {currentPage.position !== PAGE_POSITION.FIRST && (
-          <Button onClick={goToPreviousPage} type="button">
-            Página Anterior
+          <Button onClick={goToPreviousPage} type="button" variant="outlined">
+            Página anterior
           </Button>
         )}
       </div>

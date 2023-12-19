@@ -8,12 +8,13 @@
     font-weight: 700;
     font-size: u.rem(32);
 
-    text-align: center;
+    text-align: left;
     text-transform: none;
   }
 
   .pageDescription {
-    margin: 8px;
+    margin: 16px 0;
     font-size: u.rem(24);
+    text-align: left;
   }
 }

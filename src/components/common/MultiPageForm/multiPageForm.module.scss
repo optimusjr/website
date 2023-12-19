@@ -2,11 +2,23 @@
 @use "utils" as u;
 
 .card {
-  max-width: 800px;
+  max-width: 768px;
 }
 
 .controlButtons {
   display: flex;
   flex-direction: row-reverse;
+
   justify-content: space-between;
+  gap: 16px;
+
+  @media (max-width: 600px) {
+    flex-wrap: wrap-reverse;
+
+    button {
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+    }
+  }
 }

@@ -46,6 +46,12 @@
   }
 }
 
+.outlined {
+  @extend .text;
+
+  border: 2px solid v.$primary-800;
+}
+
 // Sizes
 
 .normal {

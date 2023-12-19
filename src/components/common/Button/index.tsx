@@ -3,7 +3,7 @@ import styles from "./button.module.scss";
 interface Props<T extends React.ElementType> {
   as?: T;
   size?: "normal";
-  variant?: "filled" | "text";
+  variant?: "filled" | "text" | "outlined";
   className?: string;
   children?: React.ReactNode;
 }
