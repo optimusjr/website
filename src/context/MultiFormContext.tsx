@@ -1,5 +1,6 @@
 import { createContext, Dispatch, ReactNode, SetStateAction, useState } from "react";
 
+import useLocalStorage from "@/hooks/useLocalStorage";
 import type * as Form from "@/types/formSchemaType";
 import { PAGE_POSITION } from "@/types/formSchemaType";
 
@@ -25,11 +26,13 @@ interface Props {
 }
 
 export const MultiFormProvider = ({ children, formSchema }: Props) => {
-  const [formData, setFormData] = useState({} as Form.Answers);
+  const [formData, setFormData] = useLocalStorage<Form.Answers>(formSchema.title, {});
   const [index, setIndex] = useState(0);
 
   const nextValidPageIndex = getNextValidPageIndex(index, formSchema, formData);
   const previousValidPageIndex = getPreviousValidPageIndex(index, formSchema, formData);
+
+  console.log(formData);
 
   const goToNextPage = () => {
     if (nextValidPageIndex === undefined) {
@@ -75,7 +78,7 @@ function isValidPage(page: Form.Page, formData: Form.Answers) {
 
   const conditionValue = formData[page.rule.condition.variable];
   if (conditionValue === undefined) {
-    return true;
+    return false;
   }
 
   if (page.rule.effect === "SHOW") {
