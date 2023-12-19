@@ -2,7 +2,8 @@ import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
 import { MultiFormProvider } from "@/context/MultiFormContext";
 import useMultiForm from "@/hooks/useMultiForm";
-import type * as Form from "@/types/formSchemaType";
+import * as Form from "@/types/formSchemaType";
+import { PAGE_POSITION } from "@/types/formSchemaType";
 
 import FormPage from "./FormPage";
 import styles from "./multiPageForm.module.scss";
@@ -36,9 +37,15 @@ const FormCard = () => {
       <FormPage />
 
       <div className={styles.controlButtons}>
-        <Button>{currentPage.index === 0 ? "Vamos lá!" : "Próxima Página"}</Button>
+        <Button>
+          {currentPage.position === PAGE_POSITION.FIRST
+            ? "Vamos lá!"
+            : currentPage.position === PAGE_POSITION.LAST
+            ? "Enviar"
+            : "Próxima Página"}
+        </Button>
 
-        {currentPage.index !== 0 && (
+        {currentPage.position !== PAGE_POSITION.FIRST && (
           <Button onClick={goToPreviousPage} type="button">
             Página Anterior
           </Button>

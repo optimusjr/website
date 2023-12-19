@@ -15,8 +15,8 @@ const FormPage = () => {
 
       {page.questions && (
         <div className={styles.questions}>
-          {page.questions.map((question, key) => (
-            <Question key={key} question={question} />
+          {page.questions.map((question) => (
+            <Question key={question.name} question={question} />
           ))}
         </div>
       )}

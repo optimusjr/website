@@ -6,11 +6,11 @@ export interface Option {
 
 interface GenericQuestion {
   label: string;
+  name: string;
 }
 
 export interface TextQuestion extends GenericQuestion {
   type: "text" | "email" | "tel";
-  name: string;
   required?: boolean;
   multiline?: boolean;
   placeholder?: string;
@@ -29,7 +29,7 @@ interface Condition {
 }
 
 interface Rule {
-  effect: "SHOW";
+  effect: "SHOW" | "HIDE";
   condition: Condition;
 }
 
@@ -47,4 +47,10 @@ export interface Schema {
 
 export interface Answers {
   [key: string]: string | boolean;
+}
+
+export enum PAGE_POSITION {
+  FIRST,
+  MIDDLE,
+  LAST,
 }

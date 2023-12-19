@@ -1,4 +1,4 @@
-import { ChangeEvent, ComponentProps, useState, useTransition } from "react";
+import { ChangeEvent, ComponentProps, startTransition, useState } from "react";
 
 import Checkbox from "@/components/common/Checkbox";
 import { TextArea, TextField } from "@/components/common/TextField";
@@ -18,7 +18,6 @@ const Question = ({ question }: { question: Form.Question }) => {
 export default Question;
 
 const TextQuestion = ({ question }: { question: Form.TextQuestion }) => {
-  const [, startTransition] = useTransition();
   const { formData, setFormData } = useMultiForm();
   const [answer, setAnswer] = useState(
     typeof formData[question.name] === "string" ? (formData[question.name] as string) : ""
@@ -28,9 +27,9 @@ const TextQuestion = ({ question }: { question: Form.TextQuestion }) => {
     setAnswer(e.target.value);
 
     startTransition(() => {
-      setFormData((data) => {
-        data[question.name] = e.target.value;
-        return data;
+      setFormData({
+        ...formData,
+        [question.name]: e.target.value,
       });
     });
   };
@@ -52,15 +51,14 @@ const SelectQuestion = ({ question }: { question: Form.SelectQuestion }) => (
   <fieldset className={styles.checkboxQuestion}>
     <legend>{question.label}</legend>
     <div className={styles.optionsContainer}>
-      {question.options.map((option, key) => (
-        <SelectQuestionOption key={key} option={option} />
+      {question.options.map((option) => (
+        <SelectQuestionOption key={option.name} option={option} />
       ))}
     </div>
   </fieldset>
 );
 
 const SelectQuestionOption = ({ option }: { option: Form.Option }) => {
-  const [, startTransition] = useTransition();
   const { formData, setFormData } = useMultiForm();
   const [isChecked, setChecked] = useState(
     typeof formData[option.name] === "boolean" ? (formData[option.name] as boolean) : false
@@ -70,14 +68,20 @@ const SelectQuestionOption = ({ option }: { option: Form.Option }) => {
     setChecked(e.target.checked);
 
     startTransition(() => {
-      setFormData((data) => {
-        data[option.name] = e.target.checked;
-        return data;
+      setFormData({
+        ...formData,
+        [option.name]: e.target.checked,
       });
     });
   };
 
   return (
-    <Checkbox checked={isChecked} label={option.label} name={option.name} onChange={handleChange} />
+    <Checkbox
+      Icon={option.icon}
+      checked={isChecked}
+      label={option.label}
+      name={option.name}
+      onChange={handleChange}
+    />
   );
 };

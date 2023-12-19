@@ -1,23 +1,22 @@
 import { createContext, Dispatch, ReactNode, SetStateAction, useState } from "react";
 
 import type * as Form from "@/types/formSchemaType";
+import { PAGE_POSITION } from "@/types/formSchemaType";
 
-const MultiFormContext = createContext({
-  formSchema: {} as Form.Schema,
-  formData: {} as Form.Answers,
-  setFormData: (() => ({})) as Dispatch<SetStateAction<Form.Answers>>,
-
+interface Context {
+  formSchema: Form.Schema;
+  formData: Form.Answers;
+  setFormData: Dispatch<SetStateAction<Form.Answers>>;
   currentPage: {
-    page: {} as Form.Page,
-    index: 0,
-  },
-  goToNextPage: () => {
-    /* do nothing */
-  },
-  goToPreviousPage: () => {
-    /* do nothing */
-  },
-});
+    page: Form.Page;
+    position: PAGE_POSITION;
+    index: number;
+  };
+  goToNextPage: () => void;
+  goToPreviousPage: () => void;
+}
+
+const MultiFormContext = createContext({} as Context);
 export { MultiFormContext };
 
 interface Props {
@@ -29,32 +28,19 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
   const [formData, setFormData] = useState({} as Form.Answers);
   const [index, setIndex] = useState(0);
 
-  const goToNextPage = () => {
-    if (index < formSchema.pages.length) {
-      setIndex(index + 1);
-    }
-    /*
-    const updatePage = (page: number) => {
-      if (page >= 0 && page < quoteFormSchema.pages.length) {
-        const rule = quoteFormSchema.pages[page].rule;
+  const nextValidPageIndex = getNextValidPageIndex(index, formSchema, formData);
+  const previousValidPageIndex = getPreviousValidPageIndex(index, formSchema, formData);
 
-        if (rule === undefined) {
-          setCurrentPageIndex(page);
-        }else (rule.condition.variable === rule.condition.be){
-        }
-      }
-      */
+  const goToNextPage = () => {
+    if (nextValidPageIndex === undefined) {
+      submit();
+    } else {
+      setIndex(nextValidPageIndex);
+    }
   };
 
   const goToPreviousPage = () => {
-    if (index > 0) {
-      setIndex(index - 1);
-    }
-  };
-
-  const currentPage = {
-    page: formSchema.pages[index],
-    index,
+    setIndex(previousValidPageIndex);
   };
 
   return (
@@ -63,7 +49,16 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
         formSchema,
         formData,
         setFormData,
-        currentPage,
+        currentPage: {
+          page: formSchema.pages[index],
+          position:
+            nextValidPageIndex === undefined
+              ? PAGE_POSITION.LAST
+              : index === 0
+              ? PAGE_POSITION.FIRST
+              : PAGE_POSITION.MIDDLE,
+          index,
+        },
         goToNextPage,
         goToPreviousPage,
       }}
@@ -72,3 +67,57 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
     </MultiFormContext.Provider>
   );
 };
+
+function isValidPage(page: Form.Page, formData: Form.Answers) {
+  if (page.rule === undefined) {
+    return true;
+  }
+
+  const conditionValue = formData[page.rule.condition.variable];
+  if (conditionValue === undefined) {
+    return true;
+  }
+
+  if (page.rule.effect === "SHOW") {
+    return conditionValue === page.rule.condition.be;
+  } else if (page.rule.effect === "HIDE") {
+    return !(conditionValue === page.rule.condition.be);
+  } else {
+    return true;
+  }
+}
+
+const getNextValidPageIndex = (
+  currentIndex: number,
+  formSchema: Form.Schema,
+  formData: Form.Answers
+): number | undefined => {
+  let nextIndex = currentIndex + 1;
+
+  while (
+    nextIndex < formSchema.pages.length &&
+    !isValidPage(formSchema.pages[nextIndex], formData)
+  ) {
+    nextIndex++;
+  }
+
+  return nextIndex < formSchema.pages.length ? nextIndex : undefined;
+};
+
+const getPreviousValidPageIndex = (
+  currentIndex: number,
+  formSchema: Form.Schema,
+  formData: Form.Answers
+): number => {
+  let previousIndex = currentIndex - 1;
+
+  while (previousIndex > 0 && !isValidPage(formSchema.pages[previousIndex], formData)) {
+    previousIndex--;
+  }
+
+  return previousIndex;
+};
+
+function submit() {
+  console.log("Function not implemented.");
+}

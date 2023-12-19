@@ -20,21 +20,34 @@
   }
 
   input:checked ~ .checkboxCard {
+    border: 2px solid v.$primary-800;
     background-color: v.$primary-200;
+
+    svg {
+      fill: v.$primary-800;
+    }
   }
 
   .checkboxCard {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 4px;
+
+    border: 2px solid transparent;
 
     border-radius: 8px;
     background-color: v.$gray-200;
     padding: 16px;
 
+    .iconContainer {
+      svg {
+        margin-right: 8px;
+        width: 32px;
+      }
+    }
+
     span {
-      text-align: center;
+      text-align: left;
     }
   }
 }

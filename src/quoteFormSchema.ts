@@ -58,6 +58,7 @@ const quoteFormSchema: Form.Schema = {
         {
           type: "checkbox",
           label: "Selecione os serviços:",
+          name: "serviços",
           options: [
             {
               label: "Controle de Iluminação",
@@ -121,6 +122,7 @@ const quoteFormSchema: Form.Schema = {
         {
           type: "checkbox",
           label: "Selecione os cômodos:",
+          name: "iluminação-cômodos",
           options: [
             {
               label: "Sala de Estar/Jantar",
