@@ -1,9 +1,9 @@
 import { AnimatePresence, m } from "framer-motion";
-import { useState } from "react";
 
 import Button from "@/components/common/Button";
 import Typography from "@/components/common/Typography";
 import ChevronIcon from "@/components/icons/Chevron";
+import useToggle from "@/hooks/useToggle";
 
 import styles from "./accordion.module.scss";
 
@@ -13,11 +13,7 @@ interface Props {
 }
 
 const Accordion = ({ title, children }: Props) => {
-  const [open, setOpen] = useState(false);
-
-  const toggleOpen = () => {
-    setOpen(!open);
-  };
+  const [open, toggleOpen] = useToggle(false);
 
   return (
     <m.li className={styles.item}>

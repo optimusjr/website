@@ -1,8 +1,7 @@
-import { useState } from "react";
-
 import Image from "@/components/common/Image";
 import Link from "@/components/common/Link";
 import QuoteButton from "@/components/common/QuoteButton";
+import useToggle from "@/hooks/useToggle";
 import OPTIMUSIcon from "@/images/OPTIMUS/icon.svg";
 import wordmark from "@/images/OPTIMUS/wordmark.svg";
 
@@ -11,11 +10,7 @@ import Links from "./Links";
 import Mobile from "./Mobile";
 
 const Header = () => {
-  const [showMobile, setShowMobile] = useState(false);
-
-  const toggleShowMobile = () => {
-    setShowMobile(!showMobile);
-  };
+  const [showMobile, toggleShowMobile, setShowMobile] = useToggle(false);
 
   const hideMobile = () => {
     if (showMobile) {
