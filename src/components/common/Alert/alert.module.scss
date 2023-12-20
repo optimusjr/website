@@ -1,0 +1,23 @@
+@use "variables" as v;
+@use "utils" as u;
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 16px;
+
+  border-radius: 8px;
+
+  background-color: #ffcdd2;
+  padding: 16px;
+
+  color: #b71c1c;
+  font-size: u.rem(16px);
+  text-align: left;
+
+  svg {
+    fill: #b71c1c;
+    margin-right: 8px;
+  }
+}

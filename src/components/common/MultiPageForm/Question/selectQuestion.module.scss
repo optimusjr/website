@@ -1,0 +1,23 @@
+@use "variables" as v;
+@use "utils" as u;
+
+.checkboxQuestion {
+  width: 100%;
+
+  legend {
+    margin-bottom: 16px;
+    font-size: u.rem(24);
+    text-align: left;
+  }
+
+  .optionsContainer {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

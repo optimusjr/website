@@ -1,10 +1,10 @@
 import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
-import { MultiFormProvider } from "@/context/MultiFormContext";
-import useMultiForm from "@/hooks/useMultiForm";
 import * as Form from "@/types/formSchemaType";
 import { PAGE_POSITION } from "@/types/formSchemaType";
 
+import { MultiFormProvider } from "./FormContext";
+import useFormContext from "./FormContext/useFormContext";
 import FormPage from "./FormPage";
 import styles from "./multiPageForm.module.scss";
 
@@ -23,7 +23,7 @@ const MultiPageForm = ({ schema }: Props) => {
 export default MultiPageForm;
 
 const FormCard = () => {
-  const { goToNextPage, goToPreviousPage, currentPage } = useMultiForm();
+  const { goToNextPage, goToPreviousPage, currentPage } = useFormContext();
 
   return (
     <Card

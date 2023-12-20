@@ -1,10 +1,9 @@
-import useMultiForm from "@/hooks/useMultiForm";
-
+import useFormContext from "./FormContext/useFormContext";
 import styles from "./formPage.module.scss";
 import Question from "./Question";
 
 const FormPage = () => {
-  const { currentPage } = useMultiForm();
+  const { currentPage } = useFormContext();
 
   const page = currentPage.page;
 

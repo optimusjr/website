@@ -1,5 +1,5 @@
 import { useContext } from "react";
 
-import { MultiFormContext } from "@/context/MultiFormContext";
+import { MultiFormContext } from "./index";
 
 export default () => useContext(MultiFormContext);
