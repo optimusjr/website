@@ -31,6 +31,7 @@ export interface TextQuestion {
 
 export interface SelectQuestion {
   label?: string;
+  name: string;
   // Tipo de pergunta de múltipla escolha
   // Por enquanto, apenas é permitido a opção checkbox,
   // mas essa opção serve caso no futuro sejam adicionadas perguntas com radio buttons

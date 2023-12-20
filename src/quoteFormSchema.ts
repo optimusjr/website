@@ -67,6 +67,7 @@ const quoteFormSchema: Form.Schema = {
         {
           type: "checkbox",
           label: "Selecione os serviços:",
+          name: "Selecione os serviços",
           required: true,
           options: [
             { label: "Controle de Iluminação", name: "serviços>iluminação", icon: LightIcon },
@@ -112,6 +113,7 @@ const quoteFormSchema: Form.Schema = {
         {
           type: "checkbox",
           label: "Selecione os cômodos:",
+          name: "cômodos para iluminação",
           options: [
             { label: "Sala de Estar/Jantar", name: "iluminação>Sala de Estar/Jantar" },
             { label: "Quarto(s)", name: "iluminação>Quarto(s)" },
@@ -163,6 +165,7 @@ const quoteFormSchema: Form.Schema = {
         {
           type: "checkbox",
           label: "Selecione os cômodos:",
+          name: "cômodos para tomadas:",
           options: [
             { label: "Sala de Estar/Jantar", name: "tomadas>Sala de Estar/Jantar" },
             { label: "Quarto(s)", name: "tomadas>Quarto(s)" },
@@ -212,6 +215,7 @@ const quoteFormSchema: Form.Schema = {
         {
           type: "checkbox",
           label: "Selecione os dispositivos:",
+          name: "dispositivos para automatizar",
           options: [
             { label: "Ar-Condicionado", name: "dispositivos>Ar-Condicionado" },
             { label: "Televisão", name: "dispositivos>Televisão" },
@@ -240,6 +244,7 @@ const quoteFormSchema: Form.Schema = {
         {
           type: "checkbox",
           required: true,
+          name: "n° de cortinas",
           options: [
             { label: "Apenas uma", name: "cortinas>1" },
             { label: "Duas", name: "cortinas>2" },
@@ -261,6 +266,7 @@ const quoteFormSchema: Form.Schema = {
       questions: [
         {
           label: "Quantas planeja colocar no seu lar ou estabelecimento",
+          name: "n° de fechaduras",
           type: "checkbox",
           required: true,
           options: [
@@ -284,6 +290,7 @@ const quoteFormSchema: Form.Schema = {
       questions: [
         {
           type: "checkbox",
+          name: "fechadura>funcionalidades",
           options: [
             { label: "Controle Biométrico", name: "fechadura>Controle Biométrico" },
             { label: "Controle Através Pin", name: "fechadura>Controle Através Pin" },
@@ -335,23 +342,27 @@ const quoteFormSchema: Form.Schema = {
       questions: [
         {
           type: "checkbox",
+          name: "tipos de sensores",
           options: [
-            { label: "Controle Biométrico", name: "fechadura>Controle Biométrico" },
-            { label: "Controle Através Pin", name: "fechadura>Controle Através Pin" },
             {
-              label: "Controle Por Meio de Cartões",
-              name: "fechadura>Controle Por Meio de Cartões",
+              label: "Sensor de Presença e Movimento",
+              name: "sensores>Sensor de presença e Movimento",
             },
             {
-              label: "Controle a Distância e por Assistentes Virtuais",
-              name: "fechadura>Controle a Distância e por Assistentes Virtuais",
+              label: "Sensor de Temperatura e Umidade",
+              name: "sensores>Sensor de Temperatura e Umidade",
             },
+            {
+              label: "Sensor de Portas e Janelas",
+              name: "sensores>Sensor de Portas e Janelas",
+            },
+            { label: "Sensor de Fumaça", name: "sensores>Sensor de Fumaça" },
           ],
         },
         {
           type: "text",
-          name: "fechadura (custom)",
-          label: "Outro(s) modos de controle para fechadura (se houver):",
+          name: "tipos de sensores (custom)",
+          label: "Outro(s) tipo(s) de sensores (se houver):",
         },
       ],
     },
