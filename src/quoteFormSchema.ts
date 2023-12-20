@@ -59,6 +59,7 @@ const quoteFormSchema: Form.Schema = {
           type: "checkbox",
           label: "Selecione os serviços:",
           name: "serviços",
+          required: true,
           options: [
             {
               label: "Controle de Iluminação",

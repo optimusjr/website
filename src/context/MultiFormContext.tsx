@@ -1,4 +1,4 @@
-import { createContext, Dispatch, ReactNode, SetStateAction, useState } from "react";
+import { createContext, Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
 
 import useLocalStorage from "@/hooks/useLocalStorage";
 import type * as Form from "@/types/formSchemaType";
@@ -15,6 +15,9 @@ interface Context {
   };
   goToNextPage: () => void;
   goToPreviousPage: () => void;
+  isProgressBlocked: boolean;
+  setProgressBlocked: Dispatch<SetStateAction<boolean>>;
+  showProgressBlocked: boolean;
 }
 
 const MultiFormContext = createContext({} as Context);
@@ -32,9 +35,17 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
   const nextValidPageIndex = getNextValidPageIndex(index, formSchema, formData);
   const previousValidPageIndex = getPreviousValidPageIndex(index, formSchema, formData);
 
-  console.log(formData);
+  const [isProgressBlocked, setProgressBlocked] = useState(false);
+  const [showProgressBlocked, setShowProgressBlocked] = useState(false);
 
   const goToNextPage = () => {
+    if (isProgressBlocked) {
+      setShowProgressBlocked(true);
+      return;
+    } else {
+      setShowProgressBlocked(false);
+    }
+
     if (nextValidPageIndex === undefined) {
       submit();
     } else {
@@ -45,6 +56,12 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
   const goToPreviousPage = () => {
     setIndex(previousValidPageIndex);
   };
+
+  useEffect(() => {
+    if (!isProgressBlocked) {
+      setShowProgressBlocked(false);
+    }
+  }, [isProgressBlocked]);
 
   return (
     <MultiFormContext.Provider
@@ -64,6 +81,9 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
         },
         goToNextPage,
         goToPreviousPage,
+        isProgressBlocked,
+        setProgressBlocked,
+        showProgressBlocked,
       }}
     >
       {children}

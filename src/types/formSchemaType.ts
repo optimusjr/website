@@ -18,6 +18,7 @@ export interface TextQuestion extends GenericQuestion {
 
 export interface SelectQuestion extends GenericQuestion {
   type: "checkbox";
+  required?: boolean;
   options: Option[];
 }
 

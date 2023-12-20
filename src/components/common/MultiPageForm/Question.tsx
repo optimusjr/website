@@ -1,7 +1,8 @@
-import { ChangeEvent, ComponentProps, startTransition, useState } from "react";
+import { ChangeEvent, ComponentProps, startTransition, useEffect, useState } from "react";
 
 import Checkbox from "@/components/common/Checkbox";
 import { TextArea, TextField } from "@/components/common/TextField";
+import AlertIcon from "@/components/icons/Alert";
 import useMultiForm from "@/hooks/useMultiForm";
 import type * as Form from "@/types/formSchemaType";
 
@@ -51,16 +52,54 @@ const TextQuestion = ({ question }: { question: Form.TextQuestion }) => {
   );
 };
 
-const SelectQuestion = ({ question }: { question: Form.SelectQuestion }) => (
-  <fieldset className={styles.checkboxQuestion}>
-    <legend>{question.label}</legend>
-    <div className={styles.optionsContainer}>
-      {question.options.map((option) => (
-        <SelectQuestionOption key={option.name} option={option} />
-      ))}
-    </div>
-  </fieldset>
-);
+const SelectQuestion = ({ question }: { question: Form.SelectQuestion }) => {
+  const [isValid, setIsValid] = useState(true);
+  const { formData, setProgressBlocked, showProgressBlocked } = useMultiForm();
+
+  useEffect(() => {
+    if (question.required) {
+      const isAtLeastOneOptionIsMarked = question.options.some((option) => formData[option.name]);
+
+      if (isValid && !isAtLeastOneOptionIsMarked) {
+        setIsValid(false);
+        startTransition(() => {
+          setProgressBlocked(true);
+        });
+      }
+
+      if (!isValid && isAtLeastOneOptionIsMarked) {
+        setIsValid(true);
+        startTransition(() => {
+          setProgressBlocked(false);
+        });
+      }
+    }
+
+    return () => {
+      startTransition(() => {
+        setProgressBlocked(false);
+      });
+    };
+  }, [formData]);
+
+  return (
+    <fieldset className={styles.checkboxQuestion}>
+      {!isValid && showProgressBlocked && (
+        <div className={styles.error}>
+          <AlertIcon />
+          <p>Por favor, escolha pelo menos um item.</p>
+        </div>
+      )}
+
+      <legend>{question.label}</legend>
+      <div className={styles.optionsContainer}>
+        {question.options.map((option) => (
+          <SelectQuestionOption key={option.name} option={option} />
+        ))}
+      </div>
+    </fieldset>
+  );
+};
 
 const SelectQuestionOption = ({ option }: { option: Form.Option }) => {
   const { formData, setFormData } = useMultiForm();

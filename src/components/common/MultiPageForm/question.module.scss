@@ -14,8 +14,12 @@
 }
 
 .checkboxQuestion {
+  width: 100%;
+
   legend {
-    font-size: u.rem(32);
+    margin-bottom: 16px;
+    font-size: u.rem(24);
+    text-align: left;
   }
 
   .optionsContainer {
@@ -23,5 +27,30 @@
 
     grid-template-columns: 1fr 1fr;
     gap: 12px;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 16px;
+
+  border-radius: 8px;
+
+  background-color: #ffcdd2;
+  padding: 16px;
+
+  color: #b71c1c;
+  font-size: u.rem(16px);
+  text-align: left;
+
+  svg {
+    fill: #b71c1c;
+    margin-right: 8px;
   }
 }
