@@ -2,8 +2,14 @@
 @use "utils" as u;
 
 .formPage {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
   .pageTitle {
+    float: left;
     width: 100%;
+
     color: v.$primary-800;
     font-weight: 700;
     font-size: u.rem(32);
@@ -13,7 +19,6 @@
   }
 
   .pageDescription {
-    margin: 16px 0;
     font-size: u.rem(24);
     text-align: left;
   }

@@ -376,6 +376,36 @@ const quoteFormSchema: Form.Schema = {
       ],
     },
     {
+      title: "Pelo visto você escolheu uma solução personalizada",
+      rule: {
+        effect: "SHOW",
+        condition: {
+          variable: "serviços>outro",
+          be: true,
+        },
+      },
+      questions: [
+        {
+          type: "text",
+          name: "Informações sobre o seu serviço personalizado",
+          multiline: true,
+          required: true,
+          label: "Qual serviço não listado anteriormente você tem em mente? Descreva com detalhes",
+        },
+      ],
+    },
+    {
+      title: "Já estamos finalizando",
+      questions: [
+        {
+          type: "text",
+          name: "Informações extras",
+          multiline: true,
+          label: "Deseja falar algo mais? Você pode descrever melhor como deseja suas automações",
+        },
+      ],
+    },
+    {
       title: "Ficamos extremamente gratos com o contato",
       description:
         "Devido à complexidade de cada serviço, pedimos um pequeno prazo para conseguimos elaborar o projeto e apresentar de maneira exclusiva as melhores opções para cada SÓCIO OPTIMUS!!",

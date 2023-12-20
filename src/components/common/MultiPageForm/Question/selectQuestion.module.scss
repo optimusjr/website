@@ -2,11 +2,14 @@
 @use "utils" as u;
 
 .checkboxQuestion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   width: 100%;
 
   legend {
-    margin-bottom: 16px;
-    font-size: u.rem(24);
+    float: left;
+    font-size: u.rem(20);
     text-align: left;
   }
 
