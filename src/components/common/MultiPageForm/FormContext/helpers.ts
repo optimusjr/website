@@ -1,5 +1,11 @@
 import type * as Form from "@/types/formSchemaType";
 
+enum PAGE_POSITION {
+  FIRST,
+  MIDDLE,
+  LAST,
+}
+
 function isValidPage(page: Form.Page, formData: Form.Answers) {
   if (page.rule === undefined) {
     return true;
@@ -54,4 +60,4 @@ function submit() {
   console.log("Function not implemented.");
 }
 
-export { getNextValidPageIndex, getPreviousValidPageIndex, submit };
+export { getNextValidPageIndex, getPreviousValidPageIndex, PAGE_POSITION, submit };

@@ -10,9 +10,8 @@ import {
 
 import useLocalStorage from "@/hooks/useLocalStorage";
 import type * as Form from "@/types/formSchemaType";
-import { PAGE_POSITION } from "@/types/formSchemaType";
 
-import { getNextValidPageIndex, getPreviousValidPageIndex, submit } from "./helpers";
+import { getNextValidPageIndex, getPreviousValidPageIndex, PAGE_POSITION, submit } from "./helpers";
 
 interface Context {
   formSchema: Form.Schema;

@@ -15,12 +15,14 @@
   }
 
   input:hover ~ .checkboxCard {
+    border: 2px solid v.$gray-400;
     background-color: v.$gray-300;
   }
 
   input:checked ~ .checkboxCard {
     border: 2px solid v.$primary-800;
     background-color: v.$primary-200;
+    color: v.$primary-800;
 
     svg {
       fill: v.$primary-800;

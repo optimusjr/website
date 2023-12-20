@@ -1,4 +1,13 @@
-import SofaIcon from "@/components/icons/Sofa";
+import PlusIcon from "@/components/icons/Eye copy";
+import GarageGateIcon from "@/components/icons/GarageGate";
+import HexagonsIcon from "@/components/icons/Hexagons";
+import LightIcon from "@/components/icons/Light";
+import LockedDoorIcon from "@/components/icons/LockedDoor";
+import MotionSensorIcon from "@/components/icons/MotionSensor";
+import PlugIcon from "@/components/icons/Plug";
+import PoolIcon from "@/components/icons/Pool";
+import TelevisionIcon from "@/components/icons/Television";
+import WindowIcon from "@/components/icons/Window";
 import type * as Form from "@/types/formSchemaType";
 
 const quoteFormSchema: Form.Schema = {
@@ -10,7 +19,7 @@ const quoteFormSchema: Form.Schema = {
         "Olá, nossa equipe se sente extremamente honrada em poder ajudar, siga o formulário rápido e intuitivo para podemos apresentar um orçamento exclusivo referente ao seu projeto.",
     },
     {
-      title: "Fale um pouco sobre você",
+      title: "Primeiro precisamos conhecer melhor o(a) próximo(a) sócio(a) OPTIMUS JR.",
       description:
         "Precisamos de alguns dados, para efetuarmos a precificação do serviço e entrar em contato.",
       questions: [
@@ -64,47 +73,52 @@ const quoteFormSchema: Form.Schema = {
             {
               label: "Controle de Iluminação",
               name: "iluminação",
-              icon: SofaIcon,
+              icon: LightIcon,
             },
             {
               label: "Automação de Tomadas",
               name: "tomadas",
-              icon: SofaIcon,
+              icon: PlugIcon,
             },
             {
               label: "Controle de dispositivos",
               name: "dispositivos",
-              icon: SofaIcon,
+              icon: TelevisionIcon,
             },
             {
               label: "Automação de Cortinas",
               name: "cortinas",
-              icon: SofaIcon,
+              icon: WindowIcon,
             },
             {
               label: "Instalação de Fechadura digital",
               name: "fechadura",
-              icon: SofaIcon,
+              icon: LockedDoorIcon,
             },
             {
               label: "Automação de Portão Eletrônico",
               name: "portão",
-              icon: SofaIcon,
+              icon: GarageGateIcon,
             },
             {
               label: "Instalação de Sensores",
               name: "sensores",
-              icon: SofaIcon,
+              icon: MotionSensorIcon,
+            },
+            {
+              label: "Automação de Piscinas",
+              name: "piscinas",
+              icon: PoolIcon,
             },
             {
               label: "Criação de Cenários",
               name: "cenários",
-              icon: SofaIcon,
+              icon: HexagonsIcon,
             },
             {
               label: "Outro (Especifique nas próximas páginas)",
               name: "outro",
-              icon: SofaIcon,
+              icon: PlusIcon,
             },
           ],
         },

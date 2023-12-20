@@ -1,9 +1,9 @@
 import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
-import * as Form from "@/types/formSchemaType";
-import { PAGE_POSITION } from "@/types/formSchemaType";
+import type * as Form from "@/types/formSchemaType";
 
 import { MultiFormProvider } from "./FormContext";
+import { PAGE_POSITION } from "./FormContext/helpers";
 import useFormContext from "./FormContext/useFormContext";
 import FormPage from "./FormPage";
 import styles from "./multiPageForm.module.scss";
