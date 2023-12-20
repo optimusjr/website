@@ -20,19 +20,17 @@ export interface Option {
   icon?: () => React.ReactElement;
 }
 
-interface GenericQuestion {
+export interface TextQuestion {
   label: string;
   name: string;
-}
-
-export interface TextQuestion extends GenericQuestion {
   type: "text" | "email" | "tel"; // Tipo de entrada de texto
   required?: boolean;
   multiline?: boolean; // Permite entrada de múltiplas linhas
   placeholder?: string; // Exemplo de resposta valida
 }
 
-export interface SelectQuestion extends GenericQuestion {
+export interface SelectQuestion {
+  label?: string;
   // Tipo de pergunta de múltipla escolha
   // Por enquanto, apenas é permitido a opção checkbox,
   // mas essa opção serve caso no futuro sejam adicionadas perguntas com radio buttons

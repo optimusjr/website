@@ -43,7 +43,8 @@ const SelectQuestion = ({ question }: { question: Form.SelectQuestion }) => {
         <Alert severity="error">Por favor, escolha pelo menos um item.</Alert>
       )}
 
-      <legend>{question.label}</legend>
+      {question.label && <legend>{question.label}</legend>}
+
       <div className={styles.optionsContainer}>
         {question.options.map((option) => (
           <SelectQuestionOption key={option.name} option={option} />

@@ -56,7 +56,7 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
     }
 
     if (nextValidPageIndex === undefined) {
-      submit();
+      submit(formData);
     } else {
       setIndex(nextValidPageIndex);
     }

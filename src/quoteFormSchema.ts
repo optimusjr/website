@@ -67,57 +67,32 @@ const quoteFormSchema: Form.Schema = {
         {
           type: "checkbox",
           label: "Selecione os serviços:",
-          name: "serviços",
           required: true,
           options: [
-            {
-              label: "Controle de Iluminação",
-              name: "iluminação",
-              icon: LightIcon,
-            },
-            {
-              label: "Automação de Tomadas",
-              name: "tomadas",
-              icon: PlugIcon,
-            },
+            { label: "Controle de Iluminação", name: "serviços>iluminação", icon: LightIcon },
+            { label: "Automação de Tomadas", name: "serviços>tomadas", icon: PlugIcon },
             {
               label: "Controle de dispositivos",
-              name: "dispositivos",
+              name: "serviços>dispositivos",
               icon: TelevisionIcon,
             },
-            {
-              label: "Automação de Cortinas",
-              name: "cortinas",
-              icon: WindowIcon,
-            },
+            { label: "Automação de Cortinas", name: "serviços>cortinas", icon: WindowIcon },
             {
               label: "Instalação de Fechadura digital",
-              name: "fechadura",
+              name: "serviços>fechadura",
               icon: LockedDoorIcon,
             },
             {
               label: "Automação de Portão Eletrônico",
-              name: "portão",
+              name: "serviços>portão",
               icon: GarageGateIcon,
             },
-            {
-              label: "Instalação de Sensores",
-              name: "sensores",
-              icon: MotionSensorIcon,
-            },
-            {
-              label: "Automação de Piscinas",
-              name: "piscinas",
-              icon: PoolIcon,
-            },
-            {
-              label: "Criação de Cenários",
-              name: "cenários",
-              icon: HexagonsIcon,
-            },
+            { label: "Instalação de Sensores", name: "serviços>sensores", icon: MotionSensorIcon },
+            { label: "Automação de Piscinas", name: "serviços>piscinas", icon: PoolIcon },
+            { label: "Criação de Cenários", name: "serviços>cenários", icon: HexagonsIcon },
             {
               label: "Outro (Especifique nas próximas páginas)",
-              name: "outro",
+              name: "serviços>outro",
               icon: PlusIcon,
             },
           ],
@@ -129,7 +104,7 @@ const quoteFormSchema: Form.Schema = {
       rule: {
         effect: "SHOW",
         condition: {
-          variable: "iluminação",
+          variable: "serviços>iluminação",
           be: true,
         },
       },
@@ -137,27 +112,273 @@ const quoteFormSchema: Form.Schema = {
         {
           type: "checkbox",
           label: "Selecione os cômodos:",
-          name: "iluminação-cômodos",
           options: [
-            {
-              label: "Sala de Estar/Jantar",
-              name: "sala",
-            },
-            {
-              label: "Quarto(s)",
-              name: "quartos",
-            },
-            {
-              label: "Cozinha",
-              name: "cozinha",
-            },
-            {
-              label: "Banheiro",
-              name: "banheiro",
-            },
+            { label: "Sala de Estar/Jantar", name: "iluminação>Sala de Estar/Jantar" },
+            { label: "Quarto(s)", name: "iluminação>Quarto(s)" },
+            { label: "Cozinha", name: "iluminação>Cozinha" },
+            { label: "Banheiro", name: "iluminação>Banheiro" },
+            { label: "Área de serviço", name: "iluminação>Área de serviço" },
+            { label: "Área Externa", name: "iluminação>Área Externa" },
+          ],
+        },
+        {
+          type: "text",
+          name: "cômodos (custom)",
+          label: "Outro(s) cômodo(s) para automação (se houver):",
+          placeholder: "Ex: Copa, escritório, garagem...",
+        },
+      ],
+    },
+    {
+      title: "Nesses locais possuem quantos interruptores?",
+      description:
+        "Precisamos saber quantos interruptores possuem nesses locais e quantas teclas eles possuem.",
+      rule: {
+        effect: "SHOW",
+        condition: {
+          variable: "serviços>iluminação",
+          be: true,
+        },
+      },
+      questions: [
+        {
+          type: "text",
+          name: "n° de interruptores",
+          required: true,
+          label: "Informe abaixo da forma que achar certo, sinta-se a vontade",
+          placeholder: "Ex: A sala possui um interruptor com 2 teclas, a cozinha...",
+        },
+      ],
+    },
+    {
+      title: "Quais locais da casa pretende instalar as tomadas automatizadas?",
+      rule: {
+        effect: "SHOW",
+        condition: {
+          variable: "serviços>tomadas",
+          be: true,
+        },
+      },
+      questions: [
+        {
+          type: "checkbox",
+          label: "Selecione os cômodos:",
+          options: [
+            { label: "Sala de Estar/Jantar", name: "tomadas>Sala de Estar/Jantar" },
+            { label: "Quarto(s)", name: "tomadas>Quarto(s)" },
+            { label: "Cozinha", name: "tomadas>Cozinha" },
+            { label: "Banheiro", name: "tomadas>Banheiro" },
+            { label: "Área de serviço", name: "tomadas>Área de serviço" },
+            { label: "Área Externa", name: "tomadas>Área Externa" },
+          ],
+        },
+        {
+          type: "text",
+          name: "cômodos (custom)",
+          label: "Outro(s) cômodo(s) para automação (se houver):",
+          placeholder: "Ex: Copa, escritório, garagem...",
+        },
+      ],
+    },
+    {
+      title: "Nesses locais contam atualmente com quantas tomadas?",
+      rule: {
+        effect: "SHOW",
+        condition: {
+          variable: "serviços>tomadas",
+          be: true,
+        },
+      },
+      questions: [
+        {
+          type: "text",
+          name: "n° de tomadas",
+          required: true,
+          label: "Os cômodos citados contam com quantas tomadas?",
+          placeholder: "Ex: A sala possui 5 tomadas, a cozinha 8...",
+        },
+      ],
+    },
+    {
+      title: "Quais dispositivos eletrônicos deseja controlar em sua residência?",
+      rule: {
+        effect: "SHOW",
+        condition: {
+          variable: "serviços>dispositivos",
+          be: true,
+        },
+      },
+      questions: [
+        {
+          type: "checkbox",
+          label: "Selecione os dispositivos:",
+          options: [
+            { label: "Ar-Condicionado", name: "dispositivos>Ar-Condicionado" },
+            { label: "Televisão", name: "dispositivos>Televisão" },
+            { label: "Cafeteira", name: "dispositivos>Cafeteira" },
+            { label: "Caixa de Som", name: "dispositivos>Caixa de Som" },
+          ],
+        },
+        {
+          type: "text",
+          name: "dispositivos (custom)",
+          label: "Outro(s) dispositivos(s) para automação (se houver):",
+          placeholder: "Ex: Ventilador, Sanduicheira, TV Box...",
+        },
+      ],
+    },
+    {
+      title: "Quantas cortinas planeja automatizar, tendo assim total controle?",
+      rule: {
+        effect: "SHOW",
+        condition: {
+          variable: "serviços>cortinas",
+          be: true,
+        },
+      },
+      questions: [
+        {
+          type: "checkbox",
+          required: true,
+          options: [
+            { label: "Apenas uma", name: "cortinas>1" },
+            { label: "Duas", name: "cortinas>2" },
+            { label: "Tres", name: "cortinas>3" },
+            { label: "Quatro ou mais", name: "cortinas>4+" },
           ],
         },
       ],
+    },
+    {
+      title: "Que legal! As fechaduras eletrônicas são o futuro",
+      rule: {
+        effect: "SHOW",
+        condition: {
+          variable: "serviços>fechadura",
+          be: true,
+        },
+      },
+      questions: [
+        {
+          label: "Quantas planeja colocar no seu lar ou estabelecimento",
+          type: "checkbox",
+          required: true,
+          options: [
+            { label: "Apenas uma", name: "fechadura>1" },
+            { label: "Duas", name: "fechadura>2" },
+            { label: "Tres", name: "fechadura>3" },
+            { label: "Quatro ou mais", name: "fechadura>4+" },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Ótimo! Agora conta para gente qual tipo de controle cogita obter com essa fechadura.",
+      rule: {
+        effect: "SHOW",
+        condition: {
+          variable: "serviços>fechadura",
+          be: true,
+        },
+      },
+      questions: [
+        {
+          type: "checkbox",
+          options: [
+            { label: "Controle Biométrico", name: "fechadura>Controle Biométrico" },
+            { label: "Controle Através Pin", name: "fechadura>Controle Através Pin" },
+            {
+              label: "Controle Por Meio de Cartões",
+              name: "fechadura>Controle Por Meio de Cartões",
+            },
+            {
+              label: "Controle a Distância e por Assistentes Virtuais",
+              name: "fechadura>Controle a Distância e por Assistentes Virtuais",
+            },
+          ],
+        },
+        {
+          type: "text",
+          name: "fechadura (custom)",
+          label: "Outro(s) modos de controle para fechadura (se houver):",
+        },
+      ],
+    },
+    {
+      title: "Nos conte um pouco mais a respeito do portão.",
+      rule: {
+        effect: "SHOW",
+        condition: {
+          variable: "serviços>portão",
+          be: true,
+        },
+      },
+      questions: [
+        {
+          type: "text",
+          name: "Informações sobre o portão",
+          required: true,
+          label:
+            "Em qual local está localizado, tipo de abertura, entre outras coisas que podem ser úteis",
+        },
+      ],
+    },
+    {
+      title: "Quais sensores pretende instalar para tornar seu ambiente muito mais moderno",
+      rule: {
+        effect: "SHOW",
+        condition: {
+          variable: "serviços>sensores",
+          be: true,
+        },
+      },
+      questions: [
+        {
+          type: "checkbox",
+          options: [
+            { label: "Controle Biométrico", name: "fechadura>Controle Biométrico" },
+            { label: "Controle Através Pin", name: "fechadura>Controle Através Pin" },
+            {
+              label: "Controle Por Meio de Cartões",
+              name: "fechadura>Controle Por Meio de Cartões",
+            },
+            {
+              label: "Controle a Distância e por Assistentes Virtuais",
+              name: "fechadura>Controle a Distância e por Assistentes Virtuais",
+            },
+          ],
+        },
+        {
+          type: "text",
+          name: "fechadura (custom)",
+          label: "Outro(s) modos de controle para fechadura (se houver):",
+        },
+      ],
+    },
+    {
+      title:
+        "Muito bom, descreva para nós que tipo de cenário imagina na sua nova CASA INTELIGENTE",
+      rule: {
+        effect: "SHOW",
+        condition: {
+          variable: "serviços>cenários",
+          be: true,
+        },
+      },
+      questions: [
+        {
+          type: "text",
+          name: "Informações sobre os cenários",
+          multiline: true,
+          required: true,
+          label: "Sinta-se a vontade para descrever qualquer tipo de cenário para nós criamos",
+        },
+      ],
+    },
+    {
+      title: "Ficamos extremamente gratos com o contato",
+      description:
+        "Devido à complexidade de cada serviço, pedimos um pequeno prazo para conseguimos elaborar o projeto e apresentar de maneira exclusiva as melhores opções para cada SÓCIO OPTIMUS!!",
     },
   ],
 };
