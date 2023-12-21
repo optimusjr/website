@@ -8,8 +8,8 @@
 .controlButtons {
   display: flex;
   flex-direction: row-reverse;
-
   justify-content: space-between;
+  align-items: end;
   gap: 16px;
 
   @media (max-width: 600px) {
@@ -19,6 +19,20 @@
       justify-content: center;
       width: 100%;
       text-align: center;
+    }
+  }
+
+  .skip {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+
+    a,
+    p {
+      text-wrap: wrap;
+      text-align: left;
     }
   }
 }

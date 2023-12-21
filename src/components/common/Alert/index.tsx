@@ -27,9 +27,9 @@ const Alert = ({ children, className, severity, show }: Props) => {
           initial={{ opacity: 0, height: 0 }}
           style={{ overflow: "hidden" }}
         >
-          <div className={[styles[severity], className].join(" ")}>
+          <div className={[styles[severity], className].join(" ")} role="alert">
             <Icon />
-            {children}
+            <div>{children}</div>
           </div>
         </m.div>
       )}

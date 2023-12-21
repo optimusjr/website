@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import {
   createContext,
   Dispatch,
@@ -11,7 +12,7 @@ import {
 import useLocalStorage from "@/hooks/useLocalStorage";
 import type * as Form from "@/types/formSchemaType";
 
-import { getNextValidPageIndex, getPreviousValidPageIndex, PAGE_POSITION, submit } from "./helpers";
+import { getNextValidPageIndex, getPreviousValidPageIndex, PAGE_POSITION } from "./helpers";
 
 interface Context {
   formSchema: Form.Schema;
@@ -22,11 +23,16 @@ interface Context {
     position: PAGE_POSITION;
     index: number;
   };
+
   goToNextPage: () => void;
   goToPreviousPage: () => void;
+
   isProgressBlocked: boolean;
   setProgressBlocked: Dispatch<SetStateAction<boolean>>;
   showProgressBlocked: boolean;
+
+  isLoading: boolean;
+  hasSubmissionError: boolean;
 }
 
 const MultiFormContext = createContext({} as Context);
@@ -47,6 +53,44 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
   const [isProgressBlocked, setProgressBlocked] = useState(false);
   const [showProgressBlocked, setShowProgressBlocked] = useState(false);
 
+  const [isLoading, setLoading] = useState(false);
+  const [hasSubmissionError, setSubmissionError] = useState(false);
+
+  const router = useRouter();
+
+  function submit() {
+    setLoading(true);
+    setSubmissionError(false);
+    fetch("https://formsubmit.co/ajax/silash35@gmail.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          setFormData({});
+          router.push("/thanks");
+        } else {
+          throw new Error("Requisição não retornou 200");
+        }
+      })
+      .catch((error) => {
+        // Um erro ocorreu
+        setSubmissionError(true);
+
+        // Tentar enviar o erro por email para poder ser analisado
+        fetch("https://formsubmit.co/ajax/silash35@gmail.com", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            title: "Erro ao enviar formulário " + formSchema.title,
+            error,
+          }),
+        });
+      })
+      .finally(() => setLoading(false));
+  }
+
   const goToNextPage = () => {
     if (isProgressBlocked) {
       setShowProgressBlocked(true);
@@ -56,7 +100,7 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
     }
 
     if (nextValidPageIndex === undefined) {
-      submit(formData);
+      submit();
     } else {
       setIndex(nextValidPageIndex);
     }
@@ -64,6 +108,7 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
 
   const goToPreviousPage = () => {
     setIndex(previousValidPageIndex);
+    setSubmissionError(false);
   };
 
   useEffect(() => {
@@ -88,11 +133,16 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
               : PAGE_POSITION.MIDDLE,
           index,
         },
+
         goToNextPage,
         goToPreviousPage,
+
         isProgressBlocked,
         setProgressBlocked,
         showProgressBlocked,
+
+        isLoading,
+        hasSubmissionError,
       }}
     >
       {children}

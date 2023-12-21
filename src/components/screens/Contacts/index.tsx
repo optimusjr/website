@@ -22,7 +22,9 @@ const Contacts = () => (
         <WhatsappIcon />
         <div>
           <Typography variant="h3">Chame no WhatsApp</Typography>
-          <Typography>{config.WHATSAPP}</Typography>
+          <Typography component="p" variant="a">
+            {config.WHATSAPP}
+          </Typography>
         </div>
       </ContactCard>
 
@@ -30,7 +32,9 @@ const Contacts = () => (
         <EmailIcon />
         <div>
           <Typography variant="h3">Mande um e-mail</Typography>
-          <Typography>{config.EMAIL}</Typography>
+          <Typography component="p" variant="a">
+            {config.EMAIL}
+          </Typography>
         </div>
       </ContactCard>
 
@@ -38,7 +42,9 @@ const Contacts = () => (
         <PhoneIcon />
         <div>
           <Typography variant="h3">Ligue pra gente</Typography>
-          <Typography>{config.PHONE_NUMBER}</Typography>
+          <Typography component="p" variant="a">
+            {config.PHONE_NUMBER}
+          </Typography>
         </div>
       </ContactCard>
 

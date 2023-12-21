@@ -1,7 +1,7 @@
 import styles from "./typography.module.scss";
 
 interface Props<T extends React.ElementType> {
-  variant?: "h2" | "h3" | "p" | "span" | "strap";
+  variant?: "h2" | "h3" | "p" | "span" | "strap" | "a";
   component?: T;
   className?: string;
 }
@@ -14,6 +14,10 @@ const Typography = <T extends React.ElementType = "div">({
 }: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>) => {
   const Variant = variant || "p";
   let Component = component || Variant;
+
+  if (Component === "a") {
+    Component = "a";
+  }
 
   if (Component === "strap") {
     Component = "span";
