@@ -9,6 +9,7 @@ import {
   useState,
 } from "react";
 
+import config from "@/config";
 import useLocalStorage from "@/hooks/useLocalStorage";
 import type * as Form from "@/types/formSchemaType";
 
@@ -66,7 +67,7 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
   function submit() {
     setLoading(true);
     setSubmissionError(false);
-    fetch("https://formsubmit.co/ajax/silash35@gmail.com", {
+    fetch(`https://formsubmit.co/ajax/${config.EMAIL}`, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify(formData, jsonReplacer),
@@ -84,7 +85,7 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
         setSubmissionError(true);
 
         // Tentar enviar o erro por email para poder ser analisado
-        fetch("https://formsubmit.co/ajax/silash35@gmail.com", {
+        fetch(`https://formsubmit.co/ajax/${config.EMAIL}`, {
           method: "POST",
           headers: { "Content-Type": "application/json", Accept: "application/json" },
           body: JSON.stringify({
