@@ -8,7 +8,11 @@ import useFormContext from "../FormContext/useFormContext";
 const TextQuestion = ({ question }: { question: Form.TextQuestion }) => {
   const { formData, setFormData } = useFormContext();
   const [answer, setAnswer] = useState(
-    typeof formData[question.name] === "string" ? (formData[question.name] as string) : ""
+    typeof formData[question.name] === "string"
+      ? (formData[question.name] as string)
+      : question.type === "number"
+      ? "1"
+      : ""
   );
 
   const handleChange = (e: ChangeEvent<HTMLInputElement> & ChangeEvent<HTMLTextAreaElement>) => {

@@ -23,7 +23,7 @@ export interface Option {
 export interface TextQuestion {
   label: string;
   name: string;
-  type: "text" | "email" | "tel"; // Tipo de entrada de texto
+  type: "text" | "email" | "tel" | "number"; // Tipo de entrada de texto
   required?: boolean;
   multiline?: boolean; // Permite entrada de múltiplas linhas
   placeholder?: string; // Exemplo de resposta valida

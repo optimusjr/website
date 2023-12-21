@@ -232,7 +232,7 @@ const quoteFormSchema: Form.Schema = {
       ],
     },
     {
-      title: "Quantas cortinas planeja automatizar, tendo assim total controle?",
+      title: "Nos conte sobre suas cortinas",
       rule: {
         effect: "SHOW",
         condition: {
@@ -242,15 +242,10 @@ const quoteFormSchema: Form.Schema = {
       },
       questions: [
         {
-          type: "checkbox",
+          label: "Quantas cortinas planeja automatizar",
+          type: "number",
           required: true,
           name: "n° de cortinas",
-          options: [
-            { label: "Apenas uma", name: "cortinas>1" },
-            { label: "Duas", name: "cortinas>2" },
-            { label: "Tres", name: "cortinas>3" },
-            { label: "Quatro ou mais", name: "cortinas>4+" },
-          ],
         },
       ],
     },
@@ -265,16 +260,10 @@ const quoteFormSchema: Form.Schema = {
       },
       questions: [
         {
-          label: "Quantas planeja colocar no seu lar ou estabelecimento",
+          label: "Quantas planeja colocar no seu lar ou estabelecimento?",
           name: "n° de fechaduras",
-          type: "checkbox",
+          type: "number",
           required: true,
-          options: [
-            { label: "Apenas uma", name: "fechadura>1" },
-            { label: "Duas", name: "fechadura>2" },
-            { label: "Tres", name: "fechadura>3" },
-            { label: "Quatro ou mais", name: "fechadura>4+" },
-          ],
         },
       ],
     },
