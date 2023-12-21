@@ -1,3 +1,4 @@
+import AnimateHeight from "@/components/common/AnimateHeight";
 import Button from "@/components/common/Button";
 import Card from "@/components/common/Card";
 import type * as Form from "@/types/formSchemaType";
@@ -34,7 +35,9 @@ const FormCard = () => {
       as="form"
       className={styles.card}
     >
-      <FormPage />
+      <AnimateHeight>
+        <FormPage />
+      </AnimateHeight>
 
       <div className={styles.controlButtons}>
         <Button>
