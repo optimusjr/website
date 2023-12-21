@@ -1,10 +1,10 @@
-import PlusIcon from "@/components/icons/Eye copy";
 import GarageGateIcon from "@/components/icons/GarageGate";
 import HexagonsIcon from "@/components/icons/Hexagons";
 import LightIcon from "@/components/icons/Light";
 import LockedDoorIcon from "@/components/icons/LockedDoor";
 import MotionSensorIcon from "@/components/icons/MotionSensor";
 import PlugIcon from "@/components/icons/Plug";
+import PlusIcon from "@/components/icons/Plus";
 import PoolIcon from "@/components/icons/Pool";
 import TelevisionIcon from "@/components/icons/Television";
 import WindowIcon from "@/components/icons/Window";

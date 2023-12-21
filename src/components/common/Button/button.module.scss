@@ -58,4 +58,8 @@
   padding: 8px 16px;
   min-height: 40px;
   font-size: u.rem(20);
+
+  &.outlined {
+    padding: 6px 14px;
+  }
 }

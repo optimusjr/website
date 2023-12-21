@@ -39,11 +39,11 @@ const SelectQuestion = ({ question }: { question: Form.SelectQuestion }) => {
 
   return (
     <fieldset className={styles.checkboxQuestion}>
-      {!isValid && showProgressBlocked && (
-        <Alert severity="error">Por favor, escolha pelo menos um item.</Alert>
-      )}
-
       {question.label && <legend>{question.label}</legend>}
+
+      <Alert className={styles.error} severity="error" show={!isValid && showProgressBlocked}>
+        Por favor, escolha pelo menos um item.
+      </Alert>
 
       <div className={styles.optionsContainer}>
         {question.options.map((option) => (

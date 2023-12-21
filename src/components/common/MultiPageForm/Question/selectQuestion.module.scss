@@ -4,13 +4,18 @@
 .checkboxQuestion {
   display: flex;
   flex-direction: column;
-  gap: 16px;
   width: 100%;
 
   legend {
     float: left;
+    margin-bottom: 8;
+
     font-size: u.rem(20);
     text-align: left;
+  }
+
+  .error {
+    margin: 8px 0;
   }
 
   .optionsContainer {
@@ -18,6 +23,7 @@
 
     grid-template-columns: 1fr 1fr;
     gap: 12px;
+    margin-top: 8px;
 
     @media (max-width: 600px) {
       grid-template-columns: 1fr;
