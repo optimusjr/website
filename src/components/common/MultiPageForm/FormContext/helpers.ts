@@ -56,4 +56,20 @@ const getPreviousValidPageIndex = (
   return previousIndex;
 };
 
-export { getNextValidPageIndex, getPreviousValidPageIndex, PAGE_POSITION };
+const jsonReplacer = (key: string, value: Form.Answers[""]) => {
+  if (value === true) {
+    return "verdadeiro";
+  }
+
+  if (value === false) {
+    return "falso";
+  }
+
+  if (value === "") {
+    return undefined;
+  }
+
+  return value;
+};
+
+export { getNextValidPageIndex, getPreviousValidPageIndex, jsonReplacer, PAGE_POSITION };

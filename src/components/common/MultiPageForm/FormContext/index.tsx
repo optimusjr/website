@@ -12,7 +12,12 @@ import {
 import useLocalStorage from "@/hooks/useLocalStorage";
 import type * as Form from "@/types/formSchemaType";
 
-import { getNextValidPageIndex, getPreviousValidPageIndex, PAGE_POSITION } from "./helpers";
+import {
+  getNextValidPageIndex,
+  getPreviousValidPageIndex,
+  jsonReplacer,
+  PAGE_POSITION,
+} from "./helpers";
 
 interface Context {
   formSchema: Form.Schema;
@@ -64,7 +69,7 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
     fetch("https://formsubmit.co/ajax/silash35@gmail.com", {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(formData, jsonReplacer),
     })
       .then((response) => {
         if (response.status === 200) {
