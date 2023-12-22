@@ -135,8 +135,8 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
             nextValidPageIndex === undefined
               ? PAGE_POSITION.LAST
               : index === 0
-              ? PAGE_POSITION.FIRST
-              : PAGE_POSITION.MIDDLE,
+                ? PAGE_POSITION.FIRST
+                : PAGE_POSITION.MIDDLE,
           index,
         },
 

@@ -1,11 +1,14 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-env node */
-const path = require("node:path");
+import * as path from "path";
+import { fileURLToPath } from "url";
 
 /**
  * @type {import('next').NextConfig}
  */
-const nextConfig = {
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export default {
   output: "export",
   reactStrictMode: true,
   sassOptions: {
@@ -22,5 +25,3 @@ const nextConfig = {
   },
   transpilePackages: ["next-image-export-optimizer"],
 };
-
-module.exports = nextConfig;

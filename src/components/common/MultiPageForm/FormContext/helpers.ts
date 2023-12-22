@@ -28,7 +28,7 @@ function isValidPage(page: Form.Page, formData: Form.Answers) {
 const getNextValidPageIndex = (
   currentIndex: number,
   formSchema: Form.Schema,
-  formData: Form.Answers
+  formData: Form.Answers,
 ): number | undefined => {
   let nextIndex = currentIndex + 1;
 
@@ -45,7 +45,7 @@ const getNextValidPageIndex = (
 const getPreviousValidPageIndex = (
   currentIndex: number,
   formSchema: Form.Schema,
-  formData: Form.Answers
+  formData: Form.Answers,
 ): number => {
   let previousIndex = currentIndex - 1;
 

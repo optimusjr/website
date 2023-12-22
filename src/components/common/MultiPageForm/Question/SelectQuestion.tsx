@@ -59,7 +59,7 @@ export default SelectQuestion;
 const SelectQuestionOption = ({ option }: { option: Form.Option }) => {
   const { formData, setFormData } = useFormContext();
   const [isChecked, setChecked] = useState(
-    typeof formData[option.name] === "boolean" ? (formData[option.name] as boolean) : false
+    typeof formData[option.name] === "boolean" ? (formData[option.name] as boolean) : false,
   );
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {

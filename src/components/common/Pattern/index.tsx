@@ -28,7 +28,7 @@ const Pattern = ({ SVGPattern, backgroundColor }: Props) => {
   const y = useTransform(
     isTouch ? scrollYProgress : springedScrollYProgress,
     [0, 1],
-    ["-50%", "-30%"]
+    ["-50%", "-30%"],
   );
 
   const patternId = useId();

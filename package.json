@@ -5,6 +5,7 @@
   "author": "OPTIMUS Jr. <contato@optimusjr.com.br>",
   "license": "Unlicense",
   "private": true,
+  "type": "module",
   "engines": {
     "node": "^20.10.0",
     "pnpm": "^8.12.1"
@@ -16,9 +17,10 @@
     "lint": "next lint"
   },
   "devDependencies": {
-    "@types/node": "^20.10.4",
+    "@types/node": "^20.10.5",
     "@types/react": "^18.2.45",
-    "eslint-config-silash35": "^2.0.1",
+    "eslint-config-next": "14.0.4",
+    "eslint-config-silash35": "^3.2.0",
     "next-sitemap": "^4.2.3",
     "sass": "^1.69.5",
     "typescript": "^5.3.3"
@@ -31,6 +33,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-gtm-ts": "^1.0.45",
-    "sharp": "^0.33.0"
+    "sharp": "^0.33.1"
   }
 }

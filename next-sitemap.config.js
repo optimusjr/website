@@ -3,7 +3,7 @@
 // Array para colocar as páginas que não devem ser indexadas pelos mecanismos de busca
 const notIndex = ["/thanks", "/404", "/links", "/quote"];
 
-module.exports = {
+export default {
   siteUrl: process.env.SITE_URL,
   generateRobotsTxt: true,
 
