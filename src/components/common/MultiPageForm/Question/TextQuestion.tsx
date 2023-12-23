@@ -31,6 +31,7 @@ const TextQuestion = ({ question }: { question: Form.TextQuestion }) => {
     name: question.name,
     placeholder: question.placeholder,
     required: question.required,
+    autoComplete: question.autocomplete,
     type: question.type,
     value: answer,
     onChange: handleChange,

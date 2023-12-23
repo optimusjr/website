@@ -28,6 +28,7 @@ const quoteFormSchema: Form.Schema = {
           name: "nome",
           label: "Qual o seu nome?",
           placeholder: "John Smith",
+          autocomplete: "name",
           required: true,
         },
         {
@@ -35,6 +36,7 @@ const quoteFormSchema: Form.Schema = {
           name: "email",
           label: "Qual o seu email?",
           placeholder: "exemplo@optimusjr.com.br",
+          autocomplete: "email",
           required: true,
         },
         {
@@ -42,13 +44,15 @@ const quoteFormSchema: Form.Schema = {
           name: "telefone",
           label: "Qual o seu número de telefone?",
           placeholder: "71 98765-4321",
+          autocomplete: "tel",
           required: true,
         },
         {
           type: "text",
           name: "endereço",
           label: "Qual seu endereço?",
-          placeholder: "Rua Prof. Aristides Novis nº 02 Federação",
+          placeholder: "Rua Prof. Aristides Novis, 02 - Federação",
+          autocomplete: "street-address",
           required: true,
         },
         {
@@ -56,6 +60,7 @@ const quoteFormSchema: Form.Schema = {
           name: "CEP",
           label: "Qual o seu CEP?",
           placeholder: "40210-630",
+          autocomplete: "postal-code",
           required: true,
         },
       ],
