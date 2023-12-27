@@ -1,3 +1,5 @@
+"use client";
+
 import { ChangeEvent, startTransition, useEffect, useState } from "react";
 
 import Alert from "@/components/common/Alert";

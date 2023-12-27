@@ -1,8 +1,10 @@
+"use client";
+
+import OPTIMUSIcon from "@/app/icon.svg";
 import Image from "@/components/common/Image";
 import Link from "@/components/common/Link";
 import QuoteButton from "@/components/common/QuoteButton";
 import useToggle from "@/hooks/useToggle";
-import OPTIMUSIcon from "@/images/OPTIMUS/icon.svg";
 import wordmark from "@/images/OPTIMUS/wordmark.svg";
 
 import styles from "./header.module.scss";

@@ -1,5 +1,8 @@
+"use client";
+
 import { m } from "framer-motion";
 
+import OPTIMUSIcon from "@/app/icon.svg";
 import Card from "@/components/common/Card";
 import Image from "@/components/common/Image";
 import Link from "@/components/common/Link";
@@ -11,7 +14,6 @@ import MessageIcon from "@/components/icons/Message";
 import PROSELIcon from "@/components/icons/PROSEL";
 import WebIcon from "@/components/icons/Web";
 import config from "@/config";
-import OPTIMUSIcon from "@/images/OPTIMUS/icon.svg";
 import variables from "@/styles/variables.module.scss";
 
 import styles from "./links.module.scss";

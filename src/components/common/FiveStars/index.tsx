@@ -1,3 +1,5 @@
+"use client";
+
 import { m } from "framer-motion";
 
 import styles from "./fiveStars.module.scss";

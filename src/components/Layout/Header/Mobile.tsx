@@ -1,3 +1,5 @@
+"use client";
+
 import { AnimatePresence, m } from "framer-motion";
 
 import Button from "@/components/common/Button";

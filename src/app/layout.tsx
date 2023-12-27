@@ -51,20 +51,15 @@ export const metadata: Metadata = {
   },
 };
 
-import { GoogleTagManager } from "@next/third-parties/dist/google"; // Remove "dist" after update
-import { domAnimation, LazyMotion } from "framer-motion";
+// import { GoogleTagManager } from "@next/third-parties/google";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html className={league.className} dir="ltr" lang="en">
     <head>
       <meta content="text/html" httpEquiv="content-type" />
     </head>
-    <body>
-      <LazyMotion features={domAnimation} strict>
-        {children}
-      </LazyMotion>
-    </body>
-    <GoogleTagManager gtmId="GTM-MQSMFGT" />
+    <body>{children}</body>
+    {/* <GoogleTagManager gtmId="GTM-MQSMFGT" /> */}
   </html>
 );
 

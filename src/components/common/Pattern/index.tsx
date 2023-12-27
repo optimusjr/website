@@ -1,3 +1,5 @@
+"use client";
+
 import { m, useScroll, useSpring, useTransform } from "framer-motion";
 import { useId, useRef } from "react";
 

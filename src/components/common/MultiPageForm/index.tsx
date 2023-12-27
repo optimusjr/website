@@ -1,3 +1,5 @@
+"use client";
+
 import { m, MotionProps } from "framer-motion";
 
 import Alert from "@/components/common/Alert";

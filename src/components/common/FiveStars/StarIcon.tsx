@@ -1,3 +1,5 @@
+"use client";
+
 import { AnimationProps, m } from "framer-motion";
 
 const icon = {

@@ -1,3 +1,5 @@
+"use client";
+
 import { m, MotionProps } from "framer-motion";
 
 import useFormContext from "./FormContext/useFormContext";

@@ -1,3 +1,5 @@
+"use client";
+
 import { ChangeEvent, ComponentProps, startTransition, useState } from "react";
 
 import { TextArea, TextField } from "@/components/common/TextField";
