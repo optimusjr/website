@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { Metadata } from "next";
 
 import Leaf from "@/components/icons/Leaf";
 import ShieldHome from "@/components/icons/ShieldHome";
@@ -14,12 +14,12 @@ import electrician from "@/images/lights/electrician.png";
 import lamps from "@/images/lights/lamps.png";
 import switches from "@/images/lights/switches.png";
 
+export const metadata: Metadata = {
+  title: "Automação de lâmpadas: torne sua casa mais inteligente e economize energia",
+};
+
 const Lights = () => (
   <>
-    <Head>
-      <title>Automação de lâmpadas: torne sua casa mais inteligente e economize energia</title>
-    </Head>
-
     <LandingPageStart>
       <LandingPageStart.intro>
         <span>Automação de luzes</span>

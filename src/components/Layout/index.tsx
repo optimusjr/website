@@ -3,17 +3,16 @@ import Header from "./Header";
 import PROSEL from "./PROSEL";
 
 interface Props {
-  className: string;
   children: React.ReactNode;
 }
 
-const Layout = ({ className, children }: Props) => (
-  <div className={className} style={{ display: "contents" }}>
+const Layout = ({ children }: Props) => (
+  <>
     <Header />
     <main>{children}</main>
     <Footer />
     <PROSEL />
-  </div>
+  </>
 );
 
 export default Layout;

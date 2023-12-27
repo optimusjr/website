@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 import Benefits from "@/components/screens/Benefits";
 import Contacts from "@/components/screens/Contacts";
 import Differentials from "@/components/screens/Differentials";
@@ -8,10 +6,6 @@ import Start from "@/components/screens/Start";
 
 const Home = () => (
   <>
-    <Head>
-      <title>OPTIMUS Jr. Controle e Automação | Empresa de Automação em Salvador</title>
-    </Head>
-
     <Start />
     <Differentials />
     <Services />
