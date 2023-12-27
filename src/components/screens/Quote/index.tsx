@@ -1,3 +1,5 @@
+"use client";
+
 import MultiPageForm from "@/components/common/MultiPageForm";
 import Screen from "@/components/common/Screen";
 import Typography from "@/components/common/Typography";

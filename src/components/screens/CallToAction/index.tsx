@@ -1,3 +1,5 @@
+"use client";
+
 import Pattern from "@/components/common/Pattern";
 import QuoteButton from "@/components/common/QuoteButton";
 import Screen from "@/components/common/Screen";

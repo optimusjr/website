@@ -51,7 +51,8 @@ export const metadata: Metadata = {
   },
 };
 
-// import { GoogleTagManager } from "@next/third-parties/google";
+// @ts-expect-error Remova esse comentário após o @next/third-parties atualizar)
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html className={league.className} dir="ltr" lang="en">
@@ -59,7 +60,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
       <meta content="text/html" httpEquiv="content-type" />
     </head>
     <body>{children}</body>
-    {/* <GoogleTagManager gtmId="GTM-MQSMFGT" /> */}
+    <GoogleTagManager gtmId="GTM-MQSMFGT" />
   </html>
 );
 
