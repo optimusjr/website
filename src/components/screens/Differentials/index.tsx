@@ -17,7 +17,7 @@ const Differentials = () => (
       <ListCard layout="row">
         <TenIcon />
         <div>
-          <Typography variant="h3">Mais de 10 anos de experiencia</Typography>
+          <Typography variant="h3">Mais de 10 anos de experiência</Typography>
           <Typography>Estamos a mais de 10 anos no mercado impactando vidas e negócios.</Typography>
         </div>
       </ListCard>

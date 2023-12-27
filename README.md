@@ -1,4 +1,4 @@
-# OPTIMUS Jr.
+# Website da OPTIMUS Jr.
 
 Este repositório contém o código-fonte do site da OPTIMUS Jr. desenvolvido utilizando o framework [Next.Js](https://nextjs.org/).
 
