@@ -1,6 +1,6 @@
 "use client";
 
-import { m, MotionProps } from "framer-motion";
+import { AnimatePresence, m, MotionProps } from "framer-motion";
 
 import useFormContext from "./FormContext/useFormContext";
 import styles from "./formPage.module.scss";
@@ -19,14 +19,16 @@ const FormPage = () => {
 
   return (
     <fieldset className={styles.formPage}>
-      <m.legend
-        className={styles.pageTitle}
-        // necessário para forçar o componente a renderizar quando o texto mudar, e assim executar a animação
-        key={page.title}
-        {...animation}
-      >
-        {page.title}
-      </m.legend>
+      <AnimatePresence initial={false} mode="popLayout">
+        <m.legend
+          className={styles.pageTitle}
+          // necessário para forçar o componente a renderizar quando o texto mudar, e assim executar a animação
+          key={page.title}
+          {...animation}
+        >
+          {page.title}
+        </m.legend>
+      </AnimatePresence>
 
       {page.description && (
         <m.p
