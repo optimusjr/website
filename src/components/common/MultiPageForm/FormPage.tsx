@@ -28,18 +28,18 @@ const FormPage = () => {
         >
           {page.title}
         </m.legend>
-      </AnimatePresence>
 
-      {page.description && (
-        <m.p
-          className={styles.pageDescription}
-          // necessário para forçar o componente a renderizar quando o texto mudar, e assim executar a animação
-          key={page.description}
-          {...animation}
-        >
-          {page.description}
-        </m.p>
-      )}
+        {page.description && (
+          <m.p
+            className={styles.pageDescription}
+            // necessário para forçar o componente a renderizar quando o texto mudar, e assim executar a animação
+            key={page.description}
+            {...animation}
+          >
+            {page.description}
+          </m.p>
+        )}
+      </AnimatePresence>
 
       {page.questions && (
         <div className={styles.questions}>

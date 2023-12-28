@@ -1,6 +1,6 @@
 "use client";
 
-import { m, MotionProps } from "framer-motion";
+import { AnimatePresence, m, MotionProps } from "framer-motion";
 
 import Alert from "@/components/common/Alert";
 import AnimateHeight from "@/components/common/AnimateHeight";
@@ -68,28 +68,30 @@ const FormCard = () => {
       </Alert>
 
       <div className={styles.controlButtons}>
-        <Button>
-          {currentPage.position === PAGE_POSITION.FIRST ? (
-            <m.div {...animation}>Vamos lá!</m.div>
-          ) : currentPage.position === PAGE_POSITION.LAST && !isLoading ? (
-            <>
-              <SendIcon as={m.svg} {...animation} /> <m.div {...animation}>Enviar</m.div>
-            </>
-          ) : currentPage.position === PAGE_POSITION.LAST && isLoading ? (
-            <>
-              <m.div {...animation} style={{ lineHeight: "0" }}>
-                <LoadingIcon
-                  animate={{ rotate: 360 }}
-                  as={m.svg}
-                  transition={{ ease: "linear", duration: 1, repeat: Infinity }}
-                />
-              </m.div>
-              <m.div {...animation}>Enviando</m.div>
-            </>
-          ) : (
-            <m.div {...animation}>Próxima página</m.div>
-          )}
-        </Button>
+        <AnimatePresence initial={false} mode="popLayout">
+          <Button>
+            {currentPage.position === PAGE_POSITION.FIRST ? (
+              <m.div {...animation}>Vamos lá!</m.div>
+            ) : currentPage.position === PAGE_POSITION.LAST && !isLoading ? (
+              <>
+                <SendIcon as={m.svg} {...animation} /> <m.div {...animation}>Enviar</m.div>
+              </>
+            ) : currentPage.position === PAGE_POSITION.LAST && isLoading ? (
+              <>
+                <m.div {...animation} style={{ lineHeight: "0" }}>
+                  <LoadingIcon
+                    animate={{ rotate: 360 }}
+                    as={m.svg}
+                    transition={{ ease: "linear", duration: 1, repeat: Infinity }}
+                  />
+                </m.div>
+                <m.div {...animation}>Enviando</m.div>
+              </>
+            ) : (
+              <m.div {...animation}>Próxima página</m.div>
+            )}
+          </Button>
+        </AnimatePresence>
 
         {currentPage.position !== PAGE_POSITION.FIRST ? (
           <Button onClick={goToPreviousPage} type="button" variant="outlined">
