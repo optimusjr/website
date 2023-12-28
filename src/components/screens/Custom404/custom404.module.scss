@@ -1,7 +1,7 @@
 @use "variables" as v;
 @use "utils" as u;
 
-.custom404 {
+article.custom404 {
   display: grid;
   grid-template-columns: 1fr 2fr;
   text-align: left;

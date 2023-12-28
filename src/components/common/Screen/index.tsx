@@ -1,3 +1,5 @@
+import cn from "@/utils/cn";
+
 import styles from "./screen.module.scss";
 
 interface Props {
@@ -18,13 +20,13 @@ const Screen = ({
   backgroundColor,
 }: Props) => (
   <article
-    className={[
+    className={cn(
       styles.screen,
       styles[backgroundColor],
       fullHeight ? styles.full : "",
       firstFullHeight ? styles.firstFull : "",
       className,
-    ].join(" ")}
+    )}
     id={id}
   >
     {children}

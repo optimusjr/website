@@ -1,3 +1,5 @@
+import cn from "@/utils/cn";
+
 import styles from "./card.module.scss";
 
 interface Props<T extends React.ElementType> {
@@ -15,9 +17,7 @@ const Card = <T extends React.ElementType = "div">({
 }: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>) => {
   const Component = as || "div";
 
-  return (
-    <Component className={[styles.card, styles[cardLayout], className].join(" ")} {...props} />
-  );
+  return <Component className={cn(styles.card, styles[cardLayout], className)} {...props} />;
 };
 
 export default Card;

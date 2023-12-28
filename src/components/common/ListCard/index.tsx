@@ -2,6 +2,8 @@
 
 import { HTMLMotionProps, m } from "framer-motion";
 
+import cn from "@/utils/cn";
+
 import Card from "../Card";
 import styles from "./listCard.module.scss";
 
@@ -24,12 +26,7 @@ const ListCard = ({ layout, customAnime, className, children }: Props) => {
       };
 
   return (
-    <Card
-      as={m.li}
-      cardLayout={layout}
-      className={[styles.listCard, className].join(" ")}
-      {...animation}
-    >
+    <Card as={m.li} cardLayout={layout} className={cn(styles.listCard, className)} {...animation}>
       {children}
     </Card>
   );

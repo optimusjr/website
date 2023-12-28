@@ -8,7 +8,7 @@ type IconObject = Concrete<MetadataRoute.Manifest>["icons"][0];
 
 export default function manifest(): MetadataRoute.Manifest {
   const createIconEntry = (size: string): IconObject => ({
-    src: `${process.env.SITE_URL}/icons/"android-chrome-"${size}.png`,
+    src: `${process.env.SITE_URL}/icons/android-chrome-${size}.png`,
     sizes: size,
     type: "image/png",
   });

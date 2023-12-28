@@ -4,6 +4,7 @@ import { m, useScroll, useSpring, useTransform } from "framer-motion";
 import { useId, useRef } from "react";
 
 import useMediaQuery from "@/hooks/useMediaQuery";
+import cn from "@/utils/cn";
 
 import styles from "./pattern.module.scss";
 
@@ -38,7 +39,7 @@ const Pattern = ({ SVGPattern, backgroundColor }: Props) => {
 
   return (
     <div className={styles.container} ref={containerRef}>
-      <div className={[styles.pattern, styles[backgroundColor]].join(" ")}>
+      <div className={cn(styles.pattern, styles[backgroundColor])}>
         <svg xmlns="http://www.w3.org/2000/svg">
           <defs>
             <SVGPattern id={patternId} />

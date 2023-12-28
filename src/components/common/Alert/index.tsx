@@ -3,6 +3,7 @@
 import { AnimatePresence, m } from "framer-motion";
 
 import ErrorIcon from "@/components/icons/Error";
+import cn from "@/utils/cn";
 
 import styles from "./alert.module.scss";
 
@@ -29,7 +30,7 @@ const Alert = ({ children, className, severity, show }: Props) => {
           initial={{ opacity: 0, height: 0 }}
           style={{ overflow: "hidden" }}
         >
-          <div className={[styles[severity], className].join(" ")} role="alert">
+          <div className={cn(styles[severity], className)} role="alert">
             <Icon />
             <div>{children}</div>
           </div>

@@ -1,3 +1,5 @@
+import cn from "@/utils/cn";
+
 import styles from "./typography.module.scss";
 
 interface Props<T extends React.ElementType> {
@@ -23,7 +25,7 @@ const Typography = <T extends React.ElementType = "div">({
     Component = "span";
   }
 
-  return <Component className={[styles[Variant], className].join(" ")} {...props} />;
+  return <Component className={cn(styles[Variant], className)} {...props} />;
 };
 
 export default Typography;

@@ -1,4 +1,5 @@
 import Typography from "@/components/common/Typography";
+import cn from "@/utils/cn";
 
 import styles from "./title.module.scss";
 
@@ -9,7 +10,7 @@ interface Props {
 }
 
 const Title = ({ strap, className, children }: Props) => (
-  <div className={[styles.title, className].join(" ")}>
+  <div className={cn(styles.title, className)}>
     {strap && <Typography variant="strap">{strap}</Typography>}
     <Typography variant="h2">{children}</Typography>
   </div>

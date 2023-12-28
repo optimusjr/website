@@ -1,3 +1,5 @@
+import cn from "@/utils/cn";
+
 import styles from "./button.module.scss";
 
 interface Props<T extends React.ElementType> {
@@ -18,10 +20,7 @@ const Button = <T extends React.ElementType = "button">({
   const Component = as || "button";
 
   return (
-    <Component
-      className={[styles.button, styles[size], styles[variant], className].join(" ")}
-      {...props}
-    />
+    <Component className={cn(styles.button, styles[size], styles[variant], className)} {...props} />
   );
 };
 
