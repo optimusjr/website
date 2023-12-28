@@ -1,0 +1,35 @@
+@use "variables" as v;
+@use "utils" as u;
+
+li.serviceCard {
+  width: 30vw;
+  min-width: 300px;
+  max-width: 512px;
+
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
+
+  a {
+    margin: auto auto 0 auto;
+  }
+}
+
+.image {
+  border-radius: (v.$radius)/2;
+  background-color: blue;
+  overflow: hidden;
+  line-height: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    @extend %zoomOnHover;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

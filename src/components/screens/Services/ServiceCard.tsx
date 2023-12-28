@@ -3,7 +3,7 @@ import Link from "@/components/common/Link";
 import ListCard from "@/components/common/ListCard";
 import config from "@/config";
 
-import styles from "./servicesCard.module.scss";
+import styles from "./serviceCard.module.scss";
 
 export interface Props {
   aboutPage?: string;
@@ -13,22 +13,18 @@ export interface Props {
 
 const ServiceCard = ({ aboutPage, image, children }: Props) => (
   <ListCard className={styles.serviceCard}>
-    <div className={styles.imageContainer}>
-      <div className={styles.zoomOnHover}>{image}</div>
-    </div>
-    <div className={styles.content}>
-      {children}
+    <div className={styles.image}> {image} </div>
+    <div className={styles.content}>{children}</div>
 
-      {aboutPage ? (
-        <Button as={Link} href={aboutPage}>
-          Confira mais Detalhes
-        </Button>
-      ) : (
-        <Button as={Link} href={config.QUOTE_URL}>
-          Faça um Orçamento
-        </Button>
-      )}
-    </div>
+    {aboutPage ? (
+      <Button as={Link} href={aboutPage}>
+        Confira mais Detalhes
+      </Button>
+    ) : (
+      <Button as={Link} href={config.QUOTE_URL}>
+        Faça um Orçamento
+      </Button>
+    )}
   </ListCard>
 );
 
