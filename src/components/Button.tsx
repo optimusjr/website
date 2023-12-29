@@ -1,16 +1,16 @@
 import { tv, type VariantProps } from "tailwind-variants";
 
 const button = tv({
-  base: "flex whitespace-nowrap items-center gap-2 rounded-full",
+  base: "flex items-center gap-2 whitespace-nowrap rounded-full",
   variants: {
     variant: {
       filled:
-        "bg-primary-800 hover:bg-primary-700 text-neutral-50 fill-neutral-50 active:shadow-none active:bg-primary-900 hover:shadow-md",
-      outlined: "text-primary-800 border-2 border-solid border-primary-800",
+        "bg-primary-800 fill-neutral-50 text-neutral-50 hover:bg-primary-700 hover:shadow-md active:bg-primary-900 active:shadow-none",
+      outlined: "border-2 border-solid border-primary-800 text-primary-800",
       text: "hover:bg-neutral-300 active:bg-neutral-400",
     },
     size: {
-      normal: "py-2 px-4 min-h-10 text-xl/[0]",
+      normal: "min-h-10 px-4 py-2 text-xl/0",
     },
   },
   defaultVariants: {

@@ -26,9 +26,9 @@ const Alert = ({ children, className, severity, show }: Props) => {
       {show && (
         <m.div
           animate={{ opacity: 1, height: "auto" }}
+          className="overflow-hidden"
           exit={{ opacity: 0, height: 0 }}
           initial={{ opacity: 0, height: 0 }}
-          style={{ overflow: "hidden" }}
         >
           <div className={cn(styles[severity], className)} role="alert">
             <Icon />

@@ -31,7 +31,7 @@ const AnimateHeight = ({ children }: Props) => {
   return (
     <m.div
       animate={{ height }}
-      style={{ overflow: "hidden" }}
+      className="overflow-hidden"
       transition={{ type: "spring", mass: 0.01 }}
     >
       <div ref={containerRef}>{children}</div>

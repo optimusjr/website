@@ -4,6 +4,15 @@ export default {
   important: true,
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
+    extend: {
+      borderWidth: {
+        1: 1,
+      },
+      lineHeight: {
+        0: 0,
+        1: 1,
+      },
+    },
     colors: {
       transparent: "transparent",
       black: "#000",

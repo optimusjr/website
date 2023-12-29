@@ -78,7 +78,7 @@ const FormCard = () => {
               </>
             ) : currentPage.position === PAGE_POSITION.LAST && isLoading ? (
               <>
-                <m.div {...animation} style={{ lineHeight: "0" }}>
+                <m.div {...animation} className="leading-0">
                   <LoadingIcon
                     animate={{ rotate: 360 }}
                     as={m.svg}
