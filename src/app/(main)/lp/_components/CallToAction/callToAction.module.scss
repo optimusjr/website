@@ -1,0 +1,30 @@
+@use "variables" as v;
+@use "utils" as u;
+
+article.screen {
+  position: relative;
+  gap: 16px;
+
+  box-shadow: inset v.$shadow-md;
+  padding: 64px;
+
+  @media (max-width: 768px) {
+    padding: 64px 32px;
+  }
+
+  @media (max-width: 375px) {
+    padding: 64px 8px;
+  }
+
+  text-align: center;
+
+  h2 {
+    color: v.$gray-900;
+    font-size: calc(1.8rem + 2vw);
+  }
+
+  p {
+    color: v.$gray-900;
+    font-size: calc(1rem + 1vw);
+  }
+}

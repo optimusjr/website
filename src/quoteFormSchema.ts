@@ -8,7 +8,7 @@ import PlusIcon from "@/components/icons/Plus";
 import PoolIcon from "@/components/icons/Pool";
 import TelevisionIcon from "@/components/icons/Television";
 import WindowIcon from "@/components/icons/Window";
-import type * as Form from "@/types/formSchemaType";
+import type * as Form from "@/components/MultiPageForm/formSchemaType";
 
 const quoteFormSchema: Form.Schema = {
   title: "Formulário de Orçamento",
