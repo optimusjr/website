@@ -1,10 +1,9 @@
-import Image from "next-image-export-optimizer";
-
 import Card from "@/components/Card";
 import CheckOutlineIcon from "@/components/icons/CheckOutline";
 import DiamondIcon from "@/components/icons/Diamond";
 import EyeIcon from "@/components/icons/Eye";
 import TargetIcon from "@/components/icons/Target";
+import Image from "@/components/Image";
 import ListCard from "@/components/ListCard";
 import QuoteButton from "@/components/QuoteButton";
 import Screen from "@/components/Screen";
