@@ -15,5 +15,16 @@
   ],
   "material-icon-theme.folders.associations": {
     "_components": "components"
-  }
+  },
+  // Configuração do Tailwindcss
+  "tailwindCSS.validate": true,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ]
 }
