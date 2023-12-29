@@ -56,8 +56,8 @@ const Contacts = () => (
       >
         <Typography variant="h3">Mande uma mensagem</Typography>
 
-        <TextField label="Nome:" name="nome" required />
-        <TextField label="E-mail:" name="email" type="email" required />
+        <TextField autoComplete="name" label="Nome:" name="nome" required />
+        <TextField autoComplete="email" label="E-mail:" name="email" type="email" required />
         <TextArea label="Sua mensagem:" name="mensagem" required />
 
         <input name="_next" type="hidden" value={`${process.env.SITE_URL}/thanks`} />

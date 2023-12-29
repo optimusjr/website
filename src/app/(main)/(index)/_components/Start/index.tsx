@@ -62,6 +62,7 @@ const Start = () => {
 
             opacity: 0,
           }}
+          aria-label={light ? "Desligar Luzes" : "Ligar luzes"}
         />
       </div>
     </Screen>
