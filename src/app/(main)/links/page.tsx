@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import Links from "@/components/screens/Links";
+import Links from "./_components/Links";
 
 export const metadata: Metadata = {
   title: "Conecte-se Conosco",

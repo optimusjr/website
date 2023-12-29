@@ -3,16 +3,17 @@
 import Leaf from "@/components/icons/Leaf";
 import ShieldHome from "@/components/icons/ShieldHome";
 import SofaIcon from "@/components/icons/Sofa";
-import CallToAction from "@/components/screens/CallToAction";
-import FAQ from "@/components/screens/FAQ";
-import LandingPageStart from "@/components/screens/LandingPageStart";
-import Showcase from "@/components/screens/Showcase";
-import Testimonials from "@/components/screens/Testimonials";
 import juliaPolena from "@/images/clients/juliaPolena.jpg";
 import app from "@/images/lights/app.png";
 import electrician from "@/images/lights/electrician.png";
 import lamps from "@/images/lights/lamps.png";
 import switches from "@/images/lights/switches.png";
+
+import CallToAction from "../_components/CallToAction";
+import FAQ from "../_components/FAQ";
+import LandingPageStart from "../_components/LandingPageStart";
+import Showcase from "../_components/Showcase";
+import Testimonials from "../_components/Testimonials";
 
 const Content = () => (
   <>

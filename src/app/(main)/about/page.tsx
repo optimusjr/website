@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import AboutStart from "@/components/screens/AboutStart";
+import AboutStart from "./_components/AboutStart";
 
 export const metadata: Metadata = {
   title: "Sobre nós",

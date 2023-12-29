@@ -1,8 +1,7 @@
 import { Metadata } from "next";
 
-import Custom404 from "@/components/screens/Custom404";
-
 // Este componente deveria estar na pasta (main), mas o Next.Js precisa que ele esteja na raiz
+import Custom404 from "./(main)/_components/Custom404";
 import Layout from "./(main)/layout";
 
 export const metadata: Metadata = {
