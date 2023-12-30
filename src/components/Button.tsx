@@ -10,7 +10,7 @@ const button = tv({
       text: "hover:bg-neutral-300 active:bg-neutral-400",
     },
     size: {
-      normal: "min-h-10 px-4 py-2 text-xl leading-0",
+      normal: "min-h-10 p-4 py-2 text-xl leading-0",
     },
   },
   defaultVariants: {
