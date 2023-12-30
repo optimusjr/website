@@ -21,7 +21,9 @@ const Contacts = () => (
       <ContactCard href={`https://wa.me/${config.WHATSAPP.replace(/[^0-9]/g, "")}`}>
         <WhatsappIcon />
         <div>
-          <Typography variant="h3">Chame no WhatsApp</Typography>
+          <Typography color="primary" variant="h3">
+            Chame no WhatsApp
+          </Typography>
           <Typography component="p" variant="a">
             {config.WHATSAPP}
           </Typography>
@@ -31,7 +33,9 @@ const Contacts = () => (
       <ContactCard href={`mailto:${config.EMAIL}`}>
         <EmailIcon />
         <div>
-          <Typography variant="h3">Mande um e-mail</Typography>
+          <Typography color="primary" variant="h3">
+            Mande um e-mail
+          </Typography>
           <Typography component="p" variant="a">
             {config.EMAIL}
           </Typography>
@@ -41,7 +45,9 @@ const Contacts = () => (
       <ContactCard href={`tel:${config.PHONE_NUMBER.replace(/[^0-9]/g, "")}`}>
         <PhoneIcon />
         <div>
-          <Typography variant="h3">Ligue pra gente</Typography>
+          <Typography color="primary" variant="h3">
+            Ligue pra gente
+          </Typography>
           <Typography component="p" variant="a">
             {config.PHONE_NUMBER}
           </Typography>
@@ -54,7 +60,9 @@ const Contacts = () => (
         className={styles.contactForm}
         method="POST"
       >
-        <Typography variant="h3">Mande uma mensagem</Typography>
+        <Typography color="primary" variant="h3">
+          Mande uma mensagem
+        </Typography>
 
         <TextField autoComplete="name" label="Nome:" name="nome" required />
         <TextField autoComplete="email" label="E-mail:" name="email" type="email" required />

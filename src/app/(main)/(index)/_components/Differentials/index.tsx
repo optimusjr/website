@@ -17,7 +17,9 @@ const Differentials = () => (
       <ListCard layout="row">
         <TenIcon />
         <div>
-          <Typography variant="h3">Mais de 10 anos de experiência</Typography>
+          <Typography color="primary" variant="h3">
+            Mais de 10 anos de experiência
+          </Typography>
           <Typography>Estamos a mais de 10 anos no mercado impactando vidas e negócios.</Typography>
         </div>
       </ListCard>
@@ -25,7 +27,9 @@ const Differentials = () => (
       <ListCard layout="row">
         <HandIcon />
         <div>
-          <Typography variant="h3">Melhor preço do mercado</Typography>
+          <Typography color="primary" variant="h3">
+            Melhor preço do mercado
+          </Typography>
           <Typography>Oferecemos preços justos e alta qualidade em nossos serviços.</Typography>
         </div>
       </ListCard>
@@ -33,7 +37,9 @@ const Differentials = () => (
       <ListCard layout="row">
         <CapIcon />
         <div>
-          <Typography variant="h3">Vasto conhecimento técnico</Typography>
+          <Typography color="primary" variant="h3">
+            Vasto conhecimento técnico
+          </Typography>
           <Typography>
             Como empresa júnior da UFBA, temos o apoio dos melhores professores da instituição.
           </Typography>
@@ -43,7 +49,9 @@ const Differentials = () => (
       <ListCard layout="row">
         <CheckIcon />
         <div>
-          <Typography variant="h3">Selo de qualidade</Typography>
+          <Typography color="primary" variant="h3">
+            Selo de qualidade
+          </Typography>
           <Typography>Quem contrata, recomenda! A nossa média de NPS é 9,5.</Typography>
         </div>
       </ListCard>

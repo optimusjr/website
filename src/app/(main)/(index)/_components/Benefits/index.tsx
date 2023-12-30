@@ -19,7 +19,9 @@ const Benefits = () => (
       <ListCard>
         <DeviceIcon />
 
-        <Typography variant="h3">Praticidade</Typography>
+        <Typography color="primary" variant="h3">
+          Praticidade
+        </Typography>
         <Typography>
           Nunca foi tão prático realizar suas atividades diárias, você poderá programar seus
           dispositivos para realizarem essas atividades por você e te auxiliar no dia a dia.
@@ -29,7 +31,9 @@ const Benefits = () => (
       <ListCard>
         <LeafIcon />
 
-        <Typography variant="h3">Economia</Typography>
+        <Typography color="primary" variant="h3">
+          Economia
+        </Typography>
         <Typography>
           Monitore seu gasto de energia, tenha controle dos seus dispositivos à distância e
           economize na conta de energia.
@@ -39,7 +43,9 @@ const Benefits = () => (
       <ListCard>
         <ShieldHomeIcon />
 
-        <Typography variant="h3">Segurança</Typography>
+        <Typography color="primary" variant="h3">
+          Segurança
+        </Typography>
         <Typography>
           Seu ambiente poderá ser controlado e monitorado de qualquer lugar do mundo com apenas um
           toque.
@@ -49,7 +55,9 @@ const Benefits = () => (
       <ListCard>
         <SofaIcon />
 
-        <Typography variant="h3">Conforto</Typography>
+        <Typography color="primary" variant="h3">
+          Conforto
+        </Typography>
         <Typography>
           Tenha o controle da sua casa na palma da sua mão, sem precisar se levantar do seu lugar.
         </Typography>
@@ -58,7 +66,9 @@ const Benefits = () => (
       <ListCard>
         <RocketIcon />
 
-        <Typography variant="h3">Tecnologia de Ponta</Typography>
+        <Typography color="primary" variant="h3">
+          Tecnologia de Ponta
+        </Typography>
         <Typography>
           Integração com as tecnologias emergentes do mercado. Controle sua casa por comando de voz,
           seja esse por Alexa ou até mesmo do seu celular.
@@ -68,7 +78,9 @@ const Benefits = () => (
       <ListCard>
         <HomeAssistantIcon />
 
-        <Typography variant="h3">Design</Typography>
+        <Typography color="primary" variant="h3">
+          Design
+        </Typography>
         <Typography>
           Dê ao seu ambiente um toque futurístico! Além de todas as demais vantagens, seu espaço
           ficará moderno e bonito, valorizando o imóvel.

@@ -28,7 +28,9 @@ const Start = () => {
       <Divider />
 
       <div className={styles.text}>
-        <Typography variant="h1">Leve o futuro para o seu lar.</Typography>
+        <Typography color="primary" variant="h1">
+          Leve o futuro para o seu lar.
+        </Typography>
         <p className="leading-1">
           Transformamos sua casa com as nossas soluções de automação residencial.
         </p>
