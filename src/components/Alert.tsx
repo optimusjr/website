@@ -1,15 +1,25 @@
 "use client";
 
 import { AnimatePresence, m } from "framer-motion";
+import { tv, type VariantProps } from "tailwind-variants";
 
 import ErrorIcon from "@/components/icons/Error";
-import cn from "@/utils/cn";
 
-import styles from "./alert.module.scss";
+const alert = tv({
+  base: "flex items-center gap-2 rounded-lg p-4 text-left",
+  variants: {
+    severity: {
+      error: "bg-red-100 text-red-900 fill-red-900",
+      // Implementar se necessário
+      // warning:"",
+      // info:"",
+      // success:"".
+    },
+  },
+});
 
-interface Props {
+interface Props extends Required<VariantProps<typeof alert>> {
   show: boolean;
-  severity: "error"; // Se necessário, implementar "warning", "info" e "success"
   className?: string;
   children: React.ReactNode;
 }
@@ -30,7 +40,7 @@ const Alert = ({ children, className, severity, show }: Props) => {
           exit={{ opacity: 0, height: 0 }}
           initial={{ opacity: 0, height: 0 }}
         >
-          <div className={cn(styles[severity], className)} role="alert">
+          <div className={alert({ severity, className })} role="alert">
             <Icon />
             <div>{children}</div>
           </div>

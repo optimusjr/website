@@ -34,9 +34,8 @@ const MultiPageForm = ({ schema }: Props) => {
 export default MultiPageForm;
 
 const FormCard = () => {
-  const { goToNextPage, goToPreviousPage, currentPage, hasSubmissionError, isLoading } =
-    useFormContext();
-
+  const { goToNextPage, goToPreviousPage, currentPage, isLoading } = useFormContext();
+  const hasSubmissionError = true;
   const animation = {
     animate: { opacity: 1 },
     exit: { opacity: 0 },
@@ -60,7 +59,10 @@ const FormCard = () => {
         Ops! Algo deu errado. Não se preocupe, não é culpa sua. Por favor, tente novamente.
         <p>
           Se o problema persistir, nos avise&nbsp;
-          <Link href={`https://wa.me/${config.WHATSAPP.replace(/[^0-9]/g, "")}`}>
+          <Link
+            className="underline"
+            href={`https://wa.me/${config.WHATSAPP.replace(/[^0-9]/g, "")}`}
+          >
             clicando&nbsp;aqui
           </Link>
           .
