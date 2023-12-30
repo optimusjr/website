@@ -12,6 +12,7 @@ const typography = tv({
     color: {
       primary: "text-primary-800",
       neutral: "text-neutral-900",
+      white: "text-neutral-50",
     },
   },
   compoundVariants: [
