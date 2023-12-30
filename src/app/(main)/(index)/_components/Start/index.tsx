@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import Image from "@/components/Image";
 import Screen from "@/components/Screen";
+import Typography from "@/components/Typography";
 import bedroomOff from "@/images/bedroom-off.png";
 import bedroomOn from "@/images/bedroom-on.png";
 
@@ -27,8 +28,10 @@ const Start = () => {
       <Divider />
 
       <div className={styles.text}>
-        <h1>Leve o futuro para o seu lar.</h1>
-        <p>Transformamos sua casa com as nossas soluções de automação residencial.</p>
+        <Typography variant="h1">Leve o futuro para o seu lar.</Typography>
+        <p className="leading-1">
+          Transformamos sua casa com as nossas soluções de automação residencial.
+        </p>
       </div>
 
       <div className={styles.image}>

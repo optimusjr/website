@@ -1,7 +1,10 @@
-import Typography from "@/components/Typography";
-import cn from "@/utils/cn";
+import { tv } from "tailwind-variants";
 
-import styles from "./title.module.scss";
+import Typography from "@/components/Typography";
+
+const title = tv({
+  base: "grid text-center",
+});
 
 interface Props {
   strap?: string;
@@ -10,7 +13,7 @@ interface Props {
 }
 
 const Title = ({ strap, className, children }: Props) => (
-  <div className={cn(styles.title, className)}>
+  <div className={title({ className })}>
     {strap && <Typography variant="strap">{strap}</Typography>}
     <Typography variant="h2">{children}</Typography>
   </div>
