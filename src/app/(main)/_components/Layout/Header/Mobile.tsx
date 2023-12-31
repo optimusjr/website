@@ -8,7 +8,6 @@ import Link from "@/components/Link";
 import config from "@/config";
 
 import Links from "./Links";
-import styles from "./mobile.module.scss";
 
 interface Props {
   show: boolean;
@@ -18,7 +17,7 @@ interface Props {
 
 const Mobile = ({ show, toggleShow, hideShow }: Props) => (
   <>
-    <div className={styles.menuButton}>
+    <div className="flex items-center justify-end p-3 lg:hidden">
       <Button aria-label="Abrir menu" onClick={toggleShow}>
         <MenuIcon open={show} />
       </Button>
@@ -41,15 +40,15 @@ const Mobile = ({ show, toggleShow, hideShow }: Props) => (
             collapsed: { opacity: 0, height: 0 },
           }}
           animate="open"
-          className={styles.menuContainer}
+          className="col-span-full"
           exit="collapsed"
           initial="collapsed"
         >
-          <ul className={styles.menu}>
+          <ul className="my-4 flex flex-col gap-4">
             <Links hideMobile={hideShow} />
 
-            <li className={styles.button}>
-              <Button as={Link} href={config.QUOTE_URL}>
+            <li className="contents">
+              <Button as={Link} className="m-auto" href={config.QUOTE_URL}>
                 Faça um Orçamento
               </Button>
             </li>

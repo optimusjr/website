@@ -1,3 +1,5 @@
+import plugin from "tailwindcss/plugin";
+
 /** @type {import('tailwindcss').Config} */
 
 export default {
@@ -71,5 +73,24 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addBase, addUtilities }) => {
+      addBase({
+        svg: { width: 24 },
+        ".animate-slide-top": { transform: "translateY(-100%)" },
+      });
+
+      addUtilities({
+        ".animate-slide-top": {
+          animation: "slide-top 0.4s 0.4s ease-in-out forwards",
+          // transform: "translateY(-100%)",
+        },
+
+        "@keyframes slide-top": {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(0)" },
+        },
+      });
+    }),
+  ],
 };

@@ -1,13 +1,11 @@
 "use client";
 
-import OPTIMUSIcon from "@/app/icon.svg";
 import Image from "@/components/Image";
 import Link from "@/components/Link";
 import QuoteButton from "@/components/QuoteButton";
 import useToggle from "@/hooks/useToggle";
-import wordmark from "@/images/OPTIMUS/wordmark.svg";
+import logo_simplificado from "@/images/OPTIMUS/logo_simplificado.svg";
 
-import styles from "./header.module.scss";
 import Links from "./Links";
 import Mobile from "./Mobile";
 
@@ -21,27 +19,25 @@ const Header = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <div className={styles.left}>
+    <div className="bg-primary-600 px-4 sm:px-8 md:px-16">
+      <header className="animate-slide-top content-auto grid grid-cols-2 rounded-b-3xl bg-white text-xl lg:grid-cols-3">
+        <div className="flex min-h-16 items-center justify-start">
           <Link href="/" onClick={hideMobile}>
-            <div className={styles.iconWrapper}>
-              <Image alt="Ícone da OPTIMUS Jr." placeholder="empty" src={OPTIMUSIcon} width="40" />
-            </div>
             <Image
               alt="'OPTIMUS Jr.' escrito em letras estilizadas"
-              height="18"
+              className="ml-3"
+              height="40"
               placeholder="empty"
-              src={wordmark}
+              src={logo_simplificado}
             />
           </Link>
         </div>
 
-        <ul className={styles.center}>
+        <ul className="hidden items-center justify-center gap-4 lg:flex">
           <Links hideMobile={hideMobile} />
         </ul>
 
-        <div className={styles.right}>
+        <div className="hidden justify-end p-3 lg:flex">
           <QuoteButton />
         </div>
 

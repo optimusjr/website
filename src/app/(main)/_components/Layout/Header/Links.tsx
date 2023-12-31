@@ -1,25 +1,38 @@
+import { tv } from "tailwind-variants";
+
 import Link from "@/components/Link";
 
-import styles from "./links.module.scss";
+const { base, link } = tv({
+  slots: {
+    base: "contents",
+    link: "whitespace-nowrap text-center text-neutral-800 transition-colors hover:text-neutral-900",
+  },
+})();
 
 interface Props {
   hideMobile: () => void;
 }
 
-const Links = ({ hideMobile }: Props) => (
-  <>
-    <li className={styles.link}>
-      <Link href="/about" onClick={hideMobile}>
-        Sobre Nós
-      </Link>
-    </li>
-    <li className={styles.link} onClick={hideMobile}>
-      <Link href="/#services">Serviços</Link>
-    </li>
-    <li className={styles.link} onClick={hideMobile}>
-      <Link href="/#contact">Contato</Link>
-    </li>
-  </>
-);
+const Links = ({ hideMobile }: Props) => {
+  return (
+    <>
+      <li className={base()}>
+        <Link className={link()} href="/about" onClick={hideMobile}>
+          Sobre Nós
+        </Link>
+      </li>
+      <li className={base()} onClick={hideMobile}>
+        <Link className={link()} href="/#services">
+          Serviços
+        </Link>
+      </li>
+      <li className={base()} onClick={hideMobile}>
+        <Link className={link()} href="/#contact">
+          Contato
+        </Link>
+      </li>
+    </>
+  );
+};
 
 export default Links;

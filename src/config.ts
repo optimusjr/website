@@ -2,7 +2,7 @@ export default {
   EMAIL: "contato@optimusjr.com.br",
   PHONE_NUMBER: "(71) 99610-0916",
   QUOTE_URL: "/quote",
-  IS_PROSEL: false,
+  IS_PROSEL: true,
   PROSEL_FORM_URL: "https://forms.gle/YYviJ7yPabRXaSZn8",
 
   INSTAGRAM: "https://www.instagram.com/optimusjrautomacao/",
