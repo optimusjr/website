@@ -4,7 +4,7 @@ const typography = tv({
   variants: {
     variant: {
       p: "text-lg/tight",
-      h1: "font-extrabold uppercase leading-1",
+      h1: "font-extrabold uppercase",
       h2: "text-4xl/1 font-semibold uppercase md:text-5xl lg:text-6xl",
       h3: "text-2xl/1 font-bold uppercase",
       a: "max-w-[40vw] overflow-hidden overflow-ellipsis border-b-1 border-solid text-lg/tight transition-colors hover:border-transparent",

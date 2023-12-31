@@ -76,7 +76,7 @@ export default {
   plugins: [
     plugin(({ addBase, addUtilities }) => {
       addBase({
-        svg: { width: 24 },
+        svg: { width: 24, height: "auto" },
         ".animate-slide-top": { transform: "translateY(-100%)" },
       });
 
@@ -89,6 +89,15 @@ export default {
         "@keyframes slide-top": {
           "0%": { transform: "translateY(-100%)" },
           "100%": { transform: "translateY(0)" },
+        },
+
+        ".animate-fade-in": {
+          animation: "fade-in 0.4s ease-in-out forwards",
+        },
+
+        "@keyframes fade-in": {
+          "0%": { transform: "translateY(20px)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
         },
       });
     }),

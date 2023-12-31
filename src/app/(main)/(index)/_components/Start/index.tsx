@@ -8,8 +8,7 @@ import Typography from "@/components/Typography";
 import bedroomOff from "@/images/bedroom-off.png";
 import bedroomOn from "@/images/bedroom-on.png";
 
-import Divider from "./Divider";
-import styles from "./start.module.scss";
+import Circuits from "./Circuits";
 
 const Start = () => {
   const [light, setLight] = useState(false);
@@ -24,27 +23,37 @@ const Start = () => {
   }, [light]);
 
   return (
-    <Screen backgroundColor="secondary" className={styles.start} firstFullHeight>
-      <Divider />
+    <Screen
+      backgroundColor="secondary"
+      className="relative overflow-hidden md:flex-row"
+      height="firstFull"
+    >
+      <Circuits />
 
-      <div className={styles.text}>
-        <Typography color="primary" variant="h1">
+      <div className="text-center animate-fade-in md:w-min md:text-left">
+        <Typography
+          className="text-[length:calc(2rem+6vw)] leading-1 md:text-[length:calc(0.5rem+4.5vw)]"
+          color="white"
+          variant="h1"
+        >
           Leve o futuro para o seu lar.
         </Typography>
-        <p className="leading-1">
+        <Typography
+          className="text-[length:calc(1rem+2vw)] font-semibold leading-1 md:text-[length:calc(0.5rem+1.5vw)]"
+          color="white"
+        >
           Transformamos sua casa com as nossas soluções de automação residencial.
-        </p>
+        </Typography>
       </div>
 
-      <div className={styles.image}>
-        <Image alt="Quarto com as luzes apagadas" src={bedroomOff} width={1924} priority />
+      <div className="relative overflow-hidden rounded-3xl shadow-md animate-fade-in">
+        <Image alt="Quarto com as luzes apagadas" src={bedroomOff} priority />
 
         <Image
           alt="Quarto com as luzes acessas"
-          className={styles.topImage}
+          className="absolute left-0 top-0 transition-opacity"
           src={bedroomOn}
           style={{ opacity: light ? 1 : 0 }}
-          width={1924}
           priority
         />
 

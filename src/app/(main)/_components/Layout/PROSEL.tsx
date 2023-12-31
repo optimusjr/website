@@ -21,10 +21,9 @@ const PROSEL = () => {
     <AnimatePresence>
       {isOpen && (
         <m.div
-          animate={{ y: 0, opacity: 1 }}
-          className="fixed bottom-0 left-0 sm:p-4"
+          className="animate-fade-in fixed bottom-0 left-0 sm:p-4"
           exit={{ y: 20, opacity: 0 }}
-          initial={{ y: 20, opacity: 0 }}
+          initial={{ y: 0, opacity: 1 }}
           transition={{ linear: true }}
         >
           <Card
