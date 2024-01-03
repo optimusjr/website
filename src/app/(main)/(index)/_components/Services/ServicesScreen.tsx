@@ -5,13 +5,28 @@ import Typography from "@/components/Typography";
 
 import images from "./images";
 import ServiceCard from "./ServiceCard";
-import styles from "./servicesScreen.module.scss";
 
 const ServicesScreen = () => (
-  <Screen backgroundColor="none" className={styles.serviceScreen} id="services" fullHeight>
-    <Title strap="Serviços">Conheça as&nbsp;nossas soluções</Title>
+  <Screen
+    backgroundColor="secondary"
+    className="relative w-min flex-row"
+    height="full"
+    id="services"
+  >
+    <Title
+      className={{
+        container: "text-left",
+        strap:
+          "text-[length:calc(1rem+3vw)] leading-1 text-white sm:text-[length:calc(1rem+3vw)] md:text-[length:calc(1rem+3vw)] lg:text-[length:calc(1rem+3vw)]",
+        title:
+          "text-[length:calc(2rem+6vw)] leading-1 text-white sm:text-[length:calc(2rem+6vw)] md:text-[length:calc(2rem+6vw)] lg:text-[length:calc(2rem+6vw)]",
+      }}
+      strap="Serviços"
+    >
+      Conheça as&nbsp;nossas soluções
+    </Title>
 
-    <ul className={styles.list}>
+    <ul className="flex gap-4 sm:gap-8 md:gap-16">
       <ServiceCard
         aboutPage="/lp/lights"
         image={<Image alt="Luzes penduradas no teto" src={images.lights} width={640} />}

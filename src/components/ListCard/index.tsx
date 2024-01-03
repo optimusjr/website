@@ -8,14 +8,14 @@ import Card from "../Card";
 import styles from "./listCard.module.scss";
 
 interface Props {
-  layout?: "column" | "row" | "none";
+  cardLayout?: "column" | "row";
   customAnime?: HTMLMotionProps<"li">;
   className?: string;
 
   children: React.ReactNode;
 }
 
-const ListCard = ({ layout, customAnime, className, children }: Props) => {
+const ListCard = ({ cardLayout, customAnime, className, children }: Props) => {
   const animation = customAnime
     ? customAnime
     : {
@@ -26,7 +26,12 @@ const ListCard = ({ layout, customAnime, className, children }: Props) => {
       };
 
   return (
-    <Card as={m.li} cardLayout={layout} className={cn(styles.listCard, className)} {...animation}>
+    <Card
+      as={m.li}
+      cardLayout={cardLayout}
+      className={cn(styles.listCard, className)}
+      {...animation}
+    >
       {children}
     </Card>
   );

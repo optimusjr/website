@@ -8,9 +8,12 @@ interface TextFieldProps extends React.HTMLProps<HTMLInputElement> {
 
 const TextField = ({ label, ...props }: TextFieldProps) => (
   <label className={styles.textField}>
-    <Typography component="span" variant="p">
+    <Typography
+      className={props.required ? "after:content-['*']" : ""}
+      component="span"
+      variant="p"
+    >
       {label}
-      {props.required && "*"}
     </Typography>
     <input {...props} />
   </label>

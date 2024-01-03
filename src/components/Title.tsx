@@ -12,13 +12,19 @@ const { base, strap: strapClass } = tv({
 interface Props {
   strap?: string;
   children: React.ReactNode;
-  className?: string;
+  className?: {
+    container?: string;
+    strap?: string;
+    title?: string;
+  };
 }
 
 const Title = ({ strap, className, children }: Props) => (
-  <div className={base({ className })}>
-    {strap && <span className={strapClass()}>{strap}</span>}
-    <Typography variant="h2">{children}</Typography>
+  <div className={base({ className: className?.container })}>
+    {strap && <span className={strapClass({ className: className?.strap })}>{strap}</span>}
+    <Typography className={className?.title} variant="h2">
+      {children}
+    </Typography>
   </div>
 );
 

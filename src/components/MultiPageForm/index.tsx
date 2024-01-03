@@ -34,8 +34,9 @@ const MultiPageForm = ({ schema }: Props) => {
 export default MultiPageForm;
 
 const FormCard = () => {
-  const { goToNextPage, goToPreviousPage, currentPage, isLoading } = useFormContext();
-  const hasSubmissionError = true;
+  const { goToNextPage, goToPreviousPage, currentPage, isLoading, hasSubmissionError } =
+    useFormContext();
+
   const animation = {
     animate: { opacity: 1 },
     exit: { opacity: 0 },

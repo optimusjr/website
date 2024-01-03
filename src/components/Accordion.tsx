@@ -38,7 +38,7 @@ const Accordion = ({ title, children }: Props) => {
           </m.div>
         ) : null}
       </AnimatePresence>
-      <hr className="m-0 border-0 border-t-[1.5px] border-solid border-neutral-400" />
+      <hr className="m-0 border-0 border-t-[1.5px] border-neutral-400" />
     </m.li>
   );
 };
