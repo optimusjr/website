@@ -2,7 +2,6 @@
 
 import { m } from "framer-motion";
 
-import styles from "./fiveStars.module.scss";
 import StarIcon from "./StarIcon";
 
 const FiveStars = () => (
@@ -11,7 +10,7 @@ const FiveStars = () => (
       delayChildren: 0.3,
       staggerChildren: 0.2,
     }}
-    className={styles.fiveStars}
+    className="flex fill-[#ffab00]"
     initial="hidden"
     viewport={{ once: true }}
     whileInView="visible"

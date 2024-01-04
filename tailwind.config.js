@@ -14,6 +14,9 @@ export default {
         0: 0,
         1: 1,
       },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      },
     },
     colors: {
       transparent: "transparent",
