@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-secondary-600 px-4 sm:px-8 md:px-16">
+    <div className="bg-secondary-100 px-4 sm:px-8 md:px-16">
       <header className="content-auto animate-slide-top grid grid-cols-2 rounded-b-3xl bg-white text-xl lg:grid-cols-3">
         <div className="flex min-h-16 items-center justify-start">
           <Link href="/" onClick={hideMobile}>

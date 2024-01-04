@@ -15,12 +15,12 @@ const pattern = tv({
   variants: {
     backgroundColor: {
       green: {
-        container: "bg-secondary-600 fill-secondary-800",
-        gradientDiv: "from-transparent to-secondary-600",
+        container: "bg-secondary-100 fill-secondary-800",
+        gradientDiv: "from-transparent to-secondary-100",
       },
     },
     gradient: {
-      radial: { gradientDiv: "bg-gradient-radial top-[-30%]" },
+      radial: { gradientDiv: "top-[-30%] bg-gradient-radial" },
     },
   },
 });

@@ -25,10 +25,14 @@ const Thanks = () => {
 
   return (
     <Screen backgroundColor="secondary" className="justify-center gap-4" height="firstFull" padding>
-      <Typography className="text-[calc(2rem+2vw)] leading-none" color="primary" variant="h1">
+      <Typography
+        className="text-[length:calc(2rem+2vw)] leading-none"
+        color="primary"
+        variant="h1"
+      >
         Muito Obrigado!
       </Typography>
-      <Typography className="text-[calc(1rem+1vw)] leading-none">
+      <Typography className="text-[length:calc(1rem+1vw)] leading-none">
         Recebemos sua mensagem. Entraremos em contato com você o mais rápido possível.
       </Typography>
 

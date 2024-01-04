@@ -5,7 +5,7 @@ const screen = tv({
   variants: {
     backgroundColor: {
       white: "bg-white",
-      secondary: "bg-secondary-600",
+      secondary: "bg-secondary-100",
     },
     height: {
       full: "min-h-screen",
