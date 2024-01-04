@@ -9,13 +9,11 @@ import Screen from "@/components/Screen";
 import Title from "@/components/Title";
 import Typography from "@/components/Typography";
 
-import styles from "./benefits.module.scss";
-
 const Benefits = () => (
   <Screen backgroundColor="white">
     <Title strap="Vantagens">Por que automatizar sua casa?</Title>
 
-    <ul className={styles.list}>
+    <ul className="grid auto-rows-fr gap-4 sm:gap-8 md:grid-cols-2 md:gap-16 xl:grid-cols-3 2xl:grid-cols-6">
       <ListCard>
         <DeviceIcon />
 

@@ -10,51 +10,52 @@ import Title from "@/components/Title";
 import Typography from "@/components/Typography";
 import config from "@/config";
 
-import styles from "./contact.module.scss";
 import ContactCard from "./ContactCard";
 
 const Contacts = () => (
   <Screen backgroundColor="secondary" id="contact">
     <Title strap="Contato">Fale conosco</Title>
 
-    <div className={styles.content}>
-      <ContactCard href={`https://wa.me/${config.WHATSAPP.replace(/[^0-9]/g, "")}`}>
-        <WhatsappIcon />
-        <div>
-          <Typography variant="h3">Chame no WhatsApp</Typography>
-          <Typography component="p" variant="a">
-            {config.WHATSAPP}
-          </Typography>
-        </div>
+    <div className="grid w-full gap-4 md:w-auto md:grid-cols-[1fr_2fr] md:grid-rows-3">
+      <ContactCard
+        Icon={<WhatsappIcon />}
+        href={`https://wa.me/${config.WHATSAPP.replace(/[^0-9]/g, "")}`}
+      >
+        <Typography className="text-2xl" color="primary" variant="h3">
+          Chame no WhatsApp
+        </Typography>
+        <Typography component="p" variant="a">
+          {config.WHATSAPP}
+        </Typography>
       </ContactCard>
 
-      <ContactCard href={`mailto:${config.EMAIL}`}>
-        <EmailIcon />
-        <div>
-          <Typography variant="h3">Mande um e-mail</Typography>
-          <Typography component="p" variant="a">
-            {config.EMAIL}
-          </Typography>
-        </div>
+      <ContactCard Icon={<EmailIcon />} href={`mailto:${config.EMAIL}`}>
+        <Typography className="text-2xl" color="primary" variant="h3">
+          Mande um e-mail
+        </Typography>
+        <Typography component="p" variant="a">
+          {config.EMAIL}
+        </Typography>
       </ContactCard>
 
-      <ContactCard href={`tel:${config.PHONE_NUMBER.replace(/[^0-9]/g, "")}`}>
-        <PhoneIcon />
-        <div>
-          <Typography variant="h3">Ligue pra gente</Typography>
-          <Typography component="p" variant="a">
-            {config.PHONE_NUMBER}
-          </Typography>
-        </div>
+      <ContactCard Icon={<PhoneIcon />} href={`tel:${config.PHONE_NUMBER.replace(/[^0-9]/g, "")}`}>
+        <Typography className="text-2xl" color="primary" variant="h3">
+          Ligue pra gente
+        </Typography>
+        <Typography component="p" variant="a">
+          {config.PHONE_NUMBER}
+        </Typography>
       </ContactCard>
 
       <Card
         action={`https://formsubmit.co/${config.EMAIL}`}
         as="form"
-        className={styles.contactForm}
+        className="flex flex-col md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-4"
         method="POST"
       >
-        <Typography variant="h3">Mande uma mensagem</Typography>
+        <Typography color="primary" variant="h3">
+          Mande uma mensagem
+        </Typography>
 
         <TextField autoComplete="name" label="Nome:" name="nome" required />
         <TextField autoComplete="email" label="E-mail:" name="email" type="email" required />
@@ -62,7 +63,7 @@ const Contacts = () => (
 
         <input name="_next" type="hidden" value={`${process.env.SITE_URL}/thanks`} />
 
-        <Button type="submit">
+        <Button className="ml-auto" type="submit">
           <SendIcon />
           Enviar
         </Button>

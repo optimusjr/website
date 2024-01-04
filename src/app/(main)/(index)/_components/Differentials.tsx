@@ -7,37 +7,35 @@ import Screen from "@/components/Screen";
 import Title from "@/components/Title";
 import Typography from "@/components/Typography";
 
-import styles from "./differentials.module.scss";
-
 const Differentials = () => (
   <Screen backgroundColor="white">
     <Title strap="Diferenciais">Por que somos a escolha certa?</Title>
 
-    <ul className={styles.list}>
-      <ListCard layout="row">
+    <ul className="grid auto-rows-fr gap-4 sm:gap-8 md:grid-cols-2 md:gap-16">
+      <ListCard cardLayout="row" className="[&>svg]:w-32">
         <TenIcon />
         <div>
-          <Typography color="primary" variant="h3">
+          <Typography className="text-2xl" color="primary" variant="h3">
             Mais de 10 anos de experiência
           </Typography>
           <Typography>Estamos a mais de 10 anos no mercado impactando vidas e negócios.</Typography>
         </div>
       </ListCard>
 
-      <ListCard layout="row">
+      <ListCard cardLayout="row" className="[&>svg]:w-32">
         <HandIcon />
         <div>
-          <Typography color="primary" variant="h3">
+          <Typography className="text-2xl" color="primary" variant="h3">
             Melhor preço do mercado
           </Typography>
           <Typography>Oferecemos preços justos e alta qualidade em nossos serviços.</Typography>
         </div>
       </ListCard>
 
-      <ListCard layout="row">
+      <ListCard cardLayout="row" className="[&>svg]:w-32">
         <CapIcon />
         <div>
-          <Typography color="primary" variant="h3">
+          <Typography className="text-2xl" color="primary" variant="h3">
             Vasto conhecimento técnico
           </Typography>
           <Typography>
@@ -46,7 +44,7 @@ const Differentials = () => (
         </div>
       </ListCard>
 
-      <ListCard layout="row">
+      <ListCard cardLayout="row" className="[&>svg]:w-32">
         <CheckIcon />
         <div>
           <Typography color="primary" variant="h3">
