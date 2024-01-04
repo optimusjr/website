@@ -12,13 +12,13 @@ const Custom404 = () => (
   >
     <div className="flex flex-col items-center gap-4 md:items-start">
       <Typography
-        className="text-[length:calc(0.5rem+4.5vw)] leading-1"
+        className="text-[length:calc(0.5rem+4.5vw)] leading-none"
         color="primary"
         variant="h1"
       >
         Oops! Algo deu errado.
       </Typography>
-      <Typography className="text-[length:calc(0.5rem+1.5vw)] leading-1">
+      <Typography className="text-[length:calc(0.5rem+1.5vw)] leading-none">
         A Página que você está procurando não pôde ser encontrada.
       </Typography>
 

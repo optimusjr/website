@@ -12,7 +12,6 @@ export default {
       },
       lineHeight: {
         0: 0,
-        1: 1,
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

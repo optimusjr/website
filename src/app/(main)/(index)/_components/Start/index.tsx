@@ -32,14 +32,14 @@ const Start = () => {
 
       <div className="text-center animate-fade-in md:w-min md:text-left">
         <Typography
-          className="text-[length:calc(2rem+6vw)] leading-1 md:text-[length:calc(0.5rem+4.5vw)]"
+          className="text-[length:calc(2rem+6vw)] leading-none md:text-[length:calc(0.5rem+4.5vw)]"
           color="white"
           variant="h1"
         >
           Leve o futuro para o seu lar.
         </Typography>
         <Typography
-          className="text-[length:calc(1rem+2vw)] font-semibold leading-1 md:text-[length:calc(0.5rem+1.5vw)]"
+          className="text-[length:calc(1rem+2vw)] font-semibold leading-none md:text-[length:calc(0.5rem+1.5vw)]"
           color="white"
         >
           Transformamos sua casa com as nossas soluções de automação residencial.

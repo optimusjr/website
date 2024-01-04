@@ -17,7 +17,6 @@ import { PAGE_POSITION } from "./FormContext/helpers";
 import useFormContext from "./FormContext/useFormContext";
 import FormPage from "./FormPage";
 import type * as Form from "./formSchemaType";
-import styles from "./multiPageForm.module.scss";
 
 interface Props {
   schema: Form.Schema;
@@ -50,7 +49,7 @@ const FormCard = () => {
         goToNextPage();
       }}
       as="form"
-      className={styles.card}
+      className="w-full max-w-[768px]"
     >
       <AnimateHeight>
         <FormPage />
@@ -70,9 +69,9 @@ const FormCard = () => {
         </p>
       </Alert>
 
-      <div className={styles.controlButtons}>
+      <div className="flex flex-row-reverse flex-wrap-reverse justify-between gap-4 sm:flex-nowrap">
         <AnimatePresence initial={false} mode="popLayout">
-          <Button>
+          <Button className="w-full justify-center sm:w-auto">
             {currentPage.position === PAGE_POSITION.FIRST ? (
               <m.div {...animation}>Vamos lá!</m.div>
             ) : currentPage.position === PAGE_POSITION.LAST && !isLoading ? (
@@ -97,11 +96,16 @@ const FormCard = () => {
         </AnimatePresence>
 
         {currentPage.position !== PAGE_POSITION.FIRST ? (
-          <Button onClick={goToPreviousPage} type="button" variant="outlined">
+          <Button
+            className="w-full justify-center sm:w-auto"
+            onClick={goToPreviousPage}
+            type="button"
+            variant="outlined"
+          >
             Página anterior
           </Button>
         ) : (
-          <div className={styles.skip}>
+          <div>
             <Typography>Prefere falar diretamente com um ser humano?</Typography>
             <Typography>
               <Typography

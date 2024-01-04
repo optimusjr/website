@@ -8,8 +8,8 @@ const screen = tv({
       secondary: "bg-secondary-600",
     },
     height: {
-      full: "h-screen",
-      firstFull: "h-[calc(100vh-64px)]",
+      full: "min-h-screen",
+      firstFull: "min-h-[calc(100vh-64px)]",
     },
   },
 });

@@ -17,9 +17,9 @@ const ServicesScreen = () => (
       className={{
         container: "text-left",
         strap:
-          "text-[length:calc(1rem+3vw)] leading-1 text-white sm:text-[length:calc(1rem+3vw)] md:text-[length:calc(1rem+3vw)] lg:text-[length:calc(1rem+3vw)]",
+          "text-[length:calc(1rem+3vw)] leading-none text-white sm:text-[length:calc(1rem+3vw)] md:text-[length:calc(1rem+3vw)] lg:text-[length:calc(1rem+3vw)]",
         title:
-          "text-[length:calc(2rem+6vw)] leading-1 text-white sm:text-[length:calc(2rem+6vw)] md:text-[length:calc(2rem+6vw)] lg:text-[length:calc(2rem+6vw)]",
+          "text-[length:calc(2rem+6vw)] leading-none text-white sm:text-[length:calc(2rem+6vw)] md:text-[length:calc(2rem+6vw)] lg:text-[length:calc(2rem+6vw)]",
       }}
       strap="Serviços"
     >
