@@ -13,7 +13,7 @@ import logo from "@/images/OPTIMUS/logo.svg";
 import styles from "./about.module.scss";
 
 const AboutStart = () => (
-  <Screen backgroundColor="secondary">
+  <Screen backgroundColor="secondary" gap padding>
     <section className={styles.intro}>
       <div>
         <span>OPTIMUS Jr.</span>

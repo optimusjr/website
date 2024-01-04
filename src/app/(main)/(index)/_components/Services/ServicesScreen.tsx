@@ -7,7 +7,7 @@ import images from "./images";
 import ServiceCard from "./ServiceCard";
 
 const ServicesScreen = () => (
-  <Screen className="relative w-min flex-row" height="full" id="services">
+  <Screen className="relative w-min flex-row" height="full" id="services" gap padding>
     <Title
       className={{
         container: "text-left",

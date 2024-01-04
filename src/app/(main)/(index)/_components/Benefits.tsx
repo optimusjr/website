@@ -10,7 +10,7 @@ import Title from "@/components/Title";
 import Typography from "@/components/Typography";
 
 const Benefits = () => (
-  <Screen backgroundColor="white">
+  <Screen backgroundColor="white" gap padding>
     <Title strap="Vantagens">Por que automatizar sua casa?</Title>
 
     <ul className="grid auto-rows-fr gap-4 sm:gap-8 md:grid-cols-2 md:gap-16 xl:grid-cols-3 2xl:grid-cols-6">

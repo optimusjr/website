@@ -16,8 +16,8 @@ interface Props {
 }
 
 const Showcase = ({ images }: Props) => (
-  <Screen backgroundColor="secondary" className={styles.screen}>
-    <Title className={styles.title} strap="Veja o que já fizemos">
+  <Screen backgroundColor="secondary" className={styles.screen} gap padding>
+    <Title className={{ container: styles.title }} strap="Veja o que já fizemos">
       Quer saber como criamos ambientes únicos e envolventes?
     </Title>
 

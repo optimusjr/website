@@ -19,7 +19,7 @@ import variables from "@/styles/variables.module.scss";
 import styles from "./links.module.scss";
 
 const Links = () => (
-  <Screen backgroundColor="secondary" className={styles.container} firstFullHeight>
+  <Screen backgroundColor="secondary" className={styles.container} height="firstFull" gap padding>
     <div className={styles.title}>
       <Image
         alt="OPTIMUS Jr. Controle e Automação"
@@ -82,7 +82,6 @@ const LinkCard = ({ href, children }: LinkCardProps) => (
     <Link href={href}>
       <Card
         as={m.div}
-        cardLayout="none"
         className={styles.linkCard}
         initial={{ scale: 1, boxShadow: variables.shadowMd }}
         transition={{ type: "spring", duration: 0.3 }}

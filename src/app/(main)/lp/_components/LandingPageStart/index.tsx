@@ -10,7 +10,9 @@ interface Props {
 }
 
 const LandingPageStart = ({ children }: Props) => (
-  <Screen backgroundColor="secondary">{children}</Screen>
+  <Screen backgroundColor="secondary" gap padding>
+    {children}
+  </Screen>
 );
 
 LandingPageStart.intro = ({ children }: Props) => (

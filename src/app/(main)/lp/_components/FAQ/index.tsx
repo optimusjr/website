@@ -13,8 +13,8 @@ interface Props {
 }
 
 const FAQ = ({ questions }: Props) => (
-  <Screen backgroundColor="white" className={styles.screen}>
-    <Title className={styles.title} strap="Perguntas frequentes">
+  <Screen backgroundColor="white" className={styles.screen} gap padding>
+    <Title className={{ container: styles.title }} strap="Perguntas frequentes">
       Você tem alguma dúvida?
     </Title>
 

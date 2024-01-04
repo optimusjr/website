@@ -5,8 +5,7 @@ import { useEffect } from "react";
 
 import BackToHomeButton from "@/components/BackToHomeButton";
 import Screen from "@/components/Screen";
-
-import styles from "./thanks.module.scss";
+import Typography from "@/components/Typography";
 
 declare global {
   interface Window {
@@ -25,13 +24,15 @@ const Thanks = () => {
   }, []);
 
   return (
-    <Screen backgroundColor="secondary" className={styles.thanks} firstFullHeight>
-      <div>
-        <h1>Muito Obrigado!</h1>
-        <p>Recebemos sua mensagem. Entraremos em contato com você o mais rápido possível.</p>
+    <Screen backgroundColor="secondary" className="justify-center gap-4" height="firstFull" padding>
+      <Typography className="text-[calc(2rem+2vw)] leading-none" color="primary" variant="h1">
+        Muito Obrigado!
+      </Typography>
+      <Typography className="text-[calc(1rem+1vw)] leading-none">
+        Recebemos sua mensagem. Entraremos em contato com você o mais rápido possível.
+      </Typography>
 
-        <BackToHomeButton />
-      </div>
+      <BackToHomeButton />
     </Screen>
   );
 };

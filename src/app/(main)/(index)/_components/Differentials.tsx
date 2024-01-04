@@ -8,7 +8,7 @@ import Title from "@/components/Title";
 import Typography from "@/components/Typography";
 
 const Differentials = () => (
-  <Screen backgroundColor="white">
+  <Screen backgroundColor="white" gap padding>
     <Title strap="Diferenciais">Por que somos a escolha certa?</Title>
 
     <ul className="grid auto-rows-fr gap-4 sm:gap-8 md:grid-cols-2 md:gap-16">

@@ -13,7 +13,7 @@ import config from "@/config";
 import ContactCard from "./ContactCard";
 
 const Contacts = () => (
-  <Screen backgroundColor="secondary" id="contact">
+  <Screen backgroundColor="secondary" id="contact" gap padding>
     <Title strap="Contato">Fale conosco</Title>
 
     <div className="grid w-full gap-4 md:w-auto md:grid-cols-[1fr_2fr] md:grid-rows-3">

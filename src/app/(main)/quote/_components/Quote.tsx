@@ -9,7 +9,7 @@ import styles from "./quote.module.scss";
 
 const Quote = () => {
   return (
-    <Screen backgroundColor="secondary" height="firstFull">
+    <Screen backgroundColor="secondary" height="firstFull" gap padding>
       <Typography className={styles.title} component="h1" variant="h2">
         {quoteFormSchema.title}
       </Typography>

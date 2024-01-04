@@ -27,6 +27,8 @@ const Start = () => {
       backgroundColor="secondary"
       className="relative overflow-hidden md:flex-row"
       height="firstFull"
+      gap
+      padding
     >
       <Circuits />
 

@@ -1,7 +1,7 @@
 import { tv, type VariantProps } from "tailwind-variants";
 
 const screen = tv({
-  base: "flex flex-col items-center gap-4 p-4 sm:gap-8 sm:p-8 md:gap-16 md:p-16",
+  base: "flex flex-col items-center",
   variants: {
     backgroundColor: {
       white: "bg-white",
@@ -10,6 +10,12 @@ const screen = tv({
     height: {
       full: "min-h-screen",
       firstFull: "min-h-[calc(100vh-64px)]",
+    },
+    gap: {
+      true: "gap-4 sm:gap-8 md:gap-16",
+    },
+    padding: {
+      true: "p-4 sm:p-8 md:p-16",
     },
   },
 });
@@ -20,15 +26,8 @@ interface Props extends VariantProps<typeof screen> {
   className?: string;
 }
 
-const Screen = ({ children, id, className, height, backgroundColor }: Props) => (
-  <article
-    className={screen({
-      backgroundColor,
-      height,
-      className,
-    })}
-    id={id}
-  >
+const Screen = ({ children, id, className, height, gap, padding, backgroundColor }: Props) => (
+  <article className={screen({ backgroundColor, height, gap, padding, className })} id={id}>
     {children}
   </article>
 );

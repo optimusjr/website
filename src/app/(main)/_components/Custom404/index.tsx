@@ -8,7 +8,9 @@ const Custom404 = () => (
   <Screen
     backgroundColor="secondary"
     className="grid justify-center md:grid-cols-[1fr_2fr]"
-    firstFullHeight
+    height="firstFull"
+    gap
+    padding
   >
     <div className="flex flex-col items-center gap-4 md:items-start">
       <Typography

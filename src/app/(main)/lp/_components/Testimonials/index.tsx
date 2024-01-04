@@ -21,11 +21,11 @@ interface Props {
 }
 
 const Testimonials = ({ testimonials }: Props) => (
-  <Screen backgroundColor="white">
+  <Screen backgroundColor="white" gap padding>
     <Title strap="Depoimentos">O que os nossos clientes dizem?</Title>
     <ul className={styles.content}>
       {testimonials.map((testimonial, key) => (
-        <ListCard className={styles.testimonialCard} key={key} layout="row">
+        <ListCard cardLayout="row" className={styles.testimonialCard} key={key}>
           <div className={styles.imageContainer}>
             <Image
               alt={`Foto de ${testimonial.name}`}
