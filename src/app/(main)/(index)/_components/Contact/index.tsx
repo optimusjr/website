@@ -53,7 +53,7 @@ const Contacts = () => (
         className="flex flex-col md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-4"
         method="POST"
       >
-        <Typography color="primary" variant="h3">
+        <Typography className="text-center text-2xl" color="primary" variant="h3">
           Mande uma mensagem
         </Typography>
 
