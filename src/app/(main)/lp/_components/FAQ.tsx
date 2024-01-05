@@ -1,9 +1,7 @@
-import { Accordion, AccordionContainer } from "@/components/Accordion";
+import Accordion from "@/components/Accordion";
 import Screen from "@/components/Screen";
 import Title from "@/components/Title";
 import Typography from "@/components/Typography";
-
-import styles from "./FAQ.module.scss";
 
 interface Props {
   questions: {
@@ -13,18 +11,21 @@ interface Props {
 }
 
 const FAQ = ({ questions }: Props) => (
-  <Screen backgroundColor="white" className={styles.screen} gap padding>
-    <Title className={{ container: styles.title }} strap="Perguntas frequentes">
+  <Screen backgroundColor="white" className="items-start md:grid md:grid-cols-2">
+    <Title
+      className={{ container: "p-4 sm:p-8 md:sticky md:top-0 md:p-16 md:text-left" }}
+      strap="Perguntas frequentes"
+    >
       Você tem alguma dúvida?
     </Title>
 
-    <AccordionContainer>
+    <Accordion className="p-4 sm:p-8 md:p-16">
       {questions.map((question, key) => (
-        <Accordion key={key} title={question.question}>
+        <Accordion.item key={key} title={question.question}>
           <Typography>{question.answer}</Typography>
-        </Accordion>
+        </Accordion.item>
       ))}
-    </AccordionContainer>
+    </Accordion>
   </Screen>
 );
 

@@ -11,8 +11,6 @@ import {
 } from "framer-motion";
 import { useRef } from "react";
 
-import styles from "./parallax.module.scss";
-
 const wrap = (min: number, max: number, v: number) => {
   const rangeSize = max - min;
   return ((((v - min) % rangeSize) + rangeSize) % rangeSize) + min;
@@ -67,9 +65,9 @@ const Parallax = ({ children, baseVelocity }: ParallaxProps) => {
       onMouseLeave={() => {
         hoverFactor.set(1);
       }}
-      className={styles.parallaxContainer}
+      className="flex w-full overflow-hidden"
     >
-      <m.div className={styles.parallax} style={{ x }}>
+      <m.div className="flex w-min py-4 sm:py-8 md:py-16" style={{ x }}>
         {/*
           A quantidade de vezes que se deve repetir o children vai
           depender do tamanho do conteúdo e da tela.

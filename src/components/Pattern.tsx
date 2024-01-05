@@ -10,7 +10,7 @@ const pattern = tv({
   slots: {
     container: "absolute inset-0 -z-10 overflow-hidden",
     patternDiv: "absolute aspect-square min-h-full w-full",
-    gradientDiv: "absolute h-full w-full",
+    gradientDiv: "absolute size-full",
   },
   variants: {
     backgroundColor: {
@@ -58,7 +58,7 @@ const Pattern = ({ SVGPattern, backgroundColor, gradient }: Props) => {
       <div className={patternDiv()}>
         <div className={gradientDiv()} />
 
-        <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+        <svg className="size-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <SVGPattern id={patternId} />
           </defs>

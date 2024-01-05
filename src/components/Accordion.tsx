@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, m } from "framer-motion";
+import { tv } from "tailwind-variants";
 
 import Button from "@/components/Button";
 import ChevronIcon from "@/components/icons/Chevron";
@@ -8,11 +9,24 @@ import Typography from "@/components/Typography";
 import useToggle from "@/hooks/useToggle";
 
 interface Props {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const accordion = tv({
+  base: "flex flex-col gap-8",
+});
+
+const Accordion = ({ children, className }: Props) => {
+  return <ul className={accordion({ className })}>{children}</ul>;
+};
+
+interface ItemProps {
   title: string;
   children: React.ReactNode;
 }
 
-const Accordion = ({ title, children }: Props) => {
+Accordion.item = ({ title, children }: ItemProps) => {
   const [open, toggleOpen] = useToggle(false);
 
   return (
@@ -43,13 +57,4 @@ const Accordion = ({ title, children }: Props) => {
   );
 };
 
-interface ContainerProps {
-  children: React.ReactNode;
-}
-
-const AccordionContainer = ({ children }: ContainerProps) => {
-  return <ul className="flex flex-col gap-8">{children}</ul>;
-};
-
 export default Accordion;
-export { Accordion, AccordionContainer };

@@ -11,23 +11,23 @@ import switches from "@/images/lights/switches.png";
 
 import CallToAction from "../_components/CallToAction";
 import FAQ from "../_components/FAQ";
-import LandingPageStart from "../_components/LandingPageStart";
 import Showcase from "../_components/Showcase";
+import Start from "../_components/Start";
 import Testimonials from "../_components/Testimonials";
 
 const Content = () => (
   <>
-    <LandingPageStart>
-      <LandingPageStart.intro>
-        <span>Automação de luzes</span>
-        <h1>
+    <Start>
+      <Start.intro>
+        <Start.span>Automação de luzes</Start.span>
+        <Start.h1>
           Controle suas luzes de
           <br />
           qualquer lugar
-        </h1>
-        <p>Economize energia e torne sua casa mais conectada</p>
-      </LandingPageStart.intro>
-      <LandingPageStart.features
+        </Start.h1>
+        <Start.p>Economize energia e torne sua casa mais conectada</Start.p>
+      </Start.intro>
+      <Start.features
         features={[
           {
             icon: SofaIcon,
@@ -49,7 +49,7 @@ const Content = () => (
           },
         ]}
       />
-    </LandingPageStart>
+    </Start>
 
     <Testimonials
       testimonials={[

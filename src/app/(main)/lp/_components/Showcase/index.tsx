@@ -6,7 +6,6 @@ import Screen from "@/components/Screen";
 import Title from "@/components/Title";
 
 import Parallax from "./Parallax";
-import styles from "./showcase.module.scss";
 
 interface Props {
   images: {
@@ -16,15 +15,26 @@ interface Props {
 }
 
 const Showcase = ({ images }: Props) => (
-  <Screen backgroundColor="secondary" className={styles.screen} gap padding>
-    <Title className={{ container: styles.title }} strap="Veja o que já fizemos">
+  <Screen backgroundColor="secondary">
+    <Title
+      className={{ container: "px-4 pt-4 sm:px-8 sm:pt-8 md:px-16 md:pt-16" }}
+      strap="Veja o que já fizemos"
+    >
       Quer saber como criamos ambientes únicos e envolventes?
     </Title>
 
     <Parallax baseVelocity={2}>
       {images.map((image, key) => (
-        <Card className={styles.card} key={key}>
-          <Image alt={image.alt} src={image.image} title={image.alt} width={600} />
+        <Card
+          className="mx-4 size-32 overflow-hidden p-0 sm:mx-8 sm:size-64 md:size-72 lg:size-80 2xl:size-[40rem]"
+          key={key}
+        >
+          <Image
+            alt={image.alt}
+            className="transition-transform duration-1000 ease-in-out hover:scale-110"
+            src={image.image}
+            title={image.alt}
+          />
         </Card>
       ))}
     </Parallax>
