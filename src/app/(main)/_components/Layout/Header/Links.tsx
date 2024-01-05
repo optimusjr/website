@@ -5,7 +5,7 @@ import Link from "@/components/Link";
 const { base, link } = tv({
   slots: {
     base: "contents",
-    link: "whitespace-nowrap text-center text-neutral-800 transition-colors hover:text-neutral-900",
+    link: "whitespace-nowrap text-center text-neutral-900 transition-colors hover:text-black",
   },
 })();
 

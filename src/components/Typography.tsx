@@ -11,7 +11,7 @@ const typography = tv({
     },
     color: {
       primary: "text-primary-800",
-      neutral: "text-neutral-900",
+      black: "text-black",
       white: "text-neutral-50",
     },
   },
@@ -23,13 +23,13 @@ const typography = tv({
     },
     {
       variant: "a",
-      color: "neutral",
-      className: "border-neutral-900",
+      color: "black",
+      className: "border-black",
     },
   ],
   defaultVariants: {
     variant: "p",
-    color: "neutral",
+    color: "black",
   },
 });
 

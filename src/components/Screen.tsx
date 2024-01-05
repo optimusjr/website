@@ -4,7 +4,7 @@ const screen = tv({
   base: "flex flex-col items-center",
   variants: {
     backgroundColor: {
-      white: "bg-white",
+      white: "bg-neutral-50",
       secondary: "bg-secondary-100",
     },
     height: {

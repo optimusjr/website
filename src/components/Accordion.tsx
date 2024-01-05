@@ -32,9 +32,7 @@ Accordion.item = ({ title, children }: ItemProps) => {
   return (
     <m.li>
       <div className="flex content-between items-start py-4">
-        <Typography className="text-neutral-900" variant="h3">
-          {title}
-        </Typography>
+        <Typography variant="h3">{title}</Typography>
         <Button onClick={toggleOpen} variant="text">
           <ChevronIcon open={open} />
         </Button>

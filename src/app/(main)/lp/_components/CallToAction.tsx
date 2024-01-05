@@ -14,10 +14,10 @@ const CallToAction = () => (
   >
     <Pattern SVGPattern={CogsPattern} backgroundColor="green" gradient="radial" />
 
-    <Typography className="text-[length:calc(1.8rem+2vw)] text-white" variant="h2">
+    <Typography className="text-[length:calc(1.8rem+2vw)]" variant="h2">
       O que você está esperando?
     </Typography>
-    <Typography className="text-[length:calc(1rem+1vw)] text-white">
+    <Typography className="text-[length:calc(1rem+1vw)]">
       Descubra como a automação pode tornar sua vida mais confortável e eficiente.
     </Typography>
 

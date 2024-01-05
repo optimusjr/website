@@ -85,7 +85,7 @@ const ServicesMobile = () => {
 
   return (
     <div className="h-screen bg-secondary-100">
-      <div className="absolute z-0 h-screen w-screen">
+      <div className="absolute z-0 h-screen w-screen overflow-hidden">
         <m.div className="absolute -left-32 -top-32 sm:-left-64 sm:-top-64" style={{ rotate }}>
           <GearIcon className="w-64 fill-white sm:w-[32rem]" />
         </m.div>

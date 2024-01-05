@@ -18,7 +18,7 @@ export default {
     },
     colors: {
       transparent: "transparent",
-      black: "#000",
+      black: "#000", // Cor da tipografia
       white: "#fff",
       primary: {
         50: "#e0f1eb",
@@ -45,16 +45,16 @@ export default {
         900: "#115a3b",
       },
       neutral: {
-        50: "#f5f5f5",
-        100: "#e9e9e9",
-        200: "#d9d9d9",
-        300: "#c4c4c4",
-        400: "#9d9d9d",
-        500: "#7b7b7b",
-        600: "#555555",
-        700: "#434343",
-        800: "#262626",
-        900: "#000000", // Cor da tipografia
+        50: "#fafafa",
+        100: "#f5f5f5",
+        200: "#eeeeee",
+        300: "#e0e0e0",
+        400: "#bdbdbd",
+        500: "#9e9e9e",
+        600: "#757575",
+        700: "#616161",
+        800: "#424242",
+        900: "#212121",
       },
       red: {
         50: "#ffebee",
@@ -78,13 +78,12 @@ export default {
     plugin(({ addBase, addUtilities }) => {
       addBase({
         svg: { width: 24, height: "auto" },
-        ".animate-slide-top": { transform: "translateY(-100%)" },
       });
 
       addUtilities({
         ".animate-slide-top": {
           animation: "slide-top 0.4s 0.4s ease-in-out forwards",
-          // transform: "translateY(-100%)",
+          transform: "translateY(-100%)",
         },
 
         "@keyframes slide-top": {

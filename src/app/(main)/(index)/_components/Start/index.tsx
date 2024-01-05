@@ -5,45 +5,45 @@ import { useEffect, useState } from "react";
 import Image from "@/components/Image";
 import Screen from "@/components/Screen";
 import Typography from "@/components/Typography";
+import useToggle from "@/hooks/useToggle";
 import bedroomOff from "@/images/bedroom-off.png";
 import bedroomOn from "@/images/bedroom-on.png";
 
 import Circuits from "./Circuits";
+import Divider from "./Divider";
 
 const Start = () => {
-  const [light, setLight] = useState(false);
+  const [light, toggleLight] = useToggle(false);
   const [disableTimer, setDisableTimer] = useState(false);
 
   let timer: NodeJS.Timeout | undefined;
 
   useEffect(() => {
     if (!disableTimer) {
-      timer = setTimeout(() => setLight(!light), 5000);
+      timer = setTimeout(toggleLight, 5000);
     }
   }, [light]);
 
   return (
     <Screen
       backgroundColor="secondary"
-      className="relative overflow-hidden md:flex-row"
+      className="relative justify-center overflow-hidden md:flex-row"
       height="firstFull"
       gap
       padding
     >
       <Circuits />
+      <Divider />
 
       <div className="text-center animate-fade-in md:w-min md:text-left">
         <Typography
           className="text-[length:calc(2rem+6vw)] leading-none md:text-[length:calc(0.5rem+4.5vw)]"
-          color="white"
+          color="primary"
           variant="h1"
         >
           Leve o futuro para o seu lar.
         </Typography>
-        <Typography
-          className="text-[length:calc(1rem+2vw)] font-semibold leading-none md:text-[length:calc(0.5rem+1.5vw)]"
-          color="white"
-        >
+        <Typography className="text-[length:calc(1rem+2vw)] leading-none md:text-[length:calc(0.5rem+1.5vw)]">
           Transformamos sua casa com as nossas soluções de automação residencial.
         </Typography>
       </div>
@@ -61,7 +61,7 @@ const Start = () => {
 
         <button
           onClick={() => {
-            setLight(!light);
+            toggleLight();
             if (!disableTimer) {
               setDisableTimer(true);
               clearTimeout(timer);
@@ -78,7 +78,7 @@ const Start = () => {
 
             opacity: 0,
           }}
-          aria-label={light ? "Desligar Luzes" : "Ligar luzes"}
+          aria-label={"Interruptor da luz"}
         />
       </div>
     </Screen>

@@ -1,5 +1,5 @@
 const Circuits = () => (
-  <div className="absolute bottom-0 right-0 -rotate-90 fill-secondary-800">
+  <div className="absolute bottom-0 right-0 hidden -rotate-90 fill-secondary-200 md:block">
     <svg
       className="h-[90vh] w-auto"
       version="1.1"
