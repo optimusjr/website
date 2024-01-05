@@ -21,15 +21,12 @@ const PROSEL = () => {
     <AnimatePresence>
       {isOpen && (
         <m.div
-          className="animate-fade-in fixed bottom-0 left-0 sm:p-4"
+          className="fixed bottom-0 left-0 animate-fade-in sm:p-4"
           exit={{ y: 20, opacity: 0 }}
           initial={{ y: 0, opacity: 1 }}
           transition={{ linear: true }}
         >
-          <Card
-            cardLayout="none"
-            className="flex flex-col items-start rounded-b-none p-6 shadow-2xl sm:max-w-lg sm:rounded-2xl"
-          >
+          <Card className="flex flex-col items-start rounded-b-none p-6 shadow-2xl sm:max-w-lg sm:rounded-2xl">
             <div className="flex w-full items-center justify-between">
               <Typography color="primary" variant="h3">
                 Estamos contratando!
