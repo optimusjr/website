@@ -14,7 +14,6 @@ import Screen from "@/components/Screen";
 import SocialLinks from "@/components/SocialLinks";
 import Typography from "@/components/Typography";
 import config from "@/config";
-import variables from "@/styles/variables.module.scss";
 
 const Links = () => (
   <Screen backgroundColor="secondary" className="gap-8" height="firstFull" padding>
@@ -80,10 +79,10 @@ const LinkCard = ({ href, children }: LinkCardProps) => (
     <Link href={href}>
       <Card
         as={m.div}
-        className="grid grid-cols-[48px_auto] items-center p-4 [&>svg]:w-12"
-        initial={{ scale: 1, boxShadow: variables.shadowMd }}
+        className="grid grid-cols-[48px_auto] items-center p-4 shadow-md transition-shadow hover:shadow-lg [&>svg]:w-12"
+        initial={{ scale: 1 }}
         transition={{ type: "spring", duration: 0.3 }}
-        whileHover={{ scale: 1.01, boxShadow: variables.shadowLg }}
+        whileHover={{ scale: 1.01 }}
       >
         {children}
       </Card>

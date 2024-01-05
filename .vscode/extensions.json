@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "mrmlnc.vscode-scss",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
     "streetsidesoftware.code-spell-checker",
