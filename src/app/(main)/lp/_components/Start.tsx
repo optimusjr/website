@@ -46,7 +46,7 @@ Start.p = ({ children }: Props) => (
 
 interface FeaturesProps {
   features: {
-    icon: () => React.ReactElement;
+    icon: React.ComponentType;
     title: string;
     description: string;
   }[];

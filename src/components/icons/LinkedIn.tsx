@@ -1,7 +1,4 @@
-interface Props<T extends React.ElementType> {
-  as?: T;
-}
-
+import { Props } from "@/utils/types/GenericIconType";
 const LinkedInIcon = <T extends React.ElementType = "svg">({
   as,
   ...props
