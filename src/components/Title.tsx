@@ -1,11 +1,10 @@
 import { tv } from "tailwind-variants";
 
-import Typography from "@/components/Typography";
-
-const { base, strap: strapClass } = tv({
+const { container, title, strap } = tv({
   slots: {
-    base: "grid text-center",
-    strap: "pb-4 text-2xl font-medium text-primary-800 md:text-3xl",
+    container: "grid text-center",
+    title: "text-4xl font-semibold uppercase md:text-5xl lg:text-6xl",
+    strap: "pb-4 text-2xl font-medium text-primary-800 sm:text-3xl",
   },
 })();
 
@@ -19,12 +18,10 @@ interface Props {
   };
 }
 
-const Title = ({ strap, className, children }: Props) => (
-  <div className={base({ className: className?.container })}>
-    {strap && <span className={strapClass({ className: className?.strap })}>{strap}</span>}
-    <Typography className={className?.title} variant="h2">
-      {children}
-    </Typography>
+const Title = ({ strap: strapText, className, children }: Props) => (
+  <div className={container({ className: className?.container })}>
+    {strap && <span className={strap({ className: className?.strap })}>{strapText}</span>}
+    <h2 className={title({ className: className?.title })}>{children}</h2>
   </div>
 );
 

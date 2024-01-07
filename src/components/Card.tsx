@@ -1,19 +1,21 @@
 import { tv, type VariantProps } from "tailwind-variants";
 
 const card = tv({
-  base: "bg-200 gap-4 rounded-3xl fill-black p-8 shadow-md",
+  base: "bg-200 rounded-3xl fill-black shadow-md",
   variants: {
     cardLayout: {
       column: "flex flex-col text-center",
       row: "grid grid-cols-[1fr_2fr] text-left",
     },
-    color: {
+    bgColor: {
       white: "bg-white",
       neutral: "bg-neutral-200",
     },
+    gap: { true: "gap-4" },
+    padding: { true: "p-8" },
   },
   defaultVariants: {
-    color: "neutral",
+    bgColor: "neutral",
   },
 });
 

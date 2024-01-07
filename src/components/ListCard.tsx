@@ -2,6 +2,8 @@
 
 import { HTMLMotionProps, m } from "framer-motion";
 
+import fadeIn from "@/utils/animations/fadeIn";
+
 import Card from "./Card";
 
 interface Props {
@@ -13,14 +15,7 @@ interface Props {
 }
 
 const ListCard = ({ cardLayout, customAnime, className, children }: Props) => {
-  const animation = customAnime
-    ? customAnime
-    : {
-        initial: { y: 20, opacity: 0 },
-        whileInView: { y: 0, opacity: 1 },
-        viewport: { once: true },
-        transition: { duration: 0.4 },
-      };
+  const animation = customAnime ? customAnime : fadeIn;
 
   return (
     <Card as={m.li} cardLayout={cardLayout} className={className} {...animation}>

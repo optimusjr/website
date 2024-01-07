@@ -13,7 +13,7 @@ export interface Option {
   /**
    * Ícone, deve ser importado da pasta src/components/icons
    */
-  icon?: () => React.ReactElement;
+  icon?: React.ComponentType;
 }
 
 export interface TextQuestion {

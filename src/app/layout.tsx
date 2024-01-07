@@ -1,4 +1,4 @@
-import "@/globals.css";
+import "@/utils/globals.css";
 
 import { Viewport } from "next";
 export const viewport: Viewport = {
