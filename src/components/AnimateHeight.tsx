@@ -3,11 +3,9 @@
 import { m } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-interface Props {
-  children: React.ReactNode;
-}
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
-const AnimateHeight = ({ children }: Props) => {
+const AnimateHeight = ({ children }: PropsWithChildren) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState<number | "auto">("auto");
 

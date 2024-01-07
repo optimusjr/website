@@ -7,10 +7,10 @@ import Image from "@/components/Image";
 import Link from "@/components/Link";
 import config from "@/config";
 import fadeIn from "@/utils/animations/fadeIn";
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
-export interface Props {
+export interface Props extends PropsWithChildren {
   aboutPage?: string;
-  children: React.ReactNode;
 }
 
 const ServiceCard = ({ aboutPage, children }: Props) => (
@@ -43,10 +43,6 @@ ServiceCard.image = ({ className, ...props }: React.ComponentProps<typeof Image>
     <Image className={ServiceCardImage({ className })} {...props} />
   </div>
 );
-
-interface PropsWithChildren {
-  children: React.ReactNode;
-}
 
 ServiceCard.title = ({ children }: PropsWithChildren) => (
   <h3 className="text-center text-2xl/none font-bold uppercase text-primary-800">{children}</h3>

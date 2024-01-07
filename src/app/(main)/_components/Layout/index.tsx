@@ -1,12 +1,10 @@
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
+
 import Footer from "./Footer";
 import Header from "./Header";
 import PROSEL from "./PROSEL";
 
-interface Props {
-  children: React.ReactNode;
-}
-
-const Layout = ({ children }: Props) => (
+const Layout = ({ children }: PropsWithChildren) => (
   <>
     <Header />
     <main>{children}</main>

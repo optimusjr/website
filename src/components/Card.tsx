@@ -1,5 +1,7 @@
 import { tv, type VariantProps } from "tailwind-variants";
 
+import { PropsWithChildren } from "@/utils/types/PropsWithChildren";
+
 const card = tv({
   base: "bg-200 rounded-3xl fill-black shadow-md",
   variants: {
@@ -19,10 +21,9 @@ const card = tv({
   },
 });
 
-interface Props<T extends React.ElementType> extends VariantProps<typeof card> {
+interface Props<T extends React.ElementType> extends PropsWithChildren, VariantProps<typeof card> {
   as?: T;
   className?: string;
-  children?: React.ReactNode;
 }
 
 const Card = <T extends React.ElementType = "div">({

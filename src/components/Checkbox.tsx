@@ -2,7 +2,7 @@ import Typography from "@/components/Typography";
 
 interface TextFieldProps extends Omit<React.HTMLProps<HTMLInputElement>, "type"> {
   label: string;
-  Icon?: React.FC;
+  Icon?: React.ComponentType;
 }
 
 const Checkbox = ({ label, Icon, ...props }: TextFieldProps) => (

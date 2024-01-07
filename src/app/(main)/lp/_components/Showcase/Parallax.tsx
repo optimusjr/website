@@ -11,13 +11,14 @@ import {
 } from "framer-motion";
 import { useRef } from "react";
 
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
+
 const wrap = (min: number, max: number, v: number) => {
   const rangeSize = max - min;
   return ((((v - min) % rangeSize) + rangeSize) % rangeSize) + min;
 };
 
-interface ParallaxProps {
-  children: React.ReactNode;
+interface ParallaxProps extends PropsWithChildren {
   baseVelocity: number;
 }
 

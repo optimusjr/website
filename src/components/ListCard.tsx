@@ -3,15 +3,14 @@
 import { HTMLMotionProps, m } from "framer-motion";
 
 import fadeIn from "@/utils/animations/fadeIn";
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
 import Card from "./Card";
 
-interface Props {
+interface Props extends PropsWithChildren {
   cardLayout?: "column" | "row";
   customAnime?: HTMLMotionProps<"li">;
   className?: string;
-
-  children: React.ReactNode;
 }
 
 const ListCard = ({ cardLayout, customAnime, className, children }: Props) => {

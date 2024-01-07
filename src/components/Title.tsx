@@ -1,5 +1,7 @@
 import { tv } from "tailwind-variants";
 
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
+
 const { container, title, strap } = tv({
   slots: {
     container: "text-center",
@@ -8,9 +10,8 @@ const { container, title, strap } = tv({
   },
 })();
 
-interface Props {
+interface Props extends PropsWithChildren {
   strap?: string;
-  children: React.ReactNode;
   className?: {
     container?: string;
     strap?: string;

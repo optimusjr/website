@@ -4,6 +4,7 @@ import { AnimatePresence, m } from "framer-motion";
 import { tv, type VariantProps } from "tailwind-variants";
 
 import ErrorIcon from "@/components/icons/Error";
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
 const alert = tv({
   base: "flex items-center gap-2 rounded-lg p-4 text-left",
@@ -18,10 +19,9 @@ const alert = tv({
   },
 });
 
-interface Props extends Required<VariantProps<typeof alert>> {
+interface Props extends PropsWithChildren, Required<VariantProps<typeof alert>> {
   show: boolean;
   className?: string;
-  children: React.ReactNode;
 }
 
 const icons = {

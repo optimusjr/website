@@ -7,9 +7,9 @@ import Button from "@/components/Button";
 import ChevronIcon from "@/components/icons/Chevron";
 import Typography from "@/components/Typography";
 import useToggle from "@/hooks/useToggle";
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
-interface Props {
-  children: React.ReactNode;
+interface Props extends PropsWithChildren {
   className?: string;
 }
 
@@ -21,9 +21,8 @@ const Accordion = ({ children, className }: Props) => {
   return <ul className={accordion({ className })}>{children}</ul>;
 };
 
-interface ItemProps {
+interface ItemProps extends PropsWithChildren {
   title: string;
-  children: React.ReactNode;
 }
 
 Accordion.item = ({ title, children }: ItemProps) => {

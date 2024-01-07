@@ -14,6 +14,7 @@ import Screen from "@/components/Screen";
 import SocialLinks from "@/components/SocialLinks";
 import Typography from "@/components/Typography";
 import config from "@/config";
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
 const Links = () => (
   <Screen backgroundColor="secondary" className="gap-8" height="firstFull" padding>
@@ -69,9 +70,8 @@ const Links = () => (
   </Screen>
 );
 
-interface LinkCardProps {
+interface LinkCardProps extends PropsWithChildren {
   href: string;
-  children: React.ReactNode;
 }
 
 const LinkCard = ({ href, children }: LinkCardProps) => (

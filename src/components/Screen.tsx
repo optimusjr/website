@@ -1,5 +1,7 @@
 import { tv, type VariantProps } from "tailwind-variants";
 
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
+
 const screen = tv({
   base: "flex flex-col items-center",
   variants: {
@@ -23,8 +25,7 @@ const screen = tv({
   },
 });
 
-interface Props extends VariantProps<typeof screen> {
-  children: React.ReactNode;
+interface Props extends PropsWithChildren, VariantProps<typeof screen> {
   id?: string;
   className?: string;
 }

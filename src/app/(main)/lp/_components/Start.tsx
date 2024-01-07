@@ -2,18 +2,15 @@ import ListCard from "@/components/ListCard";
 import QuoteButton from "@/components/QuoteButton";
 import Screen from "@/components/Screen";
 import Typography from "@/components/Typography";
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
-interface Props {
-  children: React.ReactNode;
-}
-
-const Start = ({ children }: Props) => (
+const Start = ({ children }: PropsWithChildren) => (
   <Screen backgroundColor="secondary" gap padding>
     {children}
   </Screen>
 );
 
-Start.intro = ({ children }: Props) => (
+Start.intro = ({ children }: PropsWithChildren) => (
   <section className="flex flex-col items-center gap-4 py-8 animate-fade-in lg:py-16">
     {children}
 
@@ -21,7 +18,7 @@ Start.intro = ({ children }: Props) => (
   </section>
 );
 
-Start.span = ({ children }: Props) => (
+Start.span = ({ children }: PropsWithChildren) => (
   <Typography
     className="text-[length:calc(1rem+1vw)] font-bold"
     color="primary"
@@ -32,13 +29,13 @@ Start.span = ({ children }: Props) => (
   </Typography>
 );
 
-Start.h1 = ({ children }: Props) => (
+Start.h1 = ({ children }: PropsWithChildren) => (
   <Typography className="text-center text-[length:calc(2rem+2vw)] leading-none" variant="h1">
     {children}
   </Typography>
 );
 
-Start.p = ({ children }: Props) => (
+Start.p = ({ children }: PropsWithChildren) => (
   <Typography className="text-[length:calc(1rem+1vw)]" variant="p">
     {children}
   </Typography>

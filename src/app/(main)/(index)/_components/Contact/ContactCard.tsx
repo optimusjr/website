@@ -4,11 +4,11 @@ import { m } from "framer-motion";
 
 import Card from "@/components/Card";
 import Link from "@/components/Link";
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
-interface Props {
+interface Props extends PropsWithChildren {
   href: string;
   Icon: React.ReactNode;
-  children: React.ReactNode;
 }
 
 const ContactCard = ({ href, Icon, children }: Props) => (

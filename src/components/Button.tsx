@@ -1,5 +1,7 @@
 import { tv, type VariantProps } from "tailwind-variants";
 
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
+
 const button = tv({
   base: "flex items-center gap-2 whitespace-nowrap rounded-full",
   variants: {
@@ -19,10 +21,11 @@ const button = tv({
   },
 });
 
-interface Props<T extends React.ElementType> extends VariantProps<typeof button> {
+interface Props<T extends React.ElementType>
+  extends PropsWithChildren,
+    VariantProps<typeof button> {
   as?: T;
   className?: string;
-  children?: React.ReactNode;
 }
 
 const Button = <T extends React.ElementType = "button">({
