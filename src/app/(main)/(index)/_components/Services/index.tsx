@@ -84,8 +84,8 @@ const ServicesMobile = () => {
   const rotate = useTransform(scrollXProgress, [0, 1], [0, -containerWidth / 8]);
 
   return (
-    <div className="h-screen">
-      <div className="absolute h-screen w-screen overflow-hidden bg-secondary-100">
+    <div className="relative min-h-screen">
+      <div className="absolute h-full w-screen overflow-hidden bg-secondary-100">
         <m.div className="absolute -left-32 -top-32 sm:-left-64 sm:-top-64" style={{ rotate }}>
           <GearIcon className="w-64 fill-white sm:w-[32rem]" />
         </m.div>

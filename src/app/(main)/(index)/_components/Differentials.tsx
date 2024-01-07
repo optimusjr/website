@@ -9,7 +9,6 @@ import HandIcon from "@/components/icons/Hand";
 import TenIcon from "@/components/icons/Ten";
 import Screen from "@/components/Screen";
 import Title from "@/components/Title";
-import Typography from "@/components/Typography";
 import fadeIn from "@/utils/animations/fadeIn";
 
 const Differentials = () => (
@@ -57,10 +56,8 @@ const DifferentialCard = ({ Icon, title, description }: CardProps) => (
   >
     <Icon className="h-auto w-16 flex-shrink-0 sm:w-32" />
     <div>
-      <Typography className="text-xl sm:text-2xl" color="primary" variant="h3">
-        {title}
-      </Typography>
-      <Typography>{description}</Typography>
+      <h3 className="text-xl font-bold uppercase text-primary-800 sm:text-2xl">{title}</h3>
+      <p className="text-lg/tight">{description}</p>
     </div>
   </Card>
 );

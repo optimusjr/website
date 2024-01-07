@@ -2,11 +2,11 @@ import { tv } from "tailwind-variants";
 
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
-const { container, title, strap } = tv({
+const { container, strap, title } = tv({
   slots: {
-    container: "text-center",
+    container: "flex flex-col gap-4 text-center",
+    strap: "text-2xl font-medium text-primary-800 sm:text-3xl",
     title: "text-4xl font-semibold uppercase md:text-5xl lg:text-6xl",
-    strap: "pb-4 text-2xl font-medium text-primary-800 sm:text-3xl",
   },
 })();
 
