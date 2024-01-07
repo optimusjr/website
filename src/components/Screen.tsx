@@ -17,6 +17,9 @@ const screen = tv({
     padding: {
       true: "p-4 sm:p-8 md:p-16",
     },
+    shadow: {
+      true: "drop-shadow-md",
+    },
   },
 });
 
@@ -26,8 +29,8 @@ interface Props extends VariantProps<typeof screen> {
   className?: string;
 }
 
-const Screen = ({ children, id, className, height, gap, padding, backgroundColor }: Props) => (
-  <article className={screen({ backgroundColor, height, gap, padding, className })} id={id}>
+const Screen = ({ children, id, className, ...props }: Props) => (
+  <article className={screen({ ...props, className })} id={id}>
     {children}
   </article>
 );

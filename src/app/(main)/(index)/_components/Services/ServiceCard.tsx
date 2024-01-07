@@ -1,18 +1,26 @@
+import { m } from "framer-motion";
+import { tv } from "tailwind-variants";
+
 import Button from "@/components/Button";
+import Card from "@/components/Card";
+import Image from "@/components/Image";
 import Link from "@/components/Link";
-import ListCard from "@/components/ListCard";
 import config from "@/config";
+import fadeIn from "@/utils/animations/fadeIn";
 
 export interface Props {
   aboutPage?: string;
-  image: React.ReactNode;
   children: React.ReactNode;
 }
 
-const ServiceCard = ({ aboutPage, image, children }: Props) => (
-  <ListCard className="flex w-[30vw] min-w-80 max-w-lg flex-col p-4 sm:p-8">
-    <div className="overflow-hidden rounded-xl">{image}</div>
-    <div className="flex flex-col gap-4">{children}</div>
+const ServiceCard = ({ aboutPage, children }: Props) => (
+  <Card
+    as={m.li}
+    {...fadeIn}
+    bgColor="white"
+    className="flex w-[30vw] min-w-72 max-w-lg flex-col gap-4 p-4 sm:min-w-80 sm:p-8"
+  >
+    {children}
 
     {aboutPage ? (
       <Button as={Link} className="m-auto mb-0" href={aboutPage}>
@@ -23,7 +31,29 @@ const ServiceCard = ({ aboutPage, image, children }: Props) => (
         Faça um Orçamento
       </Button>
     )}
-  </ListCard>
+  </Card>
+);
+
+const ServiceCardImage = tv({
+  base: "transition-transform duration-1000 ease-in-out hover:scale-110",
+});
+
+ServiceCard.image = ({ className, ...props }: React.ComponentProps<typeof Image>) => (
+  <div className="overflow-hidden rounded-xl">
+    <Image className={ServiceCardImage({ className })} {...props} />
+  </div>
+);
+
+interface PropsWithChildren {
+  children: React.ReactNode;
+}
+
+ServiceCard.title = ({ children }: PropsWithChildren) => (
+  <h3 className="text-center text-2xl/none font-bold uppercase text-primary-800">{children}</h3>
+);
+
+ServiceCard.description = ({ children }: PropsWithChildren) => (
+  <p className="text-center text-lg/tight">{children}</p>
 );
 
 export default ServiceCard;

@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 const { container, title, strap } = tv({
   slots: {
-    container: "grid text-center",
+    container: "text-center",
     title: "text-4xl font-semibold uppercase md:text-5xl lg:text-6xl",
     strap: "pb-4 text-2xl font-medium text-primary-800 sm:text-3xl",
   },

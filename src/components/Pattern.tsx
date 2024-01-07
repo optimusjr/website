@@ -15,8 +15,8 @@ const pattern = tv({
   variants: {
     backgroundColor: {
       green: {
-        container: "bg-secondary-100 fill-secondary-800",
-        gradientDiv: "from-transparent to-secondary-100",
+        container: "bg-secondary-100 fill-secondary-200",
+        gradientDiv: "from-secondary-100",
       },
     },
     gradient: {

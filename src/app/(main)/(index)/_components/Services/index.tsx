@@ -50,8 +50,8 @@ const ServicesDesktop = () => {
   const springedRotate = useSpring(rotate, { damping: 15, mass: 0.27, stiffness: 55 });
 
   return (
-    <div className="h-[600vh] bg-secondary-100" ref={containerRef}>
-      <div className="sticky top-0 overflow-hidden">
+    <div className="h-[600vh]" ref={containerRef}>
+      <div className="sticky top-0 overflow-hidden bg-secondary-100">
         <m.div
           className="absolute -left-32 -top-32 sm:-left-64 sm:-top-64"
           style={{ rotate: springedRotate }}
@@ -84,8 +84,8 @@ const ServicesMobile = () => {
   const rotate = useTransform(scrollXProgress, [0, 1], [0, -containerWidth / 8]);
 
   return (
-    <div className="h-screen bg-secondary-100">
-      <div className="absolute z-0 h-screen w-screen overflow-hidden">
+    <div className="h-screen">
+      <div className="absolute h-screen w-screen overflow-hidden bg-secondary-100">
         <m.div className="absolute -left-32 -top-32 sm:-left-64 sm:-top-64" style={{ rotate }}>
           <GearIcon className="w-64 fill-white sm:w-[32rem]" />
         </m.div>

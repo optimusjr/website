@@ -11,7 +11,7 @@ const card = tv({
       white: "bg-white",
       neutral: "bg-neutral-200",
     },
-    gap: { true: "gap-4" },
+    gap: { true: "gap-8" },
     padding: { true: "p-8" },
   },
   defaultVariants: {
@@ -29,11 +29,16 @@ const Card = <T extends React.ElementType = "div">({
   as,
   className,
   cardLayout,
+  bgColor,
+  gap,
+  padding,
   ...props
 }: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>) => {
   const Component = as || "div";
 
-  return <Component className={card({ cardLayout, className })} {...props} />;
+  return (
+    <Component className={card({ cardLayout, bgColor, gap, padding, className })} {...props} />
+  );
 };
 
 export default Card;

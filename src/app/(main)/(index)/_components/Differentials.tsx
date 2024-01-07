@@ -13,7 +13,7 @@ import Typography from "@/components/Typography";
 import fadeIn from "@/utils/animations/fadeIn";
 
 const Differentials = () => (
-  <Screen backgroundColor="white" gap padding>
+  <Screen backgroundColor="white" className="relative z-10" gap padding shadow>
     <Title strap="Diferenciais">Por que somos a escolha certa?</Title>
 
     <ul className="grid auto-rows-fr items-stretch gap-4 sm:gap-8 md:grid-cols-2 md:gap-16">

@@ -27,7 +27,7 @@ const Start = () => {
   return (
     <Screen
       backgroundColor="secondary"
-      className="relative justify-center overflow-hidden md:flex-row"
+      className="relative z-20 justify-center overflow-hidden md:flex-row"
       height="firstFull"
       gap
       padding
