@@ -7,7 +7,7 @@ import quoteFormSchema from "@/quoteFormSchema";
 
 const Quote = () => {
   return (
-    <Screen backgroundColor="secondary" height="firstFull" gap padding>
+    <Screen bgColor="secondary" height="firstFull" gap padding>
       <Typography component="h1" variant="h2">
         {quoteFormSchema.title}
       </Typography>

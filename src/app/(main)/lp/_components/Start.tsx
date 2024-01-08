@@ -5,7 +5,7 @@ import Typography from "@/components/Typography";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
 const Start = ({ children }: PropsWithChildren) => (
-  <Screen backgroundColor="secondary" gap padding>
+  <Screen bgColor="secondary" gap padding>
     {children}
   </Screen>
 );

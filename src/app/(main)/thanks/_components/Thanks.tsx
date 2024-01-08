@@ -24,7 +24,7 @@ const Thanks = () => {
   }, []);
 
   return (
-    <Screen backgroundColor="secondary" className="justify-center gap-4" height="firstFull" padding>
+    <Screen bgColor="secondary" className="justify-center gap-4" height="firstFull" padding>
       <Typography
         className="text-[length:calc(2rem+2vw)] leading-none"
         color="primary"

@@ -19,7 +19,7 @@ interface Props {
 }
 
 const Testimonials = ({ testimonials }: Props) => (
-  <Screen backgroundColor="white" gap padding>
+  <Screen bgColor="white" gap padding>
     <Title strap="Depoimentos">O que os nossos clientes dizem?</Title>
     <ul className="grid gap-4 sm:gap-8 md:grid-cols-2 md:gap-16">
       {testimonials.map((testimonial, key) => (

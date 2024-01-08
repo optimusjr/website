@@ -17,7 +17,7 @@ import config from "@/config";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
 const Links = () => (
-  <Screen backgroundColor="secondary" className="gap-8" height="firstFull" padding>
+  <Screen bgColor="secondary" className="gap-8" height="firstFull" padding>
     <div className="flex flex-col gap-4 sm:gap-8">
       <Image
         alt="OPTIMUS Jr. Controle e Automação"

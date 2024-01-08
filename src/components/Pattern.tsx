@@ -13,7 +13,7 @@ const pattern = tv({
     gradientDiv: "absolute size-full",
   },
   variants: {
-    backgroundColor: {
+    bgColor: {
       green: {
         container: "bg-secondary-100 fill-secondary-200",
         gradientDiv: "from-secondary-100",
@@ -29,8 +29,8 @@ interface Props extends VariantProps<typeof pattern> {
   SVGPattern: React.ComponentType<{ id: string }>;
 }
 
-const Pattern = ({ SVGPattern, backgroundColor, gradient }: Props) => {
-  const { container, patternDiv, gradientDiv } = pattern({ backgroundColor, gradient });
+const Pattern = ({ SVGPattern, ...props }: Props) => {
+  const { container, patternDiv, gradientDiv } = pattern(props);
 
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({

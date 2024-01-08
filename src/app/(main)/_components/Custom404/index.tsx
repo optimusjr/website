@@ -6,7 +6,7 @@ import Illustration from "./Illustration";
 
 const Custom404 = () => (
   <Screen
-    backgroundColor="secondary"
+    bgColor="secondary"
     className="grid justify-center md:grid-cols-[1fr_2fr]"
     height="firstFull"
     gap

@@ -5,7 +5,8 @@ import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 const screen = tv({
   base: "flex flex-col items-center",
   variants: {
-    backgroundColor: {
+    bgColor: {
+      black: "bg-black",
       white: "bg-neutral-50",
       secondary: "bg-secondary-100",
     },
@@ -25,15 +26,28 @@ const screen = tv({
   },
 });
 
-interface Props extends PropsWithChildren, VariantProps<typeof screen> {
+interface Props<T extends React.ElementType>
+  extends PropsWithChildren,
+    VariantProps<typeof screen> {
+  as?: T;
   id?: string;
   className?: string;
 }
 
-const Screen = ({ children, id, className, ...props }: Props) => (
-  <article className={screen({ ...props, className })} id={id}>
-    {children}
-  </article>
-);
+const Screen = <T extends React.ElementType>({
+  children,
+  as,
+  id,
+  className,
+  ...props
+}: Props<T>) => {
+  const Component = as || "article";
+
+  return (
+    <Component className={screen({ ...props, className })} id={id}>
+      {children}
+    </Component>
+  );
+};
 
 export default Screen;

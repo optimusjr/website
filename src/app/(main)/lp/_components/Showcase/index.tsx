@@ -15,7 +15,7 @@ interface Props {
 }
 
 const Showcase = ({ images }: Props) => (
-  <Screen backgroundColor="secondary">
+  <Screen bgColor="secondary">
     <Title
       className={{ container: "px-4 pt-4 sm:px-8 sm:pt-8 md:px-16 md:pt-16" }}
       strap="Veja o que já fizemos"

@@ -7,7 +7,6 @@ import Button from "@/components/Button";
 import Card from "@/components/Card";
 import CloseIcon from "@/components/icons/Close";
 import Link from "@/components/Link";
-import Typography from "@/components/Typography";
 import config from "@/config";
 
 const PROSEL = () => {
@@ -21,27 +20,33 @@ const PROSEL = () => {
     <AnimatePresence>
       {isOpen && (
         <m.div
-          className="fixed bottom-0 left-0 animate-fade-in sm:p-4"
+          className="fixed bottom-0 left-0 z-30 shadow-lg animate-fade-in sm:p-4"
           exit={{ y: 20, opacity: 0 }}
           initial={{ y: 0, opacity: 1 }}
           transition={{ linear: true }}
         >
-          <Card className="flex flex-col items-start rounded-b-none p-6 shadow-2xl sm:max-w-lg sm:rounded-2xl">
+          <Card className="flex flex-col items-start gap-2 rounded-b-none p-6 shadow-2xl sm:max-w-lg sm:rounded-2xl">
             <div className="flex w-full items-center justify-between">
-              <Typography color="primary" variant="h3">
+              <h3 className="text-2xl font-bold uppercase text-primary-800">
                 Estamos contratando!
-              </Typography>
+              </h3>
 
               <Button onClick={() => setIsOpen(false)} variant="text">
                 <CloseIcon />
               </Button>
             </div>
-            <Typography>
+
+            <p className="text-lg/tight">
               Estão abertas as inscrições para o nosso processo seletivo. Venha trabalhar com a
               gente!
-            </Typography>
+            </p>
 
-            <Button as={Link} href={config.PROSEL_FORM_URL} onClick={() => setIsOpen(false)}>
+            <Button
+              as={Link}
+              className="ml-auto"
+              href={config.PROSEL_FORM_URL}
+              onClick={() => setIsOpen(false)}
+            >
               Quero me Inscrever!
             </Button>
           </Card>

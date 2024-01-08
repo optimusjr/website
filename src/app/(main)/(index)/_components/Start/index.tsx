@@ -26,7 +26,7 @@ const Start = () => {
 
   return (
     <Screen
-      backgroundColor="secondary"
+      bgColor="secondary"
       className="relative z-20 justify-center overflow-hidden md:flex-row"
       height="firstFull"
       gap

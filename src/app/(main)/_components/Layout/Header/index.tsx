@@ -3,6 +3,7 @@
 import Image from "@/components/Image";
 import Link from "@/components/Link";
 import QuoteButton from "@/components/QuoteButton";
+import Screen from "@/components/Screen";
 import useToggle from "@/hooks/useToggle";
 import logo_simplificado from "@/images/OPTIMUS/logo_simplificado.svg";
 
@@ -19,8 +20,8 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-secondary-100 px-4 sm:px-8 md:px-16">
-      <header className="content-auto animate-slide-top grid grid-cols-2 rounded-b-3xl bg-neutral-50 text-xl lg:grid-cols-3">
+    <Screen as="div" bgColor="secondary" className="px-4 sm:px-8 md:px-16">
+      <header className="content-auto grid w-full grid-cols-2 rounded-b-3xl bg-neutral-50 text-xl animate-slide-top lg:grid-cols-3">
         <div className="flex min-h-16 items-center justify-start">
           <Link href="/" onClick={hideMobile}>
             <Image
@@ -43,7 +44,7 @@ const Header = () => {
 
         <Mobile hideShow={hideMobile} show={showMobile} toggleShow={toggleShowMobile} />
       </header>
-    </div>
+    </Screen>
   );
 };
 

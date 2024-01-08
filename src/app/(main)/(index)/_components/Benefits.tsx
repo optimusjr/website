@@ -14,7 +14,7 @@ import Title from "@/components/Title";
 import fadeIn from "@/utils/animations/fadeIn";
 
 const Benefits = () => (
-  <Screen backgroundColor="white" className="relative z-10" gap padding shadow>
+  <Screen bgColor="white" className="relative z-10" gap padding shadow>
     <Title strap="Vantagens">Por que automatizar sua casa?</Title>
 
     <ul className="grid auto-rows-fr gap-4 sm:gap-8 md:grid-cols-2 md:gap-16 xl:grid-cols-3 2xl:grid-cols-6">

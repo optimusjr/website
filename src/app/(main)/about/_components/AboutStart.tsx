@@ -11,7 +11,7 @@ import Typography from "@/components/Typography";
 import logo from "@/images/OPTIMUS/logo.svg";
 
 const AboutStart = () => (
-  <Screen backgroundColor="secondary" height="firstFull" gap padding>
+  <Screen bgColor="secondary" height="firstFull" gap padding>
     <section className="my-8 grid gap-4 animate-fade-in sm:grid-cols-2 lg:my-16">
       <div className="flex flex-col items-start gap-4">
         <Typography

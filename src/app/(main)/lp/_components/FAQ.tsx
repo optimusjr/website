@@ -11,7 +11,7 @@ interface Props {
 }
 
 const FAQ = ({ questions }: Props) => (
-  <Screen backgroundColor="white" className="items-start md:grid md:grid-cols-2">
+  <Screen bgColor="white" className="items-start md:grid md:grid-cols-2">
     <Title
       className={{ container: "p-4 sm:p-8 md:sticky md:top-0 md:p-16 md:text-left" }}
       strap="Perguntas frequentes"
