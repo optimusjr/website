@@ -8,19 +8,23 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 
 const pattern = tv({
   slots: {
-    container: "absolute inset-0 -z-10 overflow-hidden",
-    patternDiv: "absolute aspect-square min-h-full w-full",
+    container: "absolute inset-0 -z-10",
+    svg: "absolute size-full",
     gradientDiv: "absolute size-full",
   },
   variants: {
     bgColor: {
-      green: {
-        container: "bg-secondary-100 fill-secondary-200",
-        gradientDiv: "from-secondary-100",
+      secondary: {
+        container: "bg-secondary-100",
+        svg: "fill-primary-200",
+        gradientDiv: "from-secondary-100 from-50%",
       },
     },
     gradient: {
-      radial: { gradientDiv: "top-[-30%] bg-gradient-radial" },
+      radial: {
+        gradientDiv: "bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))]",
+      },
+      linear: { gradientDiv: "bg-gradient-to-b from-50%" },
     },
   },
 });
@@ -30,7 +34,7 @@ interface Props extends VariantProps<typeof pattern> {
 }
 
 const Pattern = ({ SVGPattern, ...props }: Props) => {
-  const { container, patternDiv, gradientDiv } = pattern(props);
+  const { container, svg, gradientDiv } = pattern(props);
 
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -54,17 +58,18 @@ const Pattern = ({ SVGPattern, ...props }: Props) => {
   const patternId = useId();
 
   return (
-    <div className={container()} ref={containerRef}>
-      <div className={patternDiv()}>
-        <div className={gradientDiv()} />
-
-        <svg className="size-full" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <SVGPattern id={patternId} />
-          </defs>
-          <m.rect className="h-[200vh] w-full" fill={`url(#${patternId})`} style={{ y }} />
-        </svg>
-      </div>
+    <div className={container()}>
+      <svg className={svg()} xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <SVGPattern id={patternId} />
+        </defs>
+        <m.rect
+          className="h-[200vh] min-h-full w-screen"
+          fill={`url(#${patternId})`}
+          style={{ y }}
+        />
+      </svg>
+      <div className={gradientDiv()} />
     </div>
   );
 };

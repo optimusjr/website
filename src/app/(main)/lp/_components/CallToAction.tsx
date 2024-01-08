@@ -8,7 +8,7 @@ import Typography from "@/components/Typography";
 
 const CallToAction = () => (
   <Screen className="relative px-2 py-16 sm:px-8 md:px-16" padding>
-    <Pattern SVGPattern={CogsPattern} bgColor="green" gradient="radial" />
+    <Pattern SVGPattern={CogsPattern} bgColor="secondary" gradient="radial" />
 
     <Typography className="text-[length:calc(1.8rem+2vw)]" variant="h2">
       O que você está esperando?
