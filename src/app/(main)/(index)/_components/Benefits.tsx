@@ -61,7 +61,7 @@ interface CardProps {
 const BenefitCard = ({ Icon, title, description }: CardProps) => (
   <Card as={m.li} className="flex flex-col items-center gap-4 p-8 text-center" {...fadeIn}>
     <Icon className="w-32 flex-shrink-0" />
-    <h3 className="text-2xl font-bold uppercase text-primary-800">{title}</h3>
+    <Card.title className="text-2xl">{title}</Card.title>
     <p className="text-lg/tight">{description}</p>
   </Card>
 );

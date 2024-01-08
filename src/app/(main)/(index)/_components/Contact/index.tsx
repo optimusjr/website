@@ -43,9 +43,7 @@ const Contacts = () => (
         gap
         padding
       >
-        <h3 className="text-center text-2xl/none font-bold uppercase text-primary-800">
-          Mande uma mensagem
-        </h3>
+        <Card.title className="text-center text-2xl/none">Mande uma mensagem</Card.title>
 
         <TextField autoComplete="name" label="Nome:" name="nome" required />
         <TextField autoComplete="email" label="E-mail:" name="email" type="email" required />

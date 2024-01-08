@@ -29,7 +29,7 @@ const ContactCard = ({ href, Icon, children }: Props) => (
 );
 
 ContactCard.title = ({ children }: PropsWithChildren) => (
-  <h3 className="text-2xl/none font-bold uppercase text-primary-800">{children}</h3>
+  <Card.title className="text-2xl/none">{children}</Card.title>
 );
 
 ContactCard.link = ({ children }: PropsWithChildren) => (

@@ -56,7 +56,7 @@ const DifferentialCard = ({ Icon, title, description }: CardProps) => (
   >
     <Icon className="h-auto w-16 flex-shrink-0 sm:w-32" />
     <div>
-      <h3 className="text-xl font-bold uppercase text-primary-800 sm:text-2xl">{title}</h3>
+      <Card.title className="text-xl sm:text-2xl">{title}</Card.title>
       <p className="text-lg/tight">{description}</p>
     </div>
   </Card>

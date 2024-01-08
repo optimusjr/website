@@ -42,4 +42,16 @@ const Card = <T extends React.ElementType = "div">({
   );
 };
 
+const cardTitle = tv({
+  base: "font-bold uppercase text-primary-800",
+});
+
+interface TitleProps extends PropsWithChildren {
+  className?: string;
+}
+
+Card.title = ({ className, children }: TitleProps) => (
+  <h3 className={cardTitle({ className })}>{children}</h3>
+);
+
 export default Card;
