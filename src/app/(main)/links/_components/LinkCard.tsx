@@ -6,12 +6,12 @@ import Card from "@/components/Card";
 import Link from "@/components/Link";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
-interface LinkCardProps extends PropsWithChildren {
+interface Props extends PropsWithChildren {
   href: string;
   Icon: React.ComponentType<{ className?: string }>;
 }
 
-const LinkCard = ({ href, Icon, children }: LinkCardProps) => (
+const LinkCard = ({ href, Icon, children }: Props) => (
   <m.li
     initial={{ scale: 1 }}
     transition={{ type: "spring", duration: 0.3 }}

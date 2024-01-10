@@ -14,8 +14,9 @@
     "XGPWMK"
   ],
   "material-icon-theme.folders.associations": {
-    "_components": "components"
+    "_components": "react-components"
   },
+  "material-icon-theme.activeIconPack": "react",
   // Configuração do Tailwindcss
   "tailwindCSS.validate": true,
   "editor.quickSuggestions": {
