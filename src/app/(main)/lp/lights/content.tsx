@@ -30,19 +30,19 @@ const Content = () => (
       <Start.features
         features={[
           {
-            icon: SofaIcon,
+            Icon: SofaIcon,
             title: "Tenha o Conforto da Iluminação Inteligente",
             description:
               "Controle as luzes da sua casa pelo celular ou por comando de voz, sem precisar sair do sofá.",
           },
           {
-            icon: ShieldHome,
+            Icon: ShieldHome,
             title: "Simule Presença, Afaste Intrusos",
             description:
               "Controle suas lâmpadas remotamente e programe horários e timers para simular presença e afastar intrusos.",
           },
           {
-            icon: Leaf,
+            Icon: Leaf,
             title: "Reduza a Conta de Luz com a Automação",
             description:
               "Evite desperdício de energia programando horários para acender e apagar as luzes apenas quando necessário.",
