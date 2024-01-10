@@ -5,7 +5,6 @@ import { tv } from "tailwind-variants";
 
 import Button from "@/components/Button";
 import ChevronIcon from "@/components/icons/Chevron";
-import Typography from "@/components/Typography";
 import useToggle from "@/hooks/useToggle";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
@@ -29,9 +28,9 @@ Accordion.item = ({ title, children }: ItemProps) => {
   const [open, toggleOpen] = useToggle(false);
 
   return (
-    <m.li>
-      <div className="flex content-between items-start py-4">
-        <Typography variant="h3">{title}</Typography>
+    <li>
+      <div className="flex content-between items-start">
+        <h3 className="mb-4 text-lg/none font-semibold uppercase md:text-2xl/none">{title}</h3>
         <Button onClick={toggleOpen} variant="text">
           <ChevronIcon open={open} />
         </Button>
@@ -49,8 +48,8 @@ Accordion.item = ({ title, children }: ItemProps) => {
           </m.div>
         ) : null}
       </AnimatePresence>
-      <hr className="m-0 border-0 border-t-[1.5px] border-neutral-400" />
-    </m.li>
+      <hr className="m-0 mb-4 border-0 border-t-[1.5px] border-neutral-400" />
+    </li>
   );
 };
 

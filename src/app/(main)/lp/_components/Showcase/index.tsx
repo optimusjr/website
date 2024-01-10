@@ -17,7 +17,7 @@ interface Props {
 const Showcase = ({ images }: Props) => (
   <Screen bgColor="secondary">
     <Title
-      className={{ container: "px-4 pt-4 sm:px-8 sm:pt-8 md:px-16 md:pt-16" }}
+      className={{ container: "p-4 pb-0 sm:p-8 sm:pb-0 md:p-16 md:pb-0" }}
       strap="Veja o que já fizemos"
     >
       Quer saber como criamos ambientes únicos e envolventes?
@@ -26,7 +26,7 @@ const Showcase = ({ images }: Props) => (
     <Parallax baseVelocity={2}>
       {images.map((image, key) => (
         <Card
-          className="mx-4 size-32 overflow-hidden p-0 sm:mx-8 sm:size-64 md:size-72 lg:size-80 2xl:size-[40rem]"
+          className="mx-4 size-32 overflow-hidden p-0 sm:mx-8 sm:size-64 md:size-72 lg:size-96 2xl:size-[40rem]"
           key={key}
         >
           <Image

@@ -73,7 +73,7 @@ const Parallax = ({ children, baseVelocity }: ParallaxProps) => {
           A quantidade de vezes que se deve repetir o children vai
           depender do tamanho do conteúdo e da tela.
           Atualmente ele está sendo repetido duas vezes.
-          Cuidado que isso vai influencia nos valores que vão dentro da função wrap
+          Cuidado que isso vai influenciar nos valores que vão dentro da função wrap
         */}
         {children}
         {children}

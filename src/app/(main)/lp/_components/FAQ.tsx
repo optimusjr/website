@@ -1,7 +1,6 @@
 import Accordion from "@/components/Accordion";
 import Screen from "@/components/Screen";
 import Title from "@/components/Title";
-import Typography from "@/components/Typography";
 
 interface Props {
   questions: {
@@ -11,18 +10,18 @@ interface Props {
 }
 
 const FAQ = ({ questions }: Props) => (
-  <Screen bgColor="white" className="items-start md:grid md:grid-cols-2">
+  <Screen bgColor="neutral" className="md:grid md:grid-cols-2 md:items-start" gap padding>
     <Title
-      className={{ container: "p-4 sm:p-8 md:sticky md:top-0 md:p-16 md:text-left" }}
+      className={{ container: "top-4 sm:top-8 md:sticky md:top-16 md:text-left" }}
       strap="Perguntas frequentes"
     >
       Você tem alguma dúvida?
     </Title>
 
-    <Accordion className="p-4 sm:p-8 md:p-16">
+    <Accordion>
       {questions.map((question, key) => (
         <Accordion.item key={key} title={question.question}>
-          <Typography>{question.answer}</Typography>
+          <p className="text-lg/tight">{question.answer}</p>
         </Accordion.item>
       ))}
     </Accordion>

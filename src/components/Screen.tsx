@@ -8,6 +8,7 @@ const screen = tv({
     bgColor: {
       black: "bg-black",
       white: "bg-neutral-50",
+      neutral: "bg-neutral-200",
       secondary: "bg-secondary-100",
     },
     height: {
