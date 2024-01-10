@@ -1,8 +1,6 @@
 import { Props } from "@/utils/types/GenericIconType";
-const PlusIcon = <T extends React.ElementType = "svg">({
-  as,
-  ...props
-}: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>) => {
+
+const PlusIcon = <T extends React.ElementType = "svg">({ as, ...props }: Props<T>) => {
   const Component = as || "svg";
 
   return (
