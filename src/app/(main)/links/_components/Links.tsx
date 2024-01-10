@@ -1,20 +1,16 @@
 "use client";
 
-import { m } from "framer-motion";
-
 import OPTIMUSIcon from "@/app/icon.svg";
-import Card from "@/components/Card";
 import ClipboardIcon from "@/components/icons/Clipboard";
 import MessageIcon from "@/components/icons/Message";
 import PROSELIcon from "@/components/icons/PROSEL";
 import WebIcon from "@/components/icons/Web";
 import Image from "@/components/Image";
-import Link from "@/components/Link";
 import Screen from "@/components/Screen";
 import SocialLinks from "@/components/SocialLinks";
-import Typography from "@/components/Typography";
 import config from "@/config";
-import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
+
+import LinkCard from "./LinkCard";
 
 const Links = () => (
   <Screen bgColor="secondary" className="gap-8" height="firstFull" padding>
@@ -25,69 +21,33 @@ const Links = () => (
         placeholder="empty"
         src={OPTIMUSIcon}
       />
-      <Typography className="text-center text-5xl sm:text-6xl" variant="h1">
+      <h1 className="text-center text-5xl font-extrabold uppercase sm:text-6xl">
         Links relacionados
-      </Typography>
+      </h1>
     </div>
 
     <SocialLinks />
 
     <ul className="flex w-[32rem] max-w-[90vw] flex-col gap-8">
       {config.IS_PROSEL && (
-        <LinkCard href={config.PROSEL_FORM_URL}>
-          <PROSELIcon />
-
-          <Typography className="text-2xl" color="primary" component="h2" variant="h3">
-            Se inscreva no PROSEL
-          </Typography>
+        <LinkCard Icon={PROSELIcon} href={config.PROSEL_FORM_URL}>
+          Se inscreva no PROSEL
         </LinkCard>
       )}
 
-      <LinkCard href={config.QUOTE_URL}>
-        <ClipboardIcon />
-
-        <Typography className="text-2xl" color="primary" component="h2" variant="h3">
-          Faça um orçamento
-        </Typography>
+      <LinkCard Icon={ClipboardIcon} href={config.QUOTE_URL}>
+        Faça um orçamento
       </LinkCard>
 
-      <LinkCard href="/">
-        <WebIcon />
-
-        <Typography className="text-2xl" color="primary" component="h2" variant="h3">
-          Conheça nosso Website
-        </Typography>
+      <LinkCard Icon={WebIcon} href="/">
+        Conheça nosso Website
       </LinkCard>
 
-      <LinkCard href="/#contact">
-        <MessageIcon />
-
-        <Typography className="text-2xl" color="primary" component="h2" variant="h3">
-          Entre em contato
-        </Typography>
+      <LinkCard Icon={MessageIcon} href="/#contact">
+        Entre em contato
       </LinkCard>
     </ul>
   </Screen>
-);
-
-interface LinkCardProps extends PropsWithChildren {
-  href: string;
-}
-
-const LinkCard = ({ href, children }: LinkCardProps) => (
-  <li>
-    <Link href={href}>
-      <Card
-        as={m.div}
-        className="grid grid-cols-[48px_auto] items-center p-4 shadow-md transition-shadow hover:shadow-lg [&>svg]:w-12"
-        initial={{ scale: 1 }}
-        transition={{ type: "spring", duration: 0.3 }}
-        whileHover={{ scale: 1.01 }}
-      >
-        {children}
-      </Card>
-    </Link>
-  </li>
 );
 
 export default Links;

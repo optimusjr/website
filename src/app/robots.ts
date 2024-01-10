@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      // Escreva aqui os caminhos que você não quer que sejam indexados pelo Google
       disallow: ["/thanks", "/404", "/links"],
     },
     sitemap: `${process.env.SITE_URL}/sitemap.xml`,
