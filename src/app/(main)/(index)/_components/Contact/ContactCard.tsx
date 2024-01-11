@@ -4,6 +4,7 @@ import { m } from "framer-motion";
 
 import Card from "@/components/Card";
 import Link from "@/components/Link";
+import { LinkStyles } from "@/components/StyledLink";
 import scaleOnHover from "@/utils/animations/scaleOnHover";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
@@ -28,10 +29,6 @@ const ContactCard = ({ href, Icon, children }: Props) => (
 
 ContactCard.title = ({ children }: PropsWithChildren) => <Card.title>{children}</Card.title>;
 
-ContactCard.link = ({ children }: PropsWithChildren) => (
-  <p className="max-w-[40vw] overflow-hidden overflow-ellipsis whitespace-nowrap border-b-1 text-lg/tight transition-colors hover:border-transparent">
-    {children}
-  </p>
-);
+ContactCard.link = ({ children }: PropsWithChildren) => <p className={LinkStyles()}>{children}</p>;
 
 export default ContactCard;

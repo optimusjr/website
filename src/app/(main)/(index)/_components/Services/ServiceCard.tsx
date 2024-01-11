@@ -1,10 +1,9 @@
 import { m } from "framer-motion";
-import { tv } from "tailwind-variants";
 
 import Button from "@/components/Button";
 import Card from "@/components/Card";
-import Image from "@/components/Image";
 import Link from "@/components/Link";
+import StyledImage from "@/components/StyledImage";
 import config from "@/config";
 import fadeIn from "@/utils/animations/fadeIn";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
@@ -34,15 +33,7 @@ const ServiceCard = ({ aboutPage, children }: Props) => (
   </Card>
 );
 
-const ServiceCardImage = tv({
-  base: "transition-transform duration-1000 ease-in-out hover:scale-110",
-});
-
-ServiceCard.image = ({ className, ...props }: React.ComponentProps<typeof Image>) => (
-  <div className="overflow-hidden rounded-xl">
-    <Image className={ServiceCardImage({ className })} {...props} />
-  </div>
-);
+ServiceCard.image = StyledImage;
 
 ServiceCard.title = ({ children }: PropsWithChildren) => (
   <Card.title className="text-center">{children}</Card.title>
