@@ -4,6 +4,7 @@ import { m } from "framer-motion";
 
 import Card from "@/components/Card";
 import Link from "@/components/Link";
+import scaleOnHover from "@/utils/animations/scaleOnHover";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
 interface Props extends PropsWithChildren {
@@ -12,11 +13,7 @@ interface Props extends PropsWithChildren {
 }
 
 const LinkCard = ({ href, Icon, children }: Props) => (
-  <m.li
-    initial={{ scale: 1 }}
-    transition={{ type: "spring", duration: 0.3 }}
-    whileHover={{ scale: 1.01 }}
-  >
+  <m.li {...scaleOnHover}>
     <Card
       as={Link}
       bgColor="white"

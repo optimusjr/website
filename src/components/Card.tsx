@@ -5,16 +5,10 @@ import { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 const card = tv({
   base: "bg-200 rounded-3xl fill-black shadow-md",
   variants: {
-    cardLayout: {
-      column: "flex flex-col text-center",
-      row: "grid grid-cols-[1fr_2fr] text-left",
-    },
     bgColor: {
       white: "bg-white",
       neutral: "bg-neutral-200",
     },
-    gap: { true: "gap-8" },
-    padding: { true: "p-8" },
   },
   defaultVariants: {
     bgColor: "neutral",
@@ -29,17 +23,12 @@ interface Props<T extends React.ElementType> extends PropsWithChildren, VariantP
 const Card = <T extends React.ElementType = "div">({
   as,
   className,
-  cardLayout,
   bgColor,
-  gap,
-  padding,
   ...props
 }: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>) => {
   const Component = as || "div";
 
-  return (
-    <Component className={card({ cardLayout, bgColor, gap, padding, className })} {...props} />
-  );
+  return <Component className={card({ bgColor, className })} {...props} />;
 };
 
 const cardTitle = tv({

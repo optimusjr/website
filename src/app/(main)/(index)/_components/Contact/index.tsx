@@ -37,10 +37,8 @@ const Contacts = () => (
         action={`https://formsubmit.co/${config.EMAIL}`}
         as="form"
         bgColor="white"
-        className="flex flex-col lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-4"
+        className="flex flex-col gap-8 p-8 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-4"
         method="POST"
-        gap
-        padding
       >
         <Card.title className="text-center">Mande uma mensagem</Card.title>
 

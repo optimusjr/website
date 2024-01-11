@@ -4,6 +4,7 @@ import { m } from "framer-motion";
 
 import Card from "@/components/Card";
 import Link from "@/components/Link";
+import scaleOnHover from "@/utils/animations/scaleOnHover";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
 interface Props extends PropsWithChildren {
@@ -16,11 +17,8 @@ const ContactCard = ({ href, Icon, children }: Props) => (
     <Card
       as={m.div}
       bgColor="white"
-      className="flex h-full gap-4 shadow-md transition-shadow hover:shadow-lg"
-      initial={{ scale: 1 }}
-      transition={{ type: "spring", duration: 0.3 }}
-      whileHover={{ scale: 1.01 }}
-      padding
+      className="flex h-full gap-4 p-8 shadow-md transition-shadow hover:shadow-lg"
+      {...scaleOnHover}
     >
       <Icon className="w-16 flex-shrink-0" />
       <div className="flex flex-col items-start gap-2">{children}</div>
