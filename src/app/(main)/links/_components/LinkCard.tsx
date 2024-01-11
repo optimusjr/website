@@ -24,7 +24,7 @@ const LinkCard = ({ href, Icon, children }: Props) => (
       href={href}
     >
       <Icon className="w-12" />
-      <h2 className="text-2xl font-bold uppercase text-primary-800">{children}</h2>
+      <Card.title as="h2">{children}</Card.title>
     </Card>
   </m.li>
 );

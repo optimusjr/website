@@ -22,9 +22,7 @@ const AboutCard = ({ Icon, children }: Props) => (
   </Card>
 );
 
-AboutCard.title = ({ children }: PropsWithChildren) => (
-  <h2 className="text-2xl font-bold uppercase text-primary-800">{children}</h2>
-);
+AboutCard.title = ({ children }: PropsWithChildren) => <Card.title as="h2">{children}</Card.title>;
 
 AboutCard.description = ({ children }: PropsWithChildren) => (
   <p className="text-lg/tight">{children}</p>

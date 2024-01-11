@@ -27,7 +27,7 @@ const PROSEL = () => {
         >
           <Card className="flex flex-col items-start gap-2 rounded-b-none p-6 shadow-2xl sm:max-w-lg sm:rounded-2xl">
             <div className="flex w-full items-center justify-between">
-              <Card.title className="text-2xl">Estamos contratando!</Card.title>
+              <Card.title>Estamos contratando!</Card.title>
 
               <Button onClick={() => setIsOpen(false)} variant="text">
                 <CloseIcon />

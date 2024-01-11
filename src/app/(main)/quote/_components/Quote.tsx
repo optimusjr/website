@@ -2,13 +2,12 @@
 
 import MultiPageForm from "@/components/MultiPageForm";
 import Screen from "@/components/Screen";
-import Title from "@/components/Title";
 import quoteFormSchema from "@/quoteFormSchema";
 
 const Quote = () => {
   return (
     <Screen bgColor="secondary" height="firstFull" gap padding>
-      <Title>{quoteFormSchema.title}</Title>
+      <Screen.title>{quoteFormSchema.title}</Screen.title>
 
       <MultiPageForm schema={quoteFormSchema} />
     </Screen>

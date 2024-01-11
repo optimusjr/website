@@ -10,12 +10,11 @@ import RocketIcon from "@/components/icons/Rocket";
 import ShieldHomeIcon from "@/components/icons/ShieldHome";
 import SofaIcon from "@/components/icons/Sofa";
 import Screen from "@/components/Screen";
-import Title from "@/components/Title";
 import fadeIn from "@/utils/animations/fadeIn";
 
 const Benefits = () => (
   <Screen bgColor="white" className="relative z-10" gap padding shadow>
-    <Title strap="Vantagens">Por que automatizar sua casa?</Title>
+    <Screen.title strap="Vantagens">Por que automatizar sua casa?</Screen.title>
 
     <ul className="grid auto-rows-fr gap-4 sm:gap-8 md:grid-cols-2 md:gap-16 xl:grid-cols-3 2xl:grid-cols-6">
       <BenefitCard
@@ -61,7 +60,7 @@ interface CardProps {
 const BenefitCard = ({ Icon, title, description }: CardProps) => (
   <Card as={m.li} className="flex flex-col items-center gap-4 p-8 text-center" {...fadeIn}>
     <Icon className="w-32 flex-shrink-0" />
-    <Card.title className="text-2xl">{title}</Card.title>
+    <Card.title>{title}</Card.title>
     <p className="text-lg/tight">{description}</p>
   </Card>
 );

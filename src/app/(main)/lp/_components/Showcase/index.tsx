@@ -3,7 +3,6 @@ import type { StaticImageData } from "next/image";
 import Card from "@/components/Card";
 import Image from "@/components/Image";
 import Screen from "@/components/Screen";
-import Title from "@/components/Title";
 
 import Parallax from "./Parallax";
 
@@ -16,12 +15,12 @@ interface Props {
 
 const Showcase = ({ images }: Props) => (
   <Screen bgColor="secondary">
-    <Title
+    <Screen.title
       className={{ container: "p-4 pb-0 sm:p-8 sm:pb-0 md:p-16 md:pb-0" }}
       strap="Veja o que já fizemos"
     >
       Quer saber como criamos ambientes únicos e envolventes?
-    </Title>
+    </Screen.title>
 
     <Parallax baseVelocity={2}>
       {images.map((image, key) => (

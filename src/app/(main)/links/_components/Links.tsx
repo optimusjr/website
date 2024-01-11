@@ -21,7 +21,7 @@ const Links = () => (
         placeholder="empty"
         src={OPTIMUSIcon}
       />
-      <h1 className="text-center text-5xl font-extrabold uppercase sm:text-6xl">
+      <h1 className="text-center text-4xl font-extrabold uppercase sm:text-5xl sm:text-6xl">
         Links relacionados
       </h1>
     </div>

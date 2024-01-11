@@ -8,14 +8,13 @@ import SendIcon from "@/components/icons/Send";
 import WhatsappIcon from "@/components/icons/Whatsapp";
 import Screen from "@/components/Screen";
 import { TextArea, TextField } from "@/components/TextField";
-import Title from "@/components/Title";
 import config from "@/config";
 
 import ContactCard from "./ContactCard";
 
 const Contacts = () => (
   <Screen bgColor="secondary" id="contact" gap padding>
-    <Title strap="Contato">Fale conosco</Title>
+    <Screen.title strap="Contato">Fale conosco</Screen.title>
 
     <div className="grid w-full gap-8 lg:w-auto lg:grid-cols-[1fr_2fr] lg:grid-rows-3">
       <ContactCard
@@ -43,7 +42,7 @@ const Contacts = () => (
         gap
         padding
       >
-        <Card.title className="text-center text-2xl/none">Mande uma mensagem</Card.title>
+        <Card.title className="text-center">Mande uma mensagem</Card.title>
 
         <TextField autoComplete="name" label="Nome:" name="nome" required />
         <TextField autoComplete="email" label="E-mail:" name="email" type="email" required />

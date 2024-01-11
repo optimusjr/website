@@ -45,7 +45,7 @@ ServiceCard.image = ({ className, ...props }: React.ComponentProps<typeof Image>
 );
 
 ServiceCard.title = ({ children }: PropsWithChildren) => (
-  <Card.title className="text-center text-2xl/none">{children}</Card.title>
+  <Card.title className="text-center">{children}</Card.title>
 );
 
 ServiceCard.description = ({ children }: PropsWithChildren) => (

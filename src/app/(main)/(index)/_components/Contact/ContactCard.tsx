@@ -28,9 +28,7 @@ const ContactCard = ({ href, Icon, children }: Props) => (
   </Link>
 );
 
-ContactCard.title = ({ children }: PropsWithChildren) => (
-  <Card.title className="text-2xl/none">{children}</Card.title>
-);
+ContactCard.title = ({ children }: PropsWithChildren) => <Card.title>{children}</Card.title>;
 
 ContactCard.link = ({ children }: PropsWithChildren) => (
   <p className="max-w-[40vw] overflow-hidden overflow-ellipsis whitespace-nowrap border-b-1 text-lg/tight transition-colors hover:border-transparent">
