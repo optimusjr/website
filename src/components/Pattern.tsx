@@ -19,6 +19,11 @@ const pattern = tv({
         svg: "fill-primary-200",
         gradientDiv: "from-secondary-100 from-50%",
       },
+      tintSecondary: {
+        container: "bg-secondary-600",
+        svg: "fill-primary-800",
+        gradientDiv: "from-secondary-600 from-50%",
+      },
     },
     gradient: {
       radial: {
@@ -52,19 +57,19 @@ const Pattern = ({ SVGPattern, ...props }: Props) => {
   const y = useTransform(
     isTouch ? scrollYProgress : springedScrollYProgress,
     [0, 1],
-    ["-50%", "-30%"],
+    ["-100%", "0%"],
   );
 
   const patternId = useId();
 
   return (
-    <div className={container()}>
+    <div className={container()} ref={containerRef}>
       <svg className={svg()} xmlns="http://www.w3.org/2000/svg">
         <defs>
           <SVGPattern id={patternId} />
         </defs>
         <m.rect
-          className="h-[200vh] min-h-full w-screen"
+          className="h-[200%] min-h-full w-screen"
           fill={`url(#${patternId})`}
           style={{ y }}
         />

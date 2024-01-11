@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 import Image from "@/components/Image";
 import Screen from "@/components/Screen";
-import Typography from "@/components/Typography";
 import useToggle from "@/hooks/useToggle";
 import bedroomOff from "@/images/bedroom-off.png";
 import bedroomOn from "@/images/bedroom-on.png";
@@ -36,16 +35,12 @@ const Start = () => {
       <Divider />
 
       <div className="text-center animate-fade-in md:w-min md:text-left">
-        <Typography
-          className="text-[length:calc(2rem+6vw)] leading-none md:text-[length:calc(0.5rem+4.5vw)]"
-          color="primary"
-          variant="h1"
-        >
+        <h1 className="text-[length:calc(2rem+6vw)] font-extrabold uppercase leading-none text-primary-800 md:text-[length:calc(0.5rem+4.5vw)]">
           Leve o futuro para o seu lar.
-        </Typography>
-        <Typography className="text-[length:calc(1rem+2vw)] leading-none md:text-[length:calc(0.5rem+1.5vw)]">
+        </h1>
+        <p className="text-[length:calc(1rem+2vw)] leading-none md:text-[length:calc(0.5rem+1.5vw)]">
           Transformamos sua casa com as nossas soluções de automação residencial.
-        </Typography>
+        </p>
       </div>
 
       <div className="relative overflow-hidden rounded-3xl shadow-md animate-fade-in">
