@@ -40,9 +40,9 @@ const SelectQuestion = ({ question }: { question: Form.SelectQuestion }) => {
 
   return (
     <fieldset>
-      {question.label && <legend className="text-xl">{question.label}</legend>}
+      {question.label && <legend className="pb-2 pl-1 text-xl">{question.label}</legend>}
 
-      <Alert className="my-2" severity="error" show={!isValid && showProgressBlocked}>
+      <Alert className="mb-2" severity="error" show={!isValid && showProgressBlocked}>
         Por favor, escolha pelo menos um item.
       </Alert>
 
