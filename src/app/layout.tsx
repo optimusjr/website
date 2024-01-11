@@ -1,4 +1,4 @@
-import "@/utils/globals.css";
+import "@/utils/tailwind.css";
 
 import { Viewport } from "next";
 export const viewport: Viewport = {
