@@ -76,10 +76,6 @@ export default {
   },
   plugins: [
     plugin(({ addBase, addUtilities }) => {
-      addBase({
-        svg: { width: 24, height: "auto" },
-      });
-
       addUtilities({
         ".animate-slide-top": {
           animation: "slide-top 0.4s 0.4s ease-in-out forwards",

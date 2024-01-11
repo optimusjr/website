@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 import { GoogleTagManager } from "@next/third-parties/google";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
-  <html className={league.className} dir="ltr" lang="en">
+  <html className={[league.className, "scroll-smooth"].join(" ")} dir="ltr" lang="en">
     <head>
       <meta content="text/html" httpEquiv="content-type" />
     </head>
