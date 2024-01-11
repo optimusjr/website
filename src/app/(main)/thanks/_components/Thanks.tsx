@@ -4,9 +4,9 @@ import JSConfetti from "js-confetti";
 import { useEffect } from "react";
 
 import BackToHomeButton from "@/components/BackToHomeButton";
+import Pattern from "@/components/Pattern";
+import RainPattern from "@/components/patterns/Rain";
 import Screen from "@/components/Screen";
-
-import styles from "./thanks.module.scss";
 
 declare global {
   interface Window {
@@ -25,13 +25,17 @@ const Thanks = () => {
   }, []);
 
   return (
-    <Screen backgroundColor="secondary" className={styles.thanks} firstFullHeight>
-      <div>
-        <h1>Muito Obrigado!</h1>
-        <p>Recebemos sua mensagem. Entraremos em contato com você o mais rápido possível.</p>
+    <Screen className="relative justify-center gap-4 text-center" height="firstFull" padding>
+      <Pattern SVGPattern={RainPattern} bgColor="secondary" gradient="linear" />
 
-        <BackToHomeButton />
-      </div>
+      <h1 className="text-5xl/none font-extrabold uppercase text-primary-800 sm:text-6xl">
+        Muito Obrigado!
+      </h1>
+      <p className="text-xl/none sm:text-3xl">
+        Recebemos sua mensagem. Entraremos em contato com você o mais rápido possível.
+      </p>
+
+      <BackToHomeButton />
     </Screen>
   );
 };

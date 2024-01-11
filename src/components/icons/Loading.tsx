@@ -1,11 +1,6 @@
-interface Props<T extends React.ElementType> {
-  as?: T;
-}
+import { Props } from "@/utils/types/GenericIconType";
 
-const LoadingIcon = <T extends React.ElementType = "svg">({
-  as,
-  ...props
-}: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>) => {
+const LoadingIcon = <T extends React.ElementType = "svg">({ as, ...props }: Props<T>) => {
   const Component = as || "svg";
 
   return (

@@ -4,28 +4,31 @@ import { m } from "framer-motion";
 
 import Card from "@/components/Card";
 import Link from "@/components/Link";
-import variables from "@/styles/variables.module.scss";
+import { LinkStyles } from "@/components/StyledLink";
+import scaleOnHover from "@/utils/animations/scaleOnHover";
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
-import styles from "./contactCard.module.scss";
-
-interface Props {
+interface Props extends PropsWithChildren {
   href: string;
-  children: React.ReactNode;
+  Icon: React.ComponentType<{ className?: string }>;
 }
 
-const ContactCard = ({ href, children }: Props) => (
+const ContactCard = ({ href, Icon, children }: Props) => (
   <Link href={href}>
     <Card
       as={m.div}
-      cardLayout="none"
-      className={styles.contactCard}
-      initial={{ scale: 1, boxShadow: variables.shadowMd }}
-      transition={{ type: "spring", duration: 0.3 }}
-      whileHover={{ scale: 1.01, boxShadow: variables.shadowLg }}
+      bgColor="white"
+      className="flex h-full gap-4 p-8 shadow-md transition-shadow hover:shadow-lg"
+      {...scaleOnHover}
     >
-      {children}
+      <Icon className="w-16 flex-shrink-0" />
+      <div className="flex flex-col items-start gap-2">{children}</div>
     </Card>
   </Link>
 );
+
+ContactCard.title = ({ children }: PropsWithChildren) => <Card.title>{children}</Card.title>;
+
+ContactCard.link = ({ children }: PropsWithChildren) => <p className={LinkStyles()}>{children}</p>;
 
 export default ContactCard;

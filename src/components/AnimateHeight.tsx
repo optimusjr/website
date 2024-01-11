@@ -3,11 +3,9 @@
 import { m } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-interface Props {
-  children: React.ReactNode;
-}
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
-const AnimateHeight = ({ children }: Props) => {
+const AnimateHeight = ({ children }: PropsWithChildren) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState<number | "auto">("auto");
 
@@ -31,7 +29,7 @@ const AnimateHeight = ({ children }: Props) => {
   return (
     <m.div
       animate={{ height }}
-      style={{ overflow: "hidden" }}
+      className="overflow-hidden"
       transition={{ type: "spring", mass: 0.01 }}
     >
       <div ref={containerRef}>{children}</div>

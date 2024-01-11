@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 
-import AboutStart from "./_components/AboutStart";
+import Start from "./_components/Start";
 
 export const metadata: Metadata = {
   title: "Sobre nós",
 };
 
-const About = () => <AboutStart />;
+const About = () => <Start />;
 
 export default About;

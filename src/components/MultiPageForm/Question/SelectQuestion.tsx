@@ -7,7 +7,6 @@ import Checkbox from "@/components/Checkbox";
 
 import useFormContext from "../FormContext/useFormContext";
 import type * as Form from "../formSchemaType";
-import styles from "./selectQuestion.module.scss";
 
 const SelectQuestion = ({ question }: { question: Form.SelectQuestion }) => {
   const [isValid, setIsValid] = useState(true);
@@ -40,14 +39,14 @@ const SelectQuestion = ({ question }: { question: Form.SelectQuestion }) => {
   }, [formData]);
 
   return (
-    <fieldset className={styles.checkboxQuestion}>
-      {question.label && <legend>{question.label}</legend>}
+    <fieldset>
+      {question.label && <legend className="pb-2 pl-1 text-xl">{question.label}</legend>}
 
-      <Alert className={styles.error} severity="error" show={!isValid && showProgressBlocked}>
+      <Alert className="mb-2" severity="error" show={!isValid && showProgressBlocked}>
         Por favor, escolha pelo menos um item.
       </Alert>
 
-      <div className={styles.optionsContainer}>
+      <div className="grid gap-3 sm:grid-cols-2">
         {question.options.map((option) => (
           <SelectQuestionOption key={option.name} option={option} />
         ))}

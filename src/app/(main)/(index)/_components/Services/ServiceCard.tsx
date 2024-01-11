@@ -1,31 +1,46 @@
+import { m } from "framer-motion";
+
 import Button from "@/components/Button";
+import Card from "@/components/Card";
 import Link from "@/components/Link";
-import ListCard from "@/components/ListCard";
+import StyledImage from "@/components/StyledImage";
 import config from "@/config";
+import fadeIn from "@/utils/animations/fadeIn";
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
-import styles from "./serviceCard.module.scss";
-
-export interface Props {
+export interface Props extends PropsWithChildren {
   aboutPage?: string;
-  image: React.ReactNode;
-  children: React.ReactNode;
 }
 
-const ServiceCard = ({ aboutPage, image, children }: Props) => (
-  <ListCard className={styles.serviceCard}>
-    <div className={styles.image}> {image} </div>
-    <div className={styles.content}>{children}</div>
+const ServiceCard = ({ aboutPage, children }: Props) => (
+  <Card
+    as={m.li}
+    {...fadeIn}
+    bgColor="white"
+    className="flex w-[30vw] min-w-72 max-w-lg flex-col gap-4 p-4 sm:min-w-80 sm:p-8"
+  >
+    {children}
 
     {aboutPage ? (
-      <Button as={Link} href={aboutPage}>
+      <Button as={Link} className="m-auto mb-0" href={aboutPage}>
         Confira mais Detalhes
       </Button>
     ) : (
-      <Button as={Link} href={config.QUOTE_URL}>
+      <Button as={Link} className="m-auto mb-0" href={config.QUOTE_URL}>
         Faça um Orçamento
       </Button>
     )}
-  </ListCard>
+  </Card>
+);
+
+ServiceCard.image = StyledImage;
+
+ServiceCard.title = ({ children }: PropsWithChildren) => (
+  <Card.title className="text-center">{children}</Card.title>
+);
+
+ServiceCard.description = ({ children }: PropsWithChildren) => (
+  <p className="text-center text-lg/tight">{children}</p>
 );
 
 export default ServiceCard;

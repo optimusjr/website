@@ -1,14 +1,23 @@
 import BackToHomeButton from "@/components/BackToHomeButton";
 import Screen from "@/components/Screen";
 
-import styles from "./custom404.module.scss";
 import Illustration from "./Illustration";
 
 const Custom404 = () => (
-  <Screen backgroundColor="secondary" className={styles.custom404} firstFullHeight>
-    <div className={styles.text}>
-      <h1>Oops! Algo deu errado.</h1>
-      <p>A Página que você está procurando não pôde ser encontrada.</p>
+  <Screen
+    bgColor="secondary"
+    className="justify-center md:grid md:grid-cols-[1fr_2fr]"
+    height="firstFull"
+    gap
+    padding
+  >
+    <div className="flex flex-col items-center gap-4 text-center md:items-start md:justify-self-end md:text-left">
+      <h1 className="text-[length:calc(0.5rem+4.5vw)] font-extrabold uppercase leading-none text-primary-800">
+        Oops! Algo deu errado.
+      </h1>
+      <p className="text-[length:calc(0.5rem+1.5vw)] leading-none">
+        A Página que você está procurando não pôde ser encontrada.
+      </p>
 
       <BackToHomeButton />
     </div>

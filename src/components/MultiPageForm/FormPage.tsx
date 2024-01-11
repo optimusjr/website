@@ -1,56 +1,87 @@
 "use client";
 
-import { AnimatePresence, m, MotionProps } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
+
+import Alert from "@/components/Alert";
+import Link from "@/components/Link";
+import config from "@/config";
+import fadeSwap from "@/utils/animations/fadeSwap";
 
 import useFormContext from "./FormContext/useFormContext";
-import styles from "./formPage.module.scss";
 import Question from "./Question";
 
 const FormPage = () => {
   const { currentPage } = useFormContext();
-
   const page = currentPage.page;
 
-  const animation = {
-    animate: { opacity: 1 },
-    exit: { opacity: 0 },
-    initial: { opacity: 0 },
-  } as MotionProps;
+  return (
+    <fieldset className="flex flex-col pb-8">
+      <PageTitle />
+
+      {page.questions && (
+        <div className="flex flex-col gap-8">
+          {page.questions.map((question) => (
+            <m.div {...fadeSwap} key={question.name}>
+              <Question question={question} />
+            </m.div>
+          ))}
+        </div>
+      )}
+
+      <UnknownErrorAlert />
+    </fieldset>
+  );
+};
+
+const PageTitle = () => {
+  const { currentPage } = useFormContext();
+  const page = currentPage.page;
 
   return (
-    <fieldset className={styles.formPage}>
+    <div className="mb-4">
       <AnimatePresence initial={false} mode="popLayout">
         <m.legend
-          className={styles.pageTitle}
+          className="text-3xl font-bold text-primary-800"
           // necessário para forçar o componente a renderizar quando o texto mudar, e assim executar a animação
           key={page.title}
-          {...animation}
+          {...fadeSwap}
         >
           {page.title}
         </m.legend>
 
         {page.description && (
           <m.p
-            className={styles.pageDescription}
+            className="text-xl"
             // necessário para forçar o componente a renderizar quando o texto mudar, e assim executar a animação
             key={page.description}
-            {...animation}
+            {...fadeSwap}
           >
             {page.description}
           </m.p>
         )}
       </AnimatePresence>
-
-      {page.questions && (
-        <div className={styles.questions}>
-          {page.questions.map((question) => (
-            <m.div {...animation} key={question.name}>
-              <Question question={question} />
-            </m.div>
-          ))}
-        </div>
-      )}
-    </fieldset>
+    </div>
   );
 };
+
+const UnknownErrorAlert = () => {
+  const { hasSubmissionError } = useFormContext();
+
+  return (
+    <Alert className="mt-4" severity="error" show={hasSubmissionError}>
+      Ops! Algo deu errado. Não se preocupe, não é culpa sua. Por favor, tente novamente.
+      <p>
+        Se o problema persistir, nos avise&nbsp;
+        <Link
+          className="underline"
+          href={`https://wa.me/${config.WHATSAPP.replace(/[^0-9]/g, "")}`}
+        >
+          clicando&nbsp;aqui
+        </Link>
+        .
+      </p>
+    </Alert>
+  );
+};
+
 export default FormPage;

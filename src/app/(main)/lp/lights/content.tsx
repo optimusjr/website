@@ -11,45 +11,45 @@ import switches from "@/images/lights/switches.png";
 
 import CallToAction from "../_components/CallToAction";
 import FAQ from "../_components/FAQ";
-import LandingPageStart from "../_components/LandingPageStart";
 import Showcase from "../_components/Showcase";
+import Start from "../_components/Start";
 import Testimonials from "../_components/Testimonials";
 
 const Content = () => (
   <>
-    <LandingPageStart>
-      <LandingPageStart.intro>
-        <span>Automação de luzes</span>
-        <h1>
+    <Start>
+      <Start.intro>
+        <Start.span>Automação de luzes</Start.span>
+        <Start.h1>
           Controle suas luzes de
           <br />
           qualquer lugar
-        </h1>
-        <p>Economize energia e torne sua casa mais conectada</p>
-      </LandingPageStart.intro>
-      <LandingPageStart.features
+        </Start.h1>
+        <Start.p>Economize energia e torne sua casa mais conectada</Start.p>
+      </Start.intro>
+      <Start.features
         features={[
           {
-            icon: SofaIcon,
+            Icon: SofaIcon,
             title: "Tenha o Conforto da Iluminação Inteligente",
             description:
               "Controle as luzes da sua casa pelo celular ou por comando de voz, sem precisar sair do sofá.",
           },
           {
-            icon: ShieldHome,
+            Icon: ShieldHome,
             title: "Simule Presença, Afaste Intrusos",
             description:
               "Controle suas lâmpadas remotamente e programe horários e timers para simular presença e afastar intrusos.",
           },
           {
-            icon: Leaf,
+            Icon: Leaf,
             title: "Reduza a Conta de Luz com a Automação",
             description:
               "Evite desperdício de energia programando horários para acender e apagar as luzes apenas quando necessário.",
           },
         ]}
       />
-    </LandingPageStart>
+    </Start>
 
     <Testimonials
       testimonials={[
