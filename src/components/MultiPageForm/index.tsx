@@ -34,7 +34,7 @@ const FormCard = () => {
       }}
       as="form"
       bgColor="white"
-      className="w-full max-w-[768px] p-8"
+      className="w-full max-w-3xl p-8"
     >
       <AnimateHeight>
         <FormPage />

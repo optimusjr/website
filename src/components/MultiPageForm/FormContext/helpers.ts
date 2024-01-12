@@ -18,11 +18,11 @@ function isValidPage(page: Form.Page, formData: Form.Answers) {
 
   if (page.rule.effect === "SHOW") {
     return conditionValue === page.rule.condition.be;
-  } else if (page.rule.effect === "HIDE") {
-    return !(conditionValue === page.rule.condition.be);
-  } else {
-    return true;
   }
+  if (page.rule.effect === "HIDE") {
+    return !(conditionValue === page.rule.condition.be);
+  }
+  return true;
 }
 
 const getNextValidPageIndex = (

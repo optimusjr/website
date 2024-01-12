@@ -1,8 +1,8 @@
 import type { StaticImageData } from "next/image";
 
 import Card from "@/components/Card";
-import Image from "@/components/Image";
 import Screen from "@/components/Screen";
+import StyledImage from "@/components/StyledImage";
 
 import Parallax from "./Parallax";
 
@@ -28,12 +28,7 @@ const Showcase = ({ images }: Props) => (
           className="mx-4 size-32 overflow-hidden p-0 sm:mx-8 sm:size-64 md:size-72 lg:size-96 2xl:size-[40rem]"
           key={key}
         >
-          <Image
-            alt={image.alt}
-            className="transition-transform duration-1000 ease-in-out hover:scale-110"
-            src={image.image}
-            title={image.alt}
-          />
+          <StyledImage alt={image.alt} src={image.image} title={image.alt} disableContainer />
         </Card>
       ))}
     </Parallax>

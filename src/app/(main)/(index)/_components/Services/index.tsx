@@ -13,9 +13,8 @@ const Services = () => {
 
   if (isTouch) {
     return <ServicesMobile />;
-  } else {
-    return <ServicesDesktop />;
   }
+  return <ServicesDesktop />;
 };
 
 const ServicesDesktop = () => {

@@ -47,13 +47,13 @@ const RightButtonContent = () => {
           <m.div {...fadeSwap}>Enviando</m.div>
         </>
       );
-    } else {
-      return (
-        <>
-          <SendIcon as={m.svg} {...fadeSwap} /> <m.div {...fadeSwap}>Enviar</m.div>
-        </>
-      );
     }
+
+    return (
+      <>
+        <SendIcon as={m.svg} {...fadeSwap} /> <m.div {...fadeSwap}>Enviar</m.div>
+      </>
+    );
   }
 
   return <m.div {...fadeSwap}>Próxima página</m.div>;
@@ -73,19 +73,19 @@ const LeftButton = () => {
         Página anterior
       </Button>
     );
-  } else {
-    return (
-      <div>
-        <p className="text-lg/tight">Prefere falar diretamente com um ser humano?</p>
-        <p className="text-lg/tight">
-          <StyledLink href={`https://wa.me/${config.WHATSAPP.replace(/[^0-9]/g, "")}`}>
-            Clique&nbsp;aqui
-          </StyledLink>
-          &nbsp;e converse com um dos nossos vendedores.
-        </p>
-      </div>
-    );
   }
+
+  return (
+    <div>
+      <p className="text-lg/tight">Prefere falar diretamente com um ser humano?</p>
+      <p className="text-lg/tight">
+        <StyledLink href={`https://wa.me/${config.WHATSAPP.replace(/[^0-9]/g, "")}`}>
+          Clique&nbsp;aqui
+        </StyledLink>
+        &nbsp;e converse com um dos nossos vendedores.
+      </p>
+    </div>
+  );
 };
 
 export default PaginationControls;

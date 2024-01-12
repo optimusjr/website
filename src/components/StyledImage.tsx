@@ -10,16 +10,21 @@ const { container, image } = tv({
 })();
 
 interface Props extends Omit<React.ComponentProps<typeof Image>, "className"> {
+  disableContainer?: boolean;
   className?: {
     container?: string;
     image?: string;
   };
 }
 
-const StyledImage = ({ className, ...props }: Props) => (
-  <div className={container({ className: className?.container })}>
-    <Image className={image({ className: className?.image })} {...props} />
-  </div>
-);
+const StyledImage = ({ disableContainer, className, ...props }: Props) => {
+  const imageComponent = <Image className={image({ className: className?.image })} {...props} />;
+
+  if (disableContainer) {
+    return imageComponent;
+  }
+
+  return <div className={container({ className: className?.container })}>{imageComponent}</div>;
+};
 
 export default StyledImage;

@@ -2,9 +2,9 @@ import { m } from "framer-motion";
 import type { StaticImageData } from "next/image";
 
 import Card from "@/components/Card";
-import Image from "@/components/Image";
 import Link from "@/components/Link";
 import Screen from "@/components/Screen";
+import StyledImage from "@/components/StyledImage";
 import fadeIn from "@/utils/animations/fadeIn";
 
 import FiveStars from "./FiveStars";
@@ -34,13 +34,11 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
     {...fadeIn}
     className="flex flex-col items-center gap-8 p-8 sm:flex-row lg:flex-col xl:flex-row"
   >
-    <div className="size-32 flex-shrink-0 overflow-hidden rounded-full sm:size-52">
-      <Image
-        alt={`Foto de ${testimonial.name}`}
-        className="size-full transition-transform duration-1000 ease-in-out hover:scale-110"
-        src={testimonial.photo}
-      />
-    </div>
+    <StyledImage
+      alt={`Foto de ${testimonial.name}`}
+      className={{ container: "size-32 flex-shrink-0 rounded-full sm:size-52", image: "size-full" }}
+      src={testimonial.photo}
+    />
 
     <div className="flex flex-col justify-between gap-8 text-center">
       <p className="text-lg/tight">{testimonial.review}</p>

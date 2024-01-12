@@ -31,7 +31,7 @@ const Thanks = () => {
       <h1 className="text-5xl/none font-extrabold uppercase text-primary-800 sm:text-6xl">
         Muito Obrigado!
       </h1>
-      <p className="text-xl/none sm:text-3xl">
+      <p className="max-w-4xl text-xl/none sm:text-3xl">
         Recebemos sua mensagem. Entraremos em contato com você o mais rápido possível.
       </p>
 

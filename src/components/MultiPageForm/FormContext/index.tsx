@@ -103,9 +103,8 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
     if (isProgressBlocked) {
       setShowProgressBlocked(true);
       return;
-    } else {
-      setShowProgressBlocked(false);
     }
+    setShowProgressBlocked(false);
 
     if (nextValidPageIndex === undefined) {
       submit();

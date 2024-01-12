@@ -10,7 +10,9 @@ const Question = ({ question }: { question: Form.Question }) => {
     question.type === "number"
   ) {
     return <TextQuestion question={question} />;
-  } else if (question.type === "checkbox") {
+  }
+
+  if (question.type === "checkbox") {
     return <SelectQuestion question={question} />;
   }
 };
