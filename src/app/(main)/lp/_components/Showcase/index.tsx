@@ -1,6 +1,5 @@
 import type { StaticImageData } from "next/image";
 
-import Card from "@/components/Card";
 import Screen from "@/components/Screen";
 import StyledImage from "@/components/StyledImage";
 
@@ -24,12 +23,16 @@ const Showcase = ({ images }: Props) => (
 
     <Parallax baseVelocity={2}>
       {images.map((image, key) => (
-        <Card
-          className="mx-4 size-32 overflow-hidden p-0 sm:mx-8 sm:size-64 md:size-72 lg:size-96 2xl:size-[40rem]"
+        <StyledImage
+          className={{
+            container:
+              "mx-4 size-32 rounded-3xl shadow-lg sm:mx-8 sm:size-64 md:size-72 lg:size-96 2xl:size-[40rem]",
+          }}
+          alt={image.alt}
           key={key}
-        >
-          <StyledImage alt={image.alt} src={image.image} title={image.alt} disableContainer />
-        </Card>
+          src={image.image}
+          title={image.alt}
+        />
       ))}
     </Parallax>
   </Screen>

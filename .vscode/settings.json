@@ -29,6 +29,9 @@
   // Formatter
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
 
   // Material Icon Theme
   "material-icon-theme.folders.associations": {
