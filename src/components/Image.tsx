@@ -1,7 +1,7 @@
 import ExportedImage, { ExportedImageProps } from "next-image-export-optimizer";
 
-const Image = (props: ExportedImageProps) => {
-  return <ExportedImage draggable={false} {...props} />;
-};
+const Image = (props: ExportedImageProps) => (
+  <ExportedImage draggable={false} sizes="100vw" {...props} />
+);
 
 export default Image;

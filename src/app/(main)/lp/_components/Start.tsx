@@ -53,7 +53,7 @@ Start.features = ({ features }: FeaturesProps) => (
       >
         <feature.Icon className="w-32" />
 
-        <Card.title>{feature.title}</Card.title>
+        <Card.title as="h2">{feature.title}</Card.title>
         <p className="text-lg/tight">{feature.description}</p>
       </Card>
     ))}

@@ -13,26 +13,24 @@ interface Props {
   hideMobile: () => void;
 }
 
-const Links = ({ hideMobile }: Props) => {
-  return (
-    <>
-      <li className={base()}>
-        <Link className={link()} href="/about" onClick={hideMobile}>
-          Sobre Nós
-        </Link>
-      </li>
-      <li className={base()} onClick={hideMobile}>
-        <Link className={link()} href="/#services">
-          Serviços
-        </Link>
-      </li>
-      <li className={base()} onClick={hideMobile}>
-        <Link className={link()} href="/#contact">
-          Contato
-        </Link>
-      </li>
-    </>
-  );
-};
+const Links = ({ hideMobile }: Props) => (
+  <>
+    <li className={base()}>
+      <Link className={link()} href="/about" onClick={hideMobile}>
+        Sobre Nós
+      </Link>
+    </li>
+    <li className={base()} onClick={hideMobile}>
+      <Link className={link()} href="/#services">
+        Serviços
+      </Link>
+    </li>
+    <li className={base()} onClick={hideMobile}>
+      <Link className={link()} href="/#contact">
+        Contato
+      </Link>
+    </li>
+  </>
+);
 
 export default Links;

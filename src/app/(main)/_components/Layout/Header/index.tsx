@@ -20,7 +20,7 @@ const Header = () => {
   };
 
   return (
-    <Screen as="div" bgColor="secondary" className="px-4 sm:px-8 md:px-16">
+    <Screen as="div" bgColor="secondary" className="overflow-hidden px-4 sm:px-8 md:px-16">
       <header className="content-auto grid w-full grid-cols-2 rounded-b-3xl bg-neutral-50 text-xl animate-slide-top lg:grid-cols-3">
         <div className="flex min-h-16 items-center justify-start">
           <Link className="ml-3" href="/" onClick={hideMobile}>
@@ -29,6 +29,7 @@ const Header = () => {
               height="40"
               placeholder="empty"
               src={logo_simplificado}
+              priority
             />
           </Link>
         </div>

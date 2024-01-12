@@ -49,6 +49,7 @@ const Start = () => {
         <Image
           alt="Quarto com as luzes acessas"
           className="absolute left-0 top-0 transition-opacity"
+          sizes="100vw"
           src={bedroomOn}
           style={{ opacity: light ? 1 : 0 }}
           priority

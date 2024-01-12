@@ -13,13 +13,11 @@ interface Props {
   schema: Form.Schema;
 }
 
-const MultiPageForm = ({ schema }: Props) => {
-  return (
-    <MultiFormProvider formSchema={schema}>
-      <FormCard />
-    </MultiFormProvider>
-  );
-};
+const MultiPageForm = ({ schema }: Props) => (
+  <MultiFormProvider formSchema={schema}>
+    <FormCard />
+  </MultiFormProvider>
+);
 
 export default MultiPageForm;
 

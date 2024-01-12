@@ -16,9 +16,9 @@ const accordion = tv({
   base: "flex flex-col gap-8",
 });
 
-const Accordion = ({ children, className }: Props) => {
-  return <ul className={accordion({ className })}>{children}</ul>;
-};
+const Accordion = ({ children, className }: Props) => (
+  <ul className={accordion({ className })}>{children}</ul>
+);
 
 interface ItemProps extends PropsWithChildren {
   title: string;

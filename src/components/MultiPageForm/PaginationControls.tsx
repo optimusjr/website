@@ -12,19 +12,17 @@ import fadeSwap from "@/utils/animations/fadeSwap";
 import { PAGE_POSITION } from "./FormContext/helpers";
 import useFormContext from "./FormContext/useFormContext";
 
-const PaginationControls = () => {
-  return (
-    <div className="flex flex-row-reverse flex-wrap-reverse justify-between gap-4 sm:flex-nowrap">
-      <AnimatePresence initial={false} mode="popLayout">
-        <Button className="w-full justify-center sm:w-auto">
-          <RightButtonContent />
-        </Button>
+const PaginationControls = () => (
+  <div className="flex flex-row-reverse flex-wrap-reverse justify-between gap-4 sm:flex-nowrap">
+    <AnimatePresence initial={false} mode="popLayout">
+      <Button className="w-full justify-center sm:w-auto">
+        <RightButtonContent />
+      </Button>
 
-        <LeftButton />
-      </AnimatePresence>
-    </div>
-  );
-};
+      <LeftButton />
+    </AnimatePresence>
+  </div>
+);
 
 const RightButtonContent = () => {
   const { currentPage, isLoading } = useFormContext();

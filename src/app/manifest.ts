@@ -1,12 +1,8 @@
 import { MetadataRoute } from "next";
 
-type Concrete<Type> = {
-  [Property in keyof Type]-?: Type[Property];
-};
+type IconObject = Required<MetadataRoute.Manifest>["icons"][number];
 
-type IconObject = Concrete<MetadataRoute.Manifest>["icons"][0];
-
-export default function manifest(): MetadataRoute.Manifest {
+const manifest = (): MetadataRoute.Manifest => {
   const createIconEntry = (size: string): IconObject => ({
     src: `${process.env.SITE_URL}/icons/android-chrome-${size}.png`,
     sizes: size,
@@ -26,4 +22,6 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#136041",
     icons: [...icons.map((size) => createIconEntry(size))],
   };
-}
+};
+
+export default manifest;
