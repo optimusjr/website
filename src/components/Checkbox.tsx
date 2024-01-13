@@ -18,7 +18,7 @@ const Checkbox = ({ label, Icon, ...props }: TextFieldProps) => (
       {...props}
     />
 
-    {Icon && <Icon className="flex-shrink-0 peer-checked:fill-primary-800" />}
+    {Icon && <Icon className="peer-checked:fill-primary-800" />}
 
     <span className="text-lg/tight peer-checked:text-primary-800">{label}</span>
   </label>

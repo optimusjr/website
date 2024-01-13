@@ -21,7 +21,7 @@ const ContactCard = ({ href, Icon, children }: Props) => (
       className="flex h-full gap-4 p-8 shadow-md transition-shadow hover:shadow-lg"
       {...scaleOnHover}
     >
-      <Icon className="w-16 flex-shrink-0" />
+      <Icon className="w-16" />
       <div className="flex flex-col items-start gap-2">{children}</div>
     </Card>
   </Link>

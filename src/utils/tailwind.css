@@ -4,6 +4,6 @@
 
 @layer base {
   svg {
-    @apply h-auto w-6;
+    @apply h-auto w-6 flex-shrink-0;
   }
 }
