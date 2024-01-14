@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const highPriorityPaths = ["/"];
+  const highPriorityPaths = ["/", "lp/lights"];
   const mediumPriorityPaths = ["/about", "/quote"];
 
   const createSitemapEntry = (path: string, priority: number): MetadataRoute.Sitemap[number] => ({

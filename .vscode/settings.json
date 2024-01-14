@@ -69,7 +69,6 @@
     "package.json": "package-lock.json, yarn.lock, pnpm-lock.*, .eslint*, .prettier*, tsconfig*",
     "tailwind.config.*": "postcss.config*",
     "next.config.*": "next-env.d.ts",
-    "robots.*": "sitemap.*, manifest.*",
     "icon.*": "icon*, favicon*, apple-icon*"
   }
 }

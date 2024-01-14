@@ -119,7 +119,13 @@ export interface Page {
  * perguntas, e estas podem ser de dois tipos principais: {@link TextQuestion} e {@link SelectQuestion}.
  */
 export interface Schema {
+  /**
+   * Título do formulário
+   */
   title: string;
+  /**
+   * Array que deve conter a definição de cada página do formulário
+   */
   pages: Page[];
 }
 
