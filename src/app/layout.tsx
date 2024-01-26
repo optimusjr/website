@@ -51,7 +51,6 @@ export const metadata: Metadata = {
   },
 };
 
-// @ts-expect-error Remova esse comentário após o @next/third-parties atualizar)
 import { GoogleTagManager } from "@next/third-parties/google";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
