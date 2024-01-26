@@ -47,6 +47,7 @@ Start.features = ({ features }: FeaturesProps) => (
     {features.map((feature, key) => (
       <Card
         as={m.li}
+        bgColor="white"
         className="flex flex-col items-center gap-4 p-8 text-center"
         key={key}
         {...fadeIn}
