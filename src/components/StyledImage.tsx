@@ -1,6 +1,6 @@
 import { tv } from "tailwind-variants";
 
-import Image from "@/components/Image";
+import Image from "@/components/lib/Image";
 
 const { container, image } = tv({
   slots: {

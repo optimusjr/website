@@ -3,7 +3,7 @@
 import { AnimatePresence, m } from "framer-motion";
 
 import Alert from "@/components/Alert";
-import Link from "@/components/Link";
+import Link from "@/components/lib/Link";
 import config from "@/config";
 import fadeSwap from "@/utils/animations/fadeSwap";
 

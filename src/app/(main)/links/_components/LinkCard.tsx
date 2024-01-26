@@ -3,7 +3,7 @@
 import { m } from "framer-motion";
 
 import Card from "@/components/Card";
-import Link from "@/components/Link";
+import Link from "@/components/lib/Link";
 import scaleOnHover from "@/utils/animations/scaleOnHover";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 

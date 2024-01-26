@@ -1,6 +1,6 @@
 import { tv } from "tailwind-variants";
 
-import Link from "@/components/Link";
+import Link from "@/components/lib/Link";
 
 const { base, link } = tv({
   slots: {

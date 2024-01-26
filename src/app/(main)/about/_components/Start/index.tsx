@@ -6,7 +6,7 @@ import CheckList from "@/components/CheckList";
 import DiamondIcon from "@/components/icons/Diamond";
 import EyeIcon from "@/components/icons/Eye";
 import TargetIcon from "@/components/icons/Target";
-import Image from "@/components/Image";
+import Image from "@/components/lib/Image";
 import QuoteButton from "@/components/QuoteButton";
 import Screen from "@/components/Screen";
 import logo from "@/images/OPTIMUS/logo.svg";

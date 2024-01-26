@@ -5,7 +5,7 @@ import ClipboardIcon from "@/components/icons/Clipboard";
 import MessageIcon from "@/components/icons/Message";
 import PROSELIcon from "@/components/icons/PROSEL";
 import WebIcon from "@/components/icons/Web";
-import Image from "@/components/Image";
+import Image from "@/components/lib/Image";
 import Screen from "@/components/Screen";
 import SocialLinks from "@/components/SocialLinks";
 import config from "@/config";
@@ -21,7 +21,7 @@ const Links = () => (
         placeholder="empty"
         src={OPTIMUSIcon}
       />
-      <h1 className="text-center text-4xl font-extrabold uppercase sm:text-5xl sm:text-6xl">
+      <h1 className="text-center text-4xl font-extrabold uppercase sm:text-5xl md:text-6xl">
         Links relacionados
       </h1>
     </div>

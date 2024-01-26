@@ -4,7 +4,7 @@ import { AnimatePresence, m } from "framer-motion";
 
 import Button from "@/components/Button";
 import MenuIcon from "@/components/icons/Menu";
-import Link from "@/components/Link";
+import Link from "@/components/lib/Link";
 import config from "@/config";
 
 import Links from "./Links";

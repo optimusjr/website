@@ -6,7 +6,7 @@ import { useState } from "react";
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import CloseIcon from "@/components/icons/Close";
-import Link from "@/components/Link";
+import Link from "@/components/lib/Link";
 import config from "@/config";
 
 const PROSEL = () => {

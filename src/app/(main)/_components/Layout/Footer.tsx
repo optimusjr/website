@@ -1,4 +1,4 @@
-import Image from "@/components/Image";
+import Image from "@/components/lib/Image";
 import Screen from "@/components/Screen";
 import SocialLinks from "@/components/SocialLinks";
 import logo_horizontal from "@/images/OPTIMUS/logo_white_horizontal.svg";

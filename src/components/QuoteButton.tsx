@@ -4,7 +4,7 @@ import { m } from "framer-motion";
 
 import Button from "@/components/Button";
 import ArrowRightIcon from "@/components/icons/ArrowRight";
-import Link from "@/components/Link";
+import Link from "@/components/lib/Link";
 import config from "@/config";
 
 const QuoteButton = () => (

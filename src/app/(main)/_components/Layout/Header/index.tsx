@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "@/components/Image";
-import Link from "@/components/Link";
+import Image from "@/components/lib/Image";
+import Link from "@/components/lib/Link";
 import QuoteButton from "@/components/QuoteButton";
 import Screen from "@/components/Screen";
 import useToggle from "@/hooks/useToggle";

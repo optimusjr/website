@@ -2,7 +2,7 @@ import { m } from "framer-motion";
 
 import Button from "@/components/Button";
 import Card from "@/components/Card";
-import Link from "@/components/Link";
+import Link from "@/components/lib/Link";
 import StyledImage from "@/components/StyledImage";
 import config from "@/config";
 import fadeIn from "@/utils/animations/fadeIn";
