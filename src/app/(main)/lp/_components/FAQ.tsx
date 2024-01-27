@@ -1,5 +1,5 @@
-import Accordion from "@/components/Accordion";
-import Screen from "@/components/Screen";
+import Accordion from "@/components/others/Accordion";
+import Screen from "@/components/others/Screen";
 
 interface Props {
   questions: {

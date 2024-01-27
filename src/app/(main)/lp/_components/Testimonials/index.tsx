@@ -2,8 +2,8 @@ import { m } from "framer-motion";
 import type { StaticImageData } from "next/image";
 
 import Link from "@/components/lib/Link";
-import Screen from "@/components/Screen";
-import StyledImage from "@/components/StyledImage";
+import Screen from "@/components/others/Screen";
+import StyledImage from "@/components/others/StyledImage";
 import Card from "@/components/ui/Card";
 import fadeIn from "@/utils/animations/fadeIn";
 

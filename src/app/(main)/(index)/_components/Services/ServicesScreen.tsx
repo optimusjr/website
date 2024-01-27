@@ -1,4 +1,4 @@
-import Screen from "@/components/Screen";
+import Screen from "@/components/others/Screen";
 
 import images from "./images";
 import ServiceCard from "./ServiceCard";

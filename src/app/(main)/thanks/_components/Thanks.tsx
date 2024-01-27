@@ -3,10 +3,10 @@
 import JSConfetti from "js-confetti";
 import { useEffect } from "react";
 
-import BackToHomeButton from "@/components/common/BackToHomeButton";
-import Pattern from "@/components/Pattern";
+import BackToHomeButton from "@/components/others/BackToHomeButton";
+import Pattern from "@/components/others/Pattern";
+import Screen from "@/components/others/Screen";
 import RainPattern from "@/components/patterns/Rain";
-import Screen from "@/components/Screen";
 
 declare global {
   interface Window {

@@ -1,7 +1,7 @@
 import { m } from "framer-motion";
 
-import QuoteButton from "@/components/common/QuoteButton";
-import Screen from "@/components/Screen";
+import QuoteButton from "@/components/others/QuoteButton";
+import Screen from "@/components/others/Screen";
 import Card from "@/components/ui/Card";
 import fadeIn from "@/utils/animations/fadeIn";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";

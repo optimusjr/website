@@ -8,7 +8,7 @@ import LeafIcon from "@/components/icons/Leaf";
 import RocketIcon from "@/components/icons/Rocket";
 import ShieldHomeIcon from "@/components/icons/ShieldHome";
 import SofaIcon from "@/components/icons/Sofa";
-import Screen from "@/components/Screen";
+import Screen from "@/components/others/Screen";
 import Card from "@/components/ui/Card";
 import fadeIn from "@/utils/animations/fadeIn";
 

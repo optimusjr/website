@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 import Image from "@/components/lib/Image";
-import Screen from "@/components/Screen";
+import Screen from "@/components/others/Screen";
 import useToggle from "@/hooks/useToggle";
 import bedroomOff from "@/images/bedroom-off.png";
 import bedroomOn from "@/images/bedroom-on.png";

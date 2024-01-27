@@ -1,6 +1,6 @@
 # Website da OPTIMUS Jr.
 
-Este repositório contém o código-fonte do site da OPTIMUS Jr. desenvolvido utilizando o framework [Next.Js](https://nextjs.org/).
+Este repositório contém o código-fonte do site da OPTIMUS Jr. desenvolvido utilizando o framework [Next.Js](https://nextjs.org/). Se você for um membro da OPTIMUS Jr. e tiver acesso a wikOPTIMUS, você pode conferir mais informações no artigo sobre o [Website](https://wiki.optimusjr.com.br/pt-br/Website).
 
 ## Instalação
 

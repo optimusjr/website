@@ -1,7 +1,7 @@
 "use client";
 
-import MultiPageForm from "@/components/MultiPageForm";
-import Screen from "@/components/Screen";
+import MultiPageForm from "@/components/others/MultiPageForm";
+import Screen from "@/components/others/Screen";
 import quoteFormSchema from "@/quoteFormSchema";
 
 const Quote = () => (

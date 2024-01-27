@@ -6,7 +6,7 @@ import CapIcon from "@/components/icons/Cap";
 import CheckIcon from "@/components/icons/Check";
 import HandIcon from "@/components/icons/Hand";
 import TenIcon from "@/components/icons/Ten";
-import Screen from "@/components/Screen";
+import Screen from "@/components/others/Screen";
 import Card from "@/components/ui/Card";
 import fadeIn from "@/utils/animations/fadeIn";
 

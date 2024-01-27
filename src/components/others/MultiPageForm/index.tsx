@@ -1,6 +1,6 @@
 "use client";
 
-import AnimateHeight from "@/components/AnimateHeight";
+import AnimateHeight from "@/components/others/AnimateHeight";
 import Card from "@/components/ui/Card";
 
 import { MultiFormProvider } from "./FormContext";

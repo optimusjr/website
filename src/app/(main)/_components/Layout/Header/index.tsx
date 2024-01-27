@@ -1,9 +1,9 @@
 "use client";
 
-import QuoteButton from "@/components/common/QuoteButton";
 import Image from "@/components/lib/Image";
 import Link from "@/components/lib/Link";
-import Screen from "@/components/Screen";
+import QuoteButton from "@/components/others/QuoteButton";
+import Screen from "@/components/others/Screen";
 import useToggle from "@/hooks/useToggle";
 import logo_simplificado from "@/images/OPTIMUS/logo_simplificado.svg";
 

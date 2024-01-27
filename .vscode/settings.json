@@ -31,8 +31,15 @@
   // Formatter
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit"
+  "eslint.format.enable": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
 
   // Material Icon Theme
@@ -49,6 +56,8 @@
     "strings": "on"
   },
   "files.associations": {
+    "*.ts": "typescript",
+    "*.tsx": "typescriptreact",
     "*.css": "tailwindcss"
   },
   "tailwindCSS.experimental.classRegex": [

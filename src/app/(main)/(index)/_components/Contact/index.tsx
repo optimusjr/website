@@ -4,7 +4,7 @@ import EmailIcon from "@/components/icons/Email";
 import PhoneIcon from "@/components/icons/Phone";
 import SendIcon from "@/components/icons/Send";
 import WhatsappIcon from "@/components/icons/Whatsapp";
-import Screen from "@/components/Screen";
+import Screen from "@/components/others/Screen";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 import { TextArea, TextField } from "@/components/ui/TextField";

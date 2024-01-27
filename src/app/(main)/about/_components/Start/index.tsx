@@ -1,13 +1,13 @@
 "use client";
 
 import AboutCard from "@/app/(main)/about/_components/Start/AboutCard";
-import CheckList from "@/components/CheckList";
-import QuoteButton from "@/components/common/QuoteButton";
 import DiamondIcon from "@/components/icons/Diamond";
 import EyeIcon from "@/components/icons/Eye";
 import TargetIcon from "@/components/icons/Target";
 import Image from "@/components/lib/Image";
-import Screen from "@/components/Screen";
+import CheckList from "@/components/others/CheckList";
+import QuoteButton from "@/components/others/QuoteButton";
+import Screen from "@/components/others/Screen";
 import Card from "@/components/ui/Card";
 import logo from "@/images/OPTIMUS/logo.svg";
 

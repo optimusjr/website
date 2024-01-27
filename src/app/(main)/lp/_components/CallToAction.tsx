@@ -1,9 +1,9 @@
 "use client";
 
-import QuoteButton from "@/components/common/QuoteButton";
-import Pattern from "@/components/Pattern";
+import Pattern from "@/components/others/Pattern";
+import QuoteButton from "@/components/others/QuoteButton";
+import Screen from "@/components/others/Screen";
 import CogsPattern from "@/components/patterns/Cogs";
-import Screen from "@/components/Screen";
 
 const CallToAction = () => (
   <Screen className="relative px-2 py-16 sm:px-8 md:px-16" padding>

@@ -1,13 +1,13 @@
 "use client";
 
 import OPTIMUSIcon from "@/app/icon.svg";
-import SocialLinks from "@/components/common/SocialLinks";
 import ClipboardIcon from "@/components/icons/Clipboard";
 import MessageIcon from "@/components/icons/Message";
 import PROSELIcon from "@/components/icons/PROSEL";
 import WebIcon from "@/components/icons/Web";
 import Image from "@/components/lib/Image";
-import Screen from "@/components/Screen";
+import Screen from "@/components/others/Screen";
+import SocialLinks from "@/components/others/SocialLinks";
 import config from "@/config";
 
 import LinkCard from "./LinkCard";

@@ -1,7 +1,7 @@
 import type { StaticImageData } from "next/image";
 
-import Screen from "@/components/Screen";
-import StyledImage from "@/components/StyledImage";
+import Screen from "@/components/others/Screen";
+import StyledImage from "@/components/others/StyledImage";
 
 import Parallax from "./Parallax";
 

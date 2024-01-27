@@ -1,7 +1,7 @@
 import { m } from "framer-motion";
 
 import Link from "@/components/lib/Link";
-import StyledImage from "@/components/StyledImage";
+import StyledImage from "@/components/others/StyledImage";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 import config from "@/config";
