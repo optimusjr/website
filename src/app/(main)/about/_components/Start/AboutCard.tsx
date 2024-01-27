@@ -2,7 +2,7 @@
 
 import { m } from "framer-motion";
 
-import Card from "@/components/Card";
+import Card from "@/components/ui/Card";
 import fadeIn from "@/utils/animations/fadeIn";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 

@@ -1,7 +1,6 @@
 "use client";
 
 import AboutCard from "@/app/(main)/about/_components/Start/AboutCard";
-import Card from "@/components/Card";
 import CheckList from "@/components/CheckList";
 import DiamondIcon from "@/components/icons/Diamond";
 import EyeIcon from "@/components/icons/Eye";
@@ -9,6 +8,7 @@ import TargetIcon from "@/components/icons/Target";
 import Image from "@/components/lib/Image";
 import QuoteButton from "@/components/QuoteButton";
 import Screen from "@/components/Screen";
+import Card from "@/components/ui/Card";
 import logo from "@/images/OPTIMUS/logo.svg";
 
 const AboutStart = () => (

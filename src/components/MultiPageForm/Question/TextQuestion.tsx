@@ -2,7 +2,7 @@
 
 import { ChangeEvent, ComponentProps, startTransition, useState } from "react";
 
-import { TextArea, TextField } from "@/components/TextField";
+import { TextArea, TextField } from "@/components/ui/TextField";
 
 import useFormContext from "../FormContext/useFormContext";
 import type * as Form from "../formSchemaType";

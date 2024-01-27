@@ -2,8 +2,8 @@
 
 import { ChangeEvent, startTransition, useEffect, useState } from "react";
 
-import Alert from "@/components/Alert";
-import Checkbox from "@/components/Checkbox";
+import Alert from "@/components/ui/Alert";
+import Checkbox from "@/components/ui/Checkbox";
 
 import useFormContext from "../FormContext/useFormContext";
 import type * as Form from "../formSchemaType";

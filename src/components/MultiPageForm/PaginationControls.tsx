@@ -2,10 +2,10 @@
 
 import { AnimatePresence, m } from "framer-motion";
 
-import Button from "@/components/Button";
 import LoadingIcon from "@/components/icons/Loading";
 import SendIcon from "@/components/icons/Send";
 import StyledLink from "@/components/StyledLink";
+import Button from "@/components/ui/Button";
 import config from "@/config";
 import fadeSwap from "@/utils/animations/fadeSwap";
 

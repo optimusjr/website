@@ -1,9 +1,9 @@
-import Button from "@/components/Button";
 import FacebookIcon from "@/components/icons/Facebook";
 import InstagramIcon from "@/components/icons/Instagram";
 import LinkedInIcon from "@/components/icons/LinkedIn";
 import WhatsappIcon from "@/components/icons/Whatsapp";
 import Link from "@/components/lib/Link";
+import Button from "@/components/ui/Button";
 import config from "@/config";
 
 const { INSTAGRAM, WHATSAPP, LINKEDIN, FACEBOOK } = config;

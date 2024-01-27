@@ -3,8 +3,8 @@
 import { AnimatePresence, m } from "framer-motion";
 import { tv } from "tailwind-variants";
 
-import Button from "@/components/Button";
 import ChevronIcon from "@/components/icons/Chevron";
+import Button from "@/components/ui/Button";
 import useToggle from "@/hooks/useToggle";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 

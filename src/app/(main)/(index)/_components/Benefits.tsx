@@ -2,7 +2,6 @@
 
 import { m } from "framer-motion";
 
-import Card from "@/components/Card";
 import DeviceIcon from "@/components/icons/Devices";
 import HomeAssistantIcon from "@/components/icons/HomeAssistant";
 import LeafIcon from "@/components/icons/Leaf";
@@ -10,6 +9,7 @@ import RocketIcon from "@/components/icons/Rocket";
 import ShieldHomeIcon from "@/components/icons/ShieldHome";
 import SofaIcon from "@/components/icons/Sofa";
 import Screen from "@/components/Screen";
+import Card from "@/components/ui/Card";
 import fadeIn from "@/utils/animations/fadeIn";
 
 const Benefits = () => (

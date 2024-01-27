@@ -2,9 +2,9 @@
 
 import { m } from "framer-motion";
 
-import Button from "@/components/Button";
 import ArrowLeftIcon from "@/components/icons/ArrowLeft";
 import Link from "@/components/lib/Link";
+import Button from "@/components/ui/Button";
 
 const BackToHomeButton = () => (
   <m.div animate="rest" whileHover="hover">

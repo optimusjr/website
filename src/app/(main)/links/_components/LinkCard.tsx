@@ -2,8 +2,8 @@
 
 import { m } from "framer-motion";
 
-import Card from "@/components/Card";
 import Link from "@/components/lib/Link";
+import Card from "@/components/ui/Card";
 import scaleOnHover from "@/utils/animations/scaleOnHover";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 

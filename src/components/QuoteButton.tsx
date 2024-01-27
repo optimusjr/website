@@ -2,9 +2,9 @@
 
 import { m } from "framer-motion";
 
-import Button from "@/components/Button";
 import ArrowRightIcon from "@/components/icons/ArrowRight";
 import Link from "@/components/lib/Link";
+import Button from "@/components/ui/Button";
 import config from "@/config";
 
 const QuoteButton = () => (

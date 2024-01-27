@@ -3,10 +3,10 @@
 import { AnimatePresence, m } from "framer-motion";
 import { useState } from "react";
 
-import Button from "@/components/Button";
-import Card from "@/components/Card";
 import CloseIcon from "@/components/icons/Close";
 import Link from "@/components/lib/Link";
+import Button from "@/components/ui/Button";
+import Card from "@/components/ui/Card";
 import config from "@/config";
 
 const PROSEL = () => {
