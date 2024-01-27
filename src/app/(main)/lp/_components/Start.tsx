@@ -1,6 +1,6 @@
 import { m } from "framer-motion";
 
-import QuoteButton from "@/components/QuoteButton";
+import QuoteButton from "@/components/common/QuoteButton";
 import Screen from "@/components/Screen";
 import Card from "@/components/ui/Card";
 import fadeIn from "@/utils/animations/fadeIn";

@@ -4,8 +4,8 @@ import { AnimatePresence, m } from "framer-motion";
 
 import LoadingIcon from "@/components/icons/Loading";
 import SendIcon from "@/components/icons/Send";
-import StyledLink from "@/components/StyledLink";
 import Button from "@/components/ui/Button";
+import Link from "@/components/ui/Link";
 import config from "@/config";
 import fadeSwap from "@/utils/animations/fadeSwap";
 
@@ -77,9 +77,9 @@ const LeftButton = () => {
     <div>
       <p className="text-lg/tight">Prefere falar diretamente com um ser humano?</p>
       <p className="text-lg/tight">
-        <StyledLink href={`https://wa.me/${config.WHATSAPP.replace(/[^0-9]/g, "")}`}>
+        <Link href={`https://wa.me/${config.WHATSAPP.replace(/[^0-9]/g, "")}`}>
           Clique&nbsp;aqui
-        </StyledLink>
+        </Link>
         &nbsp;e converse com um dos nossos vendedores.
       </p>
     </div>

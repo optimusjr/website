@@ -3,7 +3,7 @@
 import JSConfetti from "js-confetti";
 import { useEffect } from "react";
 
-import BackToHomeButton from "@/components/BackToHomeButton";
+import BackToHomeButton from "@/components/common/BackToHomeButton";
 import Pattern from "@/components/Pattern";
 import RainPattern from "@/components/patterns/Rain";
 import Screen from "@/components/Screen";

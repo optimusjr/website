@@ -1,8 +1,8 @@
 "use client";
 
+import QuoteButton from "@/components/common/QuoteButton";
 import Pattern from "@/components/Pattern";
 import CogsPattern from "@/components/patterns/Cogs";
-import QuoteButton from "@/components/QuoteButton";
 import Screen from "@/components/Screen";
 
 const CallToAction = () => (

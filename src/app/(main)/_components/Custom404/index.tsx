@@ -1,4 +1,4 @@
-import BackToHomeButton from "@/components/BackToHomeButton";
+import BackToHomeButton from "@/components/common/BackToHomeButton";
 import Screen from "@/components/Screen";
 
 import Illustration from "./Illustration";
