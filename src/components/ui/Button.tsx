@@ -28,16 +28,13 @@ interface Props<T extends React.ElementType>
   className?: string;
 }
 
-const Button = <T extends React.ElementType = "button">({
-  as,
-  size,
-  variant,
-  className,
-  ...props
-}: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>) => {
+const Button = <T extends React.ElementType = "button">(
+  props: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>,
+) => {
+  const { as, size, variant, className, ...componentProps } = props;
   const Component = as || "button";
 
-  return <Component className={button({ size, variant, className })} {...props} />;
+  return <Component className={button({ size, variant, className })} {...componentProps} />;
 };
 
 export default Button;

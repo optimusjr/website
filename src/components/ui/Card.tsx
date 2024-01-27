@@ -20,15 +20,13 @@ interface Props<T extends React.ElementType> extends PropsWithChildren, VariantP
   className?: string;
 }
 
-const Card = <T extends React.ElementType = "div">({
-  as,
-  className,
-  bgColor,
-  ...props
-}: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>) => {
+const Card = <T extends React.ElementType = "div">(
+  props: Props<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof Props<T>>,
+) => {
+  const { as, className, bgColor, ...componentProps } = props;
   const Component = as || "div";
 
-  return <Component className={card({ bgColor, className })} {...props} />;
+  return <Component className={card({ bgColor, className })} {...componentProps} />;
 };
 
 const cardTitle = tv({

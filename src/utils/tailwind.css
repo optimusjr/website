@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   svg {
     @apply h-auto w-6 flex-shrink-0;
   }

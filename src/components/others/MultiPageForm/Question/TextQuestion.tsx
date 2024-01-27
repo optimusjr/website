@@ -2,7 +2,7 @@
 
 import { ChangeEvent, ComponentProps, startTransition, useState } from "react";
 
-import { TextArea, TextField } from "@/components/ui/TextField";
+import TextField from "@/components/ui/TextField";
 
 import useFormContext from "../FormContext/useFormContext";
 import type * as Form from "../formSchemaType";
@@ -28,18 +28,19 @@ const TextQuestion = ({ question }: { question: Form.TextQuestion }) => {
     });
   };
 
-  const props: ComponentProps<typeof TextField> & ComponentProps<typeof TextArea> = {
+  const props: ComponentProps<typeof TextField> = {
     label: question.label,
     name: question.name,
     placeholder: question.placeholder,
     required: question.required,
     autoComplete: question.autocomplete,
     type: question.type,
+    multiline: question.multiline,
     value: answer,
     onChange: handleChange,
   };
 
-  return question.multiline ? <TextArea {...props} /> : <TextField {...props} />;
+  return <TextField {...props} />;
 };
 
 export default TextQuestion;

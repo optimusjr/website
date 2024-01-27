@@ -35,17 +35,12 @@ interface Props<T extends React.ElementType>
   className?: string;
 }
 
-const Screen = <T extends React.ElementType = "article">({
-  children,
-  as,
-  id,
-  className,
-  ...props
-}: Props<T>) => {
+const Screen = <T extends React.ElementType = "article">(props: Props<T>) => {
+  const { children, as, id, className, ...tvProps } = props;
   const Component = as || "article";
 
   return (
-    <Component className={screen({ ...props, className })} id={id}>
+    <Component className={screen({ ...tvProps, className })} id={id}>
       {children}
     </Component>
   );

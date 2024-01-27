@@ -11,41 +11,29 @@ const textField = tv({
     required: {
       true: { text: "after:content-['*']" },
     },
-    textarea: {
+    multiline: {
       true: { input: "min-h-32 resize-none" },
     },
   },
 });
 
-interface TextFieldProps extends React.HTMLProps<HTMLInputElement> {
+type TextInputProps = React.HTMLProps<HTMLTextAreaElement> & React.HTMLProps<HTMLInputElement>;
+interface TextFieldProps extends TextInputProps {
+  multiline?: boolean;
   label: string;
 }
 
-const TextField = ({ label, className, ...props }: TextFieldProps) => {
-  const { container, text, input } = textField({ required: props.required });
+const TextField = ({ label, className, required, multiline, ...props }: TextFieldProps) => {
+  const { container, text, input } = textField({ required, multiline });
+
+  const InputComponent = multiline ? "textarea" : "input";
 
   return (
     <label className={container()}>
       <span className={text()}>{label}</span>
-      <input className={input({ className })} {...props} />
-    </label>
-  );
-};
-
-interface TextAreaProps extends React.HTMLProps<HTMLTextAreaElement> {
-  label: string;
-}
-
-const TextArea = ({ label, className, ...props }: TextAreaProps) => {
-  const { container, text, input } = textField({ required: props.required, textarea: true });
-
-  return (
-    <label className={container()}>
-      <span className={text()}>{label}</span>
-      <textarea className={input({ className })} {...props} />
+      <InputComponent className={input({ className })} {...props} />
     </label>
   );
 };
 
 export default TextField;
-export { TextArea, TextField };

@@ -11,6 +11,7 @@ import config from "@/config";
 
 const PROSEL = () => {
   const [isOpen, setIsOpen] = useState(true);
+  const close = () => setIsOpen(false);
 
   if (!config.IS_PROSEL) {
     return null;
@@ -29,7 +30,7 @@ const PROSEL = () => {
             <div className="flex w-full items-center justify-between">
               <Card.title>Estamos contratando!</Card.title>
 
-              <Button onClick={() => setIsOpen(false)} variant="text">
+              <Button onClick={close} variant="text">
                 <CloseIcon />
               </Button>
             </div>
@@ -39,12 +40,7 @@ const PROSEL = () => {
               gente!
             </p>
 
-            <Button
-              as={Link}
-              className="ml-auto"
-              href={config.PROSEL_FORM_URL}
-              onClick={() => setIsOpen(false)}
-            >
+            <Button as={Link} className="ml-auto" href={config.PROSEL_FORM_URL} onClick={close}>
               Quero me Inscrever!
             </Button>
           </Card>

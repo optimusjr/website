@@ -7,7 +7,7 @@ import WhatsappIcon from "@/components/icons/Whatsapp";
 import Screen from "@/components/others/Screen";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
-import { TextArea, TextField } from "@/components/ui/TextField";
+import TextField from "@/components/ui/TextField";
 import config from "@/config";
 
 import ContactCard from "./ContactCard";
@@ -44,7 +44,7 @@ const Contacts = () => (
 
         <TextField autoComplete="name" label="Nome:" name="nome" required />
         <TextField autoComplete="email" label="E-mail:" name="email" type="email" required />
-        <TextArea label="Sua mensagem:" name="mensagem" required />
+        <TextField label="Sua mensagem:" name="mensagem" multiline required />
 
         <input name="_next" type="hidden" value={`${process.env.SITE_URL}/thanks`} />
 
