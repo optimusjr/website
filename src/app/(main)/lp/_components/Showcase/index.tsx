@@ -1,8 +1,8 @@
 import type { StaticImageData } from "next/image";
-import { PropsWithChildren } from "react";
 
 import Screen from "@/components/others/Screen";
 import StyledImage from "@/components/others/StyledImage";
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
 import Parallax from "./Parallax";
 

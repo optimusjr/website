@@ -1,7 +1,6 @@
-import { PropsWithChildren } from "react";
-
 import Accordion from "@/components/others/Accordion";
 import Screen from "@/components/others/Screen";
+import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
 const FAQ = ({ children }: PropsWithChildren) => (
   <Screen bgColor="neutral" className="md:grid md:grid-cols-2 md:items-start" gap padding>
