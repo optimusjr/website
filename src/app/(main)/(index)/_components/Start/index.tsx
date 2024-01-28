@@ -12,16 +12,16 @@ import Circuits from "./Circuits";
 import Divider from "./Divider";
 
 const Start = () => {
-  const [light, toggleLight] = useToggle(false);
-  const [disableTimer, setDisableTimer] = useState(false);
+  const [isLightOn, toggleLight] = useToggle(false);
+  const [isTimerDisabled, disableTimer] = useState(false);
 
   let timer: NodeJS.Timeout | undefined;
 
   useEffect(() => {
-    if (!disableTimer) {
+    if (!isTimerDisabled) {
       timer = setTimeout(toggleLight, 5000);
     }
-  }, [light]);
+  }, [isLightOn]);
 
   return (
     <Screen
@@ -43,23 +43,22 @@ const Start = () => {
         </p>
       </div>
 
-      <div className="relative overflow-hidden rounded-3xl shadow-md animate-fade-in">
+      <div className="relative overflow-hidden rounded-3xl shadow-lg animate-fade-in">
         <Image alt="Quarto com as luzes apagadas" src={bedroomOff} priority />
 
         <Image
           alt="Quarto com as luzes acessas"
-          className="absolute left-0 top-0 transition-opacity"
-          sizes="100vw"
+          className="absolute top-0 transition-opacity"
           src={bedroomOn}
-          style={{ opacity: light ? 1 : 0 }}
+          style={{ opacity: isLightOn ? 1 : 0 }}
           priority
         />
 
         <button
           onClick={() => {
             toggleLight();
-            if (!disableTimer) {
-              setDisableTimer(true);
+            if (!isTimerDisabled) {
+              disableTimer(true);
               clearTimeout(timer);
             }
           }}
@@ -74,7 +73,7 @@ const Start = () => {
 
             opacity: 0,
           }}
-          aria-label={"Interruptor da luz"}
+          aria-label="Interruptor da luz"
         />
       </div>
     </Screen>
