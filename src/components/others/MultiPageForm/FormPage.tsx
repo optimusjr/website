@@ -2,8 +2,8 @@
 
 import { AnimatePresence, m } from "framer-motion";
 
-import Link from "@/components/lib/Link";
 import Alert from "@/components/ui/Alert";
+import Link from "@/components/ui/Link";
 import config from "@/config";
 import fadeSwap from "@/utils/animations/fadeSwap";
 
@@ -69,13 +69,10 @@ const UnknownErrorAlert = () => {
 
   return (
     <Alert className="mt-4" severity="error" show={hasSubmissionError}>
-      Ops! Algo deu errado. Não se preocupe, não é culpa sua. Por favor, tente novamente.
+      <p>Ops! Algo deu errado. Não se preocupe, não é culpa sua. Por favor, tente novamente.</p>
       <p>
         Se o problema persistir, nos avise&nbsp;
-        <Link
-          className="underline"
-          href={`https://wa.me/${config.WHATSAPP.replace(/[^0-9]/g, "")}`}
-        >
+        <Link className="text-base" href={config.WHATSAPP_LINK}>
           clicando&nbsp;aqui
         </Link>
         .

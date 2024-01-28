@@ -1,19 +1,19 @@
 import "@/utils/tailwind.css";
 
-import { Viewport } from "next";
+import type { Metadata, Viewport } from "next";
+import { League_Spartan } from "next/font/google";
+
+import config from "@/config";
+
 export const viewport: Viewport = {
   themeColor: "#efefef",
 };
-
-import { League_Spartan } from "next/font/google";
 
 const league = League_Spartan({
   subsets: ["latin"],
   fallback: ["Roboto", "sans-serif"],
   display: "swap",
 });
-
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
@@ -23,13 +23,13 @@ export const metadata: Metadata = {
   description:
     "Empresa júnior de automação residencial, oferecemos soluções inovadoras e personalizadas para tornar sua casa mais inteligente.",
   authors: [{ name: "OPTIMUS Jr. Controle e Automação" }],
-  metadataBase: new URL(process.env.SITE_URL as string),
+  metadataBase: new URL(config.SITE_URL),
 
   twitter: {
     creator: "@OPTIMUSJrBA",
   },
   openGraph: {
-    url: process.env.SITE_URL,
+    url: config.SITE_URL,
     type: "website",
     locale: "pt_BR",
     images: [
@@ -42,11 +42,11 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    shortcut: `${process.env.SITE_URL}/favicon.ico`,
+    shortcut: `${config.SITE_URL}/favicon.ico`,
     other: {
       rel: "mask-icon",
       color: "#136041",
-      url: `${process.env.SITE_URL}/icons/safari-pinned-tab.svg`,
+      url: `${config.SITE_URL}/icons/safari-pinned-tab.svg`,
     },
   },
 };

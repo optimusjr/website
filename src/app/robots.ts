@@ -1,5 +1,7 @@
 import { MetadataRoute } from "next";
 
+import config from "@/config";
+
 const robots = (): MetadataRoute.Robots => ({
   rules: {
     userAgent: "*",
@@ -7,8 +9,8 @@ const robots = (): MetadataRoute.Robots => ({
     // Escreva aqui os caminhos que você não quer que sejam indexados pelo Google
     disallow: ["/thanks", "/404", "/links"],
   },
-  sitemap: `${process.env.SITE_URL}/sitemap.xml`,
-  host: process.env.SITE_URL,
+  sitemap: `${config.SITE_URL}/sitemap.xml`,
+  host: config.SITE_URL,
 });
 
 export default robots;

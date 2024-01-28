@@ -7,7 +7,7 @@ const linkStyle = tv({
 });
 
 const Link = ({ className, ...props }: React.ComponentProps<typeof UnstyledLink>) => (
-  <UnstyledLink className={linkStyle(className)} {...props} />
+  <UnstyledLink className={linkStyle({ className })} {...props} />
 );
 
 export default Link;

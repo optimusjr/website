@@ -69,18 +69,18 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
   function submit() {
     setLoading(true);
     setSubmissionError(false);
+
     fetch(`https://formsubmit.co/ajax/${config.EMAIL}`, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify(formData, jsonReplacer),
     })
       .then((response) => {
-        if (response.status === 200) {
-          setFormData({});
-          router.push("/thanks");
-        } else {
+        if (response.status !== 200) {
           throw new Error("Requisição não retornou 200");
         }
+        setFormData({});
+        router.push("/thanks");
       })
       .catch((error) => {
         // Um erro ocorreu

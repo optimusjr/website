@@ -8,13 +8,13 @@ import Button from "@/components/ui/Button";
 import useToggle from "@/hooks/useToggle";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
-interface Props extends PropsWithChildren {
-  className?: string;
-}
-
 const accordion = tv({
   base: "flex flex-col gap-8",
 });
+
+interface Props extends PropsWithChildren {
+  className?: string;
+}
 
 const Accordion = ({ children, className }: Props) => (
   <ul className={accordion({ className })}>{children}</ul>

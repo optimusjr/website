@@ -17,10 +17,7 @@ const Contacts = () => (
     <Screen.title strap="Contato">Fale conosco</Screen.title>
 
     <div className="grid w-full gap-8 lg:w-auto lg:grid-cols-[1fr_2fr] lg:grid-rows-3">
-      <ContactCard
-        Icon={WhatsappIcon}
-        href={`https://wa.me/${config.WHATSAPP.replace(/[^0-9]/g, "")}`}
-      >
+      <ContactCard Icon={WhatsappIcon} href={config.WHATSAPP_LINK}>
         <ContactCard.title>Chame no WhatsApp</ContactCard.title>
         <ContactCard.link>{config.WHATSAPP}</ContactCard.link>
       </ContactCard>
@@ -46,7 +43,7 @@ const Contacts = () => (
         <TextField autoComplete="email" label="E-mail:" name="email" type="email" required />
         <TextField label="Sua mensagem:" name="mensagem" multiline required />
 
-        <input name="_next" type="hidden" value={`${process.env.SITE_URL}/thanks`} />
+        <input name="_next" type="hidden" value={`${config.SITE_URL}/thanks`} />
 
         <Button className="ml-auto" type="submit">
           <SendIcon />

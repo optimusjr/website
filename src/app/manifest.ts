@@ -1,10 +1,12 @@
 import { MetadataRoute } from "next";
 
+import config from "@/config";
+
 type IconObject = Required<MetadataRoute.Manifest>["icons"][number];
 
 const manifest = (): MetadataRoute.Manifest => {
   const createIconEntry = (size: string): IconObject => ({
-    src: `${process.env.SITE_URL}/icons/android-chrome-${size}.png`,
+    src: `${config.SITE_URL}/icons/android-chrome-${size}.png`,
     sizes: size,
     type: "image/png",
   });
