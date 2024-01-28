@@ -34,31 +34,28 @@ Start.p = ({ children }: PropsWithChildren) => (
   <p className="text-[length:calc(1rem+1vw)] leading-none">{children}</p>
 );
 
-interface FeaturesProps {
-  features: {
-    Icon: React.ComponentType<{ className?: string }>;
-    title: string;
-    description: string;
-  }[];
+Start.features = ({ children }: PropsWithChildren) => (
+  <ul className="grid gap-8 lg:grid-cols-3">{children}</ul>
+);
+
+interface FeatureProps {
+  Icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  description: string;
 }
 
-Start.features = ({ features }: FeaturesProps) => (
-  <ul className="grid gap-8 lg:grid-cols-3">
-    {features.map((feature, key) => (
-      <Card
-        as={m.li}
-        bgColor="white"
-        className="flex flex-col items-center gap-4 p-8 text-center"
-        key={key}
-        {...fadeIn}
-      >
-        <feature.Icon className="w-32" />
+Start.feature = ({ Icon, title, description }: FeatureProps) => (
+  <Card
+    as={m.li}
+    bgColor="white"
+    className="flex flex-col items-center gap-4 p-8 text-center"
+    {...fadeIn}
+  >
+    <Icon className="w-32" />
 
-        <Card.title as="h2">{feature.title}</Card.title>
-        <p className="text-lg/tight">{feature.description}</p>
-      </Card>
-    ))}
-  </ul>
+    <Card.title as="h2">{title}</Card.title>
+    <p className="text-lg/tight">{description}</p>
+  </Card>
 );
 
 export default Start;

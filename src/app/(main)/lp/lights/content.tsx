@@ -27,113 +27,89 @@ const Content = () => (
         </Start.h1>
         <Start.p>Economize energia e torne sua casa mais conectada</Start.p>
       </Start.intro>
-      <Start.features
-        features={[
-          {
-            Icon: SofaIcon,
-            title: "Tenha o Conforto da Iluminação Inteligente",
-            description:
-              "Controle as luzes da sua casa pelo celular ou por comando de voz, sem precisar sair do sofá.",
-          },
-          {
-            Icon: ShieldHome,
-            title: "Simule Presença, Afaste Intrusos",
-            description:
-              "Controle suas lâmpadas remotamente e programe horários e timers para simular presença e afastar intrusos.",
-          },
-          {
-            Icon: Leaf,
-            title: "Reduza a Conta de Luz com a Automação",
-            description:
-              "Evite desperdício de energia programando horários para acender e apagar as luzes apenas quando necessário.",
-          },
-        ]}
-      />
+      <Start.features>
+        <Start.feature
+          Icon={SofaIcon}
+          description="Controle as luzes da sua casa pelo celular ou por comando de voz, sem precisar sair do sofá."
+          title="Tenha o Conforto da Iluminação Inteligente"
+        />
+        <Start.feature
+          Icon={ShieldHome}
+          description="Controle suas lâmpadas remotamente e programe horários e timers para simular presença e afastar intrusos."
+          title="Simule Presença, Afaste Intrusos"
+        />
+        <Start.feature
+          Icon={Leaf}
+          description="Evite desperdício de energia programando horários para acender e apagar as luzes apenas quando necessário."
+          title="Reduza a Conta de Luz com a Automação"
+        />
+      </Start.features>
     </Start>
 
-    <Testimonials
-      testimonials={[
-        {
-          photo: juliaPolena,
-          name: "Júlia Polena",
-          review:
-            "Muito empenhados em resolver o problema! Gostei muito da tecnicidade e profissionalismo, além do bom papo durante a execução! A instalação tem ajudado muito nas demandas da casa!!",
-          socialLink: "https://www.instagram.com/juliapolena/",
-          socialNickname: "@juliapolena",
-        },
-        {
-          photo: juliaPolena,
-          name: "Júlia Polena",
-          review:
-            "Muito empenhados em resolver o problema! Gostei muito da tecnicidade e profissionalismo, além do bom papo durante a execução! A instalação tem ajudado muito nas demandas da casa!!",
-          socialLink: "https://www.instagram.com/juliapolena/",
-          socialNickname: "@juliapolena",
-        },
-      ]}
-    />
+    <Testimonials>
+      <Testimonials.card
+        name="Júlia Polena"
+        photo={juliaPolena}
+        review="Muito empenhados em resolver o problema! Gostei muito da tecnicidade e profissionalismo, além do bom papo durante a execução! A instalação tem ajudado muito nas demandas da casa!!"
+        socialLink="https://www.instagram.com/juliapolena/"
+        socialNickname="@juliapolena"
+      />
+      <Testimonials.card
+        name="Júlia Polena"
+        photo={juliaPolena}
+        review="Muito empenhados em resolver o problema! Gostei muito da tecnicidade e profissionalismo, além do bom papo durante a execução! A instalação tem ajudado muito nas demandas da casa!!"
+        socialLink="https://www.instagram.com/juliapolena/"
+        socialNickname="@juliapolena"
+      />
+    </Testimonials>
 
-    <Showcase
-      images={[
-        {
-          image: app,
-          alt: "Celular com o aplicativo para o controle de iluminação",
-        },
-        {
-          image: electrician,
-          alt: "Serviço de automação de iluminação sendo executado",
-        },
-        {
-          image: lamps,
-          alt: "Teto moderno com luzes instaladas",
-        },
-        {
-          image: switches,
-          alt: "Interruptor inteligente novo, com o plástico sendo retirado",
-        },
-      ]}
-    />
-    <FAQ
-      questions={[
-        {
-          question: "É necessário quebrar paredes para fazer a automação de lâmpadas?",
-          answer:
-            "De maneira nenhuma. Com a OPTIMUS Jr., não é preciso quebrar paredes para realizar a automação de lâmpadas. Nossas soluções de automação são projetadas para serem instaladas de forma não invasiva, sem a necessidade de qualquer intervenção estrutural em sua casa. Assim, você pode desfrutar dos benefícios da automação de lâmpadas de maneira prática e rápida, sem se preocupar com reformas ou danos nas paredes.",
-        },
-        {
-          question: "A OPTIMUS Jr. faz automação de lâmpadas em ambientes externos?",
-          answer:
-            "Sim, com certeza! Nossos sistemas de automação de lâmpadas são perfeitamente adequados para uso em ambientes externos como jardins, quintais, varandas e áreas de lazer. Na OPTIMUS Jr., entendemos a importância de proporcionar iluminação inteligente e conveniente tanto dentro quanto fora de sua casa.",
-        },
-        {
-          question:
-            "Posso automatizar apenas algumas lâmpadas ou é necessário automatizar todas de uma vez?",
-          answer:
-            "Você escolhe! Você pode contratar a automação de apenas uma lâmpada ou fazer logo de todas de uma vez, tudo de acordo com suas necessidades e orçamento.",
-        },
-        {
-          question: "Eu preciso ter uma Alexa para automatizar minhas lâmpadas?",
-          answer:
-            "Não, você não precisa ter uma Alexa para automatizar suas lâmpadas. Apesar de ser mais legal utilizar o comando de voz pela Alexa, também é possível utilizar apenas o aplicativo para controlar as lâmpadas, ou usar o comando de voz por meio do Google Assistant do seu celular.",
-        },
-        {
-          question:
-            "A automação de lâmpadas é compatível com diferentes tipos de lâmpadas, como LED, fluorescentes ou incandescentes?",
-          answer:
-            "Sim, nós automatizamos qualquer tipo de lâmpada. O sistema de automação trabalha diretamente no circuito elétrico da casa, permitindo que você automatize qualquer lâmpada conectada a esse circuito.",
-        },
-        {
-          question:
-            "Quero automatizar as lâmpadas, mas manter os interruptores que já tenho em casa. É possível?",
-          answer:
-            "Sim! Apesar de termos interruptores inteligentes com design moderno e controle por touch, entendemos que algumas pessoas preferem manter a estética e a familiaridade de seus interruptores convencionais. Por isso, oferecemos soluções de automação que podem ser instaladas de forma discreta por trás dos interruptores existentes, permitindo que você controle suas lâmpadas de maneira automatizada sem afetar o funcionamento dos interruptores que você já possui.",
-        },
-        {
-          question: "Oque acontece com as automações quando a internet cai?",
-          answer:
-            "Quando a conexão com a internet estiver inativa, o controle remoto das lâmpadas através do aplicativo ou assistente de voz pode ser temporariamente afetado. No entanto, o controle manual através dos interruptores físicos continua funcionando normalmente.",
-        },
-      ]}
-    />
+    <Showcase>
+      <Showcase.image alt="Celular com o aplicativo para o controle de iluminação" image={app} />
+      <Showcase.image
+        alt="Serviço de automação de iluminação sendo executado"
+        image={electrician}
+      />
+      <Showcase.image alt="Teto moderno com luzes instaladas" image={lamps} />
+      <Showcase.image
+        alt="Interruptor inteligente novo, com o plástico sendo retirado"
+        image={switches}
+      />
+    </Showcase>
+
+    <FAQ>
+      <FAQ.question
+        answer="De maneira nenhuma. Com a OPTIMUS Jr., não é preciso quebrar paredes para realizar a automação de lâmpadas. Nossas soluções de automação são projetadas para serem instaladas de forma não invasiva, sem a necessidade de qualquer intervenção estrutural em sua casa. Assim, você pode desfrutar dos benefícios da automação de lâmpadas de maneira prática e rápida, sem se preocupar com reformas ou danos nas paredes."
+        question="É necessário quebrar paredes para fazer a automação de lâmpadas?"
+      />
+      <FAQ.question
+        answer="Sim, com certeza! Nossos sistemas de automação de lâmpadas são perfeitamente adequados para uso em ambientes externos como jardins, quintais, varandas e áreas de lazer. Na OPTIMUS Jr., entendemos a importância de proporcionar iluminação inteligente e conveniente tanto dentro quanto fora de sua casa."
+        question="A OPTIMUS Jr. faz automação de lâmpadas em ambientes externos?"
+      />
+      <FAQ.question
+        answer="Você escolhe! Você pode contratar a automação de apenas uma lâmpada ou fazer logo de todas de uma vez, tudo de acordo com suas necessidades e orçamento."
+        question="Posso automatizar apenas algumas lâmpadas ou é necessário automatizar todas de uma vez?"
+      />
+      <FAQ.question
+        answer="Não, você não precisa ter uma Alexa para automatizar suas lâmpadas. Apesar de ser mais legal utilizar o comando de voz pela Alexa, também é possível utilizar apenas o aplicativo para controlar as lâmpadas, ou usar o comando de voz por meio do Google Assistant do seu celular."
+        question="Eu preciso ter uma Alexa para automatizar minhas lâmpadas?"
+      />
+      <FAQ.question
+        answer="Sim, nós automatizamos qualquer tipo de lâmpada. O sistema de automação trabalha diretamente no circuito elétrico da casa, permitindo que você automatize qualquer lâmpada conectada a esse circuito."
+        question="A automação de lâmpadas é compatível com diferentes tipos de lâmpadas, como LED, fluorescentes ou incandescentes?"
+      />
+      <FAQ.question
+        answer="Sim, nós automatizamos qualquer tipo de lâmpada. O sistema de automação trabalha diretamente no circuito elétrico da casa, permitindo que você automatize qualquer lâmpada conectada a esse circuito."
+        question="A automação de lâmpadas é compatível com diferentes tipos de lâmpadas, como LED, fluorescentes ou incandescentes?"
+      />
+      <FAQ.question
+        answer="Sim! Apesar de termos interruptores inteligentes com design moderno e controle por touch, entendemos que algumas pessoas preferem manter a estética e a familiaridade de seus interruptores convencionais. Por isso, oferecemos soluções de automação que podem ser instaladas de forma discreta por trás dos interruptores existentes, permitindo que você controle suas lâmpadas de maneira automatizada sem afetar o funcionamento dos interruptores que você já possui."
+        question="Quero automatizar as lâmpadas, mas manter os interruptores que já tenho em casa. É possível?"
+      />
+      <FAQ.question
+        answer="Quando a conexão com a internet estiver inativa, o controle remoto das lâmpadas através do aplicativo ou assistente de voz pode ser temporariamente afetado. No entanto, o controle manual através dos interruptores físicos continua funcionando normalmente."
+        question="Oque acontece com as automações quando a internet cai?"
+      />
+    </FAQ>
 
     <CallToAction />
   </>
