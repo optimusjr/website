@@ -61,7 +61,7 @@ const BenefitCard = ({ Icon, title, description }: CardProps) => (
   <Card as={m.li} className="flex flex-col items-center gap-4 p-8 text-center" {...fadeIn}>
     <Icon className="w-32" />
     <Card.title>{title}</Card.title>
-    <p className="text-lg/tight">{description}</p>
+    <p>{description}</p>
   </Card>
 );
 

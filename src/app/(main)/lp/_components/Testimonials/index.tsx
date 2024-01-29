@@ -1,10 +1,10 @@
 import { m } from "framer-motion";
 import type { StaticImageData } from "next/image";
 
-import Link from "@/components/lib/Link";
 import Screen from "@/components/others/Screen";
 import StyledImage from "@/components/others/StyledImage";
 import Card from "@/components/ui/Card";
+import Link from "@/components/ui/Link";
 import fadeIn from "@/utils/animations/fadeIn";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
@@ -40,16 +40,11 @@ Testimonials.card = ({ photo, name, review, socialLink, socialNickname }: Props)
     />
 
     <div className="flex flex-col justify-between gap-8 text-center">
-      <p className="text-lg/tight">{review}</p>
+      <p>{review}</p>
       <div className="flex flex-col items-center gap-1">
         <FiveStars />
         <Card.title>{name}</Card.title>
-        <Link
-          className="max-w-[40vw] overflow-hidden overflow-ellipsis border-b-1 text-lg/tight transition-colors hover:border-transparent"
-          href={socialLink}
-        >
-          {socialNickname}
-        </Link>
+        <Link href={socialLink}>{socialNickname}</Link>
       </div>
     </div>
   </Card>

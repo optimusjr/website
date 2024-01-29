@@ -30,7 +30,7 @@ Accordion.item = ({ title, children }: ItemProps) => {
   return (
     <li>
       <div className="flex content-between items-start">
-        <h3 className="mb-4 text-lg/none font-semibold uppercase md:text-2xl/none">{title}</h3>
+        <h3 className="mb-4 font-semibold uppercase leading-none md:text-xl/none">{title}</h3>
         <Button onClick={toggleOpen} variant="text">
           <ChevronIcon open={open} />
         </Button>

@@ -77,38 +77,51 @@ const Content = () => (
     </Showcase>
 
     <FAQ>
-      <FAQ.question
-        answer="De maneira nenhuma. Com a OPTIMUS Jr., não é preciso quebrar paredes para realizar a automação de lâmpadas. Nossas soluções de automação são projetadas para serem instaladas de forma não invasiva, sem a necessidade de qualquer intervenção estrutural em sua casa. Assim, você pode desfrutar dos benefícios da automação de lâmpadas de maneira prática e rápida, sem se preocupar com reformas ou danos nas paredes."
-        question="É necessário quebrar paredes para fazer a automação de lâmpadas?"
-      />
-      <FAQ.question
-        answer="Sim, com certeza! Nossos sistemas de automação de lâmpadas são perfeitamente adequados para uso em ambientes externos como jardins, quintais, varandas e áreas de lazer. Na OPTIMUS Jr., entendemos a importância de proporcionar iluminação inteligente e conveniente tanto dentro quanto fora de sua casa."
-        question="A OPTIMUS Jr. faz automação de lâmpadas em ambientes externos?"
-      />
-      <FAQ.question
-        answer="Você escolhe! Você pode contratar a automação de apenas uma lâmpada ou fazer logo de todas de uma vez, tudo de acordo com suas necessidades e orçamento."
-        question="Posso automatizar apenas algumas lâmpadas ou é necessário automatizar todas de uma vez?"
-      />
-      <FAQ.question
-        answer="Não, você não precisa ter uma Alexa para automatizar suas lâmpadas. Apesar de ser mais legal utilizar o comando de voz pela Alexa, também é possível utilizar apenas o aplicativo para controlar as lâmpadas, ou usar o comando de voz por meio do Google Assistant do seu celular."
-        question="Eu preciso ter uma Alexa para automatizar minhas lâmpadas?"
-      />
-      <FAQ.question
-        answer="Sim, nós automatizamos qualquer tipo de lâmpada. O sistema de automação trabalha diretamente no circuito elétrico da casa, permitindo que você automatize qualquer lâmpada conectada a esse circuito."
-        question="A automação de lâmpadas é compatível com diferentes tipos de lâmpadas, como LED, fluorescentes ou incandescentes?"
-      />
-      <FAQ.question
-        answer="Sim, nós automatizamos qualquer tipo de lâmpada. O sistema de automação trabalha diretamente no circuito elétrico da casa, permitindo que você automatize qualquer lâmpada conectada a esse circuito."
-        question="A automação de lâmpadas é compatível com diferentes tipos de lâmpadas, como LED, fluorescentes ou incandescentes?"
-      />
-      <FAQ.question
-        answer="Sim! Apesar de termos interruptores inteligentes com design moderno e controle por touch, entendemos que algumas pessoas preferem manter a estética e a familiaridade de seus interruptores convencionais. Por isso, oferecemos soluções de automação que podem ser instaladas de forma discreta por trás dos interruptores existentes, permitindo que você controle suas lâmpadas de maneira automatizada sem afetar o funcionamento dos interruptores que você já possui."
-        question="Quero automatizar as lâmpadas, mas manter os interruptores que já tenho em casa. É possível?"
-      />
-      <FAQ.question
-        answer="Quando a conexão com a internet estiver inativa, o controle remoto das lâmpadas através do aplicativo ou assistente de voz pode ser temporariamente afetado. No entanto, o controle manual através dos interruptores físicos continua funcionando normalmente."
-        question="Oque acontece com as automações quando a internet cai?"
-      />
+      <FAQ.question question="É necessário quebrar paredes para fazer a automação de lâmpadas?">
+        De maneira nenhuma. Com a OPTIMUS Jr., não é preciso quebrar paredes para realizar a
+        automação de lâmpadas. Nossas soluções de automação são projetadas para serem instaladas de
+        forma não invasiva, sem a necessidade de qualquer intervenção estrutural em sua casa. Assim,
+        você pode desfrutar dos benefícios da automação de lâmpadas de maneira prática e rápida, sem
+        se preocupar com reformas ou danos nas paredes.
+      </FAQ.question>
+      <FAQ.question question="A OPTIMUS Jr. faz automação de lâmpadas em ambientes externos?">
+        Sim, com certeza! Nossos sistemas de automação de lâmpadas são perfeitamente adequados para
+        uso em ambientes externos como jardins, quintais, varandas e áreas de lazer. Na OPTIMUS Jr.,
+        entendemos a importância de proporcionar iluminação inteligente e conveniente tanto dentro
+        quanto fora de sua casa.
+      </FAQ.question>
+      <FAQ.question question="Posso automatizar apenas algumas lâmpadas ou é necessário automatizar todas de uma vez?">
+        Você escolhe! Você pode contratar a automação de apenas uma lâmpada ou fazer logo de todas
+        de uma vez, tudo de acordo com suas necessidades e orçamento.
+      </FAQ.question>
+      <FAQ.question question="Eu preciso ter uma Alexa para automatizar minhas lâmpadas?">
+        Não, você não precisa ter uma Alexa para automatizar suas lâmpadas. Apesar de ser mais legal
+        utilizar o comando de voz pela Alexa, também é possível utilizar apenas o aplicativo para
+        controlar as lâmpadas, ou usar o comando de voz por meio do Google Assistant do seu celular.
+      </FAQ.question>
+      <FAQ.question question="A automação de lâmpadas é compatível com diferentes tipos de lâmpadas, como LED, fluorescentes ou incandescentes?">
+        Sim, nós automatizamos qualquer tipo de lâmpada. O sistema de automação trabalha diretamente
+        no circuito elétrico da casa, permitindo que você automatize qualquer lâmpada conectada a
+        esse circuito.
+      </FAQ.question>
+      <FAQ.question question="A automação de lâmpadas é compatível com diferentes tipos de lâmpadas, como LED, fluorescentes ou incandescentes?">
+        Sim, nós automatizamos qualquer tipo de lâmpada. O sistema de automação trabalha diretamente
+        no circuito elétrico da casa, permitindo que você automatize qualquer lâmpada conectada a
+        esse circuito.
+      </FAQ.question>
+      <FAQ.question question="Quero automatizar as lâmpadas, mas manter os interruptores que já tenho em casa. É possível?">
+        Sim! Apesar de termos interruptores inteligentes com design moderno e controle por touch,
+        entendemos que algumas pessoas preferem manter a estética e a familiaridade de seus
+        interruptores convencionais. Por isso, oferecemos soluções de automação que podem ser
+        instaladas de forma discreta por trás dos interruptores existentes, permitindo que você
+        controle suas lâmpadas de maneira automatizada sem afetar o funcionamento dos interruptores
+        que você já possui.
+      </FAQ.question>
+      <FAQ.question question="Oque acontece com as automações quando a internet cai?">
+        Quando a conexão com a internet estiver inativa, o controle remoto das lâmpadas através do
+        aplicativo ou assistente de voz pode ser temporariamente afetado. No entanto, o controle
+        manual através dos interruptores físicos continua funcionando normalmente.
+      </FAQ.question>
     </FAQ>
 
     <CallToAction />

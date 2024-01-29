@@ -35,7 +35,7 @@ const PROSEL = () => {
               </Button>
             </div>
 
-            <p className="text-lg/tight">
+            <p>
               Estão abertas as inscrições para o nosso processo seletivo. Venha trabalhar com a
               gente!
             </p>

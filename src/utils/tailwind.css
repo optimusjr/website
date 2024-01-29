@@ -7,6 +7,10 @@
     @apply scroll-smooth;
   }
 
+  body {
+    @apply text-lg/tight;
+  }
+
   svg {
     @apply h-auto w-6 flex-shrink-0;
   }

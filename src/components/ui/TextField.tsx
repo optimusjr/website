@@ -3,7 +3,7 @@ import { tv } from "tailwind-variants";
 const textField = tv({
   slots: {
     container: "flex flex-col items-start gap-1",
-    text: "ml-1 text-lg/tight",
+    text: "ml-1",
     input:
       "w-full rounded-t-lg border-b-2 border-b-neutral-800 bg-neutral-200 p-4 text-xl leading-none outline-none hover:bg-neutral-300",
   },

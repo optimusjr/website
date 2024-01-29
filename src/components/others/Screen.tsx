@@ -19,7 +19,7 @@ const screen = tv({
       true: "gap-4 sm:gap-8 md:gap-16",
     },
     padding: {
-      true: "p-4 sm:p-8 md:p-16",
+      true: "p-4 pb-8 sm:p-8 md:p-16",
     },
     shadow: {
       true: "drop-shadow-md",

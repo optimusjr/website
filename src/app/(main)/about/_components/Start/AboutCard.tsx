@@ -24,8 +24,6 @@ const AboutCard = ({ Icon, children }: Props) => (
 
 AboutCard.title = ({ children }: PropsWithChildren) => <Card.title as="h2">{children}</Card.title>;
 
-AboutCard.description = ({ children }: PropsWithChildren) => (
-  <p className="text-lg/tight">{children}</p>
-);
+AboutCard.description = ({ children }: PropsWithChildren) => <p>{children}</p>;
 
 export default AboutCard;

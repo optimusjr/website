@@ -40,7 +40,7 @@ ServiceCard.title = ({ children }: PropsWithChildren) => (
 );
 
 ServiceCard.description = ({ children }: PropsWithChildren) => (
-  <p className="text-center text-lg/tight">{children}</p>
+  <p className="text-center">{children}</p>
 );
 
 export default ServiceCard;

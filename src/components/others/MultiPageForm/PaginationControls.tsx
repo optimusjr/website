@@ -75,8 +75,8 @@ const LeftButton = () => {
 
   return (
     <div>
-      <p className="text-lg/tight">Prefere falar diretamente com um ser humano?</p>
-      <p className="text-lg/tight">
+      <p>Prefere falar diretamente com um ser humano?</p>
+      <p>
         <Link href={config.WHATSAPP_LINK}>Clique&nbsp;aqui</Link>
         &nbsp;e converse com um dos nossos vendedores.
       </p>

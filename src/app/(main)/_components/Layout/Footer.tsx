@@ -15,13 +15,13 @@ const Footer = () => (
 
     <SocialLinks />
 
-    <p className="text-lg/tight text-white">
+    <p className="text-white">
       Rua Aristides Novis, 02, 6º andar
       <br />
       Salvador, Bahia.
     </p>
 
-    <p className="text-lg/tight text-white">
+    <p className="text-white">
       &copy; {new Date().getFullYear()} OPTIMUS Jr. Controle e Automação. <br />
       Todos os direitos reservados
     </p>

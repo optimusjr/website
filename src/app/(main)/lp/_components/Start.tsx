@@ -54,7 +54,7 @@ Start.feature = ({ Icon, title, description }: FeatureProps) => (
     <Icon className="w-32" />
 
     <Card.title as="h2">{title}</Card.title>
-    <p className="text-lg/tight">{description}</p>
+    <p>{description}</p>
   </Card>
 );
 

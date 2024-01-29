@@ -22,14 +22,14 @@ const JuniorCompany = () => (
       <Screen.title className={{ container: "mb-4 gap-0 text-left" }} strap="Conheça o MEJ">
         O Movimento Empresa Júnior
       </Screen.title>
-      <p className="mb-2 text-lg/tight">
+      <p className="mb-2">
         O &ldquo;Jr.&rdquo; em OPTIMUS Jr. não é apenas uma formalidade. Ele simboliza nossa conexão
         com o <Link href="https://brasiljunior.org.br/conheca-o-mej">MEJ</Link> (Movimento Empresa
         Júnior), a rede nacional com mais de 1500 empresas juniores, provenientes de mais de 300
         instituições de ensino superior diferentes, que juntas já ultrapassam mais de R$
         70.000.000,00 em faturamento.
       </p>
-      <p className="text-lg/tight">
+      <p>
         Aqui em Salvador, o MEJ é representado pelo{" "}
         <Link href="https://www.instagram.com/nejsalvador/">NEJ Salvador</Link> (Núcleo das Empresas
         Juniores de Salvador). Com o lema de &ldquo;De Farol a Farol&rdquo;, o NEJ promove

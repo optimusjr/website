@@ -10,7 +10,7 @@ const { container, input, icon, text } = tv({
     ],
     input: "peer appearance-none",
     icon: "peer-checked:fill-primary-800",
-    text: "text-lg/tight peer-checked:text-primary-800",
+    text: "peer-checked:text-primary-800",
   },
 })();
 

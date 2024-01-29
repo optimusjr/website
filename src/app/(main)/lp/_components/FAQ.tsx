@@ -15,14 +15,13 @@ const FAQ = ({ children }: PropsWithChildren) => (
   </Screen>
 );
 
-interface Props {
+interface Props extends PropsWithChildren {
   question: string;
-  answer: string;
 }
 
-FAQ.question = ({ question, answer }: Props) => (
+FAQ.question = ({ question, children }: Props) => (
   <Accordion.item title={question}>
-    <p className="text-lg/tight">{answer}</p>
+    <p>{children}</p>
   </Accordion.item>
 );
 
