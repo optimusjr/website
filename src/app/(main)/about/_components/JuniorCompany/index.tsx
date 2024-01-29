@@ -9,10 +9,15 @@ import Link from "@/components/ui/Link";
 import Mej from "@/images/mej.png";
 import fadeIn from "@/utils/animations/fadeIn";
 
-import Border from "./border";
+import CardDecorations from "./CardDecorations";
 
 const JuniorCompany = () => (
-  <Screen bgColor="white" className="items-center md:flex-row-reverse md:items-start" gap padding>
+  <Screen
+    bgColor="white"
+    className="items-center gap-8 md:flex-row-reverse md:items-start"
+    gap
+    padding
+  >
     <div className="mt-4 md:mt-0">
       <Screen.title className={{ container: "mb-4 gap-0 text-left" }} strap="Conheça o MEJ">
         O Movimento Empresa Júnior
@@ -34,9 +39,14 @@ const JuniorCompany = () => (
       </p>
     </div>
 
-    <Card as={m.div} {...fadeIn} className="relative w-64 flex-shrink-0 lg:w-96">
+    <Card
+      as={m.div}
+      {...fadeIn}
+      className="relative mb-16 w-64 flex-shrink-0 lg:w-96"
+      whileHover={{ rotate: -2 }}
+    >
       <Image alt="Logo do NEJ Salvador estilizado" src={Mej} />
-      <Border className="absolute top-0 w-full" />
+      <CardDecorations as={m.svg} className="absolute top-0 w-full" whileHover={{ rotate: 4 }} />
     </Card>
   </Screen>
 );
