@@ -18,7 +18,6 @@ const Links = () => (
       <Image
         alt="OPTIMUS Jr. Controle e Automação"
         className="m-auto w-24 sm:w-32"
-        placeholder="empty"
         src={OPTIMUSIcon}
       />
       <h1 className="text-center text-4xl font-extrabold uppercase sm:text-5xl md:text-6xl">

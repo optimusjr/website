@@ -11,7 +11,7 @@ const Footer = () => (
     padding
     shadow
   >
-    <Image alt="Logo da OPTIMUS Jr." height={64} placeholder="empty" src={logo_horizontal} />
+    <Image alt="Logo da OPTIMUS Jr." height={64} src={logo_horizontal} />
 
     <SocialLinks />
 

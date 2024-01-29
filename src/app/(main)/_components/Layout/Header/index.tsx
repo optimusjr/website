@@ -27,7 +27,6 @@ const Header = () => {
             <Image
               alt="'OPTIMUS Jr.' escrito em letras estilizadas"
               height="40"
-              placeholder="empty"
               src={logo_simplificado}
               priority
             />

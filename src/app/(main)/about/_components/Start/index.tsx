@@ -29,7 +29,7 @@ const AboutStart = () => (
       </div>
 
       <Card bgColor="white" className="my-auto hidden w-full justify-center p-16 md:flex">
-        <Image alt="Logotipo da OPTIMUS Jr." placeholder="empty" src={logo} width={350} priority />
+        <Image alt="Logotipo da OPTIMUS Jr." src={logo} width={350} priority />
       </Card>
     </section>
 
