@@ -18,7 +18,7 @@ interface Props {
 const Mobile = ({ show, toggleShow, hideShow }: Props) => (
   <>
     <div className="flex items-center justify-end p-3 lg:hidden">
-      <Button aria-label="Abrir menu" onClick={toggleShow}>
+      <Button aria-label="menu" onClick={toggleShow}>
         <MenuIcon open={show} />
       </Button>
     </div>

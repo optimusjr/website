@@ -14,7 +14,7 @@ import logo from "@/images/OPTIMUS/logo.svg";
 const AboutStart = () => (
   <Screen bgColor="secondary" height="firstFull" gap padding>
     <section className="my-8 grid gap-4 animate-fade-in md:grid-cols-2 lg:my-16 lg:gap-16">
-      <div className="flex flex-col items-start gap-4">
+      <div className="flex flex-col items-center gap-4 text-center md:items-start md:text-left">
         <span className="text-2xl/none font-bold text-primary-800 lg:text-3xl/none">
           OPTIMUS Jr.
         </span>
