@@ -3,7 +3,7 @@ import { tv, type VariantProps } from "tailwind-variants";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
 const card = tv({
-  base: "bg-200 rounded-3xl shadow-md",
+  base: "rounded-3xl shadow-md",
   variants: {
     bgColor: {
       white: "bg-white",
