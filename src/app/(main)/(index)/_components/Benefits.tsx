@@ -16,7 +16,7 @@ const Benefits = () => (
   <Screen bgColor="white" className="relative z-10" gap padding shadow>
     <Screen.title strap="Vantagens">Por que automatizar sua casa?</Screen.title>
 
-    <ul className="grid auto-rows-fr gap-4 sm:gap-8 md:grid-cols-2 md:gap-16 xl:grid-cols-3 2xl:grid-cols-6">
+    <ul className="grid auto-rows-fr gap-4 sm:gap-8 md:grid-cols-2 md:gap-16 xl:grid-cols-3 4xl:grid-cols-6">
       <BenefitCard
         Icon={DeviceIcon}
         description="Nunca foi tão prático realizar suas atividades diárias, você poderá programar seus dispositivos para realizarem essas atividades por você e te auxiliar no dia a dia."

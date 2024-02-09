@@ -1,3 +1,4 @@
+import defaultTheme from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
 /** @type {import('tailwindcss').Config} */
@@ -15,6 +16,15 @@ export default {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
+    },
+    screens: {
+      "4xs": "384px",
+      // "3xs": "448px",
+      // "2xs": "512px",
+      // xs: "576px",
+      ...defaultTheme.screens,
+      // "3xl": "1792px",
+      "4xl": "2048px",
     },
     colors: {
       transparent: "transparent",
