@@ -5,7 +5,7 @@ import QuoteButton from "@/components/others/QuoteButton";
 import Screen from "@/components/others/Screen";
 import CogsPattern from "@/components/patterns/Cogs";
 
-const CallToAction = () => (
+const CallToActionScreen = () => (
   <Screen className="relative px-2 py-16 sm:px-8 md:px-16" padding>
     <Pattern SVGPattern={CogsPattern} bgColor="tintSecondary" gradient="radial" />
 
@@ -22,4 +22,4 @@ const CallToAction = () => (
   </Screen>
 );
 
-export default CallToAction;
+export default CallToActionScreen;

@@ -3,13 +3,13 @@
 import Leaf from "@/components/icons/Leaf";
 import ShieldHome from "@/components/icons/ShieldHome";
 import SofaIcon from "@/components/icons/Sofa";
+import CallToActionScreen from "@/components/others/CallToActionScreen";
 import juliaPolena from "@/images/clients/juliaPolena.jpg";
 import app from "@/images/lights/app.png";
 import electrician from "@/images/lights/electrician.png";
 import lamps from "@/images/lights/lamps.png";
 import switches from "@/images/lights/switches.png";
 
-import CallToAction from "../_components/CallToAction";
 import FAQ from "../_components/FAQ";
 import Showcase from "../_components/Showcase";
 import Start from "../_components/Start";
@@ -124,7 +124,7 @@ const Content = () => (
       </FAQ.question>
     </FAQ>
 
-    <CallToAction />
+    <CallToActionScreen />
   </>
 );
 
