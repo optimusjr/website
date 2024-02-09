@@ -1,6 +1,5 @@
 "use client";
 
-import AboutCard from "@/app/(main)/about/_components/Start/AboutCard";
 import DiamondIcon from "@/components/icons/Diamond";
 import EyeIcon from "@/components/icons/Eye";
 import TargetIcon from "@/components/icons/Target";
@@ -10,6 +9,8 @@ import QuoteButton from "@/components/others/QuoteButton";
 import Screen from "@/components/others/Screen";
 import Card from "@/components/ui/Card";
 import logo from "@/images/OPTIMUS/logo.svg";
+
+import AboutCard from "./AboutCard";
 
 const AboutStart = () => (
   <Screen bgColor="secondary" height="firstFull" gap padding>

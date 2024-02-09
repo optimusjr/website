@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 
-import JuniorEnterpriseMovement from "./_components/JuniorEnterpriseMovement";
-import OurHistory from "./_components/OurHistory";
+import Information from "./_components/Information";
 import Start from "./_components/Start";
 
 export const metadata: Metadata = {
@@ -11,8 +10,7 @@ export const metadata: Metadata = {
 const About = () => (
   <>
     <Start />
-    <OurHistory />
-    <JuniorEnterpriseMovement />
+    <Information />
   </>
 );
 
