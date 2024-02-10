@@ -19,7 +19,7 @@ const FormPage = () => {
       <PageTitle />
 
       {page.questions && (
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-6">
           {page.questions.map((question) => (
             <m.div {...fadeSwap} key={question.name}>
               <Question question={question} />

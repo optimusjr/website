@@ -2,29 +2,29 @@ import { tv } from "tailwind-variants";
 
 import Image from "@/components/lib/Image";
 
-const { container, image } = tv({
+const { wrapper, image } = tv({
   slots: {
-    container: "overflow-hidden rounded-xl",
+    wrapper: "overflow-hidden rounded-xl",
     image: "transition-transform duration-1000 ease-in-out hover:scale-110",
   },
 })();
 
 interface Props extends Omit<React.ComponentProps<typeof Image>, "className"> {
-  disableContainer?: boolean;
+  disableWrapper?: boolean;
   className?: {
-    container?: string;
+    wrapper?: string;
     image?: string;
   };
 }
 
-const StyledImage = ({ disableContainer, className, ...props }: Props) => {
+const StyledImage = ({ disableWrapper, className, ...props }: Props) => {
   const imageComponent = <Image className={image({ className: className?.image })} {...props} />;
 
-  if (disableContainer) {
+  if (disableWrapper) {
     return imageComponent;
   }
 
-  return <div className={container({ className: className?.container })}>{imageComponent}</div>;
+  return <div className={wrapper({ className: className?.wrapper })}>{imageComponent}</div>;
 };
 
 export default StyledImage;

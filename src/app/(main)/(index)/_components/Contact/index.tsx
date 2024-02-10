@@ -2,15 +2,12 @@
 
 import EmailIcon from "@/components/icons/Email";
 import PhoneIcon from "@/components/icons/Phone";
-import SendIcon from "@/components/icons/Send";
 import WhatsappIcon from "@/components/icons/Whatsapp";
 import Screen from "@/components/others/Screen";
-import Button from "@/components/ui/Button";
-import Card from "@/components/ui/Card";
-import TextField from "@/components/ui/TextField";
 import config from "@/config";
 
 import ContactCard from "./ContactCard";
+import FormCard from "./FormCard";
 
 const Contacts = () => (
   <Screen bgColor="secondary" id="contact" gap padding>
@@ -30,26 +27,7 @@ const Contacts = () => (
         <ContactCard.link>{config.PHONE_NUMBER}</ContactCard.link>
       </ContactCard>
 
-      <Card
-        action={`https://formsubmit.co/${config.EMAIL}`}
-        as="form"
-        bgColor="white"
-        className="flex flex-col gap-8 p-8 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-4"
-        method="POST"
-      >
-        <Card.title className="text-center">Mande uma mensagem</Card.title>
-
-        <TextField autoComplete="name" label="Nome:" name="nome" required />
-        <TextField autoComplete="email" label="E-mail:" name="email" type="email" required />
-        <TextField label="Sua mensagem:" name="mensagem" multiline required />
-
-        <input name="_next" type="hidden" value={`${config.SITE_URL}/thanks`} />
-
-        <Button className="ml-auto" type="submit">
-          <SendIcon />
-          Enviar
-        </Button>
-      </Card>
+      <FormCard />
     </div>
   </Screen>
 );

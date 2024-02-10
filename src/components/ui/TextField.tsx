@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 const textField = tv({
   slots: {
-    container: "flex flex-col items-start gap-1",
+    wrapper: "flex flex-col items-start gap-1",
     text: "ml-1",
     input:
       "w-full rounded-t-lg border-b-2 border-b-neutral-800 bg-neutral-200 p-4 text-xl leading-none outline-none hover:bg-neutral-300",
@@ -24,14 +24,14 @@ interface TextFieldProps extends TextInputProps {
 }
 
 const TextField = ({ label, className, required, multiline, ...props }: TextFieldProps) => {
-  const { container, text, input } = textField({ required, multiline });
+  const { wrapper, text, input } = textField({ required, multiline });
 
   const InputComponent = multiline ? "textarea" : "input";
 
   return (
-    <label className={container()}>
+    <label className={wrapper()}>
       <span className={text()}>{label}</span>
-      <InputComponent className={input({ className })} {...props} />
+      <InputComponent className={input({ className })} required={required} {...props} />
     </label>
   );
 };

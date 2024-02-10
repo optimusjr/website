@@ -46,9 +46,9 @@ const Screen = <T extends React.ElementType = "article">(props: Props<T>) => {
   );
 };
 
-const { container, strap, title } = tv({
+const { wrapper, strap, title } = tv({
   slots: {
-    container: "flex flex-col gap-4 text-center",
+    wrapper: "flex flex-col gap-4 text-center",
     strap: "text-2xl font-medium text-primary-800 sm:text-3xl",
     title: "text-4xl font-semibold uppercase md:text-5xl lg:text-6xl",
   },
@@ -57,14 +57,14 @@ const { container, strap, title } = tv({
 interface TitleProps extends PropsWithChildren {
   strap?: string;
   className?: {
-    container?: string;
+    wrapper?: string;
     strap?: string;
     title?: string;
   };
 }
 
 Screen.title = ({ strap: strapText, className, children }: TitleProps) => (
-  <div className={container({ className: className?.container })}>
+  <div className={wrapper({ className: className?.wrapper })}>
     {strap && <span className={strap({ className: className?.strap })}>{strapText}</span>}
     <h2 className={title({ className: className?.title })}>{children}</h2>
   </div>

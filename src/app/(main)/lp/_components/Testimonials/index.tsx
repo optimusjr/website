@@ -35,7 +35,7 @@ Testimonials.card = ({ photo, name, review, socialLink, socialNickname }: Props)
   >
     <StyledImage
       alt={`Foto de ${name}`}
-      className={{ container: "size-32 flex-shrink-0 rounded-full sm:size-52", image: "size-full" }}
+      className={{ wrapper: "size-32 flex-shrink-0 rounded-full sm:size-52", image: "size-full" }}
       src={photo}
     />
 

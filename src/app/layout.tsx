@@ -13,6 +13,7 @@ const league = League_Spartan({
   subsets: ["latin"],
   fallback: ["Roboto", "sans-serif"],
   display: "swap",
+  variable: "--font-league-spartan",
 });
 
 export const metadata: Metadata = {

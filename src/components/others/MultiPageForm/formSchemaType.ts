@@ -1,3 +1,5 @@
+import { Data } from "@/utils/helpers/sendToEmail";
+
 // Opção para pergunta do tipo multiplica escolha. Cada opção pode ter esses elementos
 export interface Option {
   /**
@@ -129,6 +131,4 @@ export interface Schema {
   pages: Page[];
 }
 
-export interface Answers {
-  [key: string]: string | boolean;
-}
+export type Answers = Data;

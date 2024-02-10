@@ -2,8 +2,7 @@
 
 import { AnimatePresence, m } from "framer-motion";
 
-import LoadingIcon from "@/components/icons/Loading";
-import SendIcon from "@/components/icons/Send";
+import SendButton from "@/components/others/SendButton";
 import Button from "@/components/ui/Button";
 import Link from "@/components/ui/Link";
 import config from "@/config";
@@ -12,74 +11,44 @@ import fadeSwap from "@/utils/animations/fadeSwap";
 import { PAGE_POSITION } from "./FormContext/helpers";
 import useFormContext from "./FormContext/useFormContext";
 
-const PaginationControls = () => (
-  <div className="flex flex-row-reverse flex-wrap-reverse justify-between gap-4 sm:flex-nowrap">
-    <AnimatePresence initial={false} mode="popLayout">
-      <Button className="w-full justify-center sm:w-auto">
-        <RightButtonContent />
-      </Button>
+const buttonClasses = "w-full justify-center sm:w-auto";
+const anime = { ...fadeSwap, transition: { duration: 0.05 } };
+const buttonProps = { as: m.button, className: buttonClasses, ...anime };
 
-      <LeftButton />
-    </AnimatePresence>
-  </div>
-);
-
-const RightButtonContent = () => {
-  const { currentPage, isLoading } = useFormContext();
-
-  if (currentPage.position === PAGE_POSITION.FIRST) {
-    return <m.div {...fadeSwap}>Vamos lá!</m.div>;
-  }
-
-  if (currentPage.position === PAGE_POSITION.LAST) {
-    if (isLoading) {
-      return (
-        <>
-          <m.div {...fadeSwap} className="leading-0">
-            <LoadingIcon
-              animate={{ rotate: 360 }}
-              as={m.svg}
-              transition={{ ease: "linear", duration: 1, repeat: Infinity }}
-            />
-          </m.div>
-          <m.div {...fadeSwap}>Enviando</m.div>
-        </>
-      );
-    }
-
-    return (
-      <>
-        <SendIcon as={m.svg} {...fadeSwap} /> <m.div {...fadeSwap}>Enviar</m.div>
-      </>
-    );
-  }
-
-  return <m.div {...fadeSwap}>Próxima página</m.div>;
-};
-
-const LeftButton = () => {
-  const { currentPage, goToPreviousPage } = useFormContext();
-
-  if (currentPage.position !== PAGE_POSITION.FIRST) {
-    return (
-      <Button
-        className="w-full justify-center sm:w-auto"
-        onClick={goToPreviousPage}
-        type="button"
-        variant="outlined"
-      >
-        Página anterior
-      </Button>
-    );
-  }
+const PaginationControls = () => {
+  const { currentPage, isLoading, goToPreviousPage } = useFormContext();
 
   return (
-    <div>
-      <p>Prefere falar diretamente com um ser humano?</p>
-      <p>
-        <Link href={config.WHATSAPP_LINK}>Clique&nbsp;aqui</Link>
-        &nbsp;e converse com um dos nossos vendedores.
-      </p>
+    <div className="flex flex-row-reverse flex-wrap-reverse items-end justify-between gap-4 sm:flex-nowrap">
+      <AnimatePresence initial={false} mode="wait">
+        {currentPage.position === PAGE_POSITION.FIRST && (
+          <Button {...buttonProps} key="first">
+            Vamos lá!
+          </Button>
+        )}
+        {currentPage.position === PAGE_POSITION.MIDDLE && (
+          <Button {...buttonProps} key="middle">
+            Próxima página
+          </Button>
+        )}
+        {currentPage.position === PAGE_POSITION.LAST && (
+          <SendButton {...buttonProps} key="end" loading={isLoading} />
+        )}
+
+        {currentPage.position === PAGE_POSITION.FIRST ? (
+          <m.div {...anime} className="mr-auto">
+            <p>Prefere falar diretamente com um ser humano?</p>
+            <p>
+              <Link href={config.WHATSAPP_LINK}>Clique&nbsp;aqui</Link>
+              &nbsp;e converse com um dos nossos vendedores.
+            </p>
+          </m.div>
+        ) : (
+          <Button onClick={goToPreviousPage} type="button" variant="outlined" {...buttonProps}>
+            Página anterior
+          </Button>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

@@ -5,6 +5,7 @@ import plugin from "tailwindcss/plugin";
 
 export default {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  blocklist: ["container"],
   theme: {
     extend: {
       borderWidth: {
@@ -16,6 +17,9 @@ export default {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
+    },
+    fontFamily: {
+      sans: ["var(--font-league-spartan)"],
     },
     screens: {
       "4xs": "384px",

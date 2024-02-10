@@ -18,7 +18,7 @@ const Information = () => (
     <Section>
       <Section.illustration>
         <Card as={m.div} {...fadeIn} className="overflow-hidden">
-          <StyledImage alt="Membros da OPTIMUS Jr." src={team} disableContainer />
+          <StyledImage alt="Membros da OPTIMUS Jr." src={team} disableWrapper />
         </Card>
       </Section.illustration>
       <Section.content>

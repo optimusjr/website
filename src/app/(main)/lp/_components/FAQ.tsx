@@ -5,7 +5,7 @@ import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 const FAQ = ({ children }: PropsWithChildren) => (
   <Screen bgColor="neutral" className="md:grid md:grid-cols-2 md:items-start" gap padding>
     <Screen.title
-      className={{ container: "top-4 sm:top-8 md:sticky md:top-16 md:text-left" }}
+      className={{ wrapper: "top-4 sm:top-8 md:sticky md:top-16 md:text-left" }}
       strap="Perguntas frequentes"
     >
       Você tem alguma dúvida?

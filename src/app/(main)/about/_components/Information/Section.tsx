@@ -14,7 +14,7 @@ Section.content = ({ children }: PropsWithChildren) => (
 
 Section.title = (props: Omit<React.ComponentProps<typeof Screen.title>, "className">) => {
   return (
-    <Screen.title className={{ container: "gap-0 text-left", title: "lg:text-5xl" }} {...props} />
+    <Screen.title className={{ wrapper: "gap-0 text-left", title: "lg:text-5xl" }} {...props} />
   );
 };
 

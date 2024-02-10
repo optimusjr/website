@@ -1,5 +1,4 @@
 "use client";
-
 import { useRouter } from "next/navigation";
 import {
   createContext,
@@ -11,16 +10,11 @@ import {
   useState,
 } from "react";
 
-import config from "@/config";
 import useLocalStorage from "@/hooks/useLocalStorage";
+import { sendToEmail } from "@/utils/helpers/sendToEmail";
 
 import type * as Form from "../formSchemaType";
-import {
-  getNextValidPageIndex,
-  getPreviousValidPageIndex,
-  jsonReplacer,
-  PAGE_POSITION,
-} from "./helpers";
+import { getNextValidPageIndex, getPreviousValidPageIndex, PAGE_POSITION } from "./helpers";
 
 interface Context {
   formSchema: Form.Schema;
@@ -70,33 +64,16 @@ export const MultiFormProvider = ({ children, formSchema }: Props) => {
     setLoading(true);
     setSubmissionError(false);
 
-    fetch(`https://formsubmit.co/ajax/${config.EMAIL}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(formData, jsonReplacer),
-    })
-      .then((response) => {
-        if (response.status !== 200) {
-          throw new Error("Requisição não retornou 200");
-        }
-        setFormData({});
+    sendToEmail(formData, formSchema.title)
+      .then(() => {
         router.push("/thanks");
       })
-      .catch((error) => {
-        // Um erro ocorreu
+      .catch(() => {
         setSubmissionError(true);
-
-        // Tentar enviar o erro por email para poder ser analisado
-        fetch(`https://formsubmit.co/ajax/${config.EMAIL}`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify({
-            title: "Erro ao enviar formulário " + formSchema.title,
-            error,
-          }),
-        });
       })
-      .finally(() => setLoading(false));
+      .finally(() => {
+        setLoading(false);
+      });
   }
 
   const goToNextPage = () => {
