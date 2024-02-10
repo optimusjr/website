@@ -1,16 +1,14 @@
 import config from "@/config";
 
-interface Data {
-  [key: string]: string | boolean;
-}
+type ObjectData = Record<string, unknown>;
 
-async function sendToEmail(data: Data, formName: string) {
+async function sendToEmail(data: ObjectData, formName: string) {
   const formSubmit = await post(`https://formsubmit.co/ajax/${config.EMAIL}`, data);
 
   if (formSubmit.error !== undefined) {
     // Add "$" in every key name, because Static Forms only show custom keys
     // that start with the $ symbol.
-    const newData: Data = {};
+    const newData: ObjectData = {};
     for (const key in data) {
       newData[`$${key}`] = data[key];
     }
@@ -35,9 +33,9 @@ async function sendToEmail(data: Data, formName: string) {
   }
 }
 
-export { type Data, sendToEmail };
+export { type ObjectData, sendToEmail };
 
-async function post(url: string, data: Data) {
+async function post(url: string, data: ObjectData) {
   let res;
   let error;
 
@@ -61,7 +59,7 @@ async function post(url: string, data: Data) {
   return { res, error };
 }
 
-const jsonReplacer = (key: string, value: Data[""]) => {
+const jsonReplacer = (key: string, value: ObjectData[""]) => {
   if (value === true) {
     return "verdadeiro";
   }
