@@ -6,6 +6,7 @@ import Screen from "@/components/others/Screen";
 import StyledImage from "@/components/others/StyledImage";
 import Card from "@/components/ui/Card";
 import Link from "@/components/ui/Link";
+import electrician from "@/images/electrician.png";
 import mej from "@/images/mej.png";
 import team from "@/images/team.png";
 import fadeIn from "@/utils/animations/fadeIn";
@@ -52,7 +53,7 @@ const Information = () => (
           <Link href="https://www.instagram.com/nejsalvador/">NEJ Salvador</Link> (Núcleo das
           Empresas Juniores de Salvador). Com o lema de &ldquo;De Farol a Farol&rdquo;, o NEJ
           promove a colaboração e o compartilhamento de experiências entre as Empresas Juniores da
-          região. Essa parceria fortalece o movimento, contribui para o desenvolvimento do cenário
+          região. Essa parceria fortalece o movimento e contribui para o desenvolvimento do cenário
           empreendedor local.
         </p>
       </Section.content>
@@ -68,6 +69,25 @@ const Information = () => (
           />
         </m.div>
       </Section.illustration>
+    </Section>
+    <Section>
+      <Section.illustration>
+        <Card as={m.div} {...fadeIn} className="overflow-hidden">
+          <StyledImage alt="Membros da OPTIMUS Jr." src={electrician} disableWrapper />
+        </Card>
+      </Section.illustration>
+      <Section.content>
+        <Section.title strap="Experiência e Compromisso">Sua Satisfação Garantida</Section.title>
+        <p>
+          Desbloqueie o potencial da sua residência ou empresa com a OPTIMUS Jr.! Com mais de uma
+          década de atuação, acumulamos uma vasta experiência entregando sucesso em cada projeto.
+        </p>
+        <p>
+          Seja em automações residenciais e comerciais até automações industriais de ponta, nossa
+          equipe dedicada está pronta para te atender da melhor forma possível e elevar sua
+          experiência a um novo patamar.
+        </p>
+      </Section.content>
     </Section>
   </Screen>
 );
