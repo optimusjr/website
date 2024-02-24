@@ -32,8 +32,8 @@ export default {
     },
     colors: {
       transparent: "transparent",
-      black: "#000", // Cor da tipografia
-      white: "#fff",
+      black: "#111", // A cor da tipografia do logo é #000, mas optamos por usar no site um preto mais suave
+      white: "#fafafa",
       primary: {
         50: "#e0f1eb",
         100: "#b3dccd",

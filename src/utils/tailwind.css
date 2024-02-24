@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply text-lg/tight;
+    @apply fill-black text-lg/tight text-black;
   }
 
   svg {

@@ -4,7 +4,7 @@ import { m } from "framer-motion";
 
 const Illustration = () => (
   <svg
-    className="w-10/12 rounded-3xl bg-neutral-50 p-8 shadow-md md:justify-self-end"
+    className="w-10/12 rounded-3xl bg-white p-8 shadow-md md:justify-self-end"
     viewBox="0 0 508 285.75"
     xmlns="http://www.w3.org/2000/svg"
   >

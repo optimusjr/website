@@ -7,7 +7,7 @@ const screen = tv({
   variants: {
     bgColor: {
       black: "bg-black",
-      white: "bg-neutral-50",
+      white: "bg-white",
       neutral: "bg-neutral-200",
       secondary: "bg-secondary-100",
     },

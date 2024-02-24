@@ -7,7 +7,7 @@ const button = tv({
   variants: {
     variant: {
       filled:
-        "bg-primary-800 fill-neutral-50 text-neutral-50 hover:bg-primary-700 hover:shadow-md active:bg-primary-900 active:shadow-none",
+        "bg-primary-800 fill-white text-white hover:bg-primary-700 hover:shadow-md active:bg-primary-900 active:shadow-none",
       outlined: "border-2 border-primary-800 text-primary-800",
       text: "bg-neutral-900/0 hover:bg-neutral-900/10 active:bg-neutral-900/20",
     },
