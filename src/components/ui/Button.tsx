@@ -9,7 +9,7 @@ const button = tv({
       filled:
         "bg-primary-800 fill-neutral-50 text-neutral-50 hover:bg-primary-700 hover:shadow-md active:bg-primary-900 active:shadow-none",
       outlined: "border-2 border-primary-800 text-primary-800",
-      text: "hover:bg-neutral-300 active:bg-neutral-400",
+      text: "bg-neutral-900/0 hover:bg-neutral-900/10 active:bg-neutral-900/20",
     },
     size: {
       normal: "min-h-10 p-4 py-2 text-xl leading-0",

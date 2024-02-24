@@ -1,11 +1,13 @@
 "use client";
 
-import { domAnimation, LazyMotion } from "framer-motion";
+import { LazyMotion } from "framer-motion";
 
 import Layout from "./_components/Layout";
 
+const loadFeatures = () => import("../../utils/helpers/framer-extra").then((res) => res.default);
+
 const MainLayout = ({ children }: { children: React.ReactNode }) => (
-  <LazyMotion features={domAnimation} strict>
+  <LazyMotion features={loadFeatures} strict>
     <Layout>{children}</Layout>
   </LazyMotion>
 );

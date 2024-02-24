@@ -29,9 +29,9 @@ Accordion.item = ({ title, children }: ItemProps) => {
 
   return (
     <li>
-      <div className="flex content-between items-start">
-        <h3 className="mb-4 font-semibold uppercase leading-none md:text-xl/none">{title}</h3>
-        <Button onClick={toggleOpen} variant="text">
+      <div className="flex items-start justify-between">
+        <h3 className="my-2 font-semibold uppercase leading-none md:text-xl/none">{title}</h3>
+        <Button className="ml-2" onClick={toggleOpen} variant="text">
           <ChevronIcon open={open} />
         </Button>
       </div>
@@ -48,7 +48,7 @@ Accordion.item = ({ title, children }: ItemProps) => {
           </m.div>
         ) : null}
       </AnimatePresence>
-      <hr className="m-0 mb-4 border-0 border-t-[1.5px] border-neutral-400" />
+      <hr className="m-0 border-0 border-t-[1.5px] border-neutral-400" />
     </li>
   );
 };
