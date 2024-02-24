@@ -3,7 +3,7 @@ import Image from "@/components/others/StyledImage";
 import Card from "@/components/ui/Card";
 import Carousel from "@/components/ui/Carousel";
 
-const Gallery = () => (
+const Showcase = () => (
   <Screen bgColor="secondary">
     <Screen.title
       className={{ wrapper: "p-4 pb-0 sm:p-8 sm:pb-0 md:p-16 md:pb-0" }}
@@ -13,7 +13,7 @@ const Gallery = () => (
     </Screen.title>
     <Carousel>
       {[1, 2, 3, 4, 5].map((i) => (
-        <GalleryImage
+        <ShowcaseImage
           alt=""
           height={1080}
           key={i}
@@ -26,10 +26,10 @@ const Gallery = () => (
   </Screen>
 );
 
-const GalleryImage = (props: React.ComponentPropsWithoutRef<typeof Image>) => (
+const ShowcaseImage = (props: React.ComponentPropsWithoutRef<typeof Image>) => (
   <Card as="li" className="w-64 flex-shrink-0 overflow-hidden md:w-1/4">
     <Image {...props} disableWrapper />
   </Card>
 );
 
-export default Gallery;
+export default Showcase;

@@ -7,7 +7,7 @@ import CallToActionScreen from "@/components/others/CallToActionScreen";
 import juliaPolena from "@/images/clients/juliaPolena.jpg";
 
 import FAQ from "../_components/FAQ";
-import { Showcase, ShowcaseImage } from "../_components/Showcase";
+import { Gallery, GalleryImage } from "../_components/Gallery";
 import Start from "../_components/Start";
 import Testimonials from "../_components/Testimonials";
 
@@ -59,9 +59,9 @@ const Content = () => (
       />
     </Testimonials>
 
-    <Showcase>
+    <Gallery>
       {[6, 7, 8, 9, 10].map((i) => (
-        <ShowcaseImage
+        <GalleryImage
           alt=""
           height={1080}
           key={i}
@@ -70,7 +70,7 @@ const Content = () => (
           unoptimized
         />
       ))}
-    </Showcase>
+    </Gallery>
 
     <FAQ>
       <FAQ.question question="É necessário quebrar paredes para fazer a automação de lâmpadas?">
