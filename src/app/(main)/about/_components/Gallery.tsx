@@ -7,9 +7,9 @@ const Gallery = () => (
   <Screen bgColor="secondary">
     <Screen.title
       className={{ wrapper: "p-4 pb-0 sm:p-8 sm:pb-0 md:p-16 md:pb-0" }}
-      strap="Galeria"
+      strap="Projetos em Destaque"
     >
-      Galeria
+      Veja o que já fizemos
     </Screen.title>
     <Carousel>
       {[1, 2, 3, 4, 5].map((i) => (
