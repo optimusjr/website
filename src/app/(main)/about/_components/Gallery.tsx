@@ -13,19 +13,23 @@ const Gallery = () => (
     </Screen.title>
     <Carousel>
       {[1, 2, 3, 4, 5].map((i) => (
-        <Card as="li" className="w-64 flex-shrink-0 overflow-hidden md:w-1/4" key={i}>
-          <Image
-            alt=""
-            height={1080}
-            src={"https://picsum.photos/seed/" + i + "/1080"}
-            width={1080}
-            disableWrapper
-            unoptimized
-          />
-        </Card>
+        <GalleryImage
+          alt=""
+          height={1080}
+          key={i}
+          src={"https://picsum.photos/seed/" + i + "/1080"}
+          width={1080}
+          unoptimized
+        />
       ))}
     </Carousel>
   </Screen>
+);
+
+const GalleryImage = (props: React.ComponentPropsWithoutRef<typeof Image>) => (
+  <Card as="li" className="w-64 flex-shrink-0 overflow-hidden md:w-1/4">
+    <Image {...props} disableWrapper />
+  </Card>
 );
 
 export default Gallery;

@@ -5,13 +5,9 @@ import ShieldHome from "@/components/icons/ShieldHome";
 import SofaIcon from "@/components/icons/Sofa";
 import CallToActionScreen from "@/components/others/CallToActionScreen";
 import juliaPolena from "@/images/clients/juliaPolena.jpg";
-import app from "@/images/lights/app.png";
-import electrician from "@/images/lights/electrician.png";
-import lamps from "@/images/lights/lamps.png";
-import switches from "@/images/lights/switches.png";
 
 import FAQ from "../_components/FAQ";
-import Showcase from "../_components/Showcase";
+import { Showcase, ShowcaseImage } from "../_components/Showcase";
 import Start from "../_components/Start";
 import Testimonials from "../_components/Testimonials";
 
@@ -64,16 +60,16 @@ const Content = () => (
     </Testimonials>
 
     <Showcase>
-      <Showcase.image alt="Celular com o aplicativo para o controle de iluminação" image={app} />
-      <Showcase.image
-        alt="Serviço de automação de iluminação sendo executado"
-        image={electrician}
-      />
-      <Showcase.image alt="Teto moderno com luzes instaladas" image={lamps} />
-      <Showcase.image
-        alt="Interruptor inteligente novo, com o plástico sendo retirado"
-        image={switches}
-      />
+      {[6, 7, 8, 9, 10].map((i) => (
+        <ShowcaseImage
+          alt=""
+          height={1080}
+          key={i}
+          src={"https://picsum.photos/seed/" + i + "/1080"}
+          width={1080}
+          unoptimized
+        />
+      ))}
     </Showcase>
 
     <FAQ>
