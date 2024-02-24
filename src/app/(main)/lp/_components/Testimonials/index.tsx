@@ -1,9 +1,9 @@
 import { m } from "framer-motion";
 import type { StaticImageData } from "next/image";
 
-import Screen from "@/components/others/Screen";
+import { Screen, ScreenTitle } from "@/components/others/Screen";
 import StyledImage from "@/components/others/StyledImage";
-import Card from "@/components/ui/Card";
+import { Card, CardTitle } from "@/components/ui/Card";
 import Link from "@/components/ui/Link";
 import fadeIn from "@/utils/animations/fadeIn";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
@@ -12,7 +12,7 @@ import FiveStars from "./FiveStars";
 
 const Testimonials = ({ children }: PropsWithChildren) => (
   <Screen bgColor="white" gap padding>
-    <Screen.title strap="Depoimentos">O que os nossos clientes dizem?</Screen.title>
+    <ScreenTitle strap="Depoimentos">O que os nossos clientes dizem?</ScreenTitle>
     <ul className="grid gap-4 sm:gap-8 md:gap-16 lg:grid-cols-2 2xl:mx-24 2xl:gap-24">
       {children}
     </ul>
@@ -27,7 +27,7 @@ interface Props {
   socialNickname: string;
 }
 
-Testimonials.card = ({ photo, name, review, socialLink, socialNickname }: Props) => (
+const TestimonialsCard = ({ photo, name, review, socialLink, socialNickname }: Props) => (
   <Card
     as={m.li}
     {...fadeIn}
@@ -43,11 +43,12 @@ Testimonials.card = ({ photo, name, review, socialLink, socialNickname }: Props)
       <p>{review}</p>
       <div className="flex flex-col items-center gap-1">
         <FiveStars />
-        <Card.title>{name}</Card.title>
+        <CardTitle>{name}</CardTitle>
         <Link href={socialLink}>{socialNickname}</Link>
       </div>
     </div>
   </Card>
 );
 
+export { Testimonials, TestimonialsCard };
 export default Testimonials;

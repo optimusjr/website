@@ -24,7 +24,7 @@ interface ItemProps extends PropsWithChildren {
   title: string;
 }
 
-Accordion.item = ({ title, children }: ItemProps) => {
+const AccordionItem = ({ title, children }: ItemProps) => {
   const [open, toggleOpen] = useToggle(false);
 
   return (
@@ -53,4 +53,5 @@ Accordion.item = ({ title, children }: ItemProps) => {
   );
 };
 
+export { Accordion, AccordionItem };
 export default Accordion;

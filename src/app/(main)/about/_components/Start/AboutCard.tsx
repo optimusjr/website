@@ -2,7 +2,7 @@
 
 import { m } from "framer-motion";
 
-import Card from "@/components/ui/Card";
+import { Card, CardTitle } from "@/components/ui/Card";
 import fadeIn from "@/utils/animations/fadeIn";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
@@ -22,8 +22,11 @@ const AboutCard = ({ Icon, children }: Props) => (
   </Card>
 );
 
-AboutCard.title = ({ children }: PropsWithChildren) => <Card.title as="h2">{children}</Card.title>;
+const AboutCardTitle = ({ children }: PropsWithChildren) => (
+  <CardTitle as="h2">{children}</CardTitle>
+);
 
-AboutCard.description = ({ children }: PropsWithChildren) => <p>{children}</p>;
+const AboutCardDescription = ({ children }: PropsWithChildren) => <p>{children}</p>;
 
+export { AboutCard, AboutCardDescription, AboutCardTitle };
 export default AboutCard;

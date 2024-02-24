@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import SendButton from "@/components/others/SendButton";
 import Alert from "@/components/ui/Alert";
-import Card from "@/components/ui/Card";
+import { Card, CardTitle } from "@/components/ui/Card";
 import Link from "@/components/ui/Link";
 import TextField from "@/components/ui/TextField";
 import config from "@/config";
@@ -45,7 +45,7 @@ const FormCard = () => {
       className="flex flex-col gap-6 p-8 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-4"
       onSubmit={handleSubmit}
     >
-      <Card.title className="text-center">Mande uma mensagem</Card.title>
+      <CardTitle className="text-center">Mande uma mensagem</CardTitle>
       <TextField autoComplete="name" label="Nome:" name="nome" required />
       <TextField autoComplete="email" label="E-mail:" name="email" type="email" required />
       <TextField label="Sua mensagem:" name="mensagem" multiline required />

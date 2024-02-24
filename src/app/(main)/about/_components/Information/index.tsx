@@ -12,18 +12,18 @@ import team from "@/images/team.png";
 import fadeIn from "@/utils/animations/fadeIn";
 
 import CardDecorations from "./CardDecorations";
-import Section from "./Section";
+import { Section, SectionContent, SectionIllustration, SectionTitle } from "./Section";
 
 const Information = () => (
   <Screen bgColor="white" className="gap-8 py-8 pb-16 4xs:p-8" gap padding>
     <Section>
-      <Section.illustration>
+      <SectionIllustration>
         <Card as={m.div} {...fadeIn} className="overflow-hidden">
           <StyledImage alt="Membros da OPTIMUS Jr." src={team} disableWrapper />
         </Card>
-      </Section.illustration>
-      <Section.content>
-        <Section.title strap="Nossa História">A Trajetória da OPTIMUS&nbsp;Jr.</Section.title>
+      </SectionIllustration>
+      <SectionContent>
+        <SectionTitle strap="Nossa História">A Trajetória da OPTIMUS&nbsp;Jr.</SectionTitle>
         <p>
           Fundada em 2010, a OPTIMUS Jr. é a empresa júnior do curso de Engenharia de Controle e
           Automação da <Link href="https://ufba.br/">UFBA</Link> (Universidade Federal da Bahia).
@@ -37,11 +37,11 @@ const Information = () => (
           projetos desafiadores, colaborando com empresas e organizações para enfrentar os desafios
           do mundo real.
         </p>
-      </Section.content>
+      </SectionContent>
     </Section>
     <Section>
-      <Section.content>
-        <Section.title strap="Conheça o MEJ">O Movimento Empresa Júnior</Section.title>
+      <SectionContent>
+        <SectionTitle strap="Conheça o MEJ">O Movimento Empresa Júnior</SectionTitle>
         <p>
           O &ldquo;Jr.&rdquo; em OPTIMUS Jr. não é apenas uma formalidade. Ele simboliza nossa
           conexão com o <Link href="https://brasiljunior.org.br/conheca-o-mej">MEJ</Link> (Movimento
@@ -56,8 +56,8 @@ const Information = () => (
           região. Essa parceria fortalece o movimento e contribui para o desenvolvimento do cenário
           empreendedor local.
         </p>
-      </Section.content>
-      <Section.illustration>
+      </SectionContent>
+      <SectionIllustration>
         <m.div className="relative" {...fadeIn} whileHover="hover">
           <Card as={m.div} className="overflow-hidden" variants={{ hover: { rotate: -1 } }}>
             <Image alt="Logo do NEJ Salvador estilizado" src={mej} />
@@ -68,16 +68,16 @@ const Information = () => (
             variants={{ hover: { rotate: 1 } }}
           />
         </m.div>
-      </Section.illustration>
+      </SectionIllustration>
     </Section>
     <Section>
-      <Section.illustration>
+      <SectionIllustration>
         <Card as={m.div} {...fadeIn} className="overflow-hidden">
           <StyledImage alt="Membros da OPTIMUS Jr." src={electrician} disableWrapper />
         </Card>
-      </Section.illustration>
-      <Section.content>
-        <Section.title strap="Experiência e Compromisso">Sua Satisfação Garantida</Section.title>
+      </SectionIllustration>
+      <SectionContent>
+        <SectionTitle strap="Experiência e Compromisso">Sua Satisfação Garantida</SectionTitle>
         <p>
           Desbloqueie o potencial da sua residência ou empresa com a OPTIMUS Jr.! Com mais de uma
           década de atuação, acumulamos uma vasta experiência entregando sucesso em cada projeto.
@@ -87,7 +87,7 @@ const Information = () => (
           equipe dedicada está pronta para te atender da melhor forma possível e elevar sua
           experiência a um novo patamar.
         </p>
-      </Section.content>
+      </SectionContent>
     </Section>
   </Screen>
 );

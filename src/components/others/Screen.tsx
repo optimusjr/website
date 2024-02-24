@@ -63,11 +63,12 @@ interface TitleProps extends PropsWithChildren {
   };
 }
 
-Screen.title = ({ strap: strapText, className, children }: TitleProps) => (
+const ScreenTitle = ({ strap: strapText, className, children }: TitleProps) => (
   <div className={wrapper({ className: className?.wrapper })}>
     {strap && <span className={strap({ className: className?.strap })}>{strapText}</span>}
     <h2 className={title({ className: className?.title })}>{children}</h2>
   </div>
 );
 
+export { Screen, ScreenTitle };
 export default Screen;

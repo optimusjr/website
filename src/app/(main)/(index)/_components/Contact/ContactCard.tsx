@@ -3,7 +3,7 @@
 import { m } from "framer-motion";
 
 import Link from "@/components/lib/Link";
-import Card from "@/components/ui/Card";
+import { Card, CardTitle } from "@/components/ui/Card";
 import { linkStyle } from "@/components/ui/Link";
 import scaleOnHover from "@/utils/animations/scaleOnHover";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
@@ -27,8 +27,11 @@ const ContactCard = ({ href, Icon, children }: Props) => (
   </Link>
 );
 
-ContactCard.title = ({ children }: PropsWithChildren) => <Card.title>{children}</Card.title>;
+const ContactCardTitle = ({ children }: PropsWithChildren) => <CardTitle>{children}</CardTitle>;
 
-ContactCard.link = ({ children }: PropsWithChildren) => <p className={linkStyle()}>{children}</p>;
+const ContactCardLink = ({ children }: PropsWithChildren) => (
+  <p className={linkStyle()}>{children}</p>
+);
 
+export { ContactCard, ContactCardLink, ContactCardTitle };
 export default ContactCard;

@@ -1,12 +1,12 @@
 "use client";
 
 import MultiPageForm from "@/components/others/MultiPageForm";
-import Screen from "@/components/others/Screen";
+import { Screen, ScreenTitle } from "@/components/others/Screen";
 import quoteFormSchema from "@/quoteFormSchema";
 
 const Quote = () => (
   <Screen bgColor="secondary" height="firstFull" gap padding>
-    <Screen.title>{quoteFormSchema.title}</Screen.title>
+    <ScreenTitle>{quoteFormSchema.title}</ScreenTitle>
 
     <MultiPageForm schema={quoteFormSchema} />
   </Screen>

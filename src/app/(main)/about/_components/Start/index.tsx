@@ -4,13 +4,13 @@ import DiamondIcon from "@/components/icons/Diamond";
 import EyeIcon from "@/components/icons/Eye";
 import TargetIcon from "@/components/icons/Target";
 import Image from "@/components/lib/Image";
-import CheckList from "@/components/others/CheckList";
+import { CheckList, CheckListItem } from "@/components/others/CheckList";
 import QuoteButton from "@/components/others/QuoteButton";
 import Screen from "@/components/others/Screen";
 import Card from "@/components/ui/Card";
 import logo from "@/images/OPTIMUS/logo.svg";
 
-import AboutCard from "./AboutCard";
+import { AboutCard, AboutCardDescription, AboutCardTitle } from "./AboutCard";
 
 const AboutStart = () => (
   <Screen bgColor="secondary" height="firstFull" gap padding>
@@ -36,31 +36,31 @@ const AboutStart = () => (
 
     <ul className="grid items-center gap-8 lg:grid-cols-3">
       <AboutCard Icon={TargetIcon}>
-        <AboutCard.title>Missão</AboutCard.title>
-        <AboutCard.description>
+        <AboutCardTitle>Missão</AboutCardTitle>
+        <AboutCardDescription>
           Desenvolver nossos membros na área de automação, através da vivência empresarial, com foco
           em trazer a melhor experiência para os nossos clientes.
-        </AboutCard.description>
+        </AboutCardDescription>
       </AboutCard>
 
       <AboutCard Icon={DiamondIcon}>
-        <AboutCard.title>Valores</AboutCard.title>
+        <AboutCardTitle>Valores</AboutCardTitle>
 
         <CheckList className="w-full">
-          <CheckList.item>Autonomia</CheckList.item>
-          <CheckList.item>Resiliência</CheckList.item>
-          <CheckList.item>Comprometimento com resultados</CheckList.item>
-          <CheckList.item>Sentimento de Ser Dono</CheckList.item>
-          <CheckList.item>Orgulho de ser OPTIMUS</CheckList.item>
+          <CheckListItem>Autonomia</CheckListItem>
+          <CheckListItem>Resiliência</CheckListItem>
+          <CheckListItem>Comprometimento com resultados</CheckListItem>
+          <CheckListItem>Sentimento de Ser Dono</CheckListItem>
+          <CheckListItem>Orgulho de ser OPTIMUS</CheckListItem>
         </CheckList>
       </AboutCard>
 
       <AboutCard Icon={EyeIcon}>
-        <AboutCard.title>Visão</AboutCard.title>
-        <AboutCard.description>
+        <AboutCardTitle>Visão</AboutCardTitle>
+        <AboutCardDescription>
           Entrar e atuar com constância no mercado de automação residencial, com preços justos e
           qualidade de excelência, gerando conforto, praticidade e economia para os clientes.
-        </AboutCard.description>
+        </AboutCardDescription>
       </AboutCard>
     </ul>
   </Screen>

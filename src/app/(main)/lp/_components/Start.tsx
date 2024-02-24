@@ -2,7 +2,7 @@ import { m } from "framer-motion";
 
 import QuoteButton from "@/components/others/QuoteButton";
 import Screen from "@/components/others/Screen";
-import Card from "@/components/ui/Card";
+import { Card, CardTitle } from "@/components/ui/Card";
 import fadeIn from "@/utils/animations/fadeIn";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
@@ -12,7 +12,7 @@ const Start = ({ children }: PropsWithChildren) => (
   </Screen>
 );
 
-Start.intro = ({ children }: PropsWithChildren) => (
+const StartIntro = ({ children }: PropsWithChildren) => (
   <section className="flex flex-col items-center gap-4 py-8 text-center animate-fade-in lg:py-16">
     {children}
 
@@ -20,21 +20,26 @@ Start.intro = ({ children }: PropsWithChildren) => (
   </section>
 );
 
-Start.span = ({ children }: PropsWithChildren) => (
-  <span className="text-[length:calc(1rem+1vw)] font-bold leading-none text-primary-800">
-    {children}
-  </span>
+interface TitleProps extends PropsWithChildren {
+  strap: string;
+}
+
+const StartTitle = ({ children, strap }: TitleProps) => (
+  <>
+    <span className="text-[length:calc(1rem+1vw)] font-bold leading-none text-primary-800">
+      {strap}
+    </span>
+    <h1 className="text-[length:calc(2rem+2vw)] font-extrabold uppercase leading-none">
+      {children}
+    </h1>
+  </>
 );
 
-Start.h1 = ({ children }: PropsWithChildren) => (
-  <h1 className="text-[length:calc(2rem+2vw)] font-extrabold uppercase leading-none">{children}</h1>
-);
-
-Start.p = ({ children }: PropsWithChildren) => (
+const StartText = ({ children }: PropsWithChildren) => (
   <p className="text-[length:calc(1rem+1vw)] leading-none">{children}</p>
 );
 
-Start.features = ({ children }: PropsWithChildren) => (
+const StartFeatures = ({ children }: PropsWithChildren) => (
   <ul className="grid gap-8 lg:grid-cols-3">{children}</ul>
 );
 
@@ -44,7 +49,7 @@ interface FeatureProps {
   description: string;
 }
 
-Start.feature = ({ Icon, title, description }: FeatureProps) => (
+const StartFeature = ({ Icon, title, description }: FeatureProps) => (
   <Card
     as={m.li}
     bgColor="white"
@@ -53,9 +58,10 @@ Start.feature = ({ Icon, title, description }: FeatureProps) => (
   >
     <Icon className="w-32" />
 
-    <Card.title as="h2">{title}</Card.title>
+    <CardTitle as="h2">{title}</CardTitle>
     <p>{description}</p>
   </Card>
 );
 
+export { Start, StartFeature, StartFeatures, StartIntro, StartText, StartTitle };
 export default Start;

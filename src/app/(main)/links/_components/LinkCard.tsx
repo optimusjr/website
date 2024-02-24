@@ -3,7 +3,7 @@
 import { m } from "framer-motion";
 
 import Link from "@/components/lib/Link";
-import Card from "@/components/ui/Card";
+import { Card, CardTitle } from "@/components/ui/Card";
 import scaleOnHover from "@/utils/animations/scaleOnHover";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
 
@@ -21,7 +21,7 @@ const LinkCard = ({ href, Icon, children }: Props) => (
       href={href}
     >
       <Icon className="w-12" />
-      <Card.title as="h2">{children}</Card.title>
+      <CardTitle as="h2">{children}</CardTitle>
     </Card>
   </m.li>
 );

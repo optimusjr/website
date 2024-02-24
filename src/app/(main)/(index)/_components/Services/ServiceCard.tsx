@@ -3,7 +3,7 @@ import { m } from "framer-motion";
 import Link from "@/components/lib/Link";
 import StyledImage from "@/components/others/StyledImage";
 import Button from "@/components/ui/Button";
-import Card from "@/components/ui/Card";
+import { Card, CardTitle } from "@/components/ui/Card";
 import config from "@/config";
 import fadeIn from "@/utils/animations/fadeIn";
 import type { PropsWithChildren } from "@/utils/types/PropsWithChildren";
@@ -33,14 +33,15 @@ const ServiceCard = ({ aboutPage, children }: Props) => (
   </Card>
 );
 
-ServiceCard.image = StyledImage;
+const ServiceCardImage = StyledImage;
 
-ServiceCard.title = ({ children }: PropsWithChildren) => (
-  <Card.title className="text-center">{children}</Card.title>
+const ServiceCardTitle = ({ children }: PropsWithChildren) => (
+  <CardTitle className="text-center">{children}</CardTitle>
 );
 
-ServiceCard.description = ({ children }: PropsWithChildren) => (
+const ServiceCardDescription = ({ children }: PropsWithChildren) => (
   <p className="text-center">{children}</p>
 );
 
+export { ServiceCard, ServiceCardDescription, ServiceCardImage, ServiceCardTitle };
 export default ServiceCard;

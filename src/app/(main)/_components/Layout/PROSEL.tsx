@@ -6,7 +6,7 @@ import { useState } from "react";
 import CloseIcon from "@/components/icons/Close";
 import Link from "@/components/lib/Link";
 import Button from "@/components/ui/Button";
-import Card from "@/components/ui/Card";
+import { Card, CardTitle } from "@/components/ui/Card";
 import config from "@/config";
 
 const PROSEL = () => {
@@ -28,7 +28,7 @@ const PROSEL = () => {
         >
           <Card className="flex flex-col items-start gap-2 rounded-b-none p-6 shadow-2xl sm:max-w-lg sm:rounded-2xl">
             <div className="flex w-full items-center justify-between">
-              <Card.title>Estamos contratando!</Card.title>
+              <CardTitle>Estamos contratando!</CardTitle>
 
               <Button onClick={close} variant="text">
                 <CloseIcon />

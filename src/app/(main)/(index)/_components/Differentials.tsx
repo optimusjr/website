@@ -6,13 +6,13 @@ import CapIcon from "@/components/icons/Cap";
 import CheckIcon from "@/components/icons/Check";
 import HandIcon from "@/components/icons/Hand";
 import TenIcon from "@/components/icons/Ten";
-import Screen from "@/components/others/Screen";
-import Card from "@/components/ui/Card";
+import { Screen, ScreenTitle } from "@/components/others/Screen";
+import { Card, CardTitle } from "@/components/ui/Card";
 import fadeIn from "@/utils/animations/fadeIn";
 
 const Differentials = () => (
   <Screen bgColor="white" className="relative z-10" gap padding shadow>
-    <Screen.title strap="Diferenciais">Por que somos a escolha certa?</Screen.title>
+    <ScreenTitle strap="Diferenciais">Por que somos a escolha certa?</ScreenTitle>
 
     <ul className="grid auto-rows-fr items-stretch gap-4 sm:gap-8 md:grid-cols-2 md:gap-16">
       <DifferentialCard
@@ -55,7 +55,7 @@ const DifferentialCard = ({ Icon, title, description }: CardProps) => (
   >
     <Icon className="h-auto w-16 sm:w-32" />
     <div>
-      <Card.title className="text-xl/none sm:text-2xl/none">{title}</Card.title>
+      <CardTitle className="text-xl/none sm:text-2xl/none">{title}</CardTitle>
       <p>{description}</p>
     </div>
   </Card>

@@ -38,10 +38,15 @@ interface TitleProps<T extends React.ElementType> extends PropsWithChildren {
   className?: string;
 }
 
-Card.title = <T extends React.ElementType = "h3">({ as, className, children }: TitleProps<T>) => {
+const CardTitle = <T extends React.ElementType = "h3">({
+  as,
+  className,
+  children,
+}: TitleProps<T>) => {
   const Component = as || "h3";
 
   return <Component className={cardTitle({ className })}>{children}</Component>;
 };
 
+export { Card, CardTitle };
 export default Card;
