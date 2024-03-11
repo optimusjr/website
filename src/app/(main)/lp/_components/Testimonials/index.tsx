@@ -13,7 +13,7 @@ import FiveStars from "./FiveStars";
 const Testimonials = ({ children }: PropsWithChildren) => (
   <Screen bgColor="white" gap padding>
     <ScreenTitle strap="Depoimentos">O que os nossos clientes dizem?</ScreenTitle>
-    <ul className="grid gap-4 sm:gap-8 md:gap-16 lg:grid-cols-2 2xl:mx-24 2xl:gap-24">
+    <ul className="flex gap-4 sm:gap-8 md:gap-16 lg:grid-cols-2 2xl:mx-24 2xl:gap-24">
       {children}
     </ul>
   </Screen>
@@ -31,7 +31,7 @@ const TestimonialsCard = ({ photo, name, review, socialLink, socialNickname }: P
   <Card
     as={m.li}
     {...fadeIn}
-    className="flex flex-col items-center gap-8 p-8 sm:flex-row lg:flex-col xl:flex-row"
+    className="flex max-w-[576px] flex-col items-center gap-8 p-8 sm:flex-row lg:flex-col xl:flex-row"
   >
     <StyledImage
       alt={`Foto de ${name}`}

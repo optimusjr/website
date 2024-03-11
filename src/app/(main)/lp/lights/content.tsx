@@ -57,13 +57,6 @@ const Content = () => (
         socialLink="https://www.instagram.com/juliapolena/"
         socialNickname="@juliapolena"
       />
-      <TestimonialsCard
-        name="Júlia Polena"
-        photo={juliaPolena}
-        review="Muito empenhados em resolver o problema! Gostei muito da tecnicidade e profissionalismo, além do bom papo durante a execução! A instalação tem ajudado muito nas demandas da casa!!"
-        socialLink="https://www.instagram.com/juliapolena/"
-        socialNickname="@juliapolena"
-      />
     </Testimonials>
 
     <Gallery>
