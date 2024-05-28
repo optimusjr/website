@@ -60,16 +60,11 @@ const Content = () => (
     </Testimonials>
 
     <Gallery>
-      {[6, 7, 8, 9, 10].map((i) => (
-        <GalleryImage
-          alt=""
-          height={1080}
-          key={i}
-          src={"https://picsum.photos/seed/" + i + "/1080"}
-          width={1080}
-          unoptimized
-        />
-      ))}
+      <GalleryImage alt="" height={1080} src={"https://picsum.photos/seed/1/1080"} width={1080} />
+      <GalleryImage alt="" height={1080} src={"https://picsum.photos/seed/2/1080"} width={1080} />
+      <GalleryImage alt="" height={1080} src={"https://picsum.photos/seed/3/1080"} width={1080} />
+      <GalleryImage alt="" height={1080} src={"https://picsum.photos/seed/4/1080"} width={1080} />
+      <GalleryImage alt="" height={1080} src={"https://picsum.photos/seed/5/1080"} width={1080} />
     </Gallery>
 
     <FAQ>
