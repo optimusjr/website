@@ -6,9 +6,9 @@ import Screen from "@/components/others/Screen";
 import StyledImage from "@/components/others/StyledImage";
 import Card from "@/components/ui/Card";
 import Link from "@/components/ui/Link";
+import team from "@/images/AGOteste.png";
 import electrician from "@/images/electrician.png";
 import mej from "@/images/mej.png";
-import team from "@/images/team.png";
 import fadeIn from "@/utils/animations/fadeIn";
 
 import CardDecorations from "./CardDecorations";
@@ -18,7 +18,7 @@ const Information = () => (
   <Screen bgColor="white" className="gap-8 py-8 pb-16 4xs:p-8" gap padding>
     <Section>
       <SectionIllustration>
-        <Card as={m.div} {...fadeIn} className="overflow-hidden">
+        <Card as={m.div} {...fadeIn} className="overflow-hidden ">
           <StyledImage alt="Membros da OPTIMUS Jr." src={team} disableWrapper />
         </Card>
       </SectionIllustration>

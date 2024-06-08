@@ -60,11 +60,12 @@ const Content = () => (
     </Testimonials>
 
     <Gallery>
-      <GalleryImage alt="" height={1080} src={"https://picsum.photos/seed/1/1080"} width={1080} />
-      <GalleryImage alt="" height={1080} src={"https://picsum.photos/seed/2/1080"} width={1080} />
-      <GalleryImage alt="" height={1080} src={"https://picsum.photos/seed/3/1080"} width={1080} />
-      <GalleryImage alt="" height={1080} src={"https://picsum.photos/seed/4/1080"} width={1080} />
-      <GalleryImage alt="" height={1080} src={"https://picsum.photos/seed/5/1080"} width={1080} />
+      <GalleryImage alt="" height={1080} src={"/images/lp/luz/luz2.png"} width={1080} />
+      <GalleryImage alt="" height={1080} src={"/images/lp/luz/luz3.jpg"} width={1080} />
+      <GalleryImage alt="" height={1080} src={"/images/lp/luz/luz4.jpg"} width={1080} />
+      <GalleryImage alt="" height={1080} src={"/images/lp/luz/luz6.jpg"} width={1080} />
+      <GalleryImage alt="" height={1080} src={"/images/lp/luz/luz7.png"} width={1080} />
+      <GalleryImage alt="" height={1080} src={"/images/lp/luz/luz8.jpg"} width={1080} />
     </Gallery>
 
     <FAQ>
