@@ -2,6 +2,13 @@ import { Screen, ScreenTitle } from "@/components/others/Screen";
 import Image from "@/components/others/StyledImage";
 import Card from "@/components/ui/Card";
 import Carousel from "@/components/ui/Carousel";
+import img1 from "@/images/services/bedroom.jpg";
+import img2 from "@/images/services/curtains.jpg";
+import img3 from "@/images/services/lock.png";
+import img4 from "@/images/services/pool.jpg";
+import img5 from "@/images/services/sensor.jpg";
+import img6 from "@/images/services/smart.png";
+
 const Showcase = () => (
   <Screen bgColor="secondary">
     <ScreenTitle
@@ -11,12 +18,12 @@ const Showcase = () => (
       Torne seus sonhos em realidade
     </ScreenTitle>
     <Carousel>
-      <ShowcaseImage alt="" height={1080} src={"/images/services/bedroom.jpg"} width={1080} />
-      <ShowcaseImage alt="" height={1080} src={"/images/services/curtains.jpg"} width={1080} />
-      <ShowcaseImage alt="" height={1080} src={"/images/services/lock.png"} width={1080} />
-      <ShowcaseImage alt="" height={1080} src={"/images/services/pool.jpg"} width={1080} />
-      <ShowcaseImage alt="" height={1080} src={"/images/services/sensor.jpg"} width={1080} />
-      <ShowcaseImage alt="" height={1080} src={"/images/services/smart.png"} width={1080} />
+      <ShowcaseImage alt="Exemplo de criação de cenário no quarto" src={img1} />
+      <ShowcaseImage alt="Exemplo de automação de cortinas" src={img2} />
+      <ShowcaseImage alt="Exemplo de fechadura inteligente" src={img3} />
+      <ShowcaseImage alt="Exemplo de automação de piscina" src={img4} />
+      <ShowcaseImage alt="Exemplo de câmera de segurança" src={img5} />
+      <ShowcaseImage alt="Exemplo de controle por celular" src={img6} />
     </Carousel>
   </Screen>
 );

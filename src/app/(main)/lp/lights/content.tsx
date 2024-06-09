@@ -5,6 +5,12 @@ import ShieldHome from "@/components/icons/ShieldHome";
 import SofaIcon from "@/components/icons/Sofa";
 import CallToActionScreen from "@/components/others/CallToActionScreen";
 import juliaPolena from "@/images/clients/juliaPolena.jpg";
+import img1 from "@/images/lp/luz/luz2.png";
+import img2 from "@/images/lp/luz/luz3.jpg";
+import img3 from "@/images/lp/luz/luz4.jpg";
+import img4 from "@/images/lp/luz/luz6.jpg";
+import img5 from "@/images/lp/luz/luz7.png";
+import img6 from "@/images/lp/luz/luz8.jpg";
 
 import { FAQ, FAQQuestion } from "../_components/FAQ";
 import { Gallery, GalleryImage } from "../_components/Gallery";
@@ -60,12 +66,12 @@ const Content = () => (
     </Testimonials>
 
     <Gallery>
-      <GalleryImage alt="" height={1080} src={"/images/lp/luz/luz2.png"} width={1080} />
-      <GalleryImage alt="" height={1080} src={"/images/lp/luz/luz3.jpg"} width={1080} />
-      <GalleryImage alt="" height={1080} src={"/images/lp/luz/luz4.jpg"} width={1080} />
-      <GalleryImage alt="" height={1080} src={"/images/lp/luz/luz6.jpg"} width={1080} />
-      <GalleryImage alt="" height={1080} src={"/images/lp/luz/luz7.png"} width={1080} />
-      <GalleryImage alt="" height={1080} src={"/images/lp/luz/luz8.jpg"} width={1080} />
+      <GalleryImage alt="exemplo de sala temática" src={img1} />
+      <GalleryImage alt="exemplo de luz secundária" src={img2} />
+      <GalleryImage alt="Exemplo de controle pelo celular" src={img3} />
+      <GalleryImage alt="Exemplo de sala mais moderna" src={img4} />
+      <GalleryImage alt="Exemplo de criação de cenário na cozinha" src={img5} />
+      <GalleryImage alt="Exemplo de criação de cenário sala" src={img6} />
     </Gallery>
 
     <FAQ>
