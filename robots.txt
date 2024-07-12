@@ -1,12 +1,8 @@
-# *
-User-agent: *
+User-Agent: *
 Allow: /
 Disallow: /thanks
 Disallow: /404
 Disallow: /links
 
-# Host
 Host: https://optimusjr.com.br
-
-# Sitemaps
 Sitemap: https://optimusjr.com.br/sitemap.xml
