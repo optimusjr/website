@@ -1,14 +1,84 @@
 {
+  "editor.tabSize": 2,
+  "cSpell.language": "en,pt-BR",
   "cSpell.words": [
+    "esbenp",
+    "esnext",
     "gtag",
+    "juliapolena",
     "linkedin",
     "MQSMFGT",
     "Novis",
     "optimus",
     "peaceiris",
+    "Polena",
     "prosel",
     "PROSEL",
+    "silash",
+    "tailwindcss",
+    "Whatsapp",
+    "WHATSAPP",
     "wordmark",
     "XGPWMK"
-  ]
+  ],
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "git.enableSmartCommit": true,
+  "npm.packageManager": "pnpm",
+  "files.eol": "\n",
+
+  // Formatter
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.format.enable": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+
+  // Material Icon Theme
+  "material-icon-theme.folders.associations": {
+    "ui": "interface",
+    "_components": "react-components"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.activeIconPack": "react",
+
+  // Configuração do Tailwindcss
+  "tailwindCSS.validate": true,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "files.associations": {
+    "*.ts": "typescript",
+    "*.tsx": "typescriptreact",
+    "*.css": "tailwindcss"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["tv\\((([^()]*|\\([^()]*\\))*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+
+  "files.exclude": {
+    "**/.next": true,
+    "**/.cache": true,
+    "**/node_modules": true,
+    "**/nextImageExportOptimizer": true,
+    "**/next-image-export-optimizer-hashes.json": true
+  },
+
+  "explorer.compactFolders": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.*, .eslint*, .prettier*, tsconfig*",
+    "tailwind.config.*": "postcss.config*",
+    "next.config.*": "next-env.d.ts",
+    "icon.*": "icon*, favicon*, apple-icon*"
+  }
 }

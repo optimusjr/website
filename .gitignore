@@ -12,6 +12,7 @@ next-image-export-optimizer-hashes.json
 
 # Typescript
 *.tsbuildinfo
+tsconfig.tsbuildinfo
 
 # dependencies
 /node_modules
@@ -24,6 +25,7 @@ next-image-export-optimizer-hashes.json
 # next.js
 /.next/
 /out/
+/out.*/
 
 # production
 /build
