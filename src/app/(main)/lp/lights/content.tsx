@@ -102,11 +102,6 @@ const Content = () => (
         no circuito elétrico da casa, permitindo que você automatize qualquer lâmpada conectada a
         esse circuito.
       </FAQQuestion>
-      <FAQQuestion question="A automação de lâmpadas é compatível com diferentes tipos de lâmpadas, como LED, fluorescentes ou incandescentes?">
-        Sim, nós automatizamos qualquer tipo de lâmpada. O sistema de automação trabalha diretamente
-        no circuito elétrico da casa, permitindo que você automatize qualquer lâmpada conectada a
-        esse circuito.
-      </FAQQuestion>
       <FAQQuestion question="Quero automatizar as lâmpadas, mas manter os interruptores que já tenho em casa. É possível?">
         Sim! Apesar de termos interruptores inteligentes com design moderno e controle por touch,
         entendemos que algumas pessoas preferem manter a estética e a familiaridade de seus
