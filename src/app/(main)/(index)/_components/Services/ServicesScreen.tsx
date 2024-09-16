@@ -29,7 +29,7 @@ const ServicesScreen = () => (
         </ServiceCardDescription>
       </ServiceCard>
 
-      <ServiceCard>
+      <ServiceCard aboutPage="/lp/automacaodetomadas">
         <ServiceCardImage alt="Tomada" src={images.socket} />
         <ServiceCardTitle>Automação de Tomadas</ServiceCardTitle>
         <ServiceCardDescription>
@@ -38,7 +38,7 @@ const ServicesScreen = () => (
         </ServiceCardDescription>
       </ServiceCard>
 
-      <ServiceCard>
+      <ServiceCard aboutPage="/lp/controlededispositivo">
         <ServiceCardImage alt="Quarto com televisão e ar condicionado" src={images.bedroom} />
         <ServiceCardTitle>Controle de dispositivos</ServiceCardTitle>
         <ServiceCardDescription>
@@ -47,7 +47,7 @@ const ServicesScreen = () => (
         </ServiceCardDescription>
       </ServiceCard>
 
-      <ServiceCard>
+      <ServiceCard aboutPage="/lp/automacaodecortinas">
         <ServiceCardImage
           alt="Mulher controlando as cortinas por controle remoto"
           src={images.curtains}
@@ -59,7 +59,7 @@ const ServicesScreen = () => (
         </ServiceCardDescription>
       </ServiceCard>
 
-      <ServiceCard>
+      <ServiceCard aboutPage="/lp/fechaduradigital" ServiceCard>
         <ServiceCardImage alt="Fechadura digital inteligente" src={images.lock} />
         <ServiceCardTitle>Instalação de Fechadura digital</ServiceCardTitle>
         <ServiceCardDescription>
@@ -68,7 +68,7 @@ const ServicesScreen = () => (
         </ServiceCardDescription>
       </ServiceCard>
 
-      <ServiceCard>
+      <ServiceCard aboutPage="/lp/portaoeletronico" ServiceCard>
         <ServiceCardImage alt="Portão de garagem de uma casa moderna" src={images.gate} />
         <ServiceCardTitle>Automação de Portão Eletrônico</ServiceCardTitle>
         <ServiceCardDescription>
@@ -77,7 +77,7 @@ const ServicesScreen = () => (
         </ServiceCardDescription>
       </ServiceCard>
 
-      <ServiceCard>
+      <ServiceCard aboutPage="/lp/piscina" ServiceCard>
         <ServiceCardImage alt="Piscina limpa e com plantas em volta" src={images.pool} />
         <ServiceCardTitle>Controle de Piscinas</ServiceCardTitle>
         <ServiceCardDescription>
@@ -86,7 +86,7 @@ const ServicesScreen = () => (
         </ServiceCardDescription>
       </ServiceCard>
 
-      <ServiceCard>
+      <ServiceCard aboutPage="/lp/sensors" ServiceCard>
         <ServiceCardImage alt="Sensor de presença instalado em uma parede" src={images.sensor} />
         <ServiceCardTitle>Instalação de Sensores</ServiceCardTitle>
         <ServiceCardDescription>
@@ -95,7 +95,7 @@ const ServicesScreen = () => (
         </ServiceCardDescription>
       </ServiceCard>
 
-      <ServiceCard>
+      <ServiceCard aboutPage="/lp/criacaodecenarios" ServiceCard>
         <ServiceCardImage
           alt="Celular com uma interface para controlar a casa inteligente que está ao fundo"
           src={images.smart}
