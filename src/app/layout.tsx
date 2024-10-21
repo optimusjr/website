@@ -14,6 +14,7 @@ const league = League_Spartan({
   fallback: ["Roboto", "sans-serif"],
   display: "swap",
   variable: "--font-league-spartan",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
 import { GoogleTagManager } from "@next/third-parties/google";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
-  <html className={league.className} dir="ltr" lang="pt-BR">
+  <html className={league.variable} dir="ltr" lang="pt-BR">
     <head>
       <meta content="text/html" httpEquiv="content-type" />
     </head>
