@@ -21,7 +21,7 @@ const PROSEL = () => {
     <AnimatePresence>
       {isOpen && (
         <m.div
-          className="fixed bottom-0 left-0 z-30 shadow-lg animate-fade-in sm:p-4"
+          className="fixed bottom-0 left-0 z-30 animate-fade-in sm:p-4"
           exit={{ y: 20, opacity: 0 }}
           initial={{ y: 0, opacity: 1 }}
           transition={{ linear: true }}
