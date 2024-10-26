@@ -1,7 +1,7 @@
 export default {
   SITE_URL: "https://optimusjr.com.br",
   QUOTE_URL: "/quote",
-  IS_PROSEL: true,
+  IS_PROSEL: false,
   PROSEL_FORM_URL: "https://forms.gle/YYviJ7yPabRXaSZn8",
 
   EMAIL: "contato@optimusjr.com.br",
