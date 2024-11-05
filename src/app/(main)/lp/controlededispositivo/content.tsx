@@ -12,7 +12,6 @@ import img4 from "@/images/lp/luz/img4.jpg";
 import img5 from "@/images/lp/luz/img5.png";
 import img6 from "@/images/lp/luz/img6.jpg";
 
-
 import { FAQ, FAQQuestion } from "../_components/FAQ";
 import { Gallery, GalleryImage } from "../_components/Gallery";
 import {
