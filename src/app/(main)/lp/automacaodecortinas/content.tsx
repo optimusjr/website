@@ -92,8 +92,8 @@ const Content = () => (
       <FAQQuestion question="Posso controlar as cortinas por comando de voz?">
         Se o sistema de automação for compatível com assistentes virtuais como Amazon Alexa, Google
         Assistant ou Apple HomeKit, você pode controlar suas cortinas usando comandos de voz. Por
-        exemplo, você pode dizer "Alexa, abra as cortinas da sala" ou "Ok Google, feche as cortinas
-        do quarto".
+        exemplo, você pode dizer - Alexa, abra as cortinas da sala ou Ok Google, feche as cortinas
+        do quarto-.
       </FAQQuestion>
       <FAQQuestion question="Eu preciso ter uma Alexa para automatizar minhas cortinas?">
         Não, você não precisa ter uma Alexa para automatizar suas cortinas. Apesar de ser mais legal
