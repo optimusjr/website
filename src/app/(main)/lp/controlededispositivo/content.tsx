@@ -5,12 +5,13 @@ import ShieldHome from "@/components/icons/ShieldHome";
 import SofaIcon from "@/components/icons/Sofa";
 import CallToActionScreen from "@/components/others/CallToActionScreen";
 import juliaPolena from "@/images/clients/juliaPolena.jpg";
-import img1 from "@/images/lp/luz/luz2.png";
-import img2 from "@/images/lp/luz/luz3.jpg";
-import img3 from "@/images/lp/luz/luz4.jpg";
-import img4 from "@/images/lp/luz/luz6.jpg";
-import img5 from "@/images/lp/luz/luz7.png";
-import img6 from "@/images/lp/luz/luz8.jpg";
+import img1 from "@/images/lp/luz/img1.png";
+import img2 from "@/images/lp/luz/img2.jpg";
+import img3 from "@/images/lp/luz/img3.jpg";
+import img4 from "@/images/lp/luz/img4.jpg";
+import img5 from "@/images/lp/luz/img5.png";
+import img6 from "@/images/lp/luz/img6.jpg";
+
 
 import { FAQ, FAQQuestion } from "../_components/FAQ";
 import { Gallery, GalleryImage } from "../_components/Gallery";
