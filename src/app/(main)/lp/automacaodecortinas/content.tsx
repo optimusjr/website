@@ -27,7 +27,7 @@ const Content = () => (
   <>
     <Start>
       <StartIntro>
-        <StartTitle strap="Automação de cortinaes">
+        <StartTitle strap="Automação de cortinas">
           Controle suas cortinas de
           <br />
           qualquer lugar
