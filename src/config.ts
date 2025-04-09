@@ -9,7 +9,7 @@ export default {
   WHATSAPP: "+55 75 9709-4357",
 
   WHATSAPP_LINK: "https://wa.me/557597094357",
-  INSTAGRAM: "https://www.instagram.com/optimusjrautomacao/",
+  INSTAGRAM: "https://www.instagram.com/optimusjr_automacao/",
   LINKEDIN: "https://br.linkedin.com/company/optimusjr",
   FACEBOOK: "https://pt-br.facebook.com/OptimusJrAutomacao/",
 
