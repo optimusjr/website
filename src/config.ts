@@ -1,15 +1,15 @@
 export default {
   SITE_URL: "https://optimusjr.com.br",
   QUOTE_URL: "/quote",
-  IS_PROSEL: false,
-  PROSEL_FORM_URL: "https://forms.gle/YYviJ7yPabRXaSZn8",
+  IS_PROSEL: true,
+  PROSEL_FORM_URL: "https://app.pipefy.com/public/form/mbMePBet?fbclid=PAZXh0bgNhZW0CMTEAAafkM0ZJJxUWeko9k0hMBuyd6B9FR3OC6BsH9juD4KwzqIiDsYm1_gnQsr5K9A_aem_4_tlBqQ6iG8FToGAHbKDOA",
 
   EMAIL: "contato@optimusjr.com.br",
   PHONE_NUMBER: "(75) 9709-4357",
   WHATSAPP: "+55 75 9709-4357",
 
   WHATSAPP_LINK: "https://wa.me/557597094357",
-  INSTAGRAM: "https://www.instagram.com/optimusjrautomacao/",
+  INSTAGRAM: "https://www.instagram.com/optimusjr_automacao/",
   LINKEDIN: "https://br.linkedin.com/company/optimusjr",
   FACEBOOK: "https://pt-br.facebook.com/OptimusJrAutomacao/",
 
