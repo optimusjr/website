@@ -18,7 +18,7 @@ const Information = () => (
   <Screen bgColor="white" className="gap-8 py-8 pb-16 4xs:p-8" gap padding>
     <Section>
       <SectionIllustration>
-        <Card as={m.div} {...fadeIn} className="overflow-hidden ">
+        <Card as={m.div} {...fadeIn} className="overflow-hidden">
           <StyledImage alt="Membros da OPTIMUS Jr." src={team} disableWrapper />
         </Card>
       </SectionIllustration>

@@ -28,8 +28,7 @@ const screen = tv({
 });
 
 interface Props<T extends React.ElementType>
-  extends PropsWithChildren,
-    VariantProps<typeof screen> {
+  extends PropsWithChildren, VariantProps<typeof screen> {
   as?: T;
   id?: string;
   className?: string;

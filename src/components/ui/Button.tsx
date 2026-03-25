@@ -22,8 +22,7 @@ const button = tv({
 });
 
 interface Props<T extends React.ElementType>
-  extends PropsWithChildren,
-    VariantProps<typeof button> {
+  extends PropsWithChildren, VariantProps<typeof button> {
   as?: T;
   className?: string;
 }
