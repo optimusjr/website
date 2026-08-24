@@ -1,8 +1,8 @@
 export default {
   SITE_URL: "https://optimusjr.com.br",
   QUOTE_URL: "/quote",
-  IS_PROSEL: false,
-  PROSEL_FORM_URL: "https://forms.gle/9T7WfMTKbWHPyLGz7",
+  IS_PROSEL: true,
+  PROSEL_FORM_URL: "https://forms.gle/MbD1XWrigs3BCnSv8",
 
   EMAIL: "contato@optimusjr.com.br",
   PHONE_NUMBER: "(75) 9116-6672",
