@@ -7,15 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup repo
-        uses: actions/checkout@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - name: Install PNPM
-        uses: pnpm/action-setup@v3
-        with:
-          version: latest
-          run_install: true
+        uses: actions/checkout@v7
+      - name: Install Node and PNPM
+        uses: pnpm/setup@v2
       - name: Run linter
         run: pnpm lint
